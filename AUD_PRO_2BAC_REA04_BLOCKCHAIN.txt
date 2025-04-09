@@ -1,0 +1,125 @@
+De hoy en adelante, la palabra blockchain va a ser una de las que más escuches primero
+y pronuncies después. Y eso será este año y durante muchos años más. Porque blockchain,
+del inglés cadena de bloques, es una tecnología que va a cambiar el mundo más de lo que lo
+dice internet. Sí, más de lo que lo dice internet. Y va a ser para bien de personas
+y de empresas. Blockchain es el mayor avance tecnológico que vivirá la humanidad. Es
+la cuarta revolución industrial. El origen de blockchain es la criptomoneda bitcoin,
+que es el primer ejemplo de blockchain o cadena de bloques. El que ha permitido pensar en
+usar su protocolo para miles de cosas más. Hemos conocido el internet de la información.
+Ahora vamos al internet del valor. El concepto no es fácil, pero si lo entendéis os vais
+a relamer al imaginar todo lo bueno que blockchain nos traerá a nuestras vidas. Y lo más apasionante
+no es su estructura, que es difícil de entender, sino sus aplicaciones. Alucinantes. Pero antes
+sepamos qué es blockchain. Blockchain es, como su nombre indica, una cadena de bloques.
+Hasta ahora todo se regía por bases de datos centralizadas. Una blockchain es una base
+de datos distribuida. ¿Y eso qué es lo que es? Pues una base de datos que no está en
+un solo sitio, sino que está repartida en distintos ordenadores o nodos, que son todos
+igual de importantes. Imagínate un libro de contabilidad. Blockchain es un libro de
+contabilidad que se replica de forma idéntica en todos los nodos en los que está. Pero
+cada apunte, cada nueva operación, nuevo bloque, se produce también en todos ellos.
+No hay una sola entidad que tenga la información, sino que esta está distribuida en copias
+actualizadas en tiempo real entre todos los nodos. Imagina una construcción de bloques
+de Lego. Cada bloque es una operación y cada vez que se pone un bloque nuevo, ese bloque
+contiene toda la información de todo lo anterior, que no se puede modificar ni borrar. ¿Cómo
+se acepta que a todos los nodos de la cadena les pongan un bloque nuevo? Ahí está la
+clave. Blockchain plantea un reto matemático a los nodos y el primero que lo resuelva envía
+la solución única, pues es matemática, a todos los demás. Si la mayoría certifican
+que el resultado es cierto, ese bloque es aceptado por todos y pasa a formar parte de
+la cadena con toda la información anterior y la certificación imborrable como un sello
+del momento en el que se hizo esa operación. Así la red funciona por consenso entre las
+partes. Es inviolable. Una vez aprobada una operación en ese libro maestro ya no se puede
+eliminar ni modificar. En una frase. Blockchain reemplaza la confianza por la verdad matemática.
+Adiós al fraude, todo es transparente y auditable, por todo es en directo y blockchain es seguridad
+plena. Todo va encriptado con criptografía asimétrica. Otra de las grandes promesas
+de blockchain son los contratos inteligentes o smart contracts. En vez de firmar un papel
+y que haya un tercero, ya sea un notario o un juez, que vele porque ese contrato se cumpla,
+al firmar un smart contract lo que haces es dar el ok a una aplicación. Es un contrato
+que se auto ejecuta cuando se cumplen las condiciones firmadas por las dos partes, pero
+vamos a ver mejor blockchain a través de ejemplos. Compras un billete de avión por 100 euros
+para ir a París, pero añades un seguro de 10 euros que dice que si el vuelo sale con
+más de dos horas de retraso, te devuelven el importe íntegro. Cuando estás esperando
+el vuelo, pasan dos horas sin que despegue, ves en tu iPad que te acaba de llegar al
+banco una transferencia de 110 euros. Nadie dio la orden. La base de datos oficial vinculada
+al contrato inteligente fue la condición cumplida para que el sistema te indemnice
+sin que ningún humano mueva un solo papel. Imagina el ahorro de trámites a la compañía
+y el ahorro de papeleos, el ahorro de tiempo para ti y para ellos y de cabreos que te ahorras
+y de poner reclamaciones, etc. ¿Y si aseguras tu coche que en pocos años estará lleno
+de sensores y cámaras? Aquí mezclamos internet de las cosas con blockchain. Si les das acceso,
+las aseguradoras podrán cobrarte menos porque ellos verán en directo que conduces muy prudente
+o que solo lo usas dos horas y 22 minutos a la semana. No habrá fraude ni te evaluarán
+por lo que digas que pasó. Desaparecerá gran parte del trabajo de los peritos porque
+la mayoría de la información la tendrán en tiempo real, desde cómo fue el accidente
+a cuáles son los daños según relaten los sensores y cámaras. Blockchain hará imposible
+que alguien compre un décimo de lotería para blanquear sin dejar rastro. A un afortunado
+esto no le va a gustar. También hay grandes aplicaciones para el periodismo. Hoy las comisiones
+y la gestión hacen que no compense vender un producto por menos de un euro. La eficiencia
+de blockchain permitirá micropagos de un céntimo por leer un artículo y podrá ser
+el propio periodista quien lo cobre sin que intervenga un medio. Podrá haber un gran
+kiosco donde cada medio u autor cobren la cantidad exacta en función del tiempo que
+un lector pase leyéndolos. Habrá mejor periodismo. Se terminará el fraude del clickbait o noticias
+table porque los medios no buscarán el click sino que pasemos tiempo en su página. Cobrarán
+de anunciantes o de lectores por el tiempo de visualización y no por el número de clics.
+Transparencia en donaciones a ONG. Puedes ver y rastrear tu dinero desde que lo donas
+hasta que el dinero llega al proyecto y el proyecto se termina. Transparencia absoluta.
+Y para los temas de facturación, cuando un autónomo emita una factura, la cobrará en
+directo y Hacienda se llevará el IVA y el IRPF también en ese instante. Adiós a la
+corrupción, fin de las facturas duplicadas y de otros sanchullos. Esto mismo va a pasar
+en las administraciones y en las empresas. En el crowdfunding, un contrato inteligente
+permitirá que si el proyecto que cientos de personas te han respaldado financiándotelo
+no se hace en el tiempo que has marcado, el dinero se devuelve automáticamente a todos
+ellos sin que una persona tenga que dedicar ni un segundo a gestionarlo y sin dar explicaciones.
+El voto en las elecciones con blockchain será más seguro, más rápido de contar en directo
+y todos podrán auditarlo. Periodistas, gobiernos, partidos políticos, incluso tú podrás comprobar
+que tu voto fue el que querías haciendo una consulta en directo a la base de datos que
+solamente puedes hacer tú. En Australia el gobierno está metiendo los videos de la policía
+en blockchain para asegurarse de que no se alteran. En 2020 Dubai trasladará todos sus
+documentos públicos a una blockchain y no usará más papel. El gobierno calcula que
+liberará 25 millones de horas al año de personas dedicadas a gestionar documentos
+guardados. Y para la cultura, un fotógrafo o un músico pueden ya monetizar sus imágenes
+y sus canciones con plataformas que garantizan con blockchain que el autor es quien vende
+los derechos y le hacen llegar el dinero que genera su uso al precio que el ponga. Se evita
+averiguar quién tiene esos derechos y se paga y se cobra automáticamente, entre máquinas
+y sin intermediarios. Esta descentralización les llegará también a Google, a Facebook,
+que son hoy jardines vallados en los que pasamos muchísimo tiempo. Se les va a acabar el negocio
+de comercializar con nuestros datos. ¿Y en el comercio electrónico cómo afectará?
+También con descentralización. ¿Cuál es la clave del comercio electrónico? La confianza.
+Quien venda algo físico no dependerá tanto de Amazon para hacerlo. El papel de garante
+que hoy tiene Amazon no será importante porque clientes y comercios no necesitan fiarse de
+la otra parte gracias a que blockchain suple esa confianza. Un ejemplo. Compras y tu dinero
+va a una cuenta puente y sólo cuando tú confirmas que has recibido el pedido correctamente
+el dinero sale de la cuenta a la cuenta del vendedor. Otro avance brutal es el tema de
+tu identidad única y sólo en tus manos y no en las de terceros. ¿Imaginas ver cualquier
+cosa en internet y darle a comprar sin darte de alta en ningún sitio, sin poner 27 veces
+tu dirección física ni tu tarjeta de crédito? Un clic, ¡plas! Y en unas horas el producto
+en tu casa. Todos tendríamos una identidad digital propia, un identificador único que
+no pasaría a ser propiedad de nadie, sólo lo aportaríamos de manera privada con cada
+transacción. Comprarás una bici con GPS que el fabricante registra con un número
+único al hacerla y se registra qué tienda la vende y por supuesto que tú eres el dueño
+cuando la compras. No tendrá sentido que te la roben porque además de que estará geolocalizada
+blockchain avala que tú eres el dueño. En cambio si la quieres alquilar haces un contrato
+por unas horas con un particular y se la alquilas. Suya será la bici durante ese tiempo y suya
+la responsabilidad. Quien dice tu bici dice tu coche o tu casa. Salto gigante para la
+economía colaborativa. Imagina un mundo en el que todos podemos alquilar de todo sin
+que necesitemos Airbnb, Blablacar o Cabify porque todo estará conectado y geolocalizado.
+Hemos visto muchos ejemplos y hemos entendido por encima cómo funciona blockchain. Es difícil
+y si eres un torpe con orejas como yo quizá te flote la duda de la seguridad y del anonimato.
+Todo esto funciona gracias también a la criptografía. La criptografía es el arte de transformar
+un mensaje elegible en uno elegible y único. A eso se llama cifrado. Tú metes un dato,
+por ejemplo un texto, la palabra perro, y eso se cifra de forma hexadecimal, es decir,
+se le aplica una doble fórmula matemática que lo convierte en una combinación de cifras
+y letras ininteligibles. El resultado es lo que se llama un hash de 256 bits y tiene esta
+pinta tan fea. El hash es único, pero ¿y si alguien averigua la función matemática?
+El sistema es mucho más complejo porque usa criptografía asimétrica. Todos sabéis de
+lo que es la criptografía asimétrica, ¿no? Vamos a hacerlo claro por si acaso hubiera
+algún torpecillo. Hay una clave pública para cifrar un mensaje y otra clave privada
+para descifrarlo. Si Carlos envía un mensaje a María, Carlos solo tiene que saber la clave
+pública de María y podrá enviárselo cifrado. Solo María, con su clave privada, puede descifrarlo.
+La clave pública es lo que permitirá que todos sepan que una empresa ha vendido una
+bici, pero que solo el comprador pueda ver con su clave privada todos los datos de esa
+factura y cada eslabón de esa cadena, Hacienda, la tienda de bicis, sus proveedores, el cliente,
+podrán acceder con transparencia a la parte de la información que les corresponda y no al resto.
+El fabricante no podrá ver ni el nombre ni ningún dato del comprador final, por ejemplo.
+¿Qué te parece? Ciencia ficción, ¿no? Pues es presente. De aquí a 4 o 5 años,
+el mundo en el que vivimos no lo va a conocer ni la madre que te parió. Las empresas serán
+más eficientes, los productos y servicios serán mejores, los compraremos más baratos y todo será
+personalizado de forma literal. Habrá un producto para cada persona y a un precio mucho mejor.
+¿No te mueres de ganas de verlo?

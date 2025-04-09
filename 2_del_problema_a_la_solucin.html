@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>2. Del problema a la solución | La solución: una base de datos </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Belén Lara Aznar" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<link rel="stylesheet" type="text/css" href="udl-content.css" />
+<script type="text/javascript" src="udl-content.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-5"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">La solución: una base de datos</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Del dato a la solución</a></li>
+   <li><a href="1_del_dato_al_conocimiento_el_poder_de_la_informacin.html" class="no-ch">1. Del dato al conocimiento: el poder de la información</a></li>
+   <li id="active"><a href="2_del_problema_a_la_solucin.html" class="active daddy">2. Del problema a la solución</a>
+   <ul>
+      <li><a href="21_fundamentos_de_las_bases_de_datos_lo_esencial_para_empezar.html" class="no-ch">2.1 Fundamentos de las bases de datos: lo esencial para empezar</a></li>
+   </ul>
+   </li>
+   <li><a href="3_de_las_ideas_al_diseo_construimos_el_modelo_de_datos.html" class="daddy">3. De las ideas al diseño: construimos el modelo de datos</a>
+   <ul class="other-section">
+      <li><a href="31_dibuja_tu_base_de_datos_el_modelo_conceptual.html" class="no-ch">3.1 Dibuja tu base de datos: el modelo conceptual</a></li>
+      <li><a href="32_de_los_esquemas_al_sistema_crea_las_tablas_y_normaliza_tu_base_de_datos.html" class="no-ch">3.2 De los esquemas al sistema: crea las tablas y normaliza tu base de datos</a></li>
+   </ul>
+   </li>
+   <li><a href="4_del_diagrama_al_cdigo_bienvenido_a_sql.html" class="daddy">4. Del diagrama al código: bienvenido a SQL</a>
+   <ul class="other-section">
+      <li><a href="41_cuando_los_datos_crecen_big_data_y_nuevas_formas_de_almacenarlos.html" class="no-ch">4.1 Cuando los datos crecen: Big Data y nuevas formas de almacenarlos</a></li>
+   </ul>
+   </li>
+   <li><a href="5_finalicemos_el_proyecto.html" class="no-ch">5. Finalicemos el proyecto</a></li>
+   <li><a href="9_conclusin.html" class="no-ch">9. Conclusión</a></li>
+   <li><a href="crditos.html" class="no-ch">Créditos</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="1_del_dato_al_conocimiento_el_poder_de_la_informacin.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><span class="page-counter">Página <strong>3</strong> de <strong>12</strong></span> <span class="sep">| </span><a href="21_fundamentos_de_las_bases_de_datos_lo_esencial_para_empezar.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">2. Del problema a la solución</h1></header>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id20">
+<div class="iDevice emphasis0" >
+<div id="ta20_738_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p style="text-align: justify;"><img src="retor_adultos_conbocadillo.gif" alt="Rétor dice:" title="Rétor dice:" style="float: left;" width="125" height="125">Antes de construir una base de datos, primero debemos <strong>entender qué problema queremos resolver</strong>. Esta fase es clave: si no analizamos bien los requisitos, es muy fácil que nuestra solución no funcione como debería. En este bloque serás como un analista de sistemas: observarás el problema, identificarás <em>qué datos son necesarios</em>, y empezarás a<em> pensar cómo podrías organizarlos</em>.</p>
+<p style="text-align: justify;">Pasarás por <strong>tres etapas</strong>: definir los requisitos, analizar la información relevante y hacer un primer esquema de cómo podría estructurarse tu base de datos. ¡Es el primer paso para construir una solución efectiva!</p></div></div></section></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper UDLcontentIdevice em_iDevice em_iDevice_udl_exp_grupoheterogeneo" id="id27">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">1. ¿Qué requisitos hemos de cumplir?</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta27_745_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-expression"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p style="text-align: justify;"><img src="IMG_PRO2BAC_REA04_CREATIVO.webp" alt="Persona creativa con cabeza iluminada por idea" title="Creativo" style="float: right; margin-right: 10px; margin-left: 10px;" width="400" height="299"></p>
+<p>Antes de diseñar cualquier base de datos o aplicación, el primer paso es <strong>entender bien el problema</strong> que vamos a resolver. Para ello, debemos analizar con detalle qué necesita nuestro cliente, qué datos son importantes y qué funciones debe tener el sistema.</p>
+<p>En esta fase de <strong>análisis de requisitos</strong>, el equipo de desarrollo trabaja junto al cliente para recopilar toda la información necesaria. El objetivo es redactar un documento claro y consensuado con los <strong>requisitos funcionales</strong> del sistema.</p>
+<p>Vamos a practicar este proceso con un encargo simulado: <strong>una empresa necesita una aplicación para gestionar su agenda de clientes</strong>. Antes de la reunión con el cliente, vuestro equipo hace una lluvia de ideas con posibles funcionalidades. A continuación tienes una lista con esas propuestas. Lee con atención y <strong>selecciona únicamente aquellas que sean relevantes y coherentes con el encargo recibido</strong>. Desestima aquellas que no se ajusten al problema planteado.</p>
+<hr>
+<h3><i class="icon fas fa-tasks"></i> Escenario del proyecto</h3>
+<p><strong>Proyecto:</strong> Aplicación para gestionar una agenda de clientes de una empresa.</p>
+<p><strong>Funcionalidad principal:</strong> Almacenar datos de personas y consultarlos posteriormente.</p>
+<hr>
+<h3><i class="icon fas fa-check-square"></i> Posibles requisitos del sistema</h3>
+<ul>
+<li>El programa será una agenda de clientes que permitirá guardar datos personales y consultarlos más adelante.</li>
+<li>El programa pedirá un inicio de sesión.</li>
+<li>Deberá mostrar, para cada persona, el nombre, los apellidos, el DNI, la fecha de nacimiento, el teléfono, el correo electrónico, la dirección postal y los servicios contratados.</li>
+<li>Permitirá localizar a personas que cumplan años en el próximo mes.</li>
+<li>Los datos obligatorios serán el DNI, el nombre, el primer apellido y el servicio contratado. El resto serán opcionales.</li>
+<li>Permitirá grabar una cantidad elevada de datos.</li>
+<li>Los datos se almacenarán en un fichero local para poder consultarlos en futuras sesiones.</li>
+<li>Permitirá hacer búsquedas por cualquier dato personal: DNI, nombre o apellidos.</li>
+<li>Permitirá buscar por tipo de producto para listar los clientes que lo han contratado.</li>
+<li>Debe almacenar las últimas 10 búsquedas realizadas por el usuario.</li>
+<li>El programa también gestionará los servicios ofrecidos por la empresa: se almacenará el código de la actividad y su descripción (ambos campos obligatorios).</li>
+<li>Hará visibles los precios abonados por el cliente.</li>
+</ul>
+<div style="background-color: #f0f9ff; border: 1px solid #0077b6; padding: 15px; border-radius: 8px;">
+<h3 style="color: #0077b6;"><i class="fas fa-pencil-alt"></i> Tu tarea</h3>
+<p>Selecciona de la lista anterior los <strong>requisitos que consideras coherentes con el encargo</strong>. Justifica por qué los eliges y por qué descartas los demás.</p>
+<p>Puedes presentar tu análisis como una <strong>tabla con dos columnas</strong>: “Requisito aceptado” / “Requisito descartado” y un breve motivo.</p>
+<p>Este análisis será la base para diseñar tu base de datos más adelante, así que tómate tu tiempo para reflexionar con tu equipo.</p>
+</div></div></div></section><section class="exe-udlContent-block js-hidden"><header class="exe-udlContent-header exe-udlContent-character-4"><h2>¿Cuáles habéis seleccionado?</h2></header><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>A tener en cuenta:</p>
+<p style="text-align: justify;">Nuestro programa estará instalado en la propia empresa donde solo hay un trabajador gestor de clientes, por lo que no necesita como requisito específico usar usuarios y contraseñas. Tampoco tiene la finalidad de bonificar a los clientes, por lo que no necesitamos saber su cumpleaños. La agenda de clientes no gestiona las facturas (podría plantearse como un módulo aparte en un futuro), así entonces no puede calcular importes abonados por los clientes (no es su principal objetivo). Finalmente, no necesitamos guardar las últimas búsquedas realizadas por el gestor de clientes, ya que no nos porporciona ningún beneficio adicional sobre la funcionalidad del software contratado por el cliente.<br>No obstante todas las funcionalidades especificadas, los detalles de los requisitos que puedan parecer no del todo concretos y las dudas <strong>se deben resolver en reuniones con el cliente</strong>. Esto permitirá afinar detalles y evitará malentendidos y posteriores exigencias de ampliación de funcionalidades, más allá de lo contratado.</p></div></div></section></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper UDLcontentIdevice em_iDevice em_iDevice_udl_exp_actividad" id="id29">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">2. Del qué al cómo: pensando como analistas</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta29_734_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-expression"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p style="text-align: justify;"><img src="IMG_PRO2BAC_REA04_agreement.jpg" alt="Imagen estrechando dos manos mostrando acuerdo." title="Acuerdos" style="float: right; margin-right: 10px; margin-left: 10px;" width="332" height="221"></p>
+<p>Ya conoces los requisitos generales del sistema. Sin embargo, a menudo <strong>una especificación poco precisa puede llevar a malentendidos técnicos</strong> o a implementar funciones que el cliente no necesita o no entiende de la misma forma.</p>
+<p>En esta fase actuarás como un verdadero <strong>analista funcional</strong>: deberás realizar una <strong>lectura crítica y detallada</strong> de los requisitos definidos en la actividad anterior y detectar posibles ambigüedades que haya que aclarar antes de comenzar a diseñar o programar.</p>
+<p>El objetivo es tomar decisiones claras sobre <strong>cómo debe comportarse el sistema</strong> en distintas situaciones. Esta fase puede marcar la diferencia entre una aplicación funcional y una confusa.</p>
+<p style="font-style: italic; color: #555;">💡 <strong>¿Sabías que...?</strong> El analista es la persona encargada de hablar con el cliente, observar cómo trabaja y formular las preguntas adecuadas para que el proceso de especificación de requisitos sea lo más correcto y detallado posible.</p>
+<hr>
+<div style="background-color: #f0f9ff; border: 1px solid #0077b6; padding: 15px; border-radius: 8px;">
+<h3 style="color: #0077b6;"><i class="fas fa-search"></i> Actividad: Resolviendo ambigüedades</h3>
+<p>Responde con precisión a las siguientes preguntas. Algunas pueden tener múltiples opciones válidas, pero deberás justificar tu elección. Recuerda: tus respuestas influirán directamente en el <strong>diseño de la base de datos y el comportamiento del programa</strong>.</p>
+<ol>
+<li><strong>¿Sólo se podrán visualizar datos realizando una búsqueda por datos personales?</strong><br>¿O también por otros criterios?</li>
+<li><strong>¿Qué datos se mostrarán de cada cliente cuando se realiza una búsqueda?</strong> ¿Todos los campos? ¿Solo algunos?</li>
+<li><strong>¿Las búsquedas serán exactas o se permitirá buscar por fragmentos?</strong> (Ej. buscar "Gonz" para encontrar "González")</li>
+<li><strong>¿Los datos se guardarán automáticamente o tras pulsar una opción específica?</strong></li>
+<li><strong>¿Se permitirá modificar o eliminar datos ya guardados?</strong></li>
+<li><strong>¿Cómo se dará de alta un nuevo servicio de la empresa?</strong> ¿Dónde se introducen esos datos? ¿Qué campos son obligatorios?</li>
+<li><strong>¿Se podrán eliminar servicios?</strong> ¿Cómo?</li>
+<li><strong>¿El código del servicio se generará automáticamente o lo decidirá el usuario?</strong> ¿Qué formato tendrá?</li>
+<li><strong>¿Cómo se mostrará la información por pantalla?</strong> ¿Una sola línea por cliente, varias líneas, por campos separados…?</li>
+<li><strong>¿La búsqueda por tipo de producto será por código, por nombre o por ambos?</strong></li>
+</ol>
+</div></div></div></section><section class="exe-udlContent-block js-hidden"><header class="exe-udlContent-header exe-udlContent-character-3"><h2>Aplicación a la realidad</h2></header><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Es importante pensar en cómo podremos aplicar todo lo que aprendemos a nuestra vida real, a nuestro día a día. Así, trasladando el proceso que acabamos de presentar, en la realización de un proyecto real es habitual volver varias veces a la fase de análisis, por eso es deseable realizar varias reuniones con el cliente entre fase y fase para que las necesidades y carencias puedan detectarse rápidamente. Por ejemplo: Si el proyecto durase varios meses, son deseables reuniones cada dos semanas ya que esto evitará costes adicionales de tener que volver atrás por malentendidos.</p></div></div></section></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper UDLcontentIdevice em_iDevice em_iDevice_udl_exp_escribe" id="id30">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">3. Esquema visual del sistema: primer diseño del programa</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta30_734_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-expression"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>A veces, los documentos técnicos con descripciones extensas no son fáciles de entender para todos los perfiles, especialmente si no tienen formación en informática. Por eso, una excelente forma de comunicar qué hace un sistema es mediante un <strong>diagrama de casos de uso</strong>.</p>
+<p>Este tipo de diagrama nos permite representar de forma <strong>visual, sencilla y estructurada</strong> qué funciones ofrece un sistema y quién puede realizarlas. Es una herramienta muy usada en la fase de análisis, tanto en entornos profesionales como educativos.</p>
+<hr>
+<h3><i class="fas fa-project-diagram"></i> ¿Qué es un diagrama de casos de uso?</h3>
+<p>Un <strong>diagrama de casos de uso</strong> es un esquema que representa:</p>
+<ul>
+<li><strong>Los actores:</strong> personas o sistemas que interactúan con la aplicación.</li>
+<li><strong>Las acciones (casos de uso):</strong> las funciones que pueden realizar en el sistema.</li>
+<li><strong>El sistema:</strong> representado como un rectángulo que contiene todas las acciones disponibles.</li>
+</ul>
+<p>Se utiliza habitualmente para mostrar de forma simple cómo debe funcionar un programa desde el punto de vista del usuario, especialmente en las primeras fases del proyecto.</p>
+<hr>
+<div style="background-color: #f0f9ff; border: 1px solid #0077b6; padding: 15px; border-radius: 8px;">
+<h3 style="color: #0077b6;"><i class="fas fa-pencil-ruler"></i> Tu tarea</h3>
+<p>Crea un <strong>diagrama de casos de uso</strong> que represente el sistema que estás diseñando para gestionar la agenda de clientes. Sigue estos pasos:</p>
+<ol>
+<li>Dibuja un <strong>rectángulo</strong> que represente el sistema completo (la aplicación).</li>
+<li>Dentro, coloca <strong>elipses</strong> con las acciones principales (buscar cliente, añadir datos, modificar, eliminar, etc.).</li>
+<li>Fuera del rectángulo, dibuja los <strong>actores</strong> (por ejemplo, administrador, usuario...).</li>
+<li>Conecta cada actor con las acciones que puede realizar mediante líneas.</li>
+</ol>
+<p>Para hacer el diagrama debes usar una herramienta digital como <a href="https://app.diagrams.net" target="_blank" rel="noopener">draw.io (diagrams.net)</a>.</p>
+<p><strong>Debes entregar:</strong></p>
+<ul>
+<li>✅ Una <strong>imagen del diagrama</strong>.</li>
+<li>✅ Una <strong>explicación breve</strong> (máx. 150 palabras) del funcionamiento general del sistema y de los actores que has incluido.</li>
+</ul>
+</div></div></div></section><section class="exe-udlContent-block js-hidden"><header class="exe-udlContent-header exe-udlContent-character-3"><h2>¿Quieres ver un ejemplo resuelto?</h2></header><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p style="text-align: center;"><img src="IMG_PRO2BAC_REA04_diagrama_caso_de_uso.svg" alt="Diagrama de casos de ejemplo de un restaurante" title="Diagramad e casos de uso" width="498" height="359" style="float: left;"></p>
+<h3>Ejemplo resuelto: Diagrama de casos de uso de un restaurante</h3>
+<p>Para ayudarte a entender mejor qué se espera en esta actividad, aquí tienes un <strong>ejemplo resuelto</strong> de un sistema simplificado sobre un restaurante.</p>
+<p>Este diagrama muestra los actores principales (el chef y el crítico de comidas) y las acciones que pueden realizar dentro del sistema.</p>
+<p>Observa cómo:</p>
+<ul>
+<li>El sistema está representado como un <strong>rectángulo</strong> que contiene las acciones.</li>
+<li>Las <strong>acciones (casos de uso)</strong> están escritas en <strong>elipses</strong>, como "Probar la comida" o "Pagar la comida".</li>
+<li>Los <strong>actores</strong> están fuera del sistema (chef y crítico) y conectados a las acciones que pueden realizar.</li>
+</ul>
+<p>Este tipo de esquema es muy útil para <strong>visualizar el comportamiento de un sistema sin necesidad de escribir código</strong>. También permite que personas no técnicas (clientes, responsables de proyecto…) entiendan qué hace exactamente una aplicación antes de desarrollarla.</p>
+<p>Tú deberás hacer algo similar con tu propio proyecto. Este esquema te servirá como base para diseñar más adelante el <strong>modelo de datos</strong> con entidades y relaciones.</p>
+<div id="te63a3f34-cb51-e0d5-3227-0ac45114f7b8" class="exe-tooltip-text">
+<p>Es un diagrama que describe el comportamiento que tiene el software en respuesta a eventos realizados por actores externos.</p>
+</div></div></div></section><section class="exe-udlContent-block js-hidden"><header class="exe-udlContent-header exe-udlContent-character-4"><h2>Algunas pistas</h2></header><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Ten en cuenta a la hora de hacer el diagrama para nuestro cliente:</p>
+<ul>
+<li>Necesitaremos representar al <strong>empleado</strong> que se encargará de los clientes y al administrador del sistema.</li>
+<li>El <strong>administrador</strong> podrá realizar las mismas operaciones que el cliente pero además deberá poder borrar clientes y servicios de la empresa. ¿Debería poder hacerlo también el empleado?</li>
+</ul></div></div></section></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id18">
+<div class="iDevice emphasis0" >
+<div id="ta18_736_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p><img src="retor_adultos_conbocadillo.gif" alt="Rétor dice:" title="Rétor dice:" style="float: left;" width="125" height="125"></p>
+<h3>¿Y ahora qué?</h3>
+<p>Después de analizar el problema, definir los requisitos y representar las funcionalidades del sistema, ya estás en condiciones de identificar la herramienta clave que hará posible todo esto: <strong>las bases de datos</strong>.</p>
+<p>Será el motor que permitirá almacenar, organizar y consultar la información que gestionará tu aplicación. A partir del siguiente bloque vas a aprender a <strong>crear bases de datos relacionales, diseñar sus estructuras y manipular la información con SQL</strong>.</p>
+<p>Prepárate, porque el siguiente paso te permitirá construir una solución sólida, eficaz y... 100% funcional. ¡Vamos a por ello!</p></div></div></section></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="1_del_dato_al_conocimiento_el_poder_de_la_informacin.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><span class="page-counter">Página <strong>3</strong> de <strong>12</strong></span> <span class="sep">| </span><a href="21_fundamentos_de_las_bases_de_datos_lo_esencial_para_empezar.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_intef_js.js"></script></body></html>

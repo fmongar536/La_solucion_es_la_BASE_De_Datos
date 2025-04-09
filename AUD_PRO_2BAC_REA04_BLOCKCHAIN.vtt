@@ -1,0 +1,377 @@
+WEBVTT
+
+00:00.000 --> 00:08.920
+De hoy en adelante, la palabra blockchain va a ser una de las que más escuches primero
+
+00:08.920 --> 00:14.280
+y pronuncies después. Y eso será este año y durante muchos años más. Porque blockchain,
+
+00:14.280 --> 00:19.000
+del inglés cadena de bloques, es una tecnología que va a cambiar el mundo más de lo que lo
+
+00:19.000 --> 00:23.720
+dice internet. Sí, más de lo que lo dice internet. Y va a ser para bien de personas
+
+00:23.720 --> 00:29.040
+y de empresas. Blockchain es el mayor avance tecnológico que vivirá la humanidad. Es
+
+00:29.040 --> 00:34.600
+la cuarta revolución industrial. El origen de blockchain es la criptomoneda bitcoin,
+
+00:34.600 --> 00:39.480
+que es el primer ejemplo de blockchain o cadena de bloques. El que ha permitido pensar en
+
+00:39.480 --> 00:46.120
+usar su protocolo para miles de cosas más. Hemos conocido el internet de la información.
+
+00:46.120 --> 00:52.280
+Ahora vamos al internet del valor. El concepto no es fácil, pero si lo entendéis os vais
+
+00:52.280 --> 00:59.880
+a relamer al imaginar todo lo bueno que blockchain nos traerá a nuestras vidas. Y lo más apasionante
+
+00:59.880 --> 01:05.640
+no es su estructura, que es difícil de entender, sino sus aplicaciones. Alucinantes. Pero antes
+
+01:05.640 --> 01:10.560
+sepamos qué es blockchain. Blockchain es, como su nombre indica, una cadena de bloques.
+
+01:10.560 --> 01:14.760
+Hasta ahora todo se regía por bases de datos centralizadas. Una blockchain es una base
+
+01:14.760 --> 01:19.360
+de datos distribuida. ¿Y eso qué es lo que es? Pues una base de datos que no está en
+
+01:19.360 --> 01:25.120
+un solo sitio, sino que está repartida en distintos ordenadores o nodos, que son todos
+
+01:25.120 --> 01:30.400
+igual de importantes. Imagínate un libro de contabilidad. Blockchain es un libro de
+
+01:30.400 --> 01:36.240
+contabilidad que se replica de forma idéntica en todos los nodos en los que está. Pero
+
+01:36.240 --> 01:41.640
+cada apunte, cada nueva operación, nuevo bloque, se produce también en todos ellos.
+
+01:41.640 --> 01:46.320
+No hay una sola entidad que tenga la información, sino que esta está distribuida en copias
+
+01:46.320 --> 01:52.160
+actualizadas en tiempo real entre todos los nodos. Imagina una construcción de bloques
+
+01:52.160 --> 01:57.560
+de Lego. Cada bloque es una operación y cada vez que se pone un bloque nuevo, ese bloque
+
+01:57.560 --> 02:03.920
+contiene toda la información de todo lo anterior, que no se puede modificar ni borrar. ¿Cómo
+
+02:03.920 --> 02:08.480
+se acepta que a todos los nodos de la cadena les pongan un bloque nuevo? Ahí está la
+
+02:08.480 --> 02:15.560
+clave. Blockchain plantea un reto matemático a los nodos y el primero que lo resuelva envía
+
+02:15.560 --> 02:21.720
+la solución única, pues es matemática, a todos los demás. Si la mayoría certifican
+
+02:21.720 --> 02:27.080
+que el resultado es cierto, ese bloque es aceptado por todos y pasa a formar parte de
+
+02:27.080 --> 02:32.720
+la cadena con toda la información anterior y la certificación imborrable como un sello
+
+02:32.720 --> 02:37.360
+del momento en el que se hizo esa operación. Así la red funciona por consenso entre las
+
+02:37.360 --> 02:43.080
+partes. Es inviolable. Una vez aprobada una operación en ese libro maestro ya no se puede
+
+02:43.080 --> 02:50.560
+eliminar ni modificar. En una frase. Blockchain reemplaza la confianza por la verdad matemática.
+
+02:50.560 --> 02:55.680
+Adiós al fraude, todo es transparente y auditable, por todo es en directo y blockchain es seguridad
+
+02:55.680 --> 03:00.640
+plena. Todo va encriptado con criptografía asimétrica. Otra de las grandes promesas
+
+03:00.640 --> 03:05.400
+de blockchain son los contratos inteligentes o smart contracts. En vez de firmar un papel
+
+03:05.400 --> 03:11.040
+y que haya un tercero, ya sea un notario o un juez, que vele porque ese contrato se cumpla,
+
+03:11.040 --> 03:15.320
+al firmar un smart contract lo que haces es dar el ok a una aplicación. Es un contrato
+
+03:15.320 --> 03:21.360
+que se auto ejecuta cuando se cumplen las condiciones firmadas por las dos partes, pero
+
+03:21.360 --> 03:25.600
+vamos a ver mejor blockchain a través de ejemplos. Compras un billete de avión por 100 euros
+
+03:25.600 --> 03:29.640
+para ir a París, pero añades un seguro de 10 euros que dice que si el vuelo sale con
+
+03:29.640 --> 03:34.120
+más de dos horas de retraso, te devuelven el importe íntegro. Cuando estás esperando
+
+03:34.120 --> 03:39.160
+el vuelo, pasan dos horas sin que despegue, ves en tu iPad que te acaba de llegar al
+
+03:39.160 --> 03:45.160
+banco una transferencia de 110 euros. Nadie dio la orden. La base de datos oficial vinculada
+
+03:45.160 --> 03:49.600
+al contrato inteligente fue la condición cumplida para que el sistema te indemnice
+
+03:49.600 --> 03:56.020
+sin que ningún humano mueva un solo papel. Imagina el ahorro de trámites a la compañía
+
+03:56.020 --> 04:02.520
+y el ahorro de papeleos, el ahorro de tiempo para ti y para ellos y de cabreos que te ahorras
+
+04:02.520 --> 04:08.640
+y de poner reclamaciones, etc. ¿Y si aseguras tu coche que en pocos años estará lleno
+
+04:08.640 --> 04:15.280
+de sensores y cámaras? Aquí mezclamos internet de las cosas con blockchain. Si les das acceso,
+
+04:15.280 --> 04:20.080
+las aseguradoras podrán cobrarte menos porque ellos verán en directo que conduces muy prudente
+
+04:20.080 --> 04:25.360
+o que solo lo usas dos horas y 22 minutos a la semana. No habrá fraude ni te evaluarán
+
+04:25.360 --> 04:30.080
+por lo que digas que pasó. Desaparecerá gran parte del trabajo de los peritos porque
+
+04:30.080 --> 04:34.440
+la mayoría de la información la tendrán en tiempo real, desde cómo fue el accidente
+
+04:34.440 --> 04:41.000
+a cuáles son los daños según relaten los sensores y cámaras. Blockchain hará imposible
+
+04:41.000 --> 04:46.280
+que alguien compre un décimo de lotería para blanquear sin dejar rastro. A un afortunado
+
+04:46.280 --> 04:51.560
+esto no le va a gustar. También hay grandes aplicaciones para el periodismo. Hoy las comisiones
+
+04:51.560 --> 04:55.360
+y la gestión hacen que no compense vender un producto por menos de un euro. La eficiencia
+
+04:55.360 --> 04:59.800
+de blockchain permitirá micropagos de un céntimo por leer un artículo y podrá ser
+
+04:59.800 --> 05:02.920
+el propio periodista quien lo cobre sin que intervenga un medio. Podrá haber un gran
+
+05:02.920 --> 05:07.560
+kiosco donde cada medio u autor cobren la cantidad exacta en función del tiempo que
+
+05:07.560 --> 05:12.960
+un lector pase leyéndolos. Habrá mejor periodismo. Se terminará el fraude del clickbait o noticias
+
+05:12.960 --> 05:19.280
+table porque los medios no buscarán el click sino que pasemos tiempo en su página. Cobrarán
+
+05:19.280 --> 05:25.680
+de anunciantes o de lectores por el tiempo de visualización y no por el número de clics.
+
+05:25.680 --> 05:31.240
+Transparencia en donaciones a ONG. Puedes ver y rastrear tu dinero desde que lo donas
+
+05:31.240 --> 05:36.960
+hasta que el dinero llega al proyecto y el proyecto se termina. Transparencia absoluta.
+
+05:36.960 --> 05:41.400
+Y para los temas de facturación, cuando un autónomo emita una factura, la cobrará en
+
+05:41.400 --> 05:47.240
+directo y Hacienda se llevará el IVA y el IRPF también en ese instante. Adiós a la
+
+05:47.240 --> 05:52.120
+corrupción, fin de las facturas duplicadas y de otros sanchullos. Esto mismo va a pasar
+
+05:52.120 --> 05:55.920
+en las administraciones y en las empresas. En el crowdfunding, un contrato inteligente
+
+05:55.920 --> 06:01.600
+permitirá que si el proyecto que cientos de personas te han respaldado financiándotelo
+
+06:01.600 --> 06:05.960
+no se hace en el tiempo que has marcado, el dinero se devuelve automáticamente a todos
+
+06:05.960 --> 06:11.640
+ellos sin que una persona tenga que dedicar ni un segundo a gestionarlo y sin dar explicaciones.
+
+06:11.640 --> 06:16.800
+El voto en las elecciones con blockchain será más seguro, más rápido de contar en directo
+
+06:16.800 --> 06:22.320
+y todos podrán auditarlo. Periodistas, gobiernos, partidos políticos, incluso tú podrás comprobar
+
+06:22.320 --> 06:26.360
+que tu voto fue el que querías haciendo una consulta en directo a la base de datos que
+
+06:26.360 --> 06:32.160
+solamente puedes hacer tú. En Australia el gobierno está metiendo los videos de la policía
+
+06:32.160 --> 06:36.880
+en blockchain para asegurarse de que no se alteran. En 2020 Dubai trasladará todos sus
+
+06:36.880 --> 06:42.480
+documentos públicos a una blockchain y no usará más papel. El gobierno calcula que
+
+06:42.480 --> 06:47.360
+liberará 25 millones de horas al año de personas dedicadas a gestionar documentos
+
+06:47.360 --> 06:53.680
+guardados. Y para la cultura, un fotógrafo o un músico pueden ya monetizar sus imágenes
+
+06:53.680 --> 06:58.680
+y sus canciones con plataformas que garantizan con blockchain que el autor es quien vende
+
+06:58.680 --> 07:02.840
+los derechos y le hacen llegar el dinero que genera su uso al precio que el ponga. Se evita
+
+07:02.840 --> 07:06.920
+averiguar quién tiene esos derechos y se paga y se cobra automáticamente, entre máquinas
+
+07:06.920 --> 07:12.040
+y sin intermediarios. Esta descentralización les llegará también a Google, a Facebook,
+
+07:12.040 --> 07:16.480
+que son hoy jardines vallados en los que pasamos muchísimo tiempo. Se les va a acabar el negocio
+
+07:16.480 --> 07:21.200
+de comercializar con nuestros datos. ¿Y en el comercio electrónico cómo afectará?
+
+07:21.200 --> 07:26.800
+También con descentralización. ¿Cuál es la clave del comercio electrónico? La confianza.
+
+07:26.800 --> 07:31.080
+Quien venda algo físico no dependerá tanto de Amazon para hacerlo. El papel de garante
+
+07:31.080 --> 07:36.200
+que hoy tiene Amazon no será importante porque clientes y comercios no necesitan fiarse de
+
+07:36.200 --> 07:43.840
+la otra parte gracias a que blockchain suple esa confianza. Un ejemplo. Compras y tu dinero
+
+07:43.840 --> 07:48.960
+va a una cuenta puente y sólo cuando tú confirmas que has recibido el pedido correctamente
+
+07:48.960 --> 07:54.600
+el dinero sale de la cuenta a la cuenta del vendedor. Otro avance brutal es el tema de
+
+07:54.600 --> 08:00.680
+tu identidad única y sólo en tus manos y no en las de terceros. ¿Imaginas ver cualquier
+
+08:00.680 --> 08:05.280
+cosa en internet y darle a comprar sin darte de alta en ningún sitio, sin poner 27 veces
+
+08:05.280 --> 08:11.000
+tu dirección física ni tu tarjeta de crédito? Un clic, ¡plas! Y en unas horas el producto
+
+08:11.000 --> 08:17.440
+en tu casa. Todos tendríamos una identidad digital propia, un identificador único que
+
+08:17.440 --> 08:23.200
+no pasaría a ser propiedad de nadie, sólo lo aportaríamos de manera privada con cada
+
+08:23.200 --> 08:28.880
+transacción. Comprarás una bici con GPS que el fabricante registra con un número
+
+08:28.880 --> 08:35.400
+único al hacerla y se registra qué tienda la vende y por supuesto que tú eres el dueño
+
+08:35.400 --> 08:41.480
+cuando la compras. No tendrá sentido que te la roben porque además de que estará geolocalizada
+
+08:41.480 --> 08:45.920
+blockchain avala que tú eres el dueño. En cambio si la quieres alquilar haces un contrato
+
+08:45.920 --> 08:52.320
+por unas horas con un particular y se la alquilas. Suya será la bici durante ese tiempo y suya
+
+08:52.320 --> 08:59.000
+la responsabilidad. Quien dice tu bici dice tu coche o tu casa. Salto gigante para la
+
+08:59.000 --> 09:04.520
+economía colaborativa. Imagina un mundo en el que todos podemos alquilar de todo sin
+
+09:04.520 --> 09:11.200
+que necesitemos Airbnb, Blablacar o Cabify porque todo estará conectado y geolocalizado.
+
+09:11.200 --> 09:16.680
+Hemos visto muchos ejemplos y hemos entendido por encima cómo funciona blockchain. Es difícil
+
+09:16.680 --> 09:23.000
+y si eres un torpe con orejas como yo quizá te flote la duda de la seguridad y del anonimato.
+
+09:23.000 --> 09:27.920
+Todo esto funciona gracias también a la criptografía. La criptografía es el arte de transformar
+
+09:27.920 --> 09:33.400
+un mensaje elegible en uno elegible y único. A eso se llama cifrado. Tú metes un dato,
+
+09:33.400 --> 09:39.160
+por ejemplo un texto, la palabra perro, y eso se cifra de forma hexadecimal, es decir,
+
+09:39.160 --> 09:43.760
+se le aplica una doble fórmula matemática que lo convierte en una combinación de cifras
+
+09:43.760 --> 09:49.560
+y letras ininteligibles. El resultado es lo que se llama un hash de 256 bits y tiene esta
+
+09:49.560 --> 09:56.760
+pinta tan fea. El hash es único, pero ¿y si alguien averigua la función matemática?
+
+09:56.760 --> 10:02.760
+El sistema es mucho más complejo porque usa criptografía asimétrica. Todos sabéis de
+
+10:02.760 --> 10:09.320
+lo que es la criptografía asimétrica, ¿no? Vamos a hacerlo claro por si acaso hubiera
+
+10:09.320 --> 10:14.000
+algún torpecillo. Hay una clave pública para cifrar un mensaje y otra clave privada
+
+10:14.000 --> 10:19.160
+para descifrarlo. Si Carlos envía un mensaje a María, Carlos solo tiene que saber la clave
+
+10:19.160 --> 10:24.880
+pública de María y podrá enviárselo cifrado. Solo María, con su clave privada, puede descifrarlo.
+
+10:24.880 --> 10:28.800
+La clave pública es lo que permitirá que todos sepan que una empresa ha vendido una
+
+10:28.800 --> 10:34.320
+bici, pero que solo el comprador pueda ver con su clave privada todos los datos de esa
+
+10:34.320 --> 10:40.040
+factura y cada eslabón de esa cadena, Hacienda, la tienda de bicis, sus proveedores, el cliente,
+
+10:40.040 --> 10:45.240
+podrán acceder con transparencia a la parte de la información que les corresponda y no al resto.
+
+10:45.240 --> 10:51.440
+El fabricante no podrá ver ni el nombre ni ningún dato del comprador final, por ejemplo.
+
+10:51.440 --> 11:00.000
+¿Qué te parece? Ciencia ficción, ¿no? Pues es presente. De aquí a 4 o 5 años,
+
+11:00.000 --> 11:05.640
+el mundo en el que vivimos no lo va a conocer ni la madre que te parió. Las empresas serán
+
+11:05.640 --> 11:11.400
+más eficientes, los productos y servicios serán mejores, los compraremos más baratos y todo será
+
+11:11.400 --> 11:17.240
+personalizado de forma literal. Habrá un producto para cada persona y a un precio mucho mejor.
+
+11:17.240 --> 11:21.160
+¿No te mueres de ganas de verlo?
+

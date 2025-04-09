@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>4.1 Cuando los datos crecen: Big Data y nuevas formas de almacenarlos | La solución: una base de datos </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Belén Lara Aznar" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<link rel="stylesheet" type="text/css" href="udl-content.css" />
+<script type="text/javascript" src="udl-content.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-12"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">La solución: una base de datos</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Del dato a la solución</a></li>
+   <li><a href="1_del_dato_al_conocimiento_el_poder_de_la_informacin.html" class="no-ch">1. Del dato al conocimiento: el poder de la información</a></li>
+   <li><a href="2_del_problema_a_la_solucin.html" class="daddy">2. Del problema a la solución</a>
+   <ul class="other-section">
+      <li><a href="21_fundamentos_de_las_bases_de_datos_lo_esencial_para_empezar.html" class="no-ch">2.1 Fundamentos de las bases de datos: lo esencial para empezar</a></li>
+   </ul>
+   </li>
+   <li><a href="3_de_las_ideas_al_diseo_construimos_el_modelo_de_datos.html" class="daddy">3. De las ideas al diseño: construimos el modelo de datos</a>
+   <ul class="other-section">
+      <li><a href="31_dibuja_tu_base_de_datos_el_modelo_conceptual.html" class="no-ch">3.1 Dibuja tu base de datos: el modelo conceptual</a></li>
+      <li><a href="32_de_los_esquemas_al_sistema_crea_las_tablas_y_normaliza_tu_base_de_datos.html" class="no-ch">3.2 De los esquemas al sistema: crea las tablas y normaliza tu base de datos</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="4_del_diagrama_al_cdigo_bienvenido_a_sql.html" class="current-page-parent daddy">4. Del diagrama al código: bienvenido a SQL</a>
+   <ul>
+      <li id="active"><a href="41_cuando_los_datos_crecen_big_data_y_nuevas_formas_de_almacenarlos.html" class="active no-ch">4.1 Cuando los datos crecen: Big Data y nuevas formas de almacenarlos</a></li>
+   </ul>
+   </li>
+   <li><a href="5_finalicemos_el_proyecto.html" class="no-ch">5. Finalicemos el proyecto</a></li>
+   <li><a href="9_conclusin.html" class="no-ch">9. Conclusión</a></li>
+   <li><a href="crditos.html" class="no-ch">Créditos</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="4_del_diagrama_al_cdigo_bienvenido_a_sql.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><span class="page-counter">Página <strong>9</strong> de <strong>12</strong></span> <span class="sep">| </span><a href="5_finalicemos_el_proyecto.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">4.1 Cuando los datos crecen: Big Data y nuevas formas de almacenarlos</h1></header>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id66">
+<div class="iDevice emphasis0" >
+<div id="ta66_736_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p style="text-align: justify;"><img src="retor_adultos_sin_bocadillo.gif" alt="Rétor dice:" title="Rétor dice:" style="float: left;" width="125" height="125"></p>
+<p>A lo largo del recurso has aprendido los fundamentos esenciales de cada fase del desarrollo de software, y ahora&nbsp;queremos detenernos en un aspecto muy relevante.</p>
+<p>Durante el proceso también has aprendido a diseñar aplicaciones apoyadas en <strong>bases de datos relacionales</strong>, pero ¿sabías que no son la única opción? Existen otras formas de almacenar y gestionar grandes cantidades de datos que cada vez son más utilizadas, especialmente en entornos donde los datos crecen a gran velocidad o tienen estructuras muy diversas.</p>
+<p>En este punto, conocerás brevemente algunas de estas alternativas mientras trabajas con la información que se te presenta sobre ellas. ¡Vamos a descubrir nuevas formas de organizar la información!</p></div></div></section></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice em_iDevice em_iDevice_edia" id="id76">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header" style="background-image:url(icon_edia.png)"><h1 class="iDeviceTitle">1. 🆚 Clásico vs Moderno: ¿SQL o NoSQL?</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta76_793_2" class="block iDevice_content">
+<div class="exe-text"><div style="background-color: #f2f7ff; border: 2px solid #3498db; padding: 20px; border-radius: 12px; text-align: center; max-width: 800px; margin: auto;">
+<h3 style="color: #2c3e50;">🎥 Equipo SQL vs Equipo NoSQL</h3>
+<p style="font-size: 15px;">¿Quieres entender las diferencias entre una base de datos relacional y una NoSQL? ¡Este vídeo lo explica con una dinámica muy divertida!</p>
+<div style="position: relative; display: inline-block; border-radius: 10px; overflow: hidden; box-shadow: 0px 4px 12px rgba(0,0,0,0.1);"><img src="https://img.youtube.com/vi/CuAYLX6reXE/0.jpg" alt="Miniatura del vídeo" style="width: 100%; max-width: 600px;" />
+<div style="position: absolute; top: 40%; left: 50%; transform: translate(-50%, -50%);"><img src="https://upload.wikimedia.org/wikipedia/commons/7/75/YouTube_social_white_squircle_%282017%29.svg" alt="Reproducir" style="width: 60px; opacity: 0.9;" /></div>
+</div>
+<p style="font-size: 13px; margin-top: 10px;"><em>*Recuerda que puedes activar los subtítulos del vídeo si lo necesitas.</em></p>
+</div>
+<hr />
+<p style="margin-top: 30px;">Tras ver el vídeo, observa ahora este <strong>cuadro comparativo</strong> con las características principales que diferencian las bases de datos SQL y NoSQL:</p>
+<table class="exe-table" style="width: 100%;">
+<thead>
+<tr>
+<th style="width: 25%;">Característica</th>
+<th style="width: 25%;">SQL</th>
+<th style="width: 50%;">NoSQL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Almacenamiento de datos</strong></td>
+<td>De manera estructurada</td>
+<td>Con su formato original</td>
+</tr>
+<tr>
+<td><strong>Capacidad de escalar</strong></td>
+<td>Baja (centralizadas)</td>
+<td>Alta (distribuidas y pensadas para Big Data)</td>
+</tr>
+<tr>
+<td><strong>Adaptación a los cambios</strong></td>
+<td>Poco y complejo</td>
+<td>Totalmente flexibles</td>
+</tr>
+<tr>
+<td><strong>Homogeneización</strong></td>
+<td>Estandarizadas</td>
+<td>No son homogéneas</td>
+</tr>
+<tr>
+<td><strong>Aplicaciones</strong></td>
+<td>De todo tipo</td>
+<td>Enfocadas al Big Data</td>
+</tr>
+<tr>
+<td><strong>Rapidez</strong></td>
+<td>Menor</td>
+<td>Mayor</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice em_iDevice" id="id77">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h1 class="iDeviceTitle">2. 📡 Conectando con el universo del Big Data</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta77_793_2" class="block iDevice_content">
+<div class="exe-text"><p><img src="IMG_PRO2BAC_REA04_BIG-DATA.jpg" width="50" height="221" style="margin-right: 50px; margin-left: 50px; float: left;" />En el apartado anterior hemos mencionado varias veces el <strong>Big Data</strong>. Pero, ¿qué es realmente? ¿para qué se utiliza?</p>
+<p>Observad a continuación, en equipo de trabajo, la siguiente infografía que nos explica qué es y varios aspectos del Big Data. De ella sacad la información necesaria para responder a las preguntas que se os plantean:</p>
+<ul>
+<li>¿Cuántos bytes de información se generan cada día en el mundo? ¿Cuántos ceros tiene esa cifra?</li>
+<li>¿Qué compañías menciona la infografía con la capacidad para ordenar, estructurar y buscar todos esos millones de millones (de millones) de bytes? ¿Conocéis alguna otra?</li>
+<li>¿Pensáis que el Big Data puede influir en que los científicos puedan calcular más precisamente el tiempo que va a hacer en tu ciudad? ¿Por qué?</li>
+</ul>
+<div style="text-align: center; margin-top: 20px;"><a href="IMG_PRO2BAC_REA04_BIG-DATA.jpg" target="_blank" style="text-decoration: none;" rel="noopener"> <button style="padding: 10px 20px; font-size: 16px; cursor: pointer;"> 📥 Ver infografía en nueva pestaña </button> </a></div></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="4_del_diagrama_al_cdigo_bienvenido_a_sql.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><span class="page-counter">Página <strong>9</strong> de <strong>12</strong></span> <span class="sep">| </span><a href="5_finalicemos_el_proyecto.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_intef_js.js"></script></body></html>

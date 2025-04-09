@@ -1,0 +1,898 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_effects.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>5. Finalicemos el proyecto | La solución: una base de datos </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Belén Lara Aznar" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_effects.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<link rel="stylesheet" type="text/css" href="udl-content.css" />
+<script type="text/javascript" src="udl-content.js"></script>
+<link rel="stylesheet" type="text/css" href="gameqp-activity.css" />
+<script type="text/javascript" src="quext-activity.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-10"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">La solución: una base de datos</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Del dato a la solución</a></li>
+   <li><a href="1_del_dato_al_conocimiento_el_poder_de_la_informacin.html" class="no-ch">1. Del dato al conocimiento: el poder de la información</a></li>
+   <li><a href="2_del_problema_a_la_solucin.html" class="daddy">2. Del problema a la solución</a>
+   <ul class="other-section">
+      <li><a href="21_fundamentos_de_las_bases_de_datos_lo_esencial_para_empezar.html" class="no-ch">2.1 Fundamentos de las bases de datos: lo esencial para empezar</a></li>
+   </ul>
+   </li>
+   <li><a href="3_de_las_ideas_al_diseo_construimos_el_modelo_de_datos.html" class="daddy">3. De las ideas al diseño: construimos el modelo de datos</a>
+   <ul class="other-section">
+      <li><a href="31_dibuja_tu_base_de_datos_el_modelo_conceptual.html" class="no-ch">3.1 Dibuja tu base de datos: el modelo conceptual</a></li>
+      <li><a href="32_de_los_esquemas_al_sistema_crea_las_tablas_y_normaliza_tu_base_de_datos.html" class="no-ch">3.2 De los esquemas al sistema: crea las tablas y normaliza tu base de datos</a></li>
+   </ul>
+   </li>
+   <li><a href="4_del_diagrama_al_cdigo_bienvenido_a_sql.html" class="daddy">4. Del diagrama al código: bienvenido a SQL</a>
+   <ul class="other-section">
+      <li><a href="41_cuando_los_datos_crecen_big_data_y_nuevas_formas_de_almacenarlos.html" class="no-ch">4.1 Cuando los datos crecen: Big Data y nuevas formas de almacenarlos</a></li>
+   </ul>
+   </li>
+   <li id="active"><a href="5_finalicemos_el_proyecto.html" class="active no-ch">5. Finalicemos el proyecto</a></li>
+   <li><a href="9_conclusin.html" class="no-ch">9. Conclusión</a></li>
+   <li><a href="crditos.html" class="no-ch">Créditos</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="41_cuando_los_datos_crecen_big_data_y_nuevas_formas_de_almacenarlos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><span class="page-counter">Página <strong>10</strong> de <strong>12</strong></span> <span class="sep">| </span><a href="9_conclusin.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">5. Finalicemos el proyecto</h1></header>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id49">
+<div class="iDevice emphasis0" >
+<div id="ta49_734_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p style="text-align: justify;"><img src="retor_adultos_movimientoboca_largo.gif" alt="Rétor dice:" title="Rétor dice:" style="float: left;" width="125" height="125"></p>
+<h3>🚀 ¡Llega el momento de finalizar tu proyecto!</h3>
+<p>Durante esta unidad has seguido el recorrido completo del desarrollo de un proyecto de software: desde los primeros pasos de análisis con el cliente, pasando por el diseño de la base de datos, hasta la implementación en código real ya que hemos trabajado los conocimientos que te permitirían implementar la base de datos usando <strong>Python y SQL</strong>.</p>
+<p>Has aprendido a:</p>
+<ul>
+<li>Identificar y organizar los requisitos del cliente.</li>
+<li>Modelar los datos con un <strong>diagrama entidad-relación</strong>.</li>
+<li>Transformar ese modelo en tablas <strong>relacionales</strong> y normalizadas.</li>
+<li>Crear e insertar datos en tu base de datos con <strong>SQLite3</strong>.</li>
+<li>Realizar <strong>consultas reales</strong> para obtener la información necesaria.</li>
+</ul>
+<p>🎯 Ahora llega el último paso: <strong>poner en práctica todo lo aprendido</strong> y desarrollar un programa funcional en Python que gestione los <strong>clientes</strong> de la empresa. No te preocupes por gestionar todavía servicios o facturas. Esa parte quedará como una posible ampliación futura del proyecto.</p>
+<p>💬 ¡Tienes todo lo necesario! Aplica lo aprendido y demuestra tu capacidad como desarrollador. ¡Ánimo, ya casi estás en la meta! 🏁</p></div></div></section></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper UDLcontentIdevice em_iDevice em_iDevice_udl_exp_actividad" id="id50">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">1. Un reto, un equipo y un comienzo</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta50_734_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-expression"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><div class="exe-layout-2-cols exe-layout-2-30-70 exe-clear">
+<div class="exe-col exe-col-1"><img src="Clientes1.png" alt="Primera pestaña de la aplicación que da una idea de cómo quedará el resultado final." title="Carga de clientes" style="margin-bottom: 10px; float: left;" width="329" height="226"> <img src="Clientes2.png" alt="Segunda pestaña de la aplicación que da una idea de cómo quedará el resultado final." title="Consulta de clientes" style="margin-bottom: 10px; float: left;" width="165" height="161"> <img src="Clientes3.png" alt="Tercera pestaña de la aplicación que da una idea de cómo quedará el resultado final." title="Listado completo de clientes" width="165" height="162" style="float: right;"></div>
+<div class="exe-col exe-col-2">
+<p>Has llegado al momento final del proyecto. En esta fase, pondrás en marcha todo lo que has aprendido a lo largo de la unidad para desarrollar una pequeña aplicación que permita gestionar los <strong>clientes de una empresa</strong>.</p>
+<p>Esta aplicación tendrá una interfaz gráfica (GUI) que se ha creado usando la librería <code>tkinter</code>. Para organizar el trabajo, el proyecto estará dividido en <strong>dos archivos Python</strong>:</p>
+<ul>
+<li><strong><code><a href="Reto_codigo_base.py">formularioclientes.py</a></code></strong>: contiene la <strong>interfaz gráfica</strong>. Ya está preparada para ti. Aquí se muestran las pestañas con las distintas funciones de la app (crear cliente, buscar por DNI, mostrar listado completo).</li>
+<li><strong><code>clientes.py</code></strong>: será el archivo que <strong>deberás crear tú</strong>. En él desarrollarás una clase llamada <code>Clientes</code>, con los métodos necesarios para acceder y trabajar con una base de datos.</li>
+</ul>
+<p>Este último archivo debe contener toda la <strong>lógica de acceso a la base de datos</strong> (usando SQLite3), como por ejemplo insertar un nuevo cliente, buscarlo por su DNI o listar todos los clientes registrados.</p>
+<p>No te preocupes si te parece complicado: ¡iremos paso a paso! El archivo <code>formularioclientes.py</code> ya te lo damos hecho, y solo tendrás que completarlo con tu archivo <code>clientes.py</code>.</p>
+<div style="background-color: #eef6ff; border-left: 4px solid #2c3e50; padding: 15px; margin-top: 20px;"><strong>🔧 ¿Qué harás exactamente?</strong>
+<ul>
+<li>Analizarás cómo funciona el archivo <code>formularioclientes.py</code>.</li>
+<li>Crearás el archivo <code>clientes.py</code> con una clase llamada <code>Clientes</code>.</li>
+<li>Implementarás 3 métodos: <code>alta()</code>, <code>consulta()</code> y <code>recuperar_todos()</code>.</li>
+<li>Probarás el programa ejecutando <code>formularioclientes.py</code>.</li>
+</ul>
+</div>
+<p><strong>¡Ánimo! Estás muy cerca de completar tu proyecto de desarrollo software 🎯</strong></p>
+</div>
+</div></div></div></section><section class="exe-udlContent-block js-hidden"><header class="exe-udlContent-header"><h2>¿QUÉ FUE LO ÚLTIMO QUE REALIZAMOS EN NUESTRO PROYECTO?</h2></header><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><div style="background-color: #eef6ff; border-left: 4px solid #2c3e50; padding: 15px; margin-bottom: 20px;">
+<h3>📌 Punto de partida del proyecto: Datos de clientes</h3>
+<p>Retomamos el proyecto justo donde lo dejamos: en el proceso de <strong>normalización de tablas</strong>. Aquel fue el momento en el que analizamos y organizamos los datos que debía contener nuestra base de datos. Ahora que vamos a continuar con la parte final del proyecto, es el momento de recordar cómo quedó la tabla <code>clientes</code>, que será fundamental para terminar la aplicación.</p>
+<p><strong style="color: red;">❗ Importante:</strong> Aunque en la tabla original aparecía la <strong>fecha de nacimiento</strong>, <strong style="color: red;">este dato no será tenido en cuenta</strong> en el desarrollo del proyecto, ya que no es relevante para los objetivos que vamos a trabajar.</p>
+<table class="exe-table" style="width: 100%; border-collapse: collapse;">
+<thead>
+<tr style="background-color: #d0e4f5;">
+<th>Nombre</th>
+<th>Apellidos</th>
+<th>DNI</th>
+<th>Teléfono</th>
+<th>E-mail</th>
+<th>Dirección</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ana</td>
+<td>Gómez</td>
+<td>12345670A</td>
+<td>600112233</td>
+<td>ana@gmail.com</td>
+<td>Calle Luna 12</td>
+</tr>
+<tr>
+<td>Luis</td>
+<td>Pérez</td>
+<td>12345671A</td>
+<td>600223344</td>
+<td>luis@gmail.com</td>
+<td>Av. del Sol 45</td>
+</tr>
+<tr>
+<td>Marta</td>
+<td>Martínez</td>
+<td>12345672A</td>
+<td>600334455</td>
+<td>marta@gmail.com</td>
+<td>Paseo Marítimo 3</td>
+</tr>
+<tr>
+<td>Carlos</td>
+<td>López</td>
+<td>12345673A</td>
+<td>600445566</td>
+<td>carlos@gmail.com</td>
+<td>Calle Fuego 78</td>
+</tr>
+<tr>
+<td>Lucía</td>
+<td>Sánchez</td>
+<td>12345674A</td>
+<td>600556677</td>
+<td>lucia@gmail.com</td>
+<td>Av. las Flores 90</td>
+</tr>
+<tr>
+<td>Pedro</td>
+<td>Ramírez</td>
+<td>12345675A</td>
+<td>600667788</td>
+<td>pedro@gmail.com</td>
+<td>Calle Río 23</td>
+</tr>
+<tr>
+<td>Sofía</td>
+<td>Ortega</td>
+<td>12345676A</td>
+<td>600778899</td>
+<td>sofia@gmail.com</td>
+<td>Camino Verde 17</td>
+</tr>
+<tr>
+<td>David</td>
+<td>Castro</td>
+<td>12345677A</td>
+<td>600889900</td>
+<td>david@gmail.com</td>
+<td>Calle Azul 5</td>
+</tr>
+</tbody>
+</table>
+</div></div></div></section></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper UDLcontentIdevice em_iDevice em_iDevice_udl_exp_competenciadigital" id="id51">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">2. El primer ladrillo del programa: crea tu base de datos</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta51_734_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-expression"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p style="text-align: justify;">Es la hora de comenzar la codificación de la aplicación. Te enfrentas a la inmersión inicial en la implementación, que seguro que superarás. Recuerda que siempre que necesites ayuda, tu equipo de compañeros y profesores estarán contigo. Sigue los pasos y ¡pon en marcha las teclas!:</p>
+<div class="exe-layout-2-cols exe-layout-2-50-50 exe-clear">
+<div class="exe-col exe-col-1">
+<div style="background: #0065ab; color: #ffffff;">
+<p style="text-align: center;">Trabajando con fichero <strong>formularioclientes.py</strong></p>
+</div>
+<div class="exe-fx exe-accordion">
+<h2>PASO 1: Importaciones</h2>
+<p>Observa las <strong>5 primeras líneas</strong> del fichero de código base:</p>
+<p><img src="conexion_base_datos_1.png" alt="" width="465" height="108" style="display: block; margin-left: auto; margin-right: auto;"></p>
+<ul>
+<li style="list-style-type: none;">
+<ul>
+<li>¿Qué <strong>módulos</strong> necesitas importar para el programa?</li>
+<li>¿Conoces <strong>qué hace</strong> cada una de las importaciones? Realiza un listado donde expliques el objetivo de cada una.</li>
+</ul>
+</li>
+</ul>
+<details>
+<summary><strong>¿Qué hacen los módulos importados al inicio?</strong></summary>
+<ul>
+<li><strong>import tkinter as tk</strong>: permite crear interfaces gráficas. Usamos <code>tk.</code> para acceder a sus elementos.</li>
+<li><strong>from tkinter import ttk</strong>: añade widgets más modernos y visualmente atractivos (como pestañas o botones estilizados).</li>
+<li><strong>from tkinter import messagebox as mb</strong>: sirve para mostrar mensajes emergentes (información, error, confirmación).</li>
+<li><strong>from tkinter import scrolledtext as st</strong>: permite usar cuadros de texto con barra de desplazamiento.</li>
+<li><strong>import clientes</strong>: importa el archivo <code>clientes.py</code> que contiene la lógica para manejar la base de datos.</li>
+</ul>
+</details>
+<h2>PASO 2: Construye la parte gráfica</h2>
+<p>Observa la clase <strong>FormularioClientes</strong> y <strong>localiza el constructor</strong>:</p>
+<ul>
+<li style="list-style-type: none;">
+<ul>
+<li>¿Qué objeto estamos creando con <strong>ventana1</strong>?</li>
+<li>Dentro de ella, observa que se crea otro objeto de clase <strong>Notebook</strong>. Consulta <a href="https://docs.python.org/es/3/library/tkinter.ttk.html#tkinter.ttk.Notebook" target="_blank" rel="noopener">la documentación</a> y crea una pequeña presentación de qué hace dicha clase y en qué biblioteca se encuentra.</li>
+<li>A continuación ves que se realiza una llamada a varios métodos de la clase que se te ofrece en el código base. Deduce por qué es necesario esto y documéntalo.</li>
+</ul>
+</li>
+</ul>
+<details>
+<summary><strong>🔍 Paso 2: Analizando la parte gráfica de la aplicación</strong></summary>
+<p><strong>¿Qué objeto estamos creando con <code>ventana1</code>?</strong></p>
+<ul>
+<li><code>ventana1 = tk.Tk()</code> crea la ventana principal de la interfaz. Es la raíz de la aplicación gráfica: sobre ella se dibujarán todos los elementos (botones, pestañas, cuadros...).</li>
+</ul>
+<p><strong>¿Qué es <code>Notebook</code> y para qué sirve?</strong></p>
+<ul>
+<li><code>ttk.Notebook</code> es un widget de la librería <code>tkinter.ttk</code> que permite crear una ventana con pestañas.</li>
+<li>Dentro de este cuaderno (Notebook) se añaden páginas como "Carga de clientes", "Consulta de clientes" y "Listado completo", cada una en una pestaña diferente.</li>
+</ul>
+<p><strong>¿Por qué se llaman varios métodos como <code>carga_clientes()</code>, <code>consulta_de_cliente()</code>, etc.?</strong></p>
+<ul>
+<li>Porque cada uno de estos métodos crea una pestaña (frame) dentro del cuaderno, con todos sus componentes: etiquetas, cuadros de texto y botones.</li>
+<li>Estos métodos permiten separar el diseño gráfico en partes organizadas y reutilizables.</li>
+<li>Se ejecutan desde el constructor para que todo se muestre al iniciar la aplicación.</li>
+</ul>
+</details>
+<h2>PASO 3: Construye la base de datos</h2>
+<p>Al ser ejecutado este constructor que inicia la aplicación, deberá contener la <strong>construcción del objeto</strong> que albergue la base de datos. Localiza esta acción en el constructor proporcionado.</p>
+<details>
+<summary><strong>🗂️ Paso 3: ¿Dónde se crea el objeto que gestiona la base de datos?</strong></summary>
+<p>En el constructor de la clase <code>FormularioClientes</code> se encuentra esta línea:</p>
+<pre><code>self.cliente1 = clientes.Clientes()</code></pre>
+<p>Con esta instrucción estamos creando un objeto de la clase <code>Clientes</code> (que está en el fichero <code>clientes.py</code>). Este objeto será el encargado de gestionar toda la conexión y operaciones con la base de datos.</p>
+<p>📌 Observa en la imagen dónde aparece esta línea en el código:</p>
+<img src="conexion_base_datos.png" alt="Inicio de la conexión con la base de datos" style="max-width: 100%; border: 1px solid #cccccc; padding: 5px; display: block; margin-left: auto; margin-right: auto;" width="462" height="68">
+<p>Este objeto será usado posteriormente en los métodos <code>alta()</code>, <code>consulta()</code>, <code>recuperar_todos()</code>... que se definirán dentro del archivo <code>clientes.py</code>.</p>
+</details></div>
+</div>
+<div class="exe-col exe-col-2">
+<div style="background: #0065ab; color: #ffffff;">
+<p style="text-align: center;">Trabajando con fichero <strong>clientes.py</strong></p>
+</div>
+<p>Como habrás visto en el constructor del programa principal (<code>FormularioClientes</code>), se crea un objeto llamado <code>cliente1</code> que pertenece a la clase <strong>Clientes</strong>. Este objeto se encarga de conectar el programa con la base de datos.</p>
+<p>Ahora vas a comenzar a crear ese archivo <strong>clientes.py</strong>, que tendrá dentro la clase <code>Clientes</code>. Este archivo será el encargado de <strong>crear y gestionar la base de datos</strong> donde se guardará toda la información de los clientes.</p>
+<p>📝 <strong>¿Qué tienes que hacer ahora?</strong></p>
+<ul>
+<li style="list-style-type: none;">
+<ul>
+<li>Abre un nuevo archivo en tu proyecto y guárdalo con el nombre <code>clientes.py</code> (¡igual que el que se importa al principio del archivo principal!).</li>
+<li>Piensa que <strong>cada vez que el programa quiera guardar, consultar o mostrar datos</strong> de los clientes, necesitará conectarse a la base de datos.</li>
+<li>Por eso, vas a crear un <strong>método llamado <code>abrir</code></strong>, que se encargará de eso: <strong>conectar con la base de datos</strong> (o crearla si no existe).</li>
+<li>La base de datos se llamará bdclientes.db.</li>
+<li>Dentro de ese mismo método también deberás incluir el <strong>código SQL para crear la tabla de clientes</strong>, con los campos que ya conoces.</li>
+</ul>
+</li>
+</ul>
+<details>
+<summary><strong>📌 Recordatorio: Modelo E/R de la AgendaClientesApp</strong></summary>
+<p>En la actividad anterior relacionada con nuestro proyecto, diseñaste el <strong>modelo entidad-relación</strong> de la aplicación AgendaClientesApp. En él aparecía la entidad <strong>Cliente</strong>, que incluía los siguientes campos:</p>
+<p><img src="ModeloER_AgendaClientesApp.drawio.png" width="300" height="302" style="float: left; margin: 40px 50px 40px 50px;"></p>
+<ul>
+<li><strong>Nombre</strong></li>
+<li><strong>Apellidos</strong></li>
+<li><strong>DNI</strong></li>
+<li><strong>Fecha de nacimiento</strong></li>
+<li><strong>Teléfono</strong></li>
+<li><strong>Correo electrónico</strong></li>
+<li><strong>Dirección postal</strong></li>
+</ul>
+<p>Estos serán los campos que deberás incluir ahora en la <strong>tabla clientes</strong> mediante la instrucción SQL dentro del método <code>abrir</code>.</p>
+<p>¡Recuerda! Esta base de datos se llamará <code>bdclientes.db</code> y será la que gestione toda la información del programa.</p>
+</details>
+<p>Recuerda que todo esto lo has aprendido cuando estudiamos cómo trabajar con bases de datos desde Python, usando SQLite3 (en el <strong>punto 4 </strong>).</p>
+</div>
+</div></div></div></section><section class="exe-udlContent-block js-hidden"><header class="exe-udlContent-header"><h2>Actividad: Desarrollar el archivo clientes.py - Tabla Clientes</h2></header><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p><strong>🧠 Crea la base de datos: Tu primer paso para finalizar el proyecto</strong></p>
+<p>Vas a comenzar a desarrollar el archivo <code>clientes.py</code>, que es el encargado de conectarse con la base de datos de la aplicación.</p>
+<p>Para ayudarte, te damos el esquema base del código. Tu tarea consistirá en <strong>completar la parte del lenguaje SQL</strong> que ya conoces para crear la base de datos y la tabla de clientes.</p>
+<p>🔧 <strong>Este será el punto de partida:</strong></p>
+<div style="background-color: #f4f4f4; border: 1px solid #ccc; padding: 10px; font-family: monospace;">
+<pre>import sqlite3  # Importamos la librería necesaria
+
+class Clientes:
+    def abrir(self):
+        # Se conecta a continuación (o crea si no existe) la base de datos llamada bdclientes.db
+        
+        
+        try:
+            # Aquí debes escribir el código SQL para crear la tabla "clientes"
+            # Recuerda: usa CREATE TABLE IF NOT EXISTS...
+            # Los campos que debe tener la tabla son:
+            # nombre, apellidos, dni (clave primaria), telefono, correo, direccion
+
+            conexion.execute("""
+                -- TU CÓDIGO SQL AQUÍ --
+            """)
+            
+            conexion.commit()  # Guardamos los cambios
+        except Exception as e:
+            print("❌ Ha ocurrido un error:", e)
+        
+        return conexion  # Devolvemos la conexión para usarla en otros métodos
+</pre>
+</div>
+<p><strong>🎯 Tu misión:</strong> Completa el espacio indicado con una sentencia SQL como las que ya conoces. Por ejemplo:</p>
+<pre style="background-color: #ffffcc; border-left: 4px solid #ffcc00; padding: 10px;">CREATE TABLE IF NOT EXISTS empleados (
+    nombre TEXT,
+    apellido TEXT,
+    id_empleado TEXT PRIMARY KEY,
+    puesto TEXT,
+    telefono TEXT
+)
+</pre>
+<p>Con este código, cuando se ejecute la aplicación por primera vez, se creará automáticamente la base de datos y la tabla necesaria para almacenar los datos de los clientes.</p>
+<p>💬 Si tienes dudas, revisa lo aprendido en el <strong>apartado 4</strong>&nbsp;donde vimos cómo crear tablas desde Python con SQLite.</p></div></div></section></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper UDLcontentIdevice em_iDevice em_iDevice_udl_exp_competenciadigital" id="id52">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">3. Cargar datos: el siguiente paso en tu aplicación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta52_735_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-expression"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p style="text-align: justify;"><img src="IMG_PRO2BAC_REA04_CARGA_BASE_DATOS.png" alt="Usuario que envía datos para almacenar en la base de datos." title="Carga de datos" style="float: right; margin-right: 10px; margin-left: 10px;" width="184" height="95"><img src="Clientes1.png" width="150" height="381" style="float: left; margin-right: 20px; margin-left: 20px;">Si observamos una de las imágenes que se nos mostraba en el punto 1 con referencia a la pestaña <strong>Carga de clientes</strong>, podemos comprobar que su funcionamiento lleva a que, una vez rellenos todos los comandos con los datos del cliente, tengamos que pulsar el botón <strong>Confirmar</strong> para que los datos se incluyan en la tabla de clientes. Tras cargarlos correctamente, se abre una ventana que nos indica el éxito de la carga.</p>
+<p style="text-align: justify;">Para ello utilizaremos los métodos <strong>carga_clientes()</strong> y <strong>agregar()</strong>, en la clase <strong>FormularioClientes</strong>; y <strong>alta()</strong> en la clase <strong>Clientes</strong>. Te enseñaré como completarlos, y deberás volver a modificar el archivo <strong>clientes.py&nbsp;</strong></p>
+<div class="exe-layout-2-cols exe-layout-2-50-50 exe-clear">
+<div class="exe-col exe-col-1">
+<div style="background: #0065ab; color: #ffffff;">
+<p style="text-align: center;">Trabajando con fichero<strong> formularioclientes.py</strong></p>
+</div>
+<p style="text-align: justify;">En el fichero <strong>formularioclientes.py</strong> de código base proporcionado, nos encontramos que hay que completar dos funciones de la clase FormularioClientes:</p>
+<div class="exe-fx exe-accordion">
+<h2>Completar <strong>carga_clientes()</strong></h2>
+<p style="text-align: justify;">En las 4 primeras líneas de código de este método se añade la primera pestaña al objeto Notebook, llamada <strong>Carga de clientes</strong>, y se crea un <strong>marco o frame</strong> para contener gráficamente los datos.</p>
+<ol>
+<li style="list-style-type: none;">
+<ol>
+<li style="text-align: justify;">A continuación se comienza a crear la estructura de elementos que contendrán los datos a agregar. Se te ofrecen creados los dos primeros (<strong>Nombre y Apellidos</strong>): observa los comandos que crean la estructura, los usaremos para crear el resto de campos que es necesario obtener del cliente, hasta completar la pantalla mostrada en el punto 1. Para ello&nbsp;&nbsp;<strong>Sustituiremos: [...] por el código correcto.</strong></li>
+<li style="text-align: justify;">Observamos también que el comando que se ejecuta al pulsar el botón <strong>Confirmar </strong>llama al método <strong>agregar()</strong> (sin parámetros, ya que pertenecen al propio objeto).</li>
+</ol>
+</li>
+</ol>
+<details>
+<summary><strong>🔍 ¿Qué hace este fragmento del formulario?</strong></summary>
+<p>Este fragmento es el encargado de mostrar el campo "Nombre" en la interfaz de la aplicación:</p>
+<p><img src="carga_clientes.png" width="999" height="135" style="vertical-align: middle; display: block; margin-left: auto; margin-right: auto;"></p>
+<ul>
+<li><code>ttk.Label</code>: crea la etiqueta de texto <strong>"Nombre:"</strong> que aparece junto al campo de entrada.</li>
+<li><code>tk.StringVar()</code>: crea una variable especial donde se almacenará lo que escriba el usuario.</li>
+<li><code>ttk.Entry(...)</code>: crea el campo de entrada de texto, vinculado a la variable anterior.</li>
+<li><code>.grid(...)</code>: coloca todos los elementos en su sitio dentro del recuadro.</li>
+</ul>
+<p>El mismo patrón se repite para crear el resto de campos como Apellidos, DNI, Teléfono, etc.</p>
+<p><strong>¿Y qué hace el botón Confirmar?</strong></p>
+<ul>
+<li><code>ttk.Button(..., command=self.agregar)</code>: crea un botón que, al pulsarlo, ejecuta el método <code>agregar()</code>.</li>
+<li>Ese método recoge todos los valores escritos, los guarda en la base de datos y luego limpia los campos.</li>
+</ul>
+</details>
+<h2>Completar <strong>agregar()</strong></h2>
+<p style="text-align: justify;">Cuando desde la pestaña <strong>Carga de clientes</strong> se presiona el botón <strong>Confirmar</strong>, en el método <strong>agregar</strong> lo primero que hacemos es crear una tupla con los dos datos ingresados en los controles tipo "Entry" y guardarla en la variable <strong>datos</strong>:</p>
+<ol>
+<li style="list-style-type: none;">
+<ol>
+<li style="text-align: justify;">Completa el código para la correcta carga de la tupla <strong>datos</strong>.</li>
+<li style="text-align: justify;">A continuación vemos que se pasan los valores de la tupla <strong>datos</strong> al método <strong>alta()</strong> del objeto <strong>cliente1</strong>, que a continuación crearemos en el otro fichero.</li>
+<li style="text-align: justify;">Para completar el método agregar(), <strong>resetea todos los campos del frame Cliente</strong>. Ayúdate para ello del último comando que se te ofrece en dicho método.</li>
+</ol>
+</li>
+</ol>
+<details>
+<summary><strong>¿Qué hace el método <code>agregar()</code>? Paso a paso</strong></summary>
+<p>Cuando pulsas el botón <strong>"Confirmar"</strong> en la pestaña de carga de clientes, se ejecuta el método <code>agregar()</code>. Este método realiza tres acciones fundamentales:</p>
+<ol>
+<li><strong>Recoge los datos introducidos en el formulario:</strong> Cada campo (nombre, apellidos, DNI, etc.) tiene una variable asociada como <code>self.nombrecarga</code>. Para obtener el valor que ha escrito el usuario se utiliza <code>.get()</code>. Todos los valores se agrupan en una tupla llamada <code>datos</code>.</li>
+<li><strong>Envía los datos a la base de datos:</strong> Se llama al método <code>alta(datos)</code> del objeto <code>cliente1</code>. Este objeto pertenece a la clase <code>Clientes</code>, definida en el archivo <code>clientes.py</code>. Su función es insertar los datos en la tabla de clientes de la base de datos.</li>
+<li><strong>Resetea el formulario:</strong> Después de guardar el cliente, se limpian todos los campos para poder introducir un nuevo cliente sin borrar manualmente los anteriores. Se hace con <code>.set("")</code>.</li>
+</ol>
+<p><img src="agregar.png" alt="" width="727" height="435" style="vertical-align: middle; display: block; margin-left: auto; margin-right: auto;"></p>
+<p>🔍 <strong>¿Cuál es el objetivo?</strong> Este método permite que el usuario introduzca fácilmente los datos de un cliente desde la interfaz gráfica, y que el programa los almacene directamente en la base de datos. Todo sin tener que escribir ninguna línea de SQL.</p>
+</details></div>
+</div>
+<div class="exe-col exe-col-2">
+<div style="background: #0065ab; color: #ffffff;">
+<p style="text-align: center;">Trabajando con fichero <strong>clientes.py</strong></p>
+</div>
+<p>En este punto vas a trabajar sobre el fichero <strong>clientes.py</strong>, donde estamos programando la clase <code>Clientes</code>.</p>
+<p>Tu objetivo es completar un método llamado <code>alta()</code>, que será el encargado de insertar los datos de un nuevo cliente en la base de datos cuando se pulse el botón <strong>Confirmar</strong> en el formulario gráfico.</p>
+<p>El método debe realizar los siguientes pasos:</p>
+<ol>
+<li style="list-style-type: none;">
+<ol>
+<li style="list-style-type: none;">
+<ol>
+<li><strong>Conectar</strong> con la base de datos llamada <code>bdclientes.db</code>.</li>
+<li><strong>Insertar</strong> los datos del cliente en la tabla <code>clientes</code> utilizando una consulta SQL con <code>INSERT INTO</code>.</li>
+<li><strong>Confirmar</strong> la operación con <code>commit()</code> para guardar los cambios.</li>
+<li><strong>Cerrar</strong> la conexión con la base de datos usando <code>close()</code>.</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<p>Recuerda: el método <code>alta()</code> recibirá una tupla con los datos del cliente y los utilizará para completar la instrucción SQL.</p>
+<p>¡Adelante! Este es un paso clave para que tu aplicación funcione correctamente.</p>
+</div>
+</div></div></div></section><section class="exe-udlContent-block js-hidden"><header class="exe-udlContent-header"><h2>Actividad: Desarrollar el archivo clientes.py - Método alta()</h2></header><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>🧩 <strong>Añadir nuevos clientes a la base de datos</strong></p>
+<p>En la actividad anterior creaste el método <code>abrir()</code> que se encarga de conectar con la base de datos y generar la tabla <code>clientes</code> si no existía.</p>
+<p>Ahora es momento de completar el siguiente paso: el método <code>alta()</code>, que permitirá guardar un nuevo cliente cada vez que se pulse el botón <strong>Confirmar</strong> en la aplicación.</p>
+<p>Tu tarea consiste en <strong>completar la parte del lenguaje SQL</strong> dentro del método <code>alta()</code>, para que se pueda insertar un nuevo registro en la tabla <code>clientes</code> con todos sus datos.</p>
+<h4>🎯 Este será el punto de partida:</h4>
+<pre style="background-color: #f8f8f8; border-left: 4px solid #2c3e50; padding: 10px;"><code>import sqlite3  # Importamos la librería necesaria
+
+class Clientes:
+    def abrir(self):
+        conexion = sqlite3.connect("bdclientes.db")
+        try:
+            conexion.execute("""
+            CREATE TABLE IF NOT EXISTS clientes (
+                nombre TEXT,
+                apellidos TEXT,
+                dni TEXT PRIMARY KEY,
+                telefono TEXT,
+                correo TEXT,
+                direccion TEXT
+            )
+            """)
+            conexion.commit()
+        except Exception as e:
+            print("❌ Ha ocurrido un error:", e)
+        return conexion
+
+    def alta(self, datos):
+        conexion = self.abrir()
+        try:
+            conexion.execute("""
+            -- AQUÍ VA TU COMANDO SQL INSERT --
+            """, datos)
+            conexion.commit()
+        except Exception as e:
+            print("❌ Error al insertar cliente:", e)
+        conexion.close()
+</code></pre>
+<h4>🧠 Tu misión:</h4>
+<p>Completa el espacio indicado usando una instrucción SQL como la que conoces, para insertar valores en la tabla <code>clientes</code>. Por ejemplo:</p>
+<pre style="background-color: #ffffdd; border: 1px solid #cccccc; padding: 10px;">INSERT INTO empleados(nombre, apellido, id_empleado, puesto, correo)
+VALUES (?, ?, ?, ?, ?)
+</pre>
+<p>Cuando tu método esté completo, al pulsar <strong>Confirmar</strong> en la aplicación, los datos del nuevo cliente se insertarán automáticamente en la base de datos. ¡Ya queda menos para tener tu software funcional! 🚀</p></div></div></section></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper UDLcontentIdevice em_iDevice em_iDevice_udl_exp_competenciadigital" id="id53">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">4. Consultas: ¿a que voy y encuentro el dato?</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta53_734_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-expression"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p style="text-align: justify;"><img src="IMG_PRO2BAC_REA04_BUSCAR-DATO.jpg" alt="Lupa que busca un dato entre una gran página de codificación." title="Buscar dato" style="float: left; margin-right: 10px; margin-left: 10px;" width="132" height="99">En el apartado anterior modificamos formularioclientes.py quedando de la <strong><a href="formularioclientes_v2.py">siguiente manera</a></strong>.</p>
+<p>Ahora que ya puedes registrar clientes nuevos, es momento de <strong>consultarlos fácilmente</strong> desde tu aplicación.</p>
+<p>Vamos a desarrollar una nueva pestaña llamada <strong>"Consulta de cliente"</strong> dentro de la interfaz gráfica. Esta pestaña nos permitirá buscar a un cliente introduciendo su <strong>DNI</strong>. Si el cliente está en la base de datos, ¡verás cómo se rellenan automáticamente todos sus datos!</p>
+<div class="exe-layout-2-cols exe-layout-2-50-50 exe-clear">
+<div class="exe-col exe-col-1">
+<div style="background: #0065ab; color: #ffffff;">
+<p style="text-align: center;">Trabajando con fichero<strong> formularioclientes.py</strong></p>
+</div>
+<p>Si continuamos observado nuestro fichero <strong>formularioclientes.py</strong>. En él ya existe una estructura preparada para la pestaña de <strong>consulta de cliente</strong>, pero necesita ser completada.</p>
+<p>Cuando se pulse el botón <strong>Consultar</strong>, el programa que estamos creando buscará en la base de datos el cliente que tenga el <strong>DNI introducido</strong> y mostrará en pantalla todos sus datos si lo encuentra.</p>
+<div class="exe-fx exe-accordion">
+<h2>Completar consulta_de_cliente()</h2>
+<p>Ya están programados los primeros dos campos (Nombre y Apellidos), y deberíamos seguir ese mismo <strong>patrón</strong> para completar el resto: teléfono, correo, dirección y dni.</p>
+<p><img src="consulta_cliente.png" alt="" width="1071" height="208" style="display: block; margin-left: auto; margin-right: auto;"></p>
+<details>
+<summary><strong>🧱 ¿Cómo completar este apartado?</strong></summary>
+<ul>
+<li style="list-style-type: none;">
+<ul style="list-style-type: disc;">
+<li><strong>1. Crear etiquetas (labels):</strong> Se utiliza <code>ttk.Label</code> para añadir una etiqueta visual encima de cada campo. Por ejemplo:<br><code>self.label1 = ttk.Label(self.labelframe2, text="Nombre:")</code></li>
+<li><strong>2. Colocar las etiquetas en el grid:</strong> Las etiquetas se colocan en la posición deseada (fila, columna).<br><code>self.label1.grid(column=0, row=0, padx=4, pady=4)</code></li>
+<li><strong>3. Asociar una variable al campo:</strong> Creamos una variable de tipo <code>tk.StringVar()</code> para guardar el valor del campo.<br><code>self.nombre = tk.StringVar()</code></li>
+<li><strong>4. Crear el campo de entrada:</strong> Creamos el <code>Entry</code> con estado <code>readonly</code> para que no se pueda modificar desde la interfaz.<br><code>self.entrynombre = ttk.Entry(self.labelframe2, textvariable=self.nombre, state="readonly")</code></li>
+<li><strong>5. Colocar el campo en el grid:</strong> Igual que con las etiquetas, se sitúa en la posición deseada.<br><code>self.entrynombre.grid(column=1, row=0, padx=4, pady=4)</code><code></code><code></code></li>
+<li><code></code><code></code><strong></strong><code></code><strong>📌 Repite este mismo patrón</strong> para los campos: <code>Apellidos, DNI, Teléfono, Correo y Dirección</code>, cambiando:
+<ul style="list-style-type: square;">
+<li>el número de fila en el <code>grid</code></li>
+<li>los nombres de las variables (por ejemplo: <code>self.telefono</code>)</li>
+<li>el texto visible en la etiqueta (por ejemplo: <code>"Teléfono:"</code>)</li>
+</ul>
+</li>
+<li><strong>6. Añadimos el botón "Consultar"</strong>:</li>
+</ul>
+</li>
+</ul>
+</details>
+<h2>Completar consultar()</h2>
+<p>Cuando se presiona el botón <strong>Consultar</strong>, se ejecuta el método <code>consultar()</code>. El objetivo es buscar el cliente a partir del DNI introducido por el usuario y mostrar sus datos si se encuentra en la base de datos.</p>
+<p>El método comienza creando una <strong>tupla con un solo dato</strong> (el DNI), necesaria para realizar la consulta en el archivo <code>clientes.py</code>.</p>
+<p>Este método devolverá una lista vacía si no existe el DNI ingresado, o una lista con una tupla en su interior con los datos del cliente.</p>
+<p><img src="consulta().png" alt="" width="847" height="208" style="display: block; margin-left: auto; margin-right: auto;"></p>
+<details>
+<summary><strong>🔍 ¿Cómo completar el método <code>consultar()</code>? Explicación paso a paso</strong></summary>
+<p>Este método se ejecuta cuando el usuario pulsa el botón <strong>Consultar</strong> en la pestaña correspondiente. A continuación se detallan los pasos que ya están iniciados en el código base y cómo completarlos:</p>
+<ol>
+<li><strong>Crear la tupla con el DNI introducido:</strong><br><code>datos = (self.dni.get(), )</code><br>El valor introducido en el campo <em>DNI</em> se guarda como una tupla para poder pasarlo a la consulta.</li>
+<li><strong>Realizar la consulta a la base de datos:</strong><br><code>respuesta = self.cliente1.consulta(datos)</code><br>Este método buscará el cliente cuyo <code>DNI</code> coincida y devolverá sus datos.</li>
+<li><strong>Si la consulta devuelve datos (cliente encontrado):</strong><br>Debes rellenar todos los campos usando los valores devueltos. Los datos están en <code>respuesta[0]</code> y su orden corresponde con el orden de la tabla. Ejemplo:
+<ul>
+<li><code>self.nombre.set(respuesta[0][0])</code> → Nombre</li>
+<li><code>self.apellidos.set(respuesta[0][1])</code> → Apellidos</li>
+<li><code>self.telefono.set(respuesta[0][2])</code> → Teléfono</li>
+<li><code>self.dni.set(respuesta[0][3])</code> → DNI</li>
+<li><code>self.fecha.set(respuesta[0][4])</code> → Fecha de nacimiento</li>
+<li><code>self.correo.set(respuesta[0][5])</code> → Correo electrónico</li>
+<li><code>self.direccion.set(respuesta[0][6])</code> → Dirección</li>
+</ul>
+</li>
+<li><strong>Si no se encuentra ningún cliente con ese DNI:</strong><br>Deja vacíos todos los campos utilizando <code>set('')</code> y muestra un mensaje informativo:<br><code>self.nombre.set('')</code><br><code>self.apellidos.set('')</code><br><code>self.telefono.set('')</code><br><code>self.dni.set('')</code><br><code>self.fecha.set('')</code><br><code>self.correo.set('')</code><br><code>self.direccion.set('')</code><br><code>mb.showinfo("Información", "No existe un cliente con dicho DNI.")</code></li>
+</ol>
+<p>🔧 <strong>Consejo:</strong> El orden de los datos que se reciben desde la base de datos debe coincidir con el orden en que se han guardado en la tabla.</p>
+</details></div>
+</div>
+<div class="exe-col exe-col-2">
+<div style="background: #0065ab; color: #ffffff;">
+<p style="text-align: center;">Trabajando con fichero<strong> clientes.py</strong></p>
+</div>
+<p>En esta actividad vamos a seguir avanzando en el desarrollo del fichero <code>clientes.py</code>. Nuestro objetivo ahora será crear el método <code>consulta()</code>, encargado de buscar un cliente en la base de datos a partir de su <strong>DNI</strong>, que será introducido por el usuario a través de la aplicación gráfica.</p>
+<p>📌 Este método se ejecutará cada vez que se pulse el botón <strong>Consultar</strong> en la pestaña correspondiente del formulario. Se conectará a la base de datos, ejecutará una instrucción SQL del tipo <code>SELECT</code>, y devolverá todos los datos del cliente si existe (o una lista vacía si no se encuentra).</p>
+<h4>🎯 ¿Qué debes hacer?</h4>
+<ul>
+<li>Conectar con la base de datos utilizando el método <code>abrir()</code> que ya programaste.</li>
+<li>Utilizar una sentencia SQL <strong>SELECT</strong> para recuperar los datos de un cliente con el <strong>DNI</strong> indicado.</li>
+<li>Usar <code>fetchall()</code> para obtener los resultados de la consulta.</li>
+<li>Devolver esos datos para que el formulario los muestre si el cliente existe.</li>
+<li>¡Y no te olvides de cerrar la conexión al terminar!</li>
+</ul>
+<p>💡 Recuerda: tu método <code>consulta()</code> no debe imprimir nada por pantalla, simplemente devolverá los resultados al formulario para que se muestren automáticamente si existen coincidencias.</p>
+<h4>📘 Ayuda adicional:</h4>
+<p>Si no recuerdas cómo hacer una consulta con SQL en Python, revisa el <strong>apartado 4</strong> del punto anterior, donde aprendimos a crear y consultar bases de datos con SQLite usando Python. También puedes fijarte en el ejemplo que te dejamos como guía.</p>
+<p>🎯 Al completar esta tarea, estarás haciendo que la aplicación sea capaz de buscar clientes en la base de datos y mostrar sus datos. ¡Estás a un paso de tener tu propia app totalmente funcional!</p>
+</div>
+</div></div></div></section><section class="exe-udlContent-block js-hidden"><header class="exe-udlContent-header"><h2>Actividad: Desarrollar el archivo clientes.py - Consultas</h2></header><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>🔧 <strong>Consultar los datos de un cliente por su DNI</strong></p>
+<p>¡Ya casi tenemos nuestra app lista! Este método permitirá al usuario buscar un cliente por su <strong>DNI</strong> y mostrar sus datos en pantalla.</p>
+<h4>🧱 Este es tu punto de partida:</h4>
+<pre style="background-color: #f8f8f8; border-left: 4px solid #2c3e50; padding: 10px;"><code>import sqlite3  # Importamos la librería necesaria
+
+class Clientes:
+    def abrir(self):
+        conexion = sqlite3.connect("bdclientes.db")
+        try:
+            conexion.execute("""
+            CREATE TABLE IF NOT EXISTS clientes (
+                nombre TEXT,
+                apellidos TEXT,
+                dni TEXT PRIMARY KEY,
+                telefono TEXT,
+                correo TEXT,
+                direccion TEXT
+            )
+            """)
+            conexion.commit()
+        except Exception as e:
+            print("❌ Ha ocurrido un error:", e)
+        return conexion
+
+    def alta(self, datos):
+        conexion = self.abrir()
+        try:
+            conexion.execute("""
+            INSERT INTO clientes(nombre, apellidos, dni, telefono, correo, direccion)
+            VALUES (?, ?, ?, ?, ?, ?)
+            """, datos)
+            conexion.commit()
+        except Exception as e:
+            print("❌ Error al insertar cliente:", e)
+        conexion.close()
+
+    def consulta(self, datos):
+        conexion = self.abrir()
+        try:
+            cursor = conexion.execute("""
+            -- AQUÍ VA TU COMANDO SELECT --
+            """, datos)
+            resultado = cursor.fetchall()
+        except Exception as e:
+            print("❌ Error en la consulta:", e)
+            resultado = []
+        conexion.close()
+        return resultado
+</code></pre>
+<h4>🧠 Tu misión:</h4>
+<p>Completa el espacio indicado usando una instrucción SQL como la que conoces, para recuperar valores desde la tabla <code>clientes</code> usando su <code>DNI</code>. A continuación te mostramos un ejemplo general que sigue la estructura correcta:</p>
+<pre style="background-color: #ffffdd; border: 1px solid #cccccc; padding: 10px;"><code>try:
+    cursor = conexion.execute("""
+    SELECT nombre, apellidos, correo
+    FROM empleados
+    WHERE id_empleado = ?
+    """, datos)
+    resultado = cursor.fetchall()
+except Exception as e:
+    print("❌ Error en la consulta:", e)
+    resultado = []
+</code></pre>
+<p>🧩 ¿Qué debes cambiar si lo usas para tu proyecto?</p>
+<ul>
+<li><code>empleados</code> → cámbialo por <code>clientes</code>.</li>
+<li><code>id_empleado</code> → cámbialo por <code>dni</code>, que es el campo que usarás para la búsqueda.</li>
+<li><code>nombre, apellidos, correo</code> → sustituye por los campos que quieras obtener del cliente.</li>
+</ul>
+<p>🔁 Recuerda devolver siempre el resultado obtenido para que la interfaz pueda mostrar los datos encontrados.</p></div></div></section></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper UDLcontentIdevice em_iDevice em_iDevice_udl_exp_competenciadigital" id="id54">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">5. Consulta general: dame la lista completa</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta54_734_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-expression"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p style="text-align: justify;"><img src="IMG_PRO2BAC_REA04_LISTAR-CLIENTES.png" alt="Conjunto de personas alrededor del mundo que representan todos los clientes, con sus características personales." title="Listar clientes" style="float: left; margin-right: 10px; margin-left: 10px;" width="205" height="131"></p>
+<p>🚀 Ha llegado el momento de crear la <strong>última pestaña</strong> de nuestra aplicación. En ella, mostraremos <strong>el listado completo de los clientes</strong> que forman parte de nuestra base de datos.</p>
+<p>Como ya viste en las imágenes del punto 1 de esta sección, esta pestaña incluye un botón llamado <strong>"Listado completo"</strong>. Al pulsarlo, el programa accederá a la base de datos y <strong>mostrará todas las filas de la tabla <code>clientes</code></strong>.</p>
+<p>Esta es probablemente la parte <strong>más sencilla</strong> de todo el proyecto. ¡Vamos a por ello!</p>
+<div class="exe-layout-2-cols exe-layout-2-50-50 exe-clear">
+<div class="exe-col exe-col-1">
+<div style="background: #0065ab; color: #ffffff;">
+<p style="text-align: center;">Trabajando con fichero<strong> formularioclientes.py</strong></p>
+</div>
+<p>Esta vez, en la clase <code>FormularioClientes</code>, solo tendrás que completar el método <code>listar()</code>, ya que el método <code>listado_completo()</code> ya se proporciona completamente codificado.</p>
+<p><strong>Pero atención:</strong> es importante que analicemos bien el código del método <code>listado_completo()</code> porque en él vas a ver cómo se construye y utiliza un objeto de clase <code>ScrolledText</code>, que es un cuadro de texto con barra de desplazamiento donde se pueden mostrar varias líneas de texto.</p>
+<p><img src="lostado_completo.png" alt="" width="1033" height="199" style="display: block; margin-left: auto; margin-right: auto;"></p>
+<p>🛠️ En el método <code>listar()</code> (que se activa al pulsar el botón), se hace una llamada al método <code>recuperar_todos</code> de la clase <code>Clientes</code>. Este método devuelve una lista de tuplas, donde cada tupla representa una fila de la tabla <code>clientes</code>.</p>
+<p>🔄 Para mostrar los datos en el ScrolledText, se utiliza un <code>bucle for</code> que recorre la lista y va insertando en cada vuelta los datos de un cliente.</p>
+<p>🧩 <b>Completaremos</b>&nbsp;el código del método <code>listar()</code> sustituyendo <code>[...]</code> por los campos que queremos mostrar (nombre, apellidos, dni, etc.) de cada cliente.</p>
+<p><img src="listar.png" alt="" width="1132" height="121" style="display: block; margin-left: auto; margin-right: auto;"></p>
+<details>
+<summary><strong>🛠️ ¿Cómo se completa el método listar()? Explicación paso a paso</strong></summary>
+<br>
+<p>En el código que se te ofrece, ya tienes lo siguiente preparado:</p>
+<pre><code>self.scrolledtext1.delete("1.0", tk.END)        
+for fila in respuesta:
+    self.scrolledtext1.insert(tk.END, "Nombre:"+fila[0]+"\nApellidos:"+fila[1]+ [...] +"\n\n")</code></pre>
+<p>Esto significa que:</p>
+<ul>
+<li><code>fila[0]</code> es el <strong>nombre</strong>.</li>
+<li><code>fila[1]</code> es el <strong>apellido</strong>.</li>
+<li><code>fila[2]</code> es el <strong>DNI</strong>.</li>
+<li>Y así sucesivamente...</li>
+</ul>
+<p>✅ Para mostrar toda la información del cliente, puedes usar algo como esto:</p>
+<pre><code>self.scrolledtext1.insert(tk.END, 
+    "Nombre: " + fila[0] + "\n" +
+    "Apellidos: " + fila[1] + "\n" +
+    "DNI: " + fila[2] + "\n" +
+    "Fecha nacimiento: " + fila[3] + "\n" +
+    "Teléfono: " + fila[4] + "\n" +
+    "Correo: " + fila[5] + "\n" +
+    "Dirección: " + fila[6] + "\n\n")</code></pre>
+<p>Así se asegura que cada cliente se vea en formato legible en el cuadro de texto.</p>
+</details></div>
+<div class="exe-col exe-col-2">
+<div style="background: #0065ab; color: #ffffff;">
+<p style="text-align: center;">Trabajando con fichero<strong>&nbsp;clientes.py</strong></p>
+</div>
+<div>
+<p>En el fichero <code>clientes.py</code>, donde estás desarrollando la clase <code>Clientes</code>, vas a crear el método <code>recuperar_todos()</code>.</p>
+<p>Este método será el encargado de devolver todos los registros de clientes que existen en la base de datos. Se activa automáticamente al pulsar el botón <strong>Listado completo</strong> en la aplicación.</p>
+<p>🔧 Para ello, sigue estos pasos:</p>
+<ul>
+<li>🔌 Conecta con la base de datos como has aprendido en métodos anteriores.</li>
+<li>📄 Crea un <strong>cursor</strong> que recoja el resultado de la consulta SQL.</li>
+<li>🧠 Escribe una instrucción <code>SELECT</code> que devuelva <strong>todas las filas</strong> de la tabla <code>clientes</code>.</li>
+<li>📦 Usa <code>fetchall()</code> para obtener todas las filas devueltas por la consulta.</li>
+<li>✅ Devuelve el resultado para que el formulario lo pueda mostrar.</li>
+<li>🚪 No olvides cerrar la conexión al terminar.</li>
+</ul>
+<p>Este método es muy sencillo pero fundamental: gracias a él podrás ver de un vistazo todos los datos guardados en tu programa.</p>
+</div>
+</div>
+</div></div></div></section><section class="exe-udlContent-block js-hidden"><header class="exe-udlContent-header"><h2>Actividad: Desarrollar el archivo clientes.py - Listar datos de la base</h2></header><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>En esta actividad vas a completar el método <code>recuperar_todos()</code> de la clase <code>Clientes</code>, que se encuentra en el archivo <code>clientes.py</code>.</p>
+<p>Este método será el encargado de consultar todos los datos de la tabla <code>clientes</code> en la base de datos. Se utilizará en la pestaña <strong>Listado completo</strong> de la aplicación, cuando el usuario pulse el botón con ese mismo nombre.</p>
+<p>Para ello necesitas utilizar lo aprendido sobre consultas SQL con el comando <code>SELECT</code>, y aplicarlo en el contexto de Python y <code>sqlite3</code>.</p>
+<h4>🎯 ¿Qué debes hacer?</h4>
+<ol>
+<li>Conectar con la base de datos usando el método <code>abrir()</code> ya creado previamente.</li>
+<li>Realizar la consulta SQL que recupere todos los datos de la tabla <code>clientes</code>.</li>
+<li>Recoger el resultado con <code>fetchall()</code>.</li>
+<li>Devolver ese resultado al final del método.</li>
+</ol>
+<h4>🚧 Código de partida:</h4>
+<pre style="background-color: #f8f8f8; border-left: 4px solid #2c3e50; padding: 10px;"><code>import sqlite3  # Importamos la librería necesaria
+
+class Clientes:
+    def abrir(self):
+        conexion = sqlite3.connect("bdclientes.db")
+        try:
+            conexion.execute("""
+            CREATE TABLE IF NOT EXISTS clientes (
+                nombre TEXT,
+                apellidos TEXT,
+                dni TEXT PRIMARY KEY,
+                telefono TEXT,
+                correo TEXT,
+                direccion TEXT
+            )
+            """)
+            conexion.commit()
+        except Exception as e:
+            print("❌ Ha ocurrido un error:", e)
+        return conexion
+
+    def alta(self, datos):
+        conexion = self.abrir()
+        try:
+            conexion.execute("""
+            INSERT INTO clientes(nombre, apellidos, dni, telefono, correo, direccion)
+            VALUES (?, ?, ?, ?, ?, ?)
+            """, datos)
+            conexion.commit()
+        except Exception as e:
+            print("❌ Error al insertar cliente:", e)
+        finally:
+            conexion.close()
+
+    def consulta(self, datos):
+        conexion = self.abrir()
+        try:
+            cursor = conexion.execute("""
+            SELECT nombre, apellidos, dni, telefono, correo, direccion
+            FROM clientes
+            WHERE dni = ?
+            """, datos)
+            resultado = cursor.fetchall()
+        except Exception as e:
+            print("❌ Error en la consulta:", e)
+            resultado = []
+        finally:
+            conexion.close()
+        return resultado
+
+    def recuperar_todos(self):
+        conexion = self.abrir()
+        try:
+            cursor = conexion.execute("""
+            -- AQUÍ VA TU COMANDO SQL SELECT --
+            """)
+            resultado = cursor.fetchall()
+        except Exception as e:
+            print("❌ Error en la consulta:", e)
+            resultado = []
+        finally:
+            conexion.close()
+        return resultado
+</code></pre>
+<h4>🧠 ¿Qué debes escribir como instrucción SQL?</h4>
+<p>Como quieres obtener todos los registros de la tabla <code>clientes</code> sin ningún filtro, puedes usar esta instrucción SQL:</p>
+<pre style="background-color: #ffffdd; border: 1px solid #cccccc; padding: 10px;">SELECT * FROM clientes</pre>
+<p>Con eso obtendrás todas las filas y todas las columnas almacenadas.</p>
+<h4>🧩 ¿Cómo quedaría el método completo?</h4>
+<p>Esta sería la estructura esperada (¡no copies directamente, entiéndelo primero!):</p>
+<pre style="background-color: #f0f0ff; border-left: 4px solid #5e60ce; padding: 10px;"><code>def recuperar_todos(self):
+    conexion = self.abrir()
+    try:
+        cursor = conexion.execute("SELECT * FROM clientes")
+        resultado = cursor.fetchall()
+    except Exception as e:
+        print("❌ Error en la consulta:", e)
+        resultado = []
+    finally:
+        conexion.close()
+    return resultado
+</code></pre>
+<p>💬 <strong>Consejo:</strong> Este método devolverá una lista de tuplas. Cada tupla representa una fila de la base de datos con los datos de un cliente. Luego, en el archivo <code>formularioclientes.py</code>, estos datos se insertan uno a uno en la interfaz mediante un bucle <code>for</code>.</p>
+<p>🛠️ ¡Con este paso completas la funcionalidad de la tercera pestaña de tu aplicación! Estás cada vez más cerca de tener un software completo y funcional.</p></div></div></section></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper UDLcontentIdevice em_iDevice em_iDevice_udl_exp_competenciadigital" id="id55">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">6. Proyecto finalizado: ¡Ya puedes ponerlo en marcha!</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta55_734_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-expression"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><div style="background-color: #f0f9ff; border-left: 4px solid #3498db; padding: 20px; margin-bottom: 20px;">
+<p>Después de haber recorrido todas las fases de desarrollo de una aplicación, desde la planificación, creación de base de datos y construcción de la interfaz gráfica, <strong>ya estás preparado para probar tu proyecto completo</strong>.</p>
+<p>Sabemos que durante el desarrollo pueden surgir dificultades. Por eso, a continuación te facilitamos los ficheros finales completos por si necesitas comprobar tu trabajo, probar la aplicación final o solucionar errores:</p>
+<ul>
+<li><strong><code>formularioclientes.py</code></strong>: contiene la interfaz gráfica con las tres pestañas para carga, consulta y listado de clientes.</li>
+<li><strong><code>clientes.py</code></strong>: contiene la clase que gestiona la base de datos con los métodos de conexión, inserción, consulta y recuperación de datos.</li>
+</ul>
+<div style="margin-top: 15px;"><a href="formularioclientes.py" target="_blank" style="display: inline-block; padding: 10px 15px; background-color: #2ecc71; color: white; text-decoration: none; border-radius: 6px; margin-right: 10px;" rel="noopener">📥 Abrir formulario clientes</a> <a href="clientes.py" target="_blank" style="display: inline-block; padding: 10px 15px; background-color: #3498db; color: white; text-decoration: none; border-radius: 6px;" rel="noopener">📥 Abrir clase Clientes</a></div>
+<p style="margin-top: 15px; font-style: italic;">💡 Recuerda: puedes ejecutar el archivo <code>formularioclientes.py</code> para iniciar la aplicación. Este archivo hace uso de la clase que programaste en <code>clientes.py</code>.</p>
+</div></div></div></section></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice em_iDevice" id="id78">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h1 class="iDeviceTitle">Prueba y mantenimiento: dos fases clave para mejorar tu proyect</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta78_794_2" class="block iDevice_content">
+<div class="exe-text"><div style="background-color: #fef9e7; border-left: 4px solid #f1c40f; padding: 20px; margin-bottom: 20px;">
+<p>En el desarrollo de software, <strong>hacer pruebas no es opcional</strong>. Es la única forma de asegurarnos de que nuestra aplicación funciona correctamente y cumple lo que se espera de ella. Las pruebas ayudan a detectar errores, mejorar la calidad del programa y a ganar confianza tanto para ti como para quien usará la aplicación.</p>
+<p>Una vez que el software pasa las pruebas y se entrega al cliente, entra en la fase de <strong>mantenimiento</strong>. A veces se piensa que el mantenimiento solo sirve para corregir errores, pero en realidad, también incluye mejoras, nuevas funciones y adaptaciones. La gran diferencia es que:</p>
+<ul>
+<li><strong>Las pruebas</strong> se hacen <u>antes</u> de entregar el software al cliente.</li>
+<li><strong>El mantenimiento</strong> se realiza <u>después</u>, cuando el programa ya está en uso.</li>
+</ul>
+<p>En esta última etapa del proyecto aprenderás en qué consisten ambas fases, por qué son tan importantes y cómo afectan al ciclo de vida de cualquier aplicación.</p>
+</div>
+<div class="exe-fx exe-tabs">
+<h2>Los tipos de pruebas</h2>
+<p><img src="IMG_PRO2BAC_REA04_TESTING.webp" alt="Testing, que significa " pruebas="" title="Testing" style="float: left; margin-right: 20px; margin-left: 20px;" width="325" height="217" />Vamos a conocer dos tipos de pruebas:</p>
+<ul>
+<li style="text-align: justify;"><strong>Pruebas de caja negra</strong>: Son las pruebas que habéis realizado en el punto 1. Sólo <strong>analizan las salidas</strong> de un sistema obtenidas a partir de ciertas entradas. Toman el código desarrollado como una <strong><em>caja negra</em></strong> en la que no importa el contenido.</li>
+<li style="text-align: justify;"><strong>Pruebas de caja blanca</strong>: Estas pruebas comprueban el código en sí mismo: verifican que se pasa por todas las posibles condiciones de <strong>if</strong> y <strong>while</strong>, los valores límite de los bucles <strong>for</strong>, etc. Estas pruebas exigen conocer perfectamente la estructura interna de las funciones que se están probando y requieren de mucho más tiempo que las de caja negra, por eso son menos habituales. En general, sólo se realizan cuando hay algún <em>software crítico</em> que pueda suponer grandes costes o vidas humanas.</li>
+</ul>
+<h2>Mantenimiento</h2>
+<p style="text-align: justify;"><img src="IMG_PRO2BAC_REA04_MANTENIMIENTO.jpg" alt="Informático trabajando en el mantenimiento del software." title="Mantenimiento" style="float: left; margin-right: 20px; margin-left: 20px;" width="260" height="260" />Cuando se ha terminado y entregado un proyecto de software al cliente, generalmente necesita alguna modificación posterior. Esta fase es el <strong>mantenimiento</strong>.</p>
+<p style="text-align: justify;">Algunas veces, estas modificaciones se refieren a fallos que deben ser corregidos (denominados <strong>bugs</strong>); y otras veces se busca incorporar <strong>funcionalidades</strong> que les resultarían útiles a los usuarios. En estos casos se propone una ampliación del proyecto. Por esto, la fase de mantenimiento puede ser de cuatro tipos diferentes:</p>
+<ul>
+<li style="text-align: justify;"><strong>Correctivo</strong>: Diagnosticar y solucionar <strong>errores</strong> detectados por los usuarios.</li>
+<li style="text-align: justify;"><strong>Perfectivo</strong>: Implementar <strong>mejoras</strong> sugeridas por los clientes.</li>
+<li style="text-align: justify;"><strong>Adaptativo</strong>: Modificar el programa para que pueda ser usado en otro <strong>entorno</strong>.</li>
+<li style="text-align: justify;"><strong>Preventivo</strong>: Mejorar la fiabilidad para <strong>minimizar</strong> el riesgo de de aparición de posteriores problemas.</li>
+</ul>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper QuExtIdevice em_iDevice em_iDevice_udl_exp_interactivo" id="id63">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Un universo de pruebas</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta63_740_2" class="block iDevice_content">
+<div class="quext-IDevice"><div class="quext-instructions gameQP-instructions"><p>¿Quieres conocer más a fondo la fase de pruebas? Responde entonces a las siguientes preguntas y verás que ¡no es una fase sencilla!</p></div><div class="quext-version js-hidden">2</div><div class="quext-feedback-game"></div><div class="quext-DataGame js-hidden" >%E9%B0%F3%E1%FB%F5%FC%F3%E6%E7%E0%F3%B0%A8%B0%B0%BE%B0%F3%E7%E6%FA%FD%E0%B0%A8%B0%B0%BE%B0%F3%E7%E6%FA%FD%E0%C4%FB%F6%F7%FD%B0%A8%B0%B0%BE%B0%E6%EB%E2%F7%D5%F3%FF%F7%B0%A8%B0%C3%E7%D7%EA%E6%B0%BE%B0%F7%FC%F6%C4%FB%F6%F7%FD%B0%A8%A2%BE%B0%FB%F6%C4%FB%F6%F7%FD%B0%A8%B0%B0%BE%B0%E1%E6%F3%E0%E6%C4%FB%F6%F7%FD%B0%A8%A2%BE%B0%FB%FC%E1%E6%E0%E7%F1%E6%FB%FD%FC%E1%D7%EA%F7%B0%A8%B0%B7%A1%D1%E2%B7%A1%D7%B7%D0%D4%C3%E7%FB%F7%E0%F7%E1%B7%A0%A2%F1%FD%FC%FD%F1%F7%E0%B7%A0%A2%FF%B7%D7%A3%E1%B7%A0%A2%F3%B7%A0%A2%F4%FD%FC%F6%FD%B7%A0%A2%FE%F3%B7%A0%A2%F4%F3%E1%F7%B7%A0%A2%F6%F7%B7%A0%A2%E2%E0%E7%F7%F0%F3%E1%B7%A1%D4%B7%A0%A2%C0%F7%E1%E2%FD%FC%F6%F7%B7%A0%A2%F7%FC%E6%FD%FC%F1%F7%E1%B7%A0%A2%F3%B7%A0%A2%FE%F3%E1%B7%A0%A2%E1%FB%F5%E7%FB%F7%FC%E6%F7%E1%B7%A0%A2%E2%E0%F7%F5%E7%FC%E6%F3%E1%B7%A0%A2%EB%B7%A0%A2%E4%F7%E0%B7%D7%A3%E1%B7%A0%A2%E3%E7%F7%B7%A0%A2%B7%D3%A3%FC%FD%B7%A0%A2%F7%E1%B7%A0%A2%E7%FC%F3%B7%A0%A2%F4%F3%E1%F7%B7%A0%A2%E1%F7%FC%F1%FB%FE%FE%F3%B7%A0%A3%B7%A1%D1%BD%E2%B7%A1%D7%B0%BE%B0%FB%FC%E1%E6%E0%E7%F1%E6%FB%FD%FC%E1%B0%A8%B0%D7%FE%FB%F8%F3%B2%FE%F3%B2%E0%F7%E1%E2%E7%F7%E1%E6%F3%B2%F1%FD%E0%E0%F7%F1%E6%F3%B2%B0%BE%B0%E1%FA%FD%E5%DF%FB%FC%FB%FF%FB%E8%F7%B0%A8%F4%F3%FE%E1%F7%BE%B0%FD%E2%E6%FB%FD%FC%E1%C0%F3%FF%F6%FD%FC%B0%A8%F4%F3%FE%E1%F7%BE%B0%F3%FC%E1%E5%F7%E0%E1%C0%F3%FF%F6%FD%FC%B0%A8%F4%F3%FE%E1%F7%BE%B0%E1%FA%FD%E5%C1%FD%FE%E7%E6%FB%FD%FC%B0%A8%E6%E0%E7%F7%BE%B0%E6%FB%FF%F7%C1%FA%FD%E5%C1%FD%FE%E7%E6%FB%FD%FC%B0%A8%A1%BE%B0%E7%E1%F7%DE%FB%E4%F7%E1%B0%A8%E6%E0%E7%F7%BE%B0%FC%E7%FF%F0%F7%E0%DE%FB%E4%F7%E1%B0%A8%A1%BE%B0%FB%E6%FB%FC%F7%E0%F3%E0%EB%B0%A8%E9%B0%E1%FA%FD%E5%D1%FE%E7%F7%B0%A8%F4%F3%FE%E1%F7%BE%B0%F1%FE%E7%F7%D5%F3%FF%F7%B0%A8%B0%B0%BE%B0%E2%F7%E0%F1%F7%FC%E6%F3%F5%F7%D1%FE%E7%F7%B0%A8%A6%A2%BE%B0%E1%FA%FD%E5%D1%FD%F6%F7%D3%F1%F1%F7%E1%E1%B0%A8%F4%F3%FE%E1%F7%BE%B0%F1%FD%F6%F7%D3%F1%F1%F7%E1%E1%B0%A8%B0%B0%BE%B0%FF%F7%E1%E1%F3%F5%F7%D1%FD%F6%F7%D3%F1%F1%F7%E1%E1%B0%A8%B0%B0%EF%BE%B0%E3%E7%F7%E1%E6%FB%FD%FC%E1%D5%F3%FF%F7%B0%A8%C9%E9%B0%E6%EB%E2%F7%B0%A8%A1%BE%B0%E6%FB%FF%F7%B0%A8%A0%BE%B0%FC%E7%FF%F0%F7%E0%DD%E2%E6%FB%FD%FC%E1%B0%A8%A6%BE%B0%EA%B0%A8%A2%BE%B0%EB%B0%A8%A2%BE%B0%F3%E7%E6%FA%FD%E0%B0%A8%B0%B0%BE%B0%F3%FE%E6%B0%A8%B0%B0%BE%B0%F1%E7%E1%E6%FD%FF%C1%F1%FD%E0%F7%B0%A8%A3%BE%B0%E7%E0%FE%B0%A8%B0%B0%BE%B0%F3%E7%F6%FB%FD%B0%A8%B0%B0%BE%B0%E1%FD%E7%FC%F6%C4%FB%F6%F7%FD%B0%A8%A3%BE%B0%FB%FF%F3%F5%F7%C4%FB%F6%F7%FD%B0%A8%A3%BE%B0%FB%C4%FB%F6%F7%FD%B0%A8%A2%BE%B0%F4%C4%FB%F6%F7%FD%B0%A8%A2%BE%B0%E1%FB%FE%F7%FC%E6%C4%FB%F6%F7%FD%B0%A8%A2%BE%B0%E6%C1%FB%FE%F7%FC%E6%C4%FB%F6%F7%FD%B0%A8%A2%BE%B0%F7%C6%F7%EA%E6%B0%A8%B0%AE%E2%AC%DE%FD%E1%B2%E1%FB%F5%E7%FB%F7%FC%E6%F7%E1%B2%F3%F1%F1%FB%FD%FC%F7%E1%B2%FA%F3%F1%F7%FC%B2%E0%F7%F4%F7%E0%F7%FC%F1%FB%F3%B2%F3%B2%F3%F1%E6%FB%E4%FB%F6%F3%F6%F7%E1%B2%F6%F7%FE%B2%E2%E0%FD%F1%F7%E1%FD%B2%F6%F7%B2%F6%F7%E1%F3%E0%E0%FD%FE%FE%FD%B2%E1%FD%F4%E6%E5%F3%E0%F7%BC%AE%F0%E0%B2%BD%AC%BA%FB%BB%B2%D7%E4%F3%FE%E7%F3%E0%B2%FE%F3%B2%F1%F3%E2%F3%F1%FB%F6%F3%F6%B2%F6%F7%B2%E2%E0%E7%F7%F0%F3%B2%F6%F7%B2%FE%FD%E1%B2%E0%F7%E3%E7%FB%E1%FB%E6%FD%E1%BC%AE%F0%E0%B2%BD%AC%BA%FB%FB%BB%B2%C0%F7%E2%F7%E6%FB%E0%B2%FE%F3%E1%B2%F3%F1%E6%FB%E4%FB%F6%F3%F6%F7%E1%B2%F6%F7%B2%E2%E0%E7%F7%F0%F3%B2%FE%E7%F7%F5%FD%B2%F6%F7%B2%F1%F3%FF%F0%FB%FD%E1%BC%AE%F0%E0%B2%BD%AC%BA%FB%FB%FB%BB%B2%D6%FB%E1%F7c%F3%E0%B2%FE%F3%B2%F1%FD%FC%F4%FB%F5%E7%E0%F3%F1%FBa%FC%B2%F6%F7%FE%B2%F7%FC%E6%FD%E0%FC%FD%B2%F6%F7%B2%E2%E0%E7%F7%F0%F3%BC%AE%F0%E0%B2%BD%AC%BA%FB%E4%BB%B2%D6%F7%E1%F3%E0%E0%FD%FE%FE%F3%E0%B2%EB%B2%E2%E0%FB%FD%E0%FB%E8%F3%E0%B2%F1%F3%E1%FD%E1%B2%F6%F7%B2%E2%E0%E7%F7%F0%F3%BC%AE%F0%E0%B2%BD%AC%BA%E4%BB%B2%C4%F7%E0%FB%F4%FB%F1%F3%E0%B2%E3%E7%F7%B2%F7%FE%B2%F7%FC%E6%FD%E0%FC%FD%B2%F7%E1%E6%7B%B2%F1%FD%FC%F4%FB%F5%E7%E0%F3%F6%FD%B2%F1%FD%E0%E0%F7%F1%E6%F3%FF%F7%FC%E6%F7%BC%AE%BD%E2%AC%B0%BE%B0%E3%E7%F7%EA%E6%FB%FD%FC%B0%A8%B0-%D1%E7s%FE%F7%E1%B2%F4%FD%E0%FF%F3%FC%B2%E2%F3%E0%E6%F7%B2%F6%F7%B2%FE%F3%B2%F4%F3%E1%F7%B2%F6%F7%B2%E2%E0%E7%F7%F0%F3%E1%AD%B0%BE%B0%FD%E2%E6%FB%FD%FC%E1%B0%A8%C9%B0%BA%FB%BB%B2%EB%B2%BA%FB%FB%FB%BB%B2%E1%FD%FC%B2%E2%F3%E0%E6%F7%B2%F6%F7%B2%D3%FCs%FE%FB%E1%FB%E1%B2%EB%B2%D6%FB%E1%F7c%FD%BE%B2%BA%FB%FB%BB%BE%B2%BA%FB%E4%BB%B2%EB%B2%BA%E4%BB%B2%E1%FD%FC%B2%E2%F3%E0%E6%F7%B2%F6%F7%B2%DB%FF%E2%FE%F7%FF%F7%FC%E6%F3%F1%FBa%FC%B2%EB%B2%D7%F8%F7%F1%E7%F1%FBa%FC%B2%F6%F7%B2%E2%E0%E7%F7%F0%F3%E1%BC%B0%BE%B0%BA%FB%BB%B2%EB%B2%BA%FB%E4%BB%B2%E1%FD%FC%B2%E2%F3%E0%E6%F7%B2%F6%F7%B2%D3%FCs%FE%FB%E1%FB%E1%B2%EB%B2%D6%FB%E1%F7c%FD%BE%B2%BA%FB%FB%BB%BE%B2%BA%FB%FB%FB%BB%B2%EB%B2%BA%E4%BB%B2%E1%FD%FC%B2%E2%F3%E0%E6%F7%B2%F6%F7%B2%DB%FF%E2%FE%F7%FF%F7%FC%E6%F3%F1%FBa%FC%B2%EB%B2%D7%F8%F7%F1%E7%F1%FBa%FC%B2%F6%F7%B2%E2%E0%E7%F7%F0%F3%E1%BC%B0%BE%B0%BA%FB%BB%B2%EB%B2%BA%E4%BB%B2%E1%FD%FC%B2%E2%F3%E0%E6%F7%B2%F6%F7%B2%D3%FCs%FE%FB%E1%FB%E1%B2%EB%B2%D6%FB%E1%F7c%FD%BE%B2%BA%FB%FB%BB%BE%B2%BA%FB%FB%FB%BB%B2%EB%B2%BA%FB%E4%BB%B2%E1%FD%FC%B2%E2%F3%E0%E6%F7%B2%F6%F7%B2%DB%FF%E2%FE%F7%FF%F7%FC%E6%F3%F1%FBa%FC%B2%EB%B2%D7%F8%F7%F1%E7%F1%FBa%FC%B2%F6%F7%B2%E2%E0%E7%F7%F0%F3%E1%BC%B0%BE%B0%BA%FB%BB%B2%EB%B2%BA%FB%FB%BB%B2%E1%FD%FC%B2%E2%F3%E0%E6%F7%B2%F6%F7%B2%D3%FCs%FE%FB%E1%FB%E1%B2%EB%B2%D6%FB%E1%F7c%FD%BE%B2%BA%FB%FB%FB%BB%BE%B2%BA%FB%E4%BB%B2%EB%B2%BA%E4%BB%B2%E1%FD%FC%B2%E2%F3%E0%E6%F7%B2%F6%F7%B2%DB%FF%E2%FE%F7%FF%F7%FC%E6%F3%F1%FBa%FC%B2%EB%B2%D7%F8%F7%F1%E7%F1%FBa%FC%B2%F6%F7%B2%E2%E0%E7%F7%F0%F3%E1%BC%B0%CF%BE%B0%E1%FD%FE%E7%E6%FB%FD%FC%B0%A8%A2%BE%B0%FF%E1%F5%DA%FB%E6%B0%A8%B0%B0%BE%B0%FF%E1%F5%D7%E0%E0%FD%E0%B0%A8%B0%B0%EF%BE%E9%B0%E6%EB%E2%F7%B0%A8%A2%BE%B0%E6%FB%FF%F7%B0%A8%A3%BE%B0%FC%E7%FF%F0%F7%E0%DD%E2%E6%FB%FD%FC%E1%B0%A8%A6%BE%B0%EA%B0%A8%A2%BE%B0%EB%B0%A8%A2%BE%B0%F3%E7%E6%FA%FD%E0%B0%A8%B0%B0%BE%B0%F3%FE%E6%B0%A8%B0%B0%BE%B0%F1%E7%E1%E6%FD%FF%C1%F1%FD%E0%F7%B0%A8%A3%BE%B0%E7%E0%FE%B0%A8%B0%B0%BE%B0%F3%E7%F6%FB%FD%B0%A8%B0%B0%BE%B0%E1%FD%E7%FC%F6%C4%FB%F6%F7%FD%B0%A8%A3%BE%B0%FB%FF%F3%F5%F7%C4%FB%F6%F7%FD%B0%A8%A3%BE%B0%FB%C4%FB%F6%F7%FD%B0%A8%A2%BE%B0%F4%C4%FB%F6%F7%FD%B0%A8%A2%BE%B0%E1%FB%FE%F7%FC%E6%C4%FB%F6%F7%FD%B0%A8%A2%BE%B0%E6%C1%FB%FE%F7%FC%E6%C4%FB%F6%F7%FD%B0%A8%A2%BE%B0%F7%C6%F7%EA%E6%B0%A8%B0%AE%E2%AC%DE%FD%E1%B2%E1%FB%F5%E7%FB%F7%FC%E6%F7%E1%B2%F3%F1%F1%FB%FD%FC%F7%E1%B2%FA%F3%F1%F7%FC%B2%E0%F7%F4%F7%E0%F7%FC%F1%FB%F3%B2%F3%B2%F3%F1%E6%FB%E4%FB%F6%F3%F6%F7%E1%B2%F6%F7%FE%B2%E2%E0%FD%F1%F7%E1%FD%B2%F6%F7%B2%F6%F7%E1%F3%E0%E0%FD%FE%FE%FD%B2%E1%FD%F4%E6%E5%F3%E0%F7%BC%AE%F0%E0%B2%BD%AC%BA%FB%BB%B2%D7%E4%F3%FE%E7%F3%E0%B2%FE%F3%B2%F1%F3%E2%F3%F1%FB%F6%F3%F6%B2%F6%F7%B2%E2%E0%E7%F7%F0%F3%B2%F6%F7%B2%FE%FD%E1%B2%E0%F7%E3%E7%FB%E1%FB%E6%FD%E1%BC%AE%F0%E0%B2%BD%AC%BA%FB%FB%BB%B2%C0%F7%E2%F7%E6%FB%E0%B2%FE%F3%E1%B2%F3%F1%E6%FB%E4%FB%F6%F3%F6%F7%E1%B2%F6%F7%B2%E2%E0%E7%F7%F0%F3%B2%FE%E7%F7%F5%FD%B2%F6%F7%B2%F1%F3%FF%F0%FB%FD%E1%BC%AE%F0%E0%B2%BD%AC%BA%FB%FB%FB%BB%B2%D6%FB%E1%F7c%F3%E0%B2%FE%F3%B2%F1%FD%FC%F4%FB%F5%E7%E0%F3%F1%FBa%FC%B2%F6%F7%FE%B2%F7%FC%E6%FD%E0%FC%FD%B2%F6%F7%B2%E2%E0%E7%F7%F0%F3%BC%AE%F0%E0%B2%BD%AC%BA%FB%E4%BB%B2%D6%F7%E1%F3%E0%E0%FD%FE%FE%F3%E0%B2%EB%B2%E2%E0%FB%FD%E0%FB%E8%F3%E0%B2%F1%F3%E1%FD%E1%B2%F6%F7%B2%E2%E0%E7%F7%F0%F3%BC%AE%F0%E0%B2%BD%AC%BA%E4%BB%B2%C4%F7%E0%FB%F4%FB%F1%F3%E0%B2%E3%E7%F7%B2%F7%FE%B2%F7%FC%E6%FD%E0%FC%FD%B2%F7%E1%E6%7B%B2%F1%FD%FC%F4%FB%F5%E7%E0%F3%F6%FD%B2%F1%FD%E0%E0%F7%F1%E6%F3%FF%F7%FC%E6%F7%BC%AE%BD%E2%AC%B0%BE%B0%E3%E7%F7%EA%E6%FB%FD%FC%B0%A8%B0-%D1%E7s%FC%F6%FD%B2%E1%F7%B2%FA%F3%FC%B2%F1%FD%FF%E2%FE%F7%E6%F3%F6%FD%B2%FE%F3%E1%B2%E2%E0%E7%F7%F0%F3%E1%AD%B2%C1%FD%FE%FD%B2%FE%F3%B2%E0%F7%E1%E2%E7%F7%E1%E6%F3%B2%FFs%E1%B2%FB%FF%E2%FD%E0%E6%F3%FC%E6%F7%B2%F7%E1%B2%E4s%FE%FB%F6%F3%BC%B0%BE%B0%FD%E2%E6%FB%FD%FC%E1%B0%A8%C9%B0%D1%E7%F3%FC%F6%FD%B2%F7%FE%B2%E6%FB%F7%FF%E2%FD%B2%EB%B2%F7%FE%B2%E2%E0%F7%E1%E7%E2%E7%F7%E1%E6%FD%B2%E1%F7%B2%FA%F3%FC%B2%F3%F5%FD%E6%F3%F6%FD%BC%B0%BE%B0%D1%E7%F3%FC%F6%FD%B2%FC%FD%B2%E3%E7%F7%F6%F3%FC%B2%F6%F7%F4%F7%F1%E6%FD%E1%B2%F6%F7%B2%F3%FE%E6%F3%B2%E2%E0%FB%FD%E0%FB%F6%F3%F6%B2%E2%F7%FC%F6%FB%F7%FC%E6%F7%E1%BC%B0%BE%B0%D1%E7%F3%FC%F6%FD%B2%FA%F3%EB%B2%E1%E7%F4%FB%F1%FB%F7%FC%E6%F7%B2%FB%FC%F4%FD%E0%FF%F3%F1%FBa%FC%B2%E2%F3%E0%F3%B2%E3%E7%F7%B2%FE%FD%E1%B2%E2%F3%E6%E0%FD%F1%FB%FC%F3%F6%FD%E0%F7%E1%B2%E6%FD%FF%F7%FC%B2%E7%FC%F3%B2%F6%F7%F1%FB%E1%FBa%FC%B2%E1%FD%F0%E0%F7%B2%F7%FE%B2%F7%FC%E4%7F%FD%B2%F3%B2%E2%E0%FD%F6%E7%F1%F1%FBa%FC%BC%B0%BE%B0%D1%E7%F3%FC%F6%FD%B2%F1%F3%F6%F3%B2%F1%FD%FF%F0%FB%FC%F3%F1%FBa%FC%B2%F6%F7%B2%F6%F3%E6%FD%E1%B2%FA%F3%B2%E1%FB%F6%FD%B2%F7%F8%F7%F1%E7%E6%F3%F6%F3%B2%F1%FD%FC%B2%7B%EA%FB%E6%FD%BC%B0%CF%BE%B0%E1%FD%FE%E7%E6%FB%FD%FC%B0%A8%A0%BE%B0%FF%E1%F5%DA%FB%E6%B0%A8%B0%B0%BE%B0%FF%E1%F5%D7%E0%E0%FD%E0%B0%A8%B0%B0%EF%BE%E9%B0%E6%EB%E2%F7%B0%A8%A2%BE%B0%E6%FB%FF%F7%B0%A8%A3%BE%B0%FC%E7%FF%F0%F7%E0%DD%E2%E6%FB%FD%FC%E1%B0%A8%A6%BE%B0%EA%B0%A8%A2%BE%B0%EB%B0%A8%A2%BE%B0%F3%E7%E6%FA%FD%E0%B0%A8%B0%B0%BE%B0%F3%FE%E6%B0%A8%B0%B0%BE%B0%F1%E7%E1%E6%FD%FF%C1%F1%FD%E0%F7%B0%A8%A3%BE%B0%E7%E0%FE%B0%A8%B0%B0%BE%B0%F3%E7%F6%FB%FD%B0%A8%B0%B0%BE%B0%E1%FD%E7%FC%F6%C4%FB%F6%F7%FD%B0%A8%A3%BE%B0%FB%FF%F3%F5%F7%C4%FB%F6%F7%FD%B0%A8%A3%BE%B0%FB%C4%FB%F6%F7%FD%B0%A8%A2%BE%B0%F4%C4%FB%F6%F7%FD%B0%A8%A2%BE%B0%E1%FB%FE%F7%FC%E6%C4%FB%F6%F7%FD%B0%A8%A2%BE%B0%E6%C1%FB%FE%F7%FC%E6%C4%FB%F6%F7%FD%B0%A8%A2%BE%B0%F7%C6%F7%EA%E6%B0%A8%B0%AE%E2%AC%DE%FD%E1%B2%E1%FB%F5%E7%FB%F7%FC%E6%F7%E1%B2%F3%F1%F1%FB%FD%FC%F7%E1%B2%FA%F3%F1%F7%FC%B2%E0%F7%F4%F7%E0%F7%FC%F1%FB%F3%B2%F3%B2%F3%F1%E6%FB%E4%FB%F6%F3%F6%F7%E1%B2%F6%F7%FE%B2%E2%E0%FD%F1%F7%E1%FD%B2%F6%F7%B2%F6%F7%E1%F3%E0%E0%FD%FE%FE%FD%B2%E1%FD%F4%E6%E5%F3%E0%F7%BC%AE%F0%E0%B2%BD%AC%BA%FB%BB%B2%D7%E4%F3%FE%E7%F3%E0%B2%FE%F3%B2%F1%F3%E2%F3%F1%FB%F6%F3%F6%B2%F6%F7%B2%E2%E0%E7%F7%F0%F3%B2%F6%F7%B2%FE%FD%E1%B2%E0%F7%E3%E7%FB%E1%FB%E6%FD%E1%BC%AE%F0%E0%B2%BD%AC%BA%FB%FB%BB%B2%C0%F7%E2%F7%E6%FB%E0%B2%FE%F3%E1%B2%F3%F1%E6%FB%E4%FB%F6%F3%F6%F7%E1%B2%F6%F7%B2%E2%E0%E7%F7%F0%F3%B2%FE%E7%F7%F5%FD%B2%F6%F7%B2%F1%F3%FF%F0%FB%FD%E1%BC%AE%F0%E0%B2%BD%AC%BA%FB%FB%FB%BB%B2%D6%FB%E1%F7c%F3%E0%B2%FE%F3%B2%F1%FD%FC%F4%FB%F5%E7%E0%F3%F1%FBa%FC%B2%F6%F7%FE%B2%F7%FC%E6%FD%E0%FC%FD%B2%F6%F7%B2%E2%E0%E7%F7%F0%F3%BC%AE%F0%E0%B2%BD%AC%BA%FB%E4%BB%B2%D6%F7%E1%F3%E0%E0%FD%FE%FE%F3%E0%B2%EB%B2%E2%E0%FB%FD%E0%FB%E8%F3%E0%B2%F1%F3%E1%FD%E1%B2%F6%F7%B2%E2%E0%E7%F7%F0%F3%BC%AE%F0%E0%B2%BD%AC%BA%E4%BB%B2%C4%F7%E0%FB%F4%FB%F1%F3%E0%B2%E3%E7%F7%B2%F7%FE%B2%F7%FC%E6%FD%E0%FC%FD%B2%F7%E1%E6%7B%B2%F1%FD%FC%F4%FB%F5%E7%E0%F3%F6%FD%B2%F1%FD%E0%E0%F7%F1%E6%F3%FF%F7%FC%E6%F7%BC%AE%BD%E2%AC%B0%BE%B0%E3%E7%F7%EA%E6%FB%FD%FC%B0%A8%B0-%D1%E7s%FE%B2%F6%F7%B2%FE%FD%E1%B2%E1%FB%F5%E7%FB%F7%FC%E6%F7%E1%B2%F6%F7%E1%F1%E0%FB%F0%F7%B2%FE%F3%E1%B2%E6%7B%F1%FC%FB%F1%F3%E1%B2%F6%F7%B2%F6%FB%E1%F7c%FD%B2%F6%F7%B2%F1%F3%E1%FD%E1%B2%F6%F7%B2%E2%E0%E7%F7%F0%F3%B2%F0%F3%E1%F3%F6%F3%E1%B2%F7%FC%B2%F7%E1%E6%E0%E7%F1%E6%E7%E0%F3%B2%BA%C2%E0%E7%F7%F0%F3%E1%B2%F6%F7%B2%F1%F3%F8%F3%B2%F0%FE%F3%FC%F1%F3%BB%AD%B0%BE%B0%FD%E2%E6%FB%FD%FC%E1%B0%A8%C9%B0%DE%F3%E1%B2%E2%E0%E7%F7%F0%F3%E1%B2%E1%F7%B2%F6%F7%E0%FB%E4%F3%FC%B2%F6%F7%B2%FE%F3%B2%F7%EA%E2%F7%E0%FB%F7%FC%F1%FB%F3%B2%F6%F7%FE%B2%E6%F7%E1%E6%F7%E0%BC%B0%BE%B0%DE%F3%E1%B2%E2%E0%E7%F7%F0%F3%E1%B2%E1%F7%B2%F6%F7%E0%FB%E4%F3%FC%B2%F6%F7%B2%FE%F3%B2%F7%EA%E2%F7%E0%FB%F7%FC%F1%FB%F3%B2%F6%F7%B2%FE%FD%E1%B2%F6%F7%E1%F3%E0%E0%FD%FE%FE%F3%F6%FD%E0%F7%E1%BC%B0%BE%B0%DE%F3%E1%B2%E2%E0%E7%F7%F0%F3%E1%B2%E1%F7%B2%F6%F7%E0%FB%E4%F3%FC%B2%F6%F7%B2%FE%FD%E1%B2%FF%FD%F6%F7%FE%FD%E1%B2%F6%F7%FE%B2%E1%FB%E1%E6%F7%FF%F3%BC%B0%BE%B0%DE%F3%E1%B2%E2%E0%E7%F7%F0%F3%E1%B2%E1%F7%B2%F6%F7%E0%FB%E4%F3%FC%B2%F6%F7%FE%B2%F1a%F6%FB%F5%FD%B2%F7%FC%E6%E0%F7%F5%F3%F6%FD%BC%B2%C0%F7%E1%E2%E7%F7%E1%E6%F3%B0%CF%BE%B0%E1%FD%FE%E7%E6%FB%FD%FC%B0%A8%A1%BE%B0%FF%E1%F5%DA%FB%E6%B0%A8%B0%B0%BE%B0%FF%E1%F5%D7%E0%E0%FD%E0%B0%A8%B0%B0%EF%BE%E9%B0%E6%EB%E2%F7%B0%A8%A1%BE%B0%E6%FB%FF%F7%B0%A8%A0%BE%B0%FC%E7%FF%F0%F7%E0%DD%E2%E6%FB%FD%FC%E1%B0%A8%A6%BE%B0%EA%B0%A8%A2%BE%B0%EB%B0%A8%A2%BE%B0%F3%E7%E6%FA%FD%E0%B0%A8%B0%B0%BE%B0%F3%FE%E6%B0%A8%B0%B0%BE%B0%F1%E7%E1%E6%FD%FF%C1%F1%FD%E0%F7%B0%A8%A3%BE%B0%E7%E0%FE%B0%A8%B0%B0%BE%B0%F3%E7%F6%FB%FD%B0%A8%B0%B0%BE%B0%E1%FD%E7%FC%F6%C4%FB%F6%F7%FD%B0%A8%A3%BE%B0%FB%FF%F3%F5%F7%C4%FB%F6%F7%FD%B0%A8%A3%BE%B0%FB%C4%FB%F6%F7%FD%B0%A8%A2%BE%B0%F4%C4%FB%F6%F7%FD%B0%A8%A2%BE%B0%E1%FB%FE%F7%FC%E6%C4%FB%F6%F7%FD%B0%A8%A2%BE%B0%E6%C1%FB%FE%F7%FC%E6%C4%FB%F6%F7%FD%B0%A8%A2%BE%B0%F7%C6%F7%EA%E6%B0%A8%B0%AE%E2%AC%C6%F7%FC%FB%F7%FC%F6%FD%B2%F7%FC%B2%F1%E7%F7%FC%E6%F3%B2%FE%F3%E1%B2%E1%FB%F5%E7%FB%F7%FC%E6%F7%E1%B2%F8%E7%E1%E6%FB%F4%FB%F1%F3%F1%FB%FD%FC%F7%E1%A8%AE%F0%E0%B2%BD%AC%BA%FB%BB%B2%C1%E7%B2%F4%F3%FE%E6%F3%B2%F6%F7%B2%FB%FC%F6%F7%E2%F7%FC%F6%F7%FC%F1%FB%F3%B2%E1%F7%B2%E4%F7%B2%FF%FB%E6%FB%F5%F3%F6%F3%B2%E2%FD%E0%B2%E2%E0%E7%F7%F0%F3%E1%B2%FB%FC%F6%F7%E2%F7%FC%F6%FB%F7%FC%E6%F7%E1%B2%F6%E7%E0%F3%FC%E6%F7%B2%FE%F3%E1%B2%E2%E0%E7%F7%F0%F3%E1%BC%AE%F0%E0%B2%BD%AC%BA%FB%FB%BB%B2%C7%FC%F3%B2%E2%F7%E0%E1%FD%FC%F3%B2%F1%FD%FC%B2%E7%FC%B2%F0%E7%F7%FC%B2%F1%FD%FC%FD%F1%FB%FF%FB%F7%FC%E6%FD%B2%F6%F7%FE%B2%F1a%F6%FB%F5%FD%B2%E2%E7%F7%F6%F7%B2%F7%FC%F1%FD%FC%E6%E0%F3%E0%B2%FFs%E1%B2%F6%F7%F4%F7%F1%E6%FD%E1%B2%FFs%E1%B2%E0s%E2%FB%F6%F3%FF%F7%FC%E6%F7%B2%E7%E1%F3%FC%F6%FD%B2%E6%7B%F1%FC%FB%F1%F3%E1%B2%F6%F7%B2%F1%F3%F8%F3%B2%F0%FE%F3%FC%F1%F3%BC%AE%F0%E0%B2%BD%AC%BA%FB%FB%FB%BB%B2%DE%FD%E1%B2%F6%F7%E1%F3%E0%E0%FD%FE%FE%F3%F6%FD%E0%F7%E1%B2%E6%FB%F7%FC%F7%FC%B2%E7%FC%F3%B2%FF%F7%F8%FD%E0%B2%F1%FD%FF%E2%E0%F7%FC%E1%FBa%FC%B2%F6%F7%B2%FE%FD%E1%B2%E0%F7%E3%E7%FB%E1%FB%E6%FD%E1%B2%E3%E7%F7%B2%FE%FD%E1%B2%E3%E7%F7%B2%E0%F7%F3%FE%FB%E8%F3%FC%B2%FE%FD%E1%B2%E6%F7%E1%E6%BC%AE%F0%E0%B2%BD%AC%BA%FB%E4%BB%B2%DE%FD%E1%B2%E3%E7%F7%B2%E0%F7%F3%FE%FB%E8%F3%FC%B2%FE%FD%E1%B2%E6%F7%E1%E6%B2%F7%E1%F1%E0%FB%F0%F7%FC%B2%FB%FC%F4%FD%E0%FF%F7%E1%B2%F6%F7%B2%FB%FC%F1%FB%F6%F7%FC%E6%F7%E1%B2%FB%FC%FC%F7%F1%F7%E1%F3%E0%FB%FD%E1%B2%E2%FD%E0%E3%E7%F7%B2%F7%FC%F1%E7%F7%FC%E6%E0%F3%FC%B2%E2%F7%E3%E7%F7c%F3%E1%B2%F6%FB%F4%F7%E0%F7%FC%F1%FB%F3%E1%B2%F7%FC%E6%E0%F7%B2%FE%F3%B2%F4%FD%E0%FF%F3%B2%F7%FC%B2%E3%E7%F7%B2%E1%F7%B2%F1%FD%FF%E2%FD%E0%E6%F3%B2%F7%FE%B2%E1%FB%E1%E6%F7%FF%F3%B2%EB%B2%FE%F3%B2%F4%FD%E0%FF%F3%B2%F7%FC%B2%E3%E7%F7%B2%E1%F7%B2%F7%E1%E2%F7%F1%FB%F4%FB%F1%F3%B2%E3%E7%F7%B2%F4%E7%FC%F1%FB%FD%FC%F7%BC%AE%BD%E2%AC%B0%BE%B0%E3%E7%F7%EA%E6%FB%FD%FC%B0%A8%B0-%D1%E7s%FE%F7%E1%B2%E4s%FE%FB%F6%F3%E1%B2%E2%F3%E0%F3%B2%FE%FD%E1%B2%F6%F7%E1%F3%E0%E0%FD%FE%FE%F3%F6%FD%E0%F7%E1%B2%E3%E7%F7%B2%E2%E0%E7%F7%F0%F3%FC%B2%E1%E7%B2%E2%E0%FD%E2%FB%FD%B2%F1a%F6%FB%F5%FD%B2%F6%E7%E0%F3%FC%E6%F7%B2%FE%F3%E1%B2%E2%E0%E7%F7%F0%F3%E1%B2%E7%FC%FB%E6%F3%E0%FB%F3%E1%AD%B0%BE%B0%FD%E2%E6%FB%FD%FC%E1%B0%A8%C9%B0%BA%FB%BB%B2%EB%B2%BA%FB%FB%BB%B0%BE%B0%BA%FB%FB%BB%B2%EB%B2%BA%FB%FB%FB%BB%B0%BE%B0%BA%FB%BB%B2%EB%B2%BA%FB%E4%BB%B0%BE%B0%BA%FB%FB%FB%BB%B2%EB%B2%BA%FB%E4%BB%B0%CF%BE%B0%E1%FD%FE%E7%E6%FB%FD%FC%B0%A8%A2%BE%B0%FF%E1%F5%DA%FB%E6%B0%A8%B0%B0%BE%B0%FF%E1%F5%D7%E0%E0%FD%E0%B0%A8%B0%B0%EF%BE%E9%B0%E6%EB%E2%F7%B0%A8%A2%BE%B0%E6%FB%FF%F7%B0%A8%A3%BE%B0%FC%E7%FF%F0%F7%E0%DD%E2%E6%FB%FD%FC%E1%B0%A8%A6%BE%B0%EA%B0%A8%A2%BE%B0%EB%B0%A8%A2%BE%B0%F3%E7%E6%FA%FD%E0%B0%A8%B0%B0%BE%B0%F3%FE%E6%B0%A8%B0%B0%BE%B0%F1%E7%E1%E6%FD%FF%C1%F1%FD%E0%F7%B0%A8%A3%BE%B0%E7%E0%FE%B0%A8%B0%B0%BE%B0%F3%E7%F6%FB%FD%B0%A8%B0%B0%BE%B0%E1%FD%E7%FC%F6%C4%FB%F6%F7%FD%B0%A8%A3%BE%B0%FB%FF%F3%F5%F7%C4%FB%F6%F7%FD%B0%A8%A3%BE%B0%FB%C4%FB%F6%F7%FD%B0%A8%A2%BE%B0%F4%C4%FB%F6%F7%FD%B0%A8%A2%BE%B0%E1%FB%FE%F7%FC%E6%C4%FB%F6%F7%FD%B0%A8%A2%BE%B0%E6%C1%FB%FE%F7%FC%E6%C4%FB%F6%F7%FD%B0%A8%A2%BE%B0%F7%C6%F7%EA%E6%B0%A8%B0%AE%E2%AC%D6%F7%B2%FE%FD%E1%B2%E1%FB%F5%E7%FB%F7%FC%E6%F7%E1%B2%F4%F3%F1%E6%FD%E0%F7%E1%B2%F6%F7%B2%E7%FC%B2%E2%E0%FD%EB%F7%F1%E6%FD%A8%AE%BD%E2%AC%CE%FC%AE%E2%AC%BA%DB%BB%B2%C0%F7%E3%E7%FB%E1%FB%E6%FD%E1%B2%F1%FD%FC%E6%E0%F3%F1%E6%E7%F3%FE%F7%E1%AE%F0%E0%B2%BD%AC%BA%DB%DB%BB%B2%C0%F7%E3%E7%FB%E1%FB%E6%FD%E1%B2%FE%F7%F5%F3%FE%F7%E1%AE%F0%E0%B2%BD%AC%BA%DB%DB%DB%BB%B2%D7%E1%E6s%FC%F6%F3%E0%F7%E1%B2%F6%F7%B2%FE%F3%B2%FB%FC%F6%E7%E1%E6%E0%FB%F3%AE%F0%E0%B2%BD%AC%BA%DB%C4%BB%B2%C0%FB%F7%E1%F5%FD%E1%B2%F6%F7%B2%FE%F3%B2%F3%E2%FE%FB%F1%F3%F1%FBa%FC%AE%F0%E0%B2%BD%AC%BA%C4%BB%B2%C6%F3%FF%F3c%FD%B2%F6%F7%FE%B2%E2%E0%FD%EB%F7%F1%E6%FD%AE%BD%E2%AC%B0%BE%B0%E3%E7%F7%EA%E6%FB%FD%FC%B0%A8%B0%C7%FC%F3%B2%FA%F7%E0%E0%F3%FF%FB%F7%FC%E6%F3%B2%F6%F7%B2%E2%E0%E7%F7%F0%F3%B2%E6%7F%E2%FB%F1%F3%B2%E2%FD%F6%E0%7F%F3%B2%E0%F7%F3%FE%FB%E8%F3%E0%B2%E6%FD%F6%FD%B2%FE%FD%B2%E1%FB%F5%E7%FB%F7%FC%E6%F7%BE%B2%D7%CA%D1%D7%C2%C6%DD%A8%B0%BE%B0%FD%E2%E6%FB%FD%FC%E1%B0%A8%C9%B0%D1%FD%FF%E2%F3%E0%F3%F1%FBa%FC%B2%F6%F7%B2%FE%FD%E1%B2%E0%F7%E1%E7%FE%E6%F3%F6%FD%E1%B2%F7%E1%E2%F7%E0%F3%F6%FD%E1%B2%F1%FD%FC%B2%FE%FD%E1%B2%E0%F7%E1%E7%FE%E6%F3%F6%FD%E1%B2%E0%F7%F3%FE%F7%E1%BC%B0%BE%B0%D5%F7%FC%F7%E0%F3%E0%B2%E0%F7%E1%E7%FE%E6%F3%F6%FD%E1%B2%F7%E1%E2%F7%E0%F3%F6%FD%E1%BC%B0%BE%B0%D5%E0%F3%F0%F3%F1%FBa%FC%B2%F6%F7%B2%F7%FC%E6%E0%F3%F6%F3%E1%B2%F6%F7%B2%E2%E0%E7%F7%F0%F3%BC%B0%BE%B0%DE%F7%EB%F7%FC%F6%FD%B2%E4%F3%FE%FD%E0%F7%E1%B2%F6%F7%B2%E2%E0%E7%F7%F0%F3%B2%F6%F7%B2%E7%FC%B2%F3%E0%F1%FA%FB%E4%FD%B2%F6%F7%B2%F6%F3%E6%FD%E1%BC%B0%CF%BE%B0%E1%FD%FE%E7%E6%FB%FD%FC%B0%A8%A3%BE%B0%FF%E1%F5%DA%FB%E6%B0%A8%B0%B0%BE%B0%FF%E1%F5%D7%E0%E0%FD%E0%B0%A8%B0%B0%EF%BE%E9%B0%E6%EB%E2%F7%B0%A8%A2%BE%B0%E6%FB%FF%F7%B0%A8%A3%BE%B0%FC%E7%FF%F0%F7%E0%DD%E2%E6%FB%FD%FC%E1%B0%A8%A6%BE%B0%EA%B0%A8%A2%BE%B0%EB%B0%A8%A2%BE%B0%F3%E7%E6%FA%FD%E0%B0%A8%B0%B0%BE%B0%F3%FE%E6%B0%A8%B0%B0%BE%B0%F1%E7%E1%E6%FD%FF%C1%F1%FD%E0%F7%B0%A8%A3%BE%B0%E7%E0%FE%B0%A8%B0%B0%BE%B0%F3%E7%F6%FB%FD%B0%A8%B0%B0%BE%B0%E1%FD%E7%FC%F6%C4%FB%F6%F7%FD%B0%A8%A3%BE%B0%FB%FF%F3%F5%F7%C4%FB%F6%F7%FD%B0%A8%A3%BE%B0%FB%C4%FB%F6%F7%FD%B0%A8%A2%BE%B0%F4%C4%FB%F6%F7%FD%B0%A8%A2%BE%B0%E1%FB%FE%F7%FC%E6%C4%FB%F6%F7%FD%B0%A8%A2%BE%B0%E6%C1%FB%FE%F7%FC%E6%C4%FB%F6%F7%FD%B0%A8%A2%BE%B0%F7%C6%F7%EA%E6%B0%A8%B0%AE%E2%AC%D6%F7%B2%FE%FD%E1%B2%E1%FB%F5%E7%FB%F7%FC%E6%F7%E1%B2%F4%F3%F1%E6%FD%E0%F7%E1%B2%F6%F7%B2%E7%FC%B2%E2%E0%FD%EB%F7%F1%E6%FD%A8%AE%BD%E2%AC%CE%FC%AE%E2%AC%BA%DB%BB%B2%C0%F7%E3%E7%FB%E1%FB%E6%FD%E1%B2%F1%FD%FC%E6%E0%F3%F1%E6%E7%F3%FE%F7%E1%AE%F0%E0%B2%BD%AC%BA%DB%DB%BB%B2%C0%F7%E3%E7%FB%E1%FB%E6%FD%E1%B2%FE%F7%F5%F3%FE%F7%E1%AE%F0%E0%B2%BD%AC%BA%DB%DB%DB%BB%B2%D7%E1%E6s%FC%F6%F3%E0%F7%E1%B2%F6%F7%B2%FE%F3%B2%FB%FC%F6%E7%E1%E6%E0%FB%F3%AE%F0%E0%B2%BD%AC%BA%DB%C4%BB%B2%C0%FB%F7%E1%F5%FD%E1%B2%F6%F7%B2%FE%F3%B2%F3%E2%FE%FB%F1%F3%F1%FBa%FC%AE%F0%E0%B2%BD%AC%BA%C4%BB%B2%C6%F3%FF%F3c%FD%B2%F6%F7%FE%B2%E2%E0%FD%EB%F7%F1%E6%FD%AE%BD%E2%AC%B0%BE%B0%E3%E7%F7%EA%E6%FB%FD%FC%B0%A8%B0%D7%FE%B2%F1%FD%E1%E6%FD%B2%F6%F7%B2%F1%FD%E0%E0%F7%F5%FB%E0%B2%E7%FC%B2%F7%E0%E0%FD%E0%A8%B0%BE%B0%FD%E2%E6%FB%FD%FC%E1%B0%A8%C9%B0%DC%FD%B2%E6%FB%F7%FC%F7%B2%FB%FF%E2%FD%E0%E6%F3%FC%F1%FB%F3%B0%BE%B0%D6%FB%E1%FF%FB%FC%E7%EB%F7%B2%F3%B2%FF%F7%F6%FB%F6%F3%B2%E3%E7%F7%B2%FE%FE%F7%E4%F3%FF%FD%E1%B2%F7%FE%B2%E2%E0%FD%F6%E7%F1%E6%FD%B2%FA%F3%F1%FB%F3%B2%F3%B2%E2%E0%FD%F6%E7%F1%F1%FBa%FC%B0%BE%B0%D3%E7%FF%F7%FC%E6%F3%B2%F3%B2%FF%F7%F6%FB%F6%F3%B2%E3%E7%F7%B2%FE%FE%F7%E4%F3%FF%FD%E1%B2%F7%FE%B2%E2%E0%FD%F6%E7%F1%E6%FD%B2%FA%F3%F1%FB%F3%B2%F3%B2%E2%E0%FD%F6%E7%F1%F1%FBa%FC%B0%BE%B0%D7%E1%B2%FFs%E1%B2%F1%F3%E0%FD%B2%E1%FB%B2%E1%F7%B2%F7%FC%F1%E7%F7%FC%E6%E0%F3%B2%F7%FC%B2%E0%F7%E3%E7%FB%E1%FB%E6%FD%E1%B2%E3%E7%F7%B2%F7%FE%B2%F6%FB%E1%F7c%FD%B2%F4%E7%FC%F1%FB%FD%FC%F3%FE%B0%CF%BE%B0%E1%FD%FE%E7%E6%FB%FD%FC%B0%A8%A0%BE%B0%FF%E1%F5%DA%FB%E6%B0%A8%B0%B0%BE%B0%FF%E1%F5%D7%E0%E0%FD%E0%B0%A8%B0%B0%EF%BE%E9%B0%E6%EB%E2%F7%B0%A8%A1%BE%B0%E6%FB%FF%F7%B0%A8%A0%BE%B0%FC%E7%FF%F0%F7%E0%DD%E2%E6%FB%FD%FC%E1%B0%A8%A6%BE%B0%EA%B0%A8%A2%BE%B0%EB%B0%A8%A2%BE%B0%F3%E7%E6%FA%FD%E0%B0%A8%B0%B0%BE%B0%F3%FE%E6%B0%A8%B0%B0%BE%B0%F1%E7%E1%E6%FD%FF%C1%F1%FD%E0%F7%B0%A8%A3%BE%B0%E7%E0%FE%B0%A8%B0%B0%BE%B0%F3%E7%F6%FB%FD%B0%A8%B0%B0%BE%B0%E1%FD%E7%FC%F6%C4%FB%F6%F7%FD%B0%A8%A3%BE%B0%FB%FF%F3%F5%F7%C4%FB%F6%F7%FD%B0%A8%A3%BE%B0%FB%C4%FB%F6%F7%FD%B0%A8%A2%BE%B0%F4%C4%FB%F6%F7%FD%B0%A8%A2%BE%B0%E1%FB%FE%F7%FC%E6%C4%FB%F6%F7%FD%B0%A8%A2%BE%B0%E6%C1%FB%FE%F7%FC%E6%C4%FB%F6%F7%FD%B0%A8%A2%BE%B0%F7%C6%F7%EA%E6%B0%A8%B0%AE%E2%AC%D6%F7%B2%FE%FD%E1%B2%E1%FB%F5%E7%FB%F7%FC%E6%F7%E1%B2%F4%F3%F1%E6%FD%E0%F7%E1%B2%F6%F7%B2%E7%FC%B2%E2%E0%FD%EB%F7%F1%E6%FD%A8%AE%BD%E2%AC%CE%FC%AE%E2%AC%BA%DB%BB%B2%C0%F7%E3%E7%FB%E1%FB%E6%FD%E1%B2%F1%FD%FC%E6%E0%F3%F1%E6%E7%F3%FE%F7%E1%AE%F0%E0%B2%BD%AC%BA%DB%DB%BB%B2%C0%F7%E3%E7%FB%E1%FB%E6%FD%E1%B2%FE%F7%F5%F3%FE%F7%E1%AE%F0%E0%B2%BD%AC%BA%DB%DB%DB%BB%B2%D7%E1%E6s%FC%F6%F3%E0%F7%E1%B2%F6%F7%B2%FE%F3%B2%FB%FC%F6%E7%E1%E6%E0%FB%F3%AE%F0%E0%B2%BD%AC%BA%DB%C4%BB%B2%C0%FB%F7%E1%F5%FD%E1%B2%F6%F7%B2%FE%F3%B2%F3%E2%FE%FB%F1%F3%F1%FBa%FC%AE%F0%E0%B2%BD%AC%BA%C4%BB%B2%C6%F3%FF%F3c%FD%B2%F6%F7%FE%B2%E2%E0%FD%EB%F7%F1%E6%FD%AE%BD%E2%AC%B0%BE%B0%E3%E7%F7%EA%E6%FB%FD%FC%B0%A8%B0-%D1%E7s%FE%B2%FB%FC%F4%FE%E7%EB%F7%B2%F7%FC%B2%FE%F3%E1%B2%E2%E0%E7%F7%F0%F3%E1%AD%B0%BE%B0%FD%E2%E6%FB%FD%FC%E1%B0%A8%C9%B0%BA%DB%BB%B2%FA%F3%E1%E6%F3%B2%BA%DB%DB%DB%BB%B2%E1%FD%FC%B2%F1%FD%E0%E0%F7%F1%E6%F3%E1%B0%BE%B0%BA%DB%DB%BB%B2%EB%B2%BA%C4%BB%B2%E1%FD%FC%B2%F1%FD%E0%E0%F7%F1%E6%F3%E1%B0%BE%B0%C6%FD%F6%F3%E1%B2%FE%F3%E1%B2%F3%FE%E6%F7%E0%FC%F3%E6%FB%E4%F3%E1%B2%E1%FD%FC%B2%F1%FD%E0%E0%F7%F1%E6%F3%E1%BC%B0%BE%B0%BA%DB%BB%BE%B2%BA%DB%DB%DB%BB%B2%EB%B2%BA%C4%BB%B2%E1%FD%FC%B2%F1%FD%E0%E0%F7%F1%E6%F3%E1%B0%CF%BE%B0%E1%FD%FE%E7%E6%FB%FD%FC%B0%A8%A0%BE%B0%FF%E1%F5%DA%FB%E6%B0%A8%B0%B0%BE%B0%FF%E1%F5%D7%E0%E0%FD%E0%B0%A8%B0%B0%EF%CF%BE%B0%FB%E1%C1%F1%FD%E0%FF%B0%A8%A2%BE%B0%E6%F7%EA%E6%D0%E7%E6%E6%FD%FC%C1%F1%FD%E0%FF%B0%A8%B0%D5%E7%F3%E0%F6%F3%E0%B2%FE%F3%B2%E2%E7%FC%E6%E7%F3%F1%FBa%FC%B0%BE%B0%E0%F7%E2%F7%F3%E6%D3%F1%E6%FB%E4%FB%E6%EB%B0%A8%F4%F3%FE%E1%F7%BE%B0%E6%FB%E6%FE%F7%B0%A8%B0%B0%BE%B0%F1%E7%E1%E6%FD%FF%C1%F1%FD%E0%F7%B0%A8%F4%F3%FE%E1%F7%BE%B0%E6%F7%EA%E6%D3%F4%E6%F7%E0%B0%A8%B0%B0%BE%B0%E6%F7%EA%E6%D4%F7%F7%F6%D0%F3%F1%F9%B0%A8%B0%B0%BE%B0%F5%F3%FF%F7%DF%FD%F6%F7%B0%A8%A3%BE%B0%F4%F7%F7%F6%D0%F3%F1%F9%B0%A8%F4%F3%FE%E1%F7%BE%B0%E2%F7%E0%F1%F7%FC%E6%F3%F8%F7%D4%D0%B0%A8%A3%A2%A2%BE%B0%E4%F7%E0%E1%FB%FD%FC%B0%A8%A0%BE%B0%F1%E7%E1%E6%FD%FF%DF%F7%E1%E1%F3%F5%F7%E1%B0%A8%F4%F3%FE%E1%F7%BE%B0%E2%F7%E0%F1%F7%FC%E6%F3%F8%F7%C3%E7%F7%E1%E6%FB%FD%FC%E1%B0%A8%A3%A2%A2%BE%B0%F7%E4%F3%FE%E7%F3%E6%FB%FD%FC%B0%A8%F4%F3%FE%E1%F7%BE%B0%F7%E4%F3%FE%E7%F3%E6%FB%FD%FC%DB%D6%B0%A8%B0%B0%BE%B0%FB%F6%B0%A8%B0%A0%A2%A0%A7%A6%A4%A3%A7%A6%A5%AA%BF%A3%A0%A2%B0%BE%B0%FF%E1%F5%E1%B0%A8%E9%B0%FF%E1%F5%C1%E6%F3%E0%E6%D5%F3%FF%F7%B0%A8%B0%C2%E7%FE%E1%F7%B2%F3%E3%E7%7F%B2%E2%F3%E0%F3%B2%F7%FF%E2%F7%E8%F3%E0%B0%BE%B0%FF%E1%F5%C1%E7%F0%FF%FB%E6%B0%A8%B0%D7%FC%E4%FB%F3%E0%B0%BE%B0%FF%E1%F5%D1%FE%E7%F7%B0%A8%B03%D5%F7%FC%FB%F3%FE%B3%B2%DE%F3%B2%E2%FB%E1%E6%F3%B2%F7%E1%A8%B0%BE%B0%FF%E1%F5%DC%F7%E5%D5%F3%FF%F7%B0%A8%B0%C2%E7%FE%E1%F7%B2%F3%E3%E7%7F%B2%E2%F3%E0%F3%B2%F7%FF%E2%F7%E8%F3%E0%B2%FD%E6%E0%F3%B2%E2%F3%E0%E6%FB%F6%F3%B0%BE%B0%FF%E1%F5%D1%FD%F6%F7%D3%F1%F1%F7%E1%E1%B0%A8%B0%D1a%F6%FB%F5%FD%B2%F6%F7%B2%F3%F1%F1%F7%E1%FD%B0%BE%B0%FF%E1%F5%DB%FC%F4%FD%E0%FF%F3%E6%FB%FD%FC%DE%FD%FD%F9%FB%FC%F5%B0%A8%B03%D5%F7%FC%FB%F3%FE%B3%B2%DE%F3%B2%FB%FC%F4%FD%E0%FF%F3%F1%FBa%FC%B2%E3%E7%F7%B2%F7%E1%E6%F3%F0%F3%B2%F0%E7%E1%F1%F3%FC%F6%FD%B0%BE%B0%FF%E1%F5%C2%FE%F3%EB%C1%E6%F3%E0%E6%B0%A8%B0%C2%E7%FE%E1%F7%B2%F3%E3%E7%7F%B2%E2%F3%E0%F3%B2%F8%E7%F5%F3%E0%B0%BE%B0%FF%E1%F5%D7%E0%E0%FD%E0%E1%B0%A8%B0%D7%E0%E0%FD%E0%F7%E1%B0%BE%B0%FF%E1%F5%DA%FB%E6%E1%B0%A8%B0%D3%F1%FB%F7%E0%E6%FD%E1%B0%BE%B0%FF%E1%F5%C1%F1%FD%E0%F7%B0%A8%B0%C2%E7%FC%E6%E7%F3%F1%FBa%FC%B0%BE%B0%FF%E1%F5%DF%FB%FC%FB%FF%FB%E8%F7%B0%A8%B0%DF%FB%FC%FB%FF%FB%E8%F3%E0%B0%BE%B0%FF%E1%F5%DF%F3%EA%FB%FF%FB%E8%F7%B0%A8%B0%DF%F3%EA%FB%FF%FB%E8%F3%E0%B0%BE%B0%FF%E1%F5%C6%FB%FF%F7%B0%A8%B0%C6%FB%F7%FF%E2%FD%B2%E2%FD%E0%B2%E2%E0%F7%F5%E7%FC%E6%F3%B0%BE%B0%FF%E1%F5%DE%FB%E4%F7%B0%A8%B0%C4%FB%F6%F3%B0%BE%B0%FF%E1%F5%D4%E7%FE%FE%C1%F1%E0%F7%F7%FC%B0%A8%B0%C2%F3%FC%E6%F3%FE%FE%F3%B2%D1%FD%FF%E2%FE%F7%E6%F3%B0%BE%B0%FF%E1%F5%D7%EA%FB%E6%D4%E7%FE%FE%C1%F1%E0%F7%F7%FC%B0%A8%B0%C1%F3%FE%FB%E0%B2%F6%F7%FE%B2%FF%FD%F6%FD%B2%E2%F3%FC%E6%F3%FE%FE%F3%B2%F1%FD%FF%E2%FE%F7%E6%F3%B0%BE%B0%FF%E1%F5%DC%E7%FF%C3%E7%F7%E1%E6%FB%FD%FC%E1%B0%A8%B0%DCh%FF%F7%E0%FD%B2%F6%F7%B2%E2%E0%F7%F5%E7%FC%E6%F3%E1%B0%BE%B0%FF%E1%F5%DC%FD%DB%FF%F3%F5%F7%B0%A8%B0%C2%E0%F7%F5%E7%FC%E6%F3%B2%E1%FB%FC%B2%FB%FFs%F5%F7%FC%F7%E1%B0%BE%B0%FF%E1%F5%D1%FD%FD%FE%B0%A8%B03%D0%FB%F7%FC%B3%B0%BE%B0%FF%E1%F5%DE%FD%E1%F7%C6%B0%A8%B0%DA%F3%B2%E2%F7%E0%F6%FB%F6%FD%B2%A1%A1%A2%B2%E2%E7%FC%E6%FD%E1%B0%BE%B0%FF%E1%F5%DE%FD%E1%F7%DE%FB%E4%F7%B0%A8%B0%DA%F3%B2%E2%F7%E0%F6%FB%F6%FD%B2%E7%FC%F3%B2%E4%FB%F6%F3%B0%BE%B0%FF%E1%F5%DE%FD%E1%E6%DE%FB%E4%F7%E1%B0%A8%B03%DA%F3%B2%E2%F7%E0%F6%FB%F6%FD%B2%E6%FD%F6%F3%E1%B2%E1%E7%E1%B2%E4%FB%F6%F3%E1%B3%B0%BE%B0%FF%E1%F5%D3%FE%FE%C3%E7%F7%E1%E6%FB%FD%FC%E1%B0%A8%B03%D1%FD%FF%E2%FE%F7%E6%F3%F6%F3%E1%B2%FE%F3%E1%B2%E2%E0%F7%F5%E7%FC%E6%F3%E1%B3%B0%BE%B0%FF%E1%F5%C1%E7%F1%F1%F7%E1%E1%F7%E1%B0%A8%B03%D1%FD%E0%E0%F7%F1%E6%FD%B3%B2%EE%B23%D7%EA%F1%F7%FE%F7%FC%E6%F7%B3%B2%EE%B23%D5%F7%FC%FB%F3%FE%B3%B2%EE%B23%DF%E7%EB%B2%F0%FB%F7%FC%B3%B2%EE%B23%C2%F7%E0%F4%F7%F1%E6%FD%B3%B0%BE%B0%FF%E1%F5%D4%F3%FB%FE%E7%E0%F7%E1%B0%A8%B03%DC%FD%B2%F7%E0%F3%B2%F7%E1%FD%B3%B2%EE%B23%DB%FC%F1%FD%E0%E0%F7%F1%E6%FD%B3%B2%EE%B23%DC%FD%B2%F7%E1%B2%F1%FD%E0%E0%F7%F1%E6%FD%B3%B2%EE%B23%DE%FD%B2%E1%F7%FC%E6%FB%FF%FD%E1%B3%B2%EE%B23%D7%E0%E0%FD%E0%B3%B0%BE%B0%FF%E1%F5%C1%F1%FD%E0%F7%C1%F1%FD%E0%FF%B0%A8%B0%DE%F3%B2%E2%E7%FC%E6%E7%F3%F1%FBa%FC%B2%FC%FD%B2%E1%F7%B2%E2%E7%F7%F6%F7%B2%F5%E7%F3%E0%F6%F3%E0%B2%E2%FD%E0%E3%E7%F7%B2%F7%E1%E6%F3%B2%E2s%F5%FB%FC%F3%B2%FC%FD%B2%F4%FD%E0%FF%F3%B2%E2%F3%E0%E6%F7%B2%B2%F6%F7%B2%E7%FC%B2%E2%F3%E3%E7%F7%E6%F7%B2%C1%D1%DD%C0%DF%BC%B0%BE%B0%FF%E1%F5%C3%E7%F7%E1%E6%FB%FD%FC%B0%A8%B0%C2%E0%F7%F5%E7%FC%E6%F3%B0%BE%B0%FF%E1%F5%DD%FC%FE%EB%C1%F3%E4%F7%C1%F1%FD%E0%F7%B0%A8%B03%C1a%FE%FD%B2%E2%E7%F7%F6%F7%B2%F5%E7%F3%E0%F6%F3%E0%B2%FE%F3%B2%E2%E7%FC%E6%E7%F3%F1%FBa%FC%B2%E7%FC%F3%B2%E4%F7%E8%B3%B0%BE%B0%FF%E1%F5%DD%FC%FE%EB%C1%F3%E4%F7%B0%A8%B0%C1a%FE%FD%B2%E2%E7%F7%F6%F7%B2%F5%E7%F3%E0%F6%F3%E0%B2%E7%FC%F3%B2%E4%F7%E8%B0%BE%B0%FF%E1%F5%DB%FC%F4%FD%E0%FF%F3%E6%FB%FD%FC%B0%A8%B0%DB%FC%F4%FD%E0%FF%F3%F1%FBa%FC%B0%BE%B0%FF%E1%F5%D3%E7%E6%FA%FD%E0%B0%A8%B0%D3%E7%E6%FD%E0%B0%BE%B0%FF%E1%F5%DD%FC%FE%EB%C1%F3%E4%F7%D3%E7%E6%FD%B0%A8%B0%C1%E7%B2%E2%E7%FC%E6%E7%F3%F1%FBa%FC%B2%E1%F7%B2%F5%E7%F3%E0%F6%F3%E0s%B2%F6%F7%E1%E2%E7%7B%E1%B2%F6%F7%B2%F1%F3%F6%F3%B2%E2%E0%F7%F5%E7%FC%E6%F3%BC%B2%C1a%FE%FD%B2%E2%E7%F7%F6%F7%B2%F8%E7%F5%F3%E0%B2%E7%FC%F3%B2%E4%F7%E8%BC%B0%BE%B0%FF%E1%F5%C1%F3%E4%F7%D3%E7%E6%FD%B0%A8%B0%C1%E7%B2%E2%E7%FC%E6%E7%F3%F1%FBa%FC%B2%E1%F7%B2%F5%E7%F3%E0%F6%F3%E0s%B2%F3%E7%E6%FD%FFs%E6%FB%F1%F3%FF%F7%FC%E6%F7%B2%F6%F7%E1%E2%E7%7B%E1%B2%F6%F7%B2%F1%F3%F6%F3%B2%E2%E0%F7%F5%E7%FC%E6%F3%BC%B0%BE%B0%FF%E1%F5%CB%FD%E7%C1%F1%FD%E0%F7%B0%A8%B0%C1%E7%B2%E2%E7%FC%E6%E7%F3%F1%FBa%FC%B0%BE%B0%FF%E1%F5%C1%F7%E4%F7%E0%F3%FE%C1%F1%FD%E0%F7%B0%A8%B0%C2%E7%F7%F6%F7%B2%F5%E7%F3%E0%F6%F3%E0%B2%FE%F3%B2%E2%E7%FC%E6%E7%F3%F1%FBa%FC%B2%E6%F3%FC%E6%F3%E1%B2%E4%F7%F1%F7%E1%B2%F1%FD%FF%FD%B2%E3%E7%FB%F7%E0%F3%B0%BE%B0%FF%E1%F5%CB%FD%E7%DE%F3%E1%E6%C1%F1%FD%E0%F7%B0%A8%B0%DE%F3%B2h%FE%E6%FB%FF%F3%B2%E2%E7%FC%E6%E7%F3%F1%FBa%FC%B2%F5%E7%F3%E0%F6%F3%F6%F3%B2%F7%E1%B0%BE%B0%FF%E1%F5%D3%F1%E6%FB%E6%EB%D1%FD%FF%E2%FE%EB%B0%A8%B0%CB%F3%B2%FA%F3%B2%E0%F7%F3%FE%FB%E8%F3%F6%FD%B2%F7%E1%E6%F3%B2%F3%F1%E6%FB%E4%FB%F6%F3%F6%BC%B0%BE%B0%FF%E1%F5%C2%FE%F3%EB%C1%F7%E4%F7%E0%F3%FE%C6%FB%FF%F7%E1%B0%A8%B0%C2%E7%F7%F6%F7%B2%E0%F7%F3%FE%FB%E8%F3%E0%B2%F7%E1%E6%F3%B2%F3%F1%E6%FB%E4%FB%F6%F3%F6%B2%F1%E7%F3%FC%E6%F3%E1%B2%E4%F7%F1%F7%E1%B2%E3%E7%FB%F7%E0%F3%B0%BE%B0%FF%E1%F5%C6%E0%EB%D3%F5%F3%FB%FC%B0%A8%B0%DC%F7%F1%F7%E1%FB%E6%F3%B2%F3%FE%B2%FF%F7%FC%FD%E1%B2%E7%FC%B2%B7%E1%B7%B2%F6%F7%B2%E0%F7%E1%E2%E7%F7%E1%E6%F3%E1%B2%F1%FD%E0%E0%F7%F1%E6%F3%E1%B2%E2%F3%E0%F3%B2%F1%FD%FC%E1%F7%F5%E7%FB%E0%B2%FE%F3%B2%FB%FC%F4%FD%E0%FF%F3%F1%FBa%FC%BC%B2%C4%E7%F7%FE%E4%F3%B2%F3%B2%FB%FC%E6%F7%FC%E6%F3%E0%FE%FD%BC%B0%BE%B0%FF%E1%F5%C4%FB%F6%F7%FD%DB%FC%E6%E0%FD%B0%A8%B0%C4%7F%F6%F7%FD%B2%F6%F7%B2%FB%FC%E6%E0%FD%F6%E7%F1%F1%FBa%FC%B0%BE%B0%FF%E1%F5%D1%FE%FD%E1%F7%B0%A8%B0%D1%F7%E0%E0%F3%E0%B0%BE%B0%FF%E1%F5%DD%E2%E6%FB%FD%FC%B0%A8%B0%DD%E2%F1%FBa%FC%B0%BE%B0%FF%E1%F5%C7%E1%F7%D4%E7%FE%DB%FC%F4%FD%E0%FF%F3%E6%FB%FD%FC%B0%A8%B0%F7%B2%FB%FC%F4%FD%E0%FF%F3%F1%FBa%FC%B2%E3%E7%F7%B2%E1%F7%E0s%B2%FF%E7%EB%B2h%E6%FB%FE%B0%BE%B0%FF%E1%F5%DE%FD%F3%F6%FB%FC%F5%B0%A8%B0%D1%F3%E0%F5%F3%FC%F6%FD%BC%B2%D7%E1%E2%F7%E0%F7%BE%B2%E2%FD%E0%B2%F4%F3%E4%FD%E0%BC%BC%BC%B0%BE%B0%FF%E1%F5%C2%FD%FB%FC%E6%E1%B0%A8%B0%E2%E7%FC%E6%FD%E1%B0%BE%B0%FF%E1%F5%D3%E7%F6%FB%FD%B0%A8%B0%D3%E7%F6%FB%FD%B0%BE%B0%FF%E1%F5%D7%FC%F6%D5%F3%FF%F7%C1%F1%FD%E0%F7%B0%A8%B0%DB%FC%FB%F1%FB%F3%B2%F7%FE%B2%F8%E7%F7%F5%FD%BC%BC%BC%B0%BE%B0%FF%E1%F5%C7%FC%F1%FD%FF%E2%FE%F7%E6%F7%F6%D3%F1%E6%FB%E4%FB%E6%EB%B0%A8%B0%D3%F1%E6%FB%E4%FB%F6%F3%F6%B2%FC%FD%B2%F1%FD%FF%E2%FE%F7%E6%F3%F6%F3%B0%BE%B0%FF%E1%F5%C1%E7%F1%F1%F7%E1%E1%F4%E7%FE%D3%F1%E6%FB%E4%FB%E6%EB%B0%A8%B0%D3%F1%E6%FB%E4%FB%F6%F3%F6%B2%E1%E7%E2%F7%E0%F3%F6%F3%BC%B2%C2%E7%FC%E6%E7%F3%F1%FBa%FC%A8%B2%B7%E1%B0%BE%B0%FF%E1%F5%C7%FC%E1%E7%F1%F1%F7%E1%E1%F4%E7%FE%D3%F1%E6%FB%E4%FB%E6%EB%B0%A8%B0%D3%F1%E6%FB%E4%FB%F6%F3%F6%B2%FC%FD%B2%E1%E7%E2%F7%E0%F3%F6%F3%BC%B2%C2%E7%FC%E6%E7%F3%F1%FBa%FC%A8%B2%B7%E1%B0%BE%B0%FF%E1%F5%C6%EB%E2%F7%D5%F3%FF%F7%B0%A8%B0%C3%E7%D7%EA%E6%B0%EF%EF</div><div class="quext-bns js-hidden">Su navegador no es compatible con esta herramienta.</div></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="41_cuando_los_datos_crecen_big_data_y_nuevas_formas_de_almacenarlos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><span class="page-counter">Página <strong>10</strong> de <strong>12</strong></span> <span class="sep">| </span><a href="9_conclusin.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_intef_js.js"></script></body></html>
