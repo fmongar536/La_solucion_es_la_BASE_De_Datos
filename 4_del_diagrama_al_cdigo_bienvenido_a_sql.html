@@ -1,0 +1,1047 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_effects.css" />
+<link rel="stylesheet" type="text/css" href="exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>4. Del diagrama al código: bienvenido a SQL | La solución: una base de datos </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Belén Lara Aznar" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_effects.js"></script>
+<script type="text/javascript" src="exe_highlighter.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<link rel="stylesheet" type="text/css" href="udl-content.css" />
+<script type="text/javascript" src="udl-content.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-9"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">La solución: una base de datos</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Del dato a la solución</a></li>
+   <li><a href="1_del_dato_al_conocimiento_el_poder_de_la_informacin.html" class="no-ch">1. Del dato al conocimiento: el poder de la información</a></li>
+   <li><a href="2_del_problema_a_la_solucin.html" class="daddy">2. Del problema a la solución</a>
+   <ul class="other-section">
+      <li><a href="21_fundamentos_de_las_bases_de_datos_lo_esencial_para_empezar.html" class="no-ch">2.1 Fundamentos de las bases de datos: lo esencial para empezar</a></li>
+   </ul>
+   </li>
+   <li><a href="3_de_las_ideas_al_diseo_construimos_el_modelo_de_datos.html" class="daddy">3. De las ideas al diseño: construimos el modelo de datos</a>
+   <ul class="other-section">
+      <li><a href="31_dibuja_tu_base_de_datos_el_modelo_conceptual.html" class="no-ch">3.1 Dibuja tu base de datos: el modelo conceptual</a></li>
+      <li><a href="32_de_los_esquemas_al_sistema_crea_las_tablas_y_normaliza_tu_base_de_datos.html" class="no-ch">3.2 De los esquemas al sistema: crea las tablas y normaliza tu base de datos</a></li>
+   </ul>
+   </li>
+   <li id="active"><a href="4_del_diagrama_al_cdigo_bienvenido_a_sql.html" class="active daddy">4. Del diagrama al código: bienvenido a SQL</a>
+   <ul>
+      <li><a href="41_cuando_los_datos_crecen_big_data_y_nuevas_formas_de_almacenarlos.html" class="no-ch">4.1 Cuando los datos crecen: Big Data y nuevas formas de almacenarlos</a></li>
+   </ul>
+   </li>
+   <li><a href="5_finalicemos_el_proyecto.html" class="no-ch">5. Finalicemos el proyecto</a></li>
+   <li><a href="9_conclusin.html" class="no-ch">9. Conclusión</a></li>
+   <li><a href="crditos.html" class="no-ch">Créditos</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="32_de_los_esquemas_al_sistema_crea_las_tablas_y_normaliza_tu_base_de_datos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><span class="page-counter">Página <strong>8</strong> de <strong>12</strong></span> <span class="sep">| </span><a href="41_cuando_los_datos_crecen_big_data_y_nuevas_formas_de_almacenarlos.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">4. Del diagrama al código: bienvenido a SQL</h1></header>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id44">
+<div class="iDevice emphasis0" >
+<div id="ta44_735_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p style="text-align: justify;"><img src="retor_adultos_sin_bocadillo.gif" alt="Rétor dice:" title="Rétor dice:" style="float: left;" width="125" height="125"></p>
+<p>🧠 ¡Nuestro proyecto sigue avanzando paso a paso!</p>
+<p>Hasta ahora, ya has superado con éxito las dos primeras fases del desarrollo del sistema <strong>AgendaClientesApp</strong>: la <strong>planificación</strong> y el <strong>diseño</strong>.</p>
+<p>Has aprendido a identificar requisitos, definir entidades y relaciones, y representar toda la estructura de datos en un <strong>modelo E/R</strong> completo. ¡Buen trabajo!</p>
+<p>Ahora comienza una nueva etapa: <strong>la implementación</strong>. Es el momento de transformar tu diseño en un sistema funcional.</p>
+<p>Para ello, aprenderás un nuevo lenguaje de programación especializado en bases de datos: <strong>SQL</strong>. Con él podrás <em>crear tablas, insertar datos, realizar consultas, actualizaciones y eliminar información</em>... en resumen, controlar toda tu base de datos de forma profesional.</p>
+<p>No te preocupes si nunca has usado este lenguaje: iremos paso a paso, con explicaciones claras, ejemplos reales y el apoyo de tu profesor y tus compañeros. ¡Es hora de llevar tu diseño al mundo real!</p></div></div></section></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper UDLcontentIdevice em_iDevice em_iDevice_udl_exp_tareagrupal" id="id45">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">1. Antes del código: relaciones y lógica</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta45_734_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-expression"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p style="text-align: justify;"><img src="IMG_PRO2BAC_REA04_CODIFICANDO.jpg" alt="Imagen que muestra la pantalla de un ordenador con distintas operaciones de codificación en un lenguaje de programación a su alrededor." title="Codificando" style="float: left; margin-right: 10px; margin-left: 10px;" width="200" height="200"></p>
+<p>Antes de comenzar a programar con SQL, necesitamos entender muy bien cómo se relacionan los datos entre sí. No se trata solo de escribir código, sino de <strong>pensar con lógica</strong> cómo se conecta la información.</p>
+<p>Cada tabla de una base de datos guarda un tipo de datos distinto, pero muchas veces necesitas combinar varias tablas para responder a una sola pregunta. ¿Cómo se hace eso? ¡Aplicando la lógica de las relaciones!</p>
+<p>Para practicarlo, vamos a analizar una base de datos de ejemplo: un <strong>sistema de gestión de alquileres de películas</strong> en un videoclub. Antes de escribir nada en SQL, escribirás las instrucciones en lenguaje natural: paso a paso, cómo se relacionan las tablas y cómo podrías obtener la información que se pide.</p>
+<p style="text-align: center;">¡Es el momento de conectar ideas antes de programar!</p></div></div></section><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><div style="background-color: #e6f4ff; border: 2px solid #2196f3; padding: 15px; border-radius: 8px;">
+<h3 style="color: #0b5394;">🧩 Actividad: Analiza la base de datos del videoclub</h3>
+<p>A continuación, vais a trabajar en grupo sobre una base de datos de ejemplo que gestiona los alquileres de un videoclub. Observad las tablas que la componen y responded, paso a paso, a las siguientes cuestiones utilizando el sentido lógico y lo que ya sabéis sobre relaciones entre tablas:</p>
+<ol>
+<li><strong>¿En qué orden crearíais las tablas en la base de datos?</strong></li>
+<li><strong>¿Por qué es necesario seguir ese orden para insertar los datos correctamente?</strong></li>
+<li><strong>Explicad qué relaciones entre las tablas utilizaríais para obtener lo siguiente:</strong>
+<ul>
+<li>Consultar los préstamos que han tenido una duración superior a dos días, visualizando el nombre del socio y el título de la película.</li>
+<li>Mostrar el nombre y el número de teléfono de socios que tienen películas en su casa.</li>
+<li>Calcular cuánto dinero ha gastado <em>María López Perdigón</em> en el videoclub.</li>
+</ul>
+</li>
+</ol>
+<p>💬 <strong>Trabajad las respuestas en grupo y explicad cada consulta paso a paso, en lenguaje natural.</strong></p>
+</div>
+<div class="exe-fx exe-tabs">
+<h2>Películas</h2>
+<table class="exe-table" style="width: 66.0698%;">
+<thead>
+<tr>
+<th style="width: 6.50262%;">Película</th>
+<th style="width: 38.1192%;">Título</th>
+<th style="width: 1.61031%;">Tema</th>
+<th style="width: 17.7955%;">Año</th>
+<th style="width: 17.4287%;">País</th>
+<th style="width: 18.9329%;">Precio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="width: 6.50262%;">1</td>
+<td style="width: 38.1192%;">Two Much</td>
+<td style="width: 1.61031%;">Comedia</td>
+<td style="width: 17.7955%;">1995</td>
+<td style="width: 17.4287%;">España</td>
+<td style="width: 18.9329%;">3</td>
+</tr>
+<tr>
+<td style="width: 6.50262%;">2</td>
+<td style="width: 38.1192%;">Tesis</td>
+<td style="width: 1.61031%;">Suspense</td>
+<td style="width: 17.7955%;">1996</td>
+<td style="width: 17.4287%;">España</td>
+<td style="width: 18.9329%;">3</td>
+</tr>
+<tr>
+<td style="width: 6.50262%;">3</td>
+<td style="width: 38.1192%;">Desperado</td>
+<td style="width: 1.61031%;">Acción</td>
+<td style="width: 17.7955%;">1995</td>
+<td style="width: 17.4287%;">EEUU</td>
+<td style="width: 18.9329%;">3,5</td>
+</tr>
+<tr>
+<td style="width: 6.50262%;">4</td>
+<td style="width: 38.1192%;">Una casa de locos</td>
+<td style="width: 1.61031%;">Comedia</td>
+<td style="width: 17.7955%;">2002</td>
+<td style="width: 17.4287%;">Francia</td>
+<td style="width: 18.9329%;">4</td>
+</tr>
+<tr>
+<td style="width: 6.50262%;">5</td>
+<td style="width: 38.1192%;">Apolo 13</td>
+<td style="width: 1.61031%;">Historia</td>
+<td style="width: 17.7955%;">1995</td>
+<td style="width: 17.4287%;">EEUU</td>
+<td style="width: 18.9329%;">2,5</td>
+</tr>
+</tbody>
+</table>
+<h2>Clientes</h2>
+<table class="exe-table" style="width: 100%;">
+<thead>
+<tr>
+<th style="width: 1.19474%;">Socio</th>
+<th style="width: 51.9715%;">Nombre</th>
+<th style="width: 13.9785%;">Fecha_alta</th>
+<th style="width: 1.91158%;">Telefono</th>
+<th style="width: 1.19474%;">DNI</th>
+<th style="width: 58.1841%;">Direccion</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="width: 1.19474%;">1</td>
+<td style="width: 51.9715%;">María López Perdigón</td>
+<td style="width: 13.9785%;">14/09/2014</td>
+<td style="width: 1.91158%;">685369896</td>
+<td style="width: 1.19474%;">27711498D</td>
+<td style="width: 58.1841%;">Granada, 12 2ºA</td>
+</tr>
+<tr>
+<td style="width: 1.19474%;">2</td>
+<td style="width: 51.9715%;">Pedro Ramos Lucena</td>
+<td style="width: 13.9785%;">13/10/2017</td>
+<td style="width: 1.91158%;">954236742</td>
+<td style="width: 1.19474%;">27148934G</td>
+<td style="width: 58.1841%;">Albricias, 23 2ºB</td>
+</tr>
+<tr>
+<td style="width: 1.19474%;">3</td>
+<td style="width: 51.9715%;">Lucas Dobla Marcial</td>
+<td style="width: 13.9785%;">02/12/2015</td>
+<td style="width: 1.91158%;">723568974</td>
+<td style="width: 1.19474%;">23451267Q</td>
+<td style="width: 58.1841%;">Miraduero, 46</td>
+</tr>
+<tr>
+<td style="width: 1.19474%;">4</td>
+<td style="width: 51.9715%;">Lucía Cabrera Pérez</td>
+<td style="width: 13.9785%;">24/02/2018</td>
+<td style="width: 1.91158%;">677158523</td>
+<td style="width: 1.19474%;">28565225C</td>
+<td style="width: 58.1841%;">Avda. El Puerto, 9, 7ºA</td>
+</tr>
+</tbody>
+</table>
+<h2>Alquiler</h2>
+<table class="exe-table">
+<thead>
+<tr>
+<th>Socio</th>
+<th>Película</th>
+<th>Fecha_alquiler</th>
+<th>Fecha_devolucion</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>4</td>
+<td>Desperado</td>
+<td>15/07/2020</td>
+<td>16/07/2020</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Two Much</td>
+<td>23/04/2022</td>
+<td>26/04/2022</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Apolo 13</td>
+<td>03/11/2022</td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>Tesis</td>
+<td>07/08/2021</td>
+<td>09/08/2021</td>
+</tr>
+</tbody>
+</table>
+</div></div></div></section><section class="exe-udlContent-block js-hidden"><header class="exe-udlContent-header exe-udlContent-character-4"><h2>¿Hacemos una revisión?</h2></header><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><h4>1. ¿En qué orden crearíais las tablas?</h4>
+<p>Lo ideal es seguir este orden para evitar errores por claves foráneas:</p>
+<ol>
+<li><strong>Socios</strong> – porque no depende de ninguna otra tabla.</li>
+<li><strong>Películas</strong> – tampoco depende de ninguna otra.</li>
+<li><strong>Préstamos</strong> – ya que necesita referencias a Socios y Películas.</li>
+</ol>
+<h4>2. ¿Por qué seguir ese orden?</h4>
+<p>Porque la tabla <strong>Préstamos</strong> tiene claves foráneas que apuntan a las otras dos tablas. Si las tablas <strong>Socios</strong> o <strong>Películas</strong> no existen, no se puede insertar correctamente la información en Préstamos sin provocar errores o dejar relaciones rotas.</p>
+<h4>3. Consultas lógicas (en lenguaje natural):</h4>
+<ul>
+<li style="list-style-type: none;">
+<ul>
+<li><strong>Consultar los préstamos de más de dos días:</strong><br>Buscar en la tabla Préstamos aquellos donde la diferencia entre fecha_devolución y fecha_prestamo sea mayor a 2 días. Cruzar esta información con la tabla Socios (para obtener el nombre del socio) y con Películas (para obtener el título).</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li style="list-style-type: none;">
+<ul>
+<li><strong>Socios que tienen películas en casa:</strong><br>Buscar en la <strong>tabla Préstamos</strong> las filas donde <code>fecha_devolución</code> esté vacía o sea posterior a hoy. Con ese <code>id_socio</code>, consultar en la <strong>tabla Socios</strong> el nombre y teléfono.</li>
+</ul>
+</li>
+<li><strong>Cuánto dinero ha gastado María López Perdigón:</strong><br>Buscar en <strong>Socios</strong> el ID correspondiente a esa persona. Después, en la tabla Préstamos, filtrar todos los registros con ese ID y sumar el importe total (si hay un campo tipo <code>precio</code> o <code>importe</code> en la tabla).</li>
+</ul>
+<p>💡 Esta lógica es la que más adelante traducirás a consultas SQL reales. ¡Buen trabajo si has llegado hasta aquí!</p></div></div></section></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper UDLcontentIdevice em_iDevice em_iDevice_udl_rep_gramatica" id="id46">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">2. Empieza con SQL para definir tu base de datos</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta46_734_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-representation"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p><img src="IMG_PRO2BAC_REA04_DDL-DML.png" alt="Las dos ramas de SQL que vamos a ver: DDL y DML" title="DDL y DML" style="float: left; margin-right: 35px; margin-left: 35px;" width="204" height="223"></p>
+<p>Ha llegado el momento de aprender un nuevo lenguaje que nos permitirá convertir nuestras ideas y estructuras en una base de datos real: <strong>SQL</strong>.</p>
+<p>El lenguaje SQL está diseñado específicamente para <strong>crear, modificar y consultar bases de datos relacionales</strong>. Se compone de distintos comandos que se utilizan según la tarea que queramos realizar.</p>
+<p>Podemos dividirlos en dos grandes grupos:</p>
+<ul>
+<li><strong>DDL (Data Definition Language):</strong> son los comandos que permiten <strong>crear y definir</strong> nuevas bases de datos, tablas, campos e índices. Aquí aprenderás a usar instrucciones como <code>CREATE</code>, <code>DROP</code> y <code>ALTER</code>.</li>
+<li><strong>DML (Data Manipulation Language):</strong> son los comandos que sirven para <strong>consultar, insertar, modificar o eliminar</strong> datos. Más adelante veremos instrucciones como <code>SELECT</code>, <code>INSERT</code>, <code>UPDATE</code> y <code>DELETE</code>.</li>
+</ul>
+<p>Comenzamos por las operaciones del <strong><a href="#t33223b9c-7aca-3a07-7d15-6e7617932baf" id="link33223b9c-7aca-3a07-7d15-6e7617932baf" class="exe-tooltip definition-tt titled-tt" title="DDL | DDL">Lenguaje de Definición de Datos (DDL)</a></strong>, que permiten crear y definir nuevas bases de datos, campos e índices. ¡Conócelos!</p>
+<div class="exe-fx exe-tabs">
+<h2>CREATE</h2>
+<p>Las sentencias del DDL utilizan unos verbos que se repiten para los distintos objetos. Por ejemplo para crear un objeto nuevo el verbo será CREATE y a continuación el tipo de objeto a crear.</p>
+<div class="exe-layout-2-cols exe-layout-2-50-50 exe-clear">
+<div class="exe-col exe-col-1">
+<div style="background: #5f1196; color: #ffffff;">
+<p style="text-align: center;"><strong>CREAR LA BASE DE DATOS<br></strong></p>
+</div>
+<p style="text-align: justify;">Al crear una base de datos sólo hay que darle un nombre, Los nombres de base de datos deben ser únicos y tendrán 128 caracteres máximo.</p>
+<p style="text-align: left;"><strong>SINTAXIS</strong></p>
+<pre style="border: 1px solid #5f1196; background: #D7D7D7;"><span style="font-size: 10pt;"><span style="color: #000000;"><strong>CREATE DATABASE</strong> nombre_base_de_datos;<br></span></span></pre>
+<p style="text-align: left;"><strong></strong></p>
+<p style="text-align: left;"><strong>EJEMPLO</strong></p>
+<pre style="border: 1px solid #5f1196; background: #D7D7D7;"><span style="font-size: 10pt;"><span style="color: #000000;"><strong>CREATE DATABASE</strong> clientesDeEmpresa;</span></span></pre>
+</div>
+<div class="exe-col exe-col-2">
+<div style="background: #5f1196; color: #ffffff;">
+<p style="text-align: center;"><strong>CREAR TABLAS<br></strong></p>
+</div>
+<p style="text-align: left;">Al crear una tabla también lo hacemos dándole un nombre. Se crea en la base de datos actual y ocurre un error si la tabla existe o si la base de datos no existe.<br><strong>SINTAXIS</strong></p>
+<pre style="border: 1px solid #5f1196; background: #D7D7D7;"><span style="font-size: 10pt;"><span style="color: #000000;"><strong>CREATE TABLE </strong>nombre_tabla<br>("columna 1" "tipo_de_datos_para_columna_1",<br>"columna 2" "tipo_de_datos_para_columna_2",<br>... ,<br>[parámetros de la tabla]);</span></span></pre>
+</div>
+<div class="exe-col exe-col-2" style="text-align: left;"><strong>EJEMPLO</strong>
+<pre style="border: 1px solid #5f1196; background: #D7D7D7;"><span style="font-size: 10pt;"><span style="color: #000000;"><strong>CREATE TABLE</strong> CLIENTE (<br>DNI VARCHAR2(10),<br>NOMBRE VARCHAR2(20),<br>FECHA_NAC DATE NOT NULL,<br>TFNO VARCHAR2(10),<br>APELLIDOS VARCHAR2(100),<br>CONSTRAINT CLIENTE_PK PRIMARY KEY (DNI)<br>)</span></span></pre>
+</div>
+</div>
+<h2>DROP</h2>
+<p>Para eliminar un objeto utilizaremos el verbo DROP (DROP TABLE, DROP INDEX…).</p>
+<div class="exe-layout-2-cols exe-layout-2-50-50 exe-clear">
+<div class="exe-col exe-col-1">
+<div style="background: #5f1196; color: #ffffff;">
+<p style="text-align: center;"><strong>BORRAR LA BASE DE DATOS<br></strong></p>
+</div>
+<p style="text-align: justify;">DROP DATABASE borra todas las tablas en la base de datos y borra la base de datos. Hay que ser muy cuidadoso con este comando. Retorna el número de tablas que se eliminan. El comando borra del directorio de base de datos los ficheros y directorios que se crean durante operaciones normales.</p>
+<p style="text-align: left;"><strong>SINTAXIS</strong></p>
+<pre style="border: 1px solid #5f1196; background: #D7D7D7;"><span style="font-size: 10pt;"><span style="color: #000000;"><strong>DROP DATABASE</strong> [IF EXISTS] db_name;</span></span></pre>
+<p style="text-align: left;"><strong>EJEMPLO</strong></p>
+<pre style="border: 1px solid #5f1196; background: #D7D7D7;"><span style="font-size: 10pt;"><span style="color: #000000;"><strong>DROP DATABASE</strong> IF EXISTS mi_vieja_base_de_datos;<br></span></span></pre>
+</div>
+<div class="exe-col exe-col-2">
+<div style="background: #5f1196; color: #ffffff;">
+<p style="text-align: center;"><strong>BORRAR TABLAS<br></strong></p>
+</div>
+<p style="text-align: left;">Con el comando de borrado se pueden borrar una o más tablas. DROP TABLE no puede utilizarse para eliminar una tabla a la que se hace referencia en una restricción FOREIGN KEY (clave ajena). Primero habrá que eliminar la restricción FOREIGN KEY de la tabla a la que se hace referencia.</p>
+<p style="text-align: left;"><strong>SINTAXIS</strong></p>
+<pre style="border: 1px solid #5f1196; background: #D7D7D7;"><span style="font-size: 10pt;"><span style="color: #000000;"><strong>DROP TABLE</strong> nombre_de_la_tabla;<br></span></span></pre>
+</div>
+<div class="exe-col exe-col-2" style="text-align: left;"><strong>EJEMPLO</strong>
+<pre style="border: 1px solid #5f1196; background: #D7D7D7;"><span style="font-size: 10pt;"><span style="color: #000000;"><strong></strong>Si deseamos eliminar una tabla denominada <strong>cliente</strong> <br>que creamospreviamente, simplemente ejecutamos:<br><strong>DROP TABLE</strong> Cliente;<br></span></span></pre>
+</div>
+</div>
+<h2>ALTER</h2>
+<p>La sentencia SQL <strong>ALTER</strong> se utiliza para añadir, eliminar o modificar columnas de una tabla.</p>
+<div class="exe-layout-2-cols exe-layout-2-50-50 exe-clear">
+<div class="exe-col exe-col-1">
+<div style="background: #5f1196; color: #ffffff;">
+<p style="text-align: center;"><strong>SINTAXIS<br></strong></p>
+</div>
+<p>A. Sintaxis para <strong>agregar</strong> una columna:</p>
+<pre style="border: 1px solid #5f1196; background: #D7D7D7;"><span style="font-size: 10pt;"><span style="color: #000000;">ALTER TABLE nombretabla<br>ADD nombrecolumna tipodatocolumna;<br></span></span></pre>
+<p>B. Sintaxis para <strong>eliminar</strong> una columna de una tabla:</p>
+<pre style="border: 1px solid #5f1196; background: #D7D7D7;"><span style="font-size: 10pt;"><span style="color: #000000;">ALTER TABLE nombretabla<br>DROP COLUMN nombrecolumna;<br></span></span></pre>
+<p>C. Sintaxis para <strong>modificar el tipo de dato</strong> de una columna de una tabla:</p>
+<pre style="border: 1px solid #5f1196; background: #D7D7D7;"><span style="font-size: 10pt;"><span style="color: #000000;">ALTER TABLE nombretabla<br>ALTER COLUMN nombrecolumna tipodatocolumna;<br></span></span></pre>
+</div>
+<div class="exe-col exe-col-2">
+<div style="background: #5f1196; color: #ffffff;">
+<p style="text-align: center;"><strong>EJEMPLOS<br></strong></p>
+</div>
+<p>A. Dada la tabla <em>personas</em>, queremos añadir una nueva columna, denominada <em>fechadenacimiento</em>:</p>
+<pre style="border: 1px solid #5f1196; background: #D7D7D7;"><span style="font-size: 10pt;"><span style="color: #000000;">ALTER TABLE personas<br>ADD fechadenacimiento date;<br></span></span></pre>
+<p>B. Dada la tabla <em>personas</em>, queremos borrar la columna, denominada <em>fechadenacimiento</em>:</p>
+<pre style="border: 1px solid #5f1196; background: #D7D7D7;"><span style="font-size: 10pt;"><span style="color: #000000;">ALTER TABLE personas<br>DROP COLUMN fechadenacimiento;<br></span></span></pre>
+<p>C. Si queremos modificar el tipo de dato de la columna <em>fecha</em>, y ponerle tipo <em>year</em> en lugar de tipo <em>date</em>:</p>
+<pre style="border: 1px solid #5f1196; background: #D7D7D7;"><span style="font-size: 10pt;"><span style="color: #000000;">ALTER TABLE personas<br>ALTER COLUMN fechadenacimiento year ;<br></span></span></pre>
+</div>
+</div>
+<div id="t33223b9c-7aca-3a07-7d15-6e7617932baf" class="exe-tooltip-text">
+<p>Data Definition Language, en inglés. Incluye órdenes para definir, modificar o borrar las tablas en las que se almacenan los datos y las relaciones entre estas.</p>
+</div>
+</div>
+<p>Para los diferentes tipos de datos que podrás usar en SQL puedes consultar los existentes aquí:</p>
+<p><strong><a href="https://www.w3schools.com/sql/sql_datatypes.asp" target="_blank" title="Enlace a w3schools.com" rel="noopener">Tipos de datos.</a></strong></p></div></div></section><section class="exe-udlContent-block js-hidden"><header class="exe-udlContent-header exe-udlContent-character-4"><h2><span class="sr-av">Lumen dice </span>Algunos ejemplos</h2></header><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Aquí puedes ver algunos ejemplos más:</p>
+<p style="text-align: center;"><img src="DDL_Ejemplos-2.gif" alt="Imagen animada donde se pueden ver algunos ejemplos más del uso de CREATE, DROP y ALTER." title="Ejemplos DDL" width="500" height="388"></p></div><article class="exe-udlContent-content-simplified js-hidden"><header class='exe-udlContent-alt-content-title'><h2>Lectura facilitada</h2></header><p>En esta imagen podemos ver los comandos DDL: CREATE, DROP y ALTER. Se especifica que para la funcionalidad de creación se usa CREATE DATABASE o CREATE TABLE, para la funcionalidad de modificación se usa ALTER TABLE, ALTER COLUMN y para la funcionalidad de borrado se usa DROP TABLE, DROP DATABASE.</p>
+<p>En el ejemplo 1 encontramos los comandos:<br>CREATE TABLE gente<br>(Cedula CHAR(8) PRIMARY KEY,<br>Nombre VARCHAR(20) NOT NULL,<br>Apellidos VARCHAR(20) NOT NULL)</p>
+<p>ALTER TABLE Gente ADD (Edad NUMBER(2));<br>ALTER TABLE Gente DROP (Edad);</p>
+<p>DROP TABLE Gente;</p>
+<p><br>En el ejemplo 2 encontramos los comandos:<br>CREATE TABLE CLIENTE(<br>DNI VARCHAR2(10),<br>&INOMBRE VARCHAR2(20),<br>FECHA_NAC DATE NOT NULL,<br>TFNO VARCHAR2(10),<br>APELLIDOS VARCHAR2(100),<br>CONSTRAINT CLIENTE_PK PRIMARY KEY (DNI)<br>);</p>
+<p>CREATE DATABASE mibasededatos</p>
+<p>En el ejemplo 3 encontramos los comandos para el ejemplo ya trabajado en las pestañas.</p><button class="exe-udlContent-alt-content-hide">Cerrar</button></article></div></section><section class="exe-udlContent-block js-hidden"><header class="exe-udlContent-header exe-udlContent-character-2"><h2><span class="sr-av">Kardia dice </span>Para saber más...</h2></header><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Debes saber que:</p>
+<p>1. Una sentencia SQL es como una frase (escrita en inglés ) con la que decimos lo que queremos obtener y de dónde obtenerlo. Todas las sentencias empiezan con un verbo (palabra reservada que indica la acción a realizar), seguido del resto de opciones, algunas obligatorias y otras opcionales que completan la frase.</p>
+<p>2. Otros comandos, además de los vistos son:</p>
+<ul>
+<li>SHOW TABLES: mostrar tablas.</li>
+<li>DESCRIBE <nombre de="" tabla=""> para mostrar estructura de una tabla.</nombre></li>
+<li>Habrás visto que existen, además, algunos comandos que hemos usado en los ejemplos, como:
+<ul>
+<li>CONSTRAINT: se usa en las instrucciones ALTER TABLE y CREATE TABLE para crear o eliminar restricciones.</li>
+<li>FOREIGN KEY: identifica una columna o varias columnas, que sirven para señalar cuál es la llave primaria de otra tabla.</li>
+</ul>
+</li>
+</ul>
+<p>Algunos enlaces recomendados para consultar comandos y su uso son:</p>
+<ul>
+<li><a href="http://sql.11sql.com/" target="_blank" title="Accede a la web: sql.11sql" rel="noopener">http://sql.11sql.com/</a></li>
+<li><a href="https://www.w3schools.com/sql/default.asp" target="_blank" title="Accede a la web: sql.11sql" rel="noopener">https://www.w3schools.com/sql/default.asp</a></li>
+</ul></div></div></section></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper UDLcontentIdevice em_iDevice em_iDevice_udl_rep_gramatica" id="id47">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">3. Consulta y modifica los datos con SQL (DML)</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta47_734_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-representation"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p style="text-align: justify;"><img src="IMG_PRO2BAC_REA04_DMLICONOS.jpg" alt="Iconos de los comandos DML usados en SQL: SELECT, INSERT, UPDATE, DELETE" title="Comandos DML SQL" style="float: left; margin-right: 10px; margin-left: 10px;" width="271" height="81">Vamos a conocer ahora las instrucciones de SQL dedicadas a llevar a cabo las tareas de consulta o modificación de los datos contenidos en las Bases de Datos. Estos comandos forman parte del llamado <a href="#t8c966244-3c22-ed69-7158-ffecad95bb07" id="link8c966244-3c22-ed69-7158-ffecad95bb07" class="exe-tooltip definition-tt titled-tt" title="DML | DML"><strong>Lenguaje de Manipulación de Datos (DML)</strong></a>. A continuación tienes los cuatro comandos básicos del DML, verás que con ellos puedes obtener o actualizar todos los datos que desees en la base de datos:</p>
+<div class="exe-fx exe-tabs">
+<h2>SELECT</h2>
+<p style="text-align: justify;">¿Para qué solemos utillizar los comandos SQL? El uso más común es la selección de datos de las tablas en las que se encuentran. La gran mayoría de operaciones que realizamos en una base de datos comienzan con una consulta. Las dos palabras claves que necesitaremos para ello son <strong>SELECT</strong> y <strong>FROM</strong>.</p>
+<p style="text-align: justify;">La <strong>estructura SQL básica</strong> para la consulta es:</p>
+<p style="text-align: left;"><strong>SELECT "nombre_columna" FROM "nombre_tabla";</strong></p>
+<div class="exe-layout-2-cols exe-layout-2-50-50 exe-clear">
+<div class="exe-col exe-col-1">
+<div style="background: #5f1196; color: #ffffff;">
+<p style="text-align: center;"><strong>EJEMPLO<br></strong></p>
+</div>
+<p style="text-align: justify;">Para comprobar el funcionamiento del comando utilizaremos la siguiente tabla que representa la transmisión a la central de las ventas de un producto en sus sucursales:</p>
+<table class="exe-table" style="width: 456px;"><caption>info_ventas</caption>
+<thead>
+<tr>
+<th style="width: 117.983px;">ciudad</th>
+<th style="width: 117.983px;">ventas</th>
+<th style="width: 117.983px;">fecha_txn</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="width: 117.983px;">Huelva</td>
+<td style="width: 117.983px; text-align: right;">250</td>
+<td style="width: 117.983px;">05/01/2022</td>
+</tr>
+<tr>
+<td style="width: 117.983px;">Córdoba</td>
+<td style="width: 117.983px; text-align: right;">1500</td>
+<td style="width: 117.983px;">14/01/2022</td>
+</tr>
+<tr>
+<td style="width: 117.983px;">Jaén</td>
+<td style="width: 117.983px; text-align: right;">300</td>
+<td style="width: 117.983px;">07/01/2022</td>
+</tr>
+<tr>
+<td style="width: 117.983px;">Almería</td>
+<td style="width: 117.983px; text-align: right;">700</td>
+<td style="width: 117.983px;">10/01/2022</td>
+</tr>
+</tbody>
+</table>
+<pre style="border: 1px solid #5f1196; background: #D7D7D7;"><span style="font-size: 10pt;"><span style="color: #000000;"><span style="color: #000080;"><strong>SELECT</strong> </span>ciudad <span style="color: #000080;"><strong>FROM</strong> </span>info_ventas;</span></span></pre>
+</div>
+<div class="exe-col exe-col-2">
+<div style="background: #5f1196; color: #ffffff;">
+<p style="text-align: center;"><strong>RESULTADO<br></strong></p>
+</div>
+<p>Tras ejecutar el comando anterior obtendremos:</p>
+<pre style="border: 1px solid #5f1196; background: #D7D7D7;"><span style="font-size: 10pt;"><span style="color: #000000;"><strong><u>ciudad</u></strong><br>Huelva<br>Córdoba<br>Jaén<br>Almería</span></span></pre>
+</div>
+</div>
+<div style="background: #5f1196; color: #ffffff;">
+<p style="text-align: center;"><strong>AMPLIACIÓN<br></strong></p>
+</div>
+<p>Junto al comando SELECT suele utilizarse la cláusula opcional <strong>WHERE</strong>. Aunque es opcional, nos resulta muy necesaria ya que nos permite añadir condiciones para filtrar los datos concretos que necesitamos obtener. El comando completo sería entonces:</p>
+<div class="exe-layout-2-cols exe-layout-2-50-50 exe-clear">
+<div class="exe-col exe-col-1">
+<pre style="border: 1px solid #5f1196; background: #D7D7D7;"><span style="font-size: 10pt;"><span style="color: #000000;"><strong>FORMATO</strong>:<br><span style="color: #000080;">SELECT</span> "nombre_columna" <span style="color: #000080;">FROM</span> "nombre_tabla"<br><span style="color: #000080;">WHERE</span> "condicion_1_de_los_datos"<br><span style="color: #000080;">AND</span> "condicion_2_de_los_datos" [...]</span></span></pre>
+</div>
+<div class="exe-col exe-col-2">
+<pre style="border: 1px solid #5f1196; background: #D7D7D7;"><span style="font-size: 10pt;"><span style="color: #000000;"><strong>EJEMPLO</strong>:<br><span style="color: #000080;">SELECT</span> ciudad <span style="color: #000080;">FROM</span> info_ventas<br><span style="color: #000080;">WHERE</span> ventas&gt;500</span></span></pre>
+</div>
+</div>
+<h2>INSERT</h2>
+<p>Acabas de conocer cómo obtener información de tablas. Pero ¿Cómo se insertan estas filas de datos en estas tablas en primer lugar? Esto es lo que vas a aprender ahora, que realiza la instrucción&nbsp;<strong>INSERT</strong>.</p>
+<p>La <strong>estructura básica</strong> para insertar una nueva fila de datos en una tabla es:</p>
+<p style="text-align: left;"><strong>INSERT INTO "nombre_tabla" ("columna1", "columna2", ...)</strong><br><strong>VALUES ("valor1", "valor2", ...);</strong></p>
+<div class="exe-layout-2-cols exe-layout-2-50-50 exe-clear">
+<div class="exe-col exe-col-1">
+<div style="background: #5f1196; color: #ffffff;">
+<p style="text-align: center;"><strong>EJEMPLO<br></strong></p>
+</div>
+<p>Así, si queremos insertar una nueva fila en la tabla <strong>info_ventas</strong> anterior, respetando siempre los tipos de tados de cada columna de la tabla para no obtener error, el comando a ejecutar sería:</p>
+<pre style="border: 1px solid #5f1196; background: #D7D7D7;"><span style="font-size: 10pt;"><span style="color: #000000;"><strong><span style="color: #000080;">INSERT</span> <span style="color: #000080;">INTO</span></strong> info_ventas (ciudad, ventas, fecha_txn)<br><strong><span style="color: #000080;">VALUES</span> </strong>('Cádiz', 900, '11/01/2022')</span></span></pre>
+</div>
+<div class="exe-col exe-col-2">
+<div style="background: #5f1196; color: #ffffff;">
+<p style="text-align: center;"><strong>RESULTADO<br></strong></p>
+</div>
+<table class="exe-table" style="width: 456px;"><caption>info_ventas</caption>
+<thead>
+<tr>
+<th style="width: 117.983px;">ciudad</th>
+<th style="width: 117.983px;">ventas</th>
+<th style="width: 117.983px;">fecha_txn</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="width: 117.983px;">Huelva</td>
+<td style="width: 117.983px; text-align: right;">250</td>
+<td style="width: 117.983px;">05/01/2022</td>
+</tr>
+<tr>
+<td style="width: 117.983px;">Córdoba</td>
+<td style="width: 117.983px; text-align: right;">1500</td>
+<td style="width: 117.983px;">14/01/2022</td>
+</tr>
+<tr>
+<td style="width: 117.983px;">Jaén</td>
+<td style="width: 117.983px; text-align: right;">300</td>
+<td style="width: 117.983px;">07/01/2022</td>
+</tr>
+<tr>
+<td style="width: 117.983px;">Almería</td>
+<td style="width: 117.983px; text-align: right;">700</td>
+<td style="width: 117.983px;">10/01/2022</td>
+</tr>
+<tr>
+<td style="width: 117.983px;">Cádiz</td>
+<td style="width: 117.983px; text-align: right;">900</td>
+<td style="width: 117.983px;">11/01/2022</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div style="background: #5f1196; color: #ffffff;">
+<p style="text-align: center;"><strong>AMPLIACIÓN<br></strong></p>
+</div>
+<p style="text-align: justify;">Los comandos SQL también se pueden anidar entre sí. De este modo, podríamos insertar en una tabla varias filas de otra tabla diferente sustituyendo la palabra VALUES por una consulta que nos proporcione efectivamente los valores que queremos insertar. La sintaxis será:</p>
+<div class="exe-layout-2-cols exe-layout-2-50-50 exe-clear">
+<div class="exe-col exe-col-1">
+<pre style="border: 1px solid #5f1196; background: #D7D7D7;"><span style="font-size: 10pt;"><span style="color: #000000;"><strong>FORMATO</strong>:<br><span style="color: #000080;"><strong>INSERT INTO</strong> </span>"tabla1" ("columna1", "columna2", ...)<br><span style="color: #000080;"><strong>SELECT</strong> </span>"columna3", "columna4", ...<br><span style="color: #000080;"><strong>FROM</strong> </span>"tabla2";<br></span></span></pre>
+</div>
+<div class="exe-col exe-col-2">
+<pre style="border: 1px solid #5f1196; background: #D7D7D7;"><span style="font-size: 10pt;"><span style="color: #000000;"><strong>EJEMPLO</strong>:<br><span style="color: #000080;">INSERT INTO</span> mayores_ventas (ciudad, ventas, fecha_txn)<br><span style="color: #000080;">SELECT </span>ciudad, ventas, fecha_txn<br><span style="color: #000080;">FROM</span> info_ventas<br><span style="color: #000080;">WHERE</span> ventas&gt;500;<br></span></span></pre>
+</div>
+</div>
+<h2>UPDATE</h2>
+<p style="text-align: justify;">Una vez que hay datos en la tabla, podríamos tener la necesidad de modificar los mismos. El comando <strong>UPDATE</strong> se utiliza para modificar valores en una tabla.</p>
+<div class="exe-layout-2-cols exe-layout-2-50-50 exe-clear">
+<div class="exe-col exe-col-1">
+<p>La <strong>sintaxis</strong> de SQL UPDATE es:</p>
+<p><strong>UPDATE nombre_tabla </strong><br><strong>SET columna1 = valor1, columna2 = valor2 </strong><br><strong>WHERE columna3 = valor3</strong></p>
+</div>
+<div class="exe-col exe-col-2">
+<p>Donde:</p>
+<ul>
+<li><strong>SET</strong> establece los nuevos valores para las columnas indicadas.</li>
+<li><strong>WHERE</strong> sirve para seleccionar las filas que queremos modificar.</li>
+<li><img src="cartoon-eyes.png" alt="Ojos" title="¡Ojo!" width="29" height="14"> ¡<strong>OJO</strong>!: Si omitimos la cláusula WHERE, por defecto, ¡modificará los valores en todas las filas de la tabla!.</li>
+</ul>
+</div>
+</div>
+<div class="exe-layout-2-cols exe-layout-2-50-50 exe-clear">
+<div class="exe-col exe-col-1">
+<div style="background: #5f1196; color: #ffffff;">
+<p style="text-align: center;"><strong>EJEMPLO<br></strong></p>
+</div>
+<p>Si, sobre la tabla <strong>info_ventas</strong> anterior, las ventas en Huelva son 280 en vez de 250 haremos:</p>
+<pre style="border: 1px solid #5f1196; background: #D7D7D7;"><span style="font-size: 10pt;"><span style="color: #000000;"><strong><span style="color: #000080;">UPDATE</span> </strong>info_ventas<br><span style="color: #000080;"><strong>SET</strong> </span>ventas = 280<br><span style="color: #000080;"><strong>WHERE</strong> </span>ciudad = 'Huelva'<br><span style="color: #000080;"><strong>AND</strong> </span>fcha_txn = '05/01/2022';<br></span></span></pre>
+</div>
+<div class="exe-col exe-col-2">
+<div style="background: #5f1196; color: #ffffff;">
+<p style="text-align: center;"><strong>RESULTADO<br></strong></p>
+</div>
+<table class="exe-table" style="width: 456px;"><caption>info_ventas</caption>
+<thead>
+<tr>
+<th style="width: 117.983px;">ciudad</th>
+<th style="width: 117.983px;">ventas</th>
+<th style="width: 117.983px;">fecha_txn</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="width: 117.983px;">Huelva</td>
+<td style="width: 117.983px; text-align: right;">280</td>
+<td style="width: 117.983px;">05/01/2022</td>
+</tr>
+<tr>
+<td style="width: 117.983px;">Córdoba</td>
+<td style="width: 117.983px; text-align: right;">1500</td>
+<td style="width: 117.983px;">14/01/2022</td>
+</tr>
+<tr>
+<td style="width: 117.983px;">Jaén</td>
+<td style="width: 117.983px; text-align: right;">300</td>
+<td style="width: 117.983px;">07/01/2022</td>
+</tr>
+<tr>
+<td style="width: 117.983px;">Almería</td>
+<td style="width: 117.983px; text-align: right;">700</td>
+<td style="width: 117.983px;">10/01/2022</td>
+</tr>
+<tr>
+<td style="width: 117.983px;">Cádiz</td>
+<td style="width: 117.983px; text-align: right;">900</td>
+<td style="width: 117.983px;">11/01/2022</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<h2>DELETE</h2>
+<p style="text-align: justify;">A veces podemos desear deshacernos de los registros de una tabla. Para ello, utilizamos el comando <strong>DELETE FROM</strong>.</p>
+<p style="text-align: justify;">Su <strong>sintaxis</strong> es:</p>
+<p style="text-align: justify;"><strong>DELETE FROM "nombre_tabla"</strong><br><strong>WHERE "condición";</strong></p>
+<div class="exe-layout-2-cols exe-layout-2-50-50 exe-clear">
+<div class="exe-col exe-col-1">
+<div style="background: #5f1196; color: #ffffff;">
+<p style="text-align: center;"><strong>EJEMPLO<br></strong></p>
+</div>
+<p>Si en la tabla anterior queremos borrar las ventas de la segunda fila:</p>
+<pre style="border: 1px solid #5f1196; background: #D7D7D7;"><span style="font-size: 10pt;"><span style="color: #000000;"><span style="color: #000080;"><strong>DELETE FROM</strong></span> info_ventas<br><strong><span style="color: #000080;">WHERE</span> </strong>ciudad = 'Córdoba';</span></span></pre>
+</div>
+<div class="exe-col exe-col-2">
+<div style="background: #5f1196; color: #ffffff;">
+<p style="text-align: center;"><strong>RESULTADO<br></strong></p>
+</div>
+<table class="exe-table" style="width: 456px;"><caption>info_ventas</caption>
+<thead>
+<tr>
+<th style="width: 117.983px;">ciudad</th>
+<th style="width: 117.983px;">ventas</th>
+<th style="width: 117.983px;">fecha_txn</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="width: 117.983px;">Huelva</td>
+<td style="width: 117.983px; text-align: right;">280</td>
+<td style="width: 117.983px;">05/01/2022</td>
+</tr>
+<tr>
+<td style="width: 117.983px;">Jaén</td>
+<td style="width: 117.983px; text-align: right;">300</td>
+<td style="width: 117.983px;">07/01/2022</td>
+</tr>
+<tr>
+<td style="width: 117.983px;">Almería</td>
+<td style="width: 117.983px; text-align: right;">700</td>
+<td style="width: 117.983px;">10/01/2022</td>
+</tr>
+<tr>
+<td style="width: 117.983px;">Cádiz</td>
+<td style="width: 117.983px; text-align: right;">900</td>
+<td style="width: 117.983px;">11/01/2022</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div id="t8c966244-3c22-ed69-7158-ffecad95bb07" class="exe-tooltip-text">
+<p>Data Manipulation Language, en inglés, es usado para recuperar y manipular datos en una base de datos relacional.</p>
+</div></div></div></section></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper UDLcontentIdevice em_iDevice em_iDevice_udl_exp_competenciadigital" id="id48">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">4. Trabaja con bases de datos SQL desde Python</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta48_742_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-representation"><section class="exe-udlContent-block js-hidden"><header class="exe-udlContent-header exe-udlContent-character-3"><h2>¿Phyton?</h2></header><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p><img src="phyton_img.jpg" alt="IDLE Python" title="IDLE Python" style="float: left; margin: 50px 45px 50px 45px;" width="121" height="67"></p>
+<p style="text-align: justify;"><a href="#te7466271-f69b-3066-ecf8-7efb73bb6c00" id="linke7466271-f69b-3066-ecf8-7efb73bb6c00" class="exe-tooltip definition-tt titled-tt" title="IDLE | Definición de IDLE"><strong>IDLE</strong></a> (Integrated DeveLopment Environment) es un entorno gráfico de desarrollo que permite editar y ejecutar programas en Python. También permite ejecutar instrucciones sueltas.</p>
+<div class="exe-fx exe-tabs">
+<h2>EducaAndOS</h2>
+<p>En la mayoría de distribuciones de Linux, entre las que se encuentra EducaAndOS, lo habitual es que Phyton esté preinstalado y no necesitemos hacer nada para empezar a usarlo. Realiza entonces las siguientes comprobaciones:</p>
+<table style="width: 100%;" class="exe-table" border="1">
+<tbody>
+<tr>
+<td style="width: 30.2103%; vertical-align: top;">
+<p style="text-align: center;">PASO 1</p>
+<p>Accede al menú de escritorio "Aplicaciones" y busca Python en alguna de las categorías:<img src="educand_1.png" alt="Aplicaciones Educaandos" title="Aplicaciones Educaandos" style="display: block; margin-left: auto; margin-right: auto;" width="300" height="346"></p>
+</td>
+<td style="width: 3.86266%; vertical-align: top;">
+<p style="text-align: center;">PASO 2</p>
+<p>Si no lo has encontrado en ese menú, lo puedes lanzar desde la terminal. Para abrir la Terminal accede a Aplicaciones→Herramientas del sistema→Terminal:</p>
+<p><img src="educand_2-1.png" alt="Terminal educaandos" title="Terminal educaandos" style="float: left;" width="835" height="74"></p>
+<p>Entonces, desde la terminal, basta con escribir "python3" para abrir el entorno básico de programación:</p>
+<figure class="exe-figure exe-image float-left" style="width: 814px;"><img src="educand_2-2.png" alt="terminal python3" title="terminal python3" width="814" height="196">
+<figcaption class="figcaption"><a href="https://commons.wikimedia.org/w/index.php?title=User:Lamraoui_walid&amp;action=edit&amp;redlink=1" target="_blank" class="author" rel="noopener">https://commons.wikimedia.org/w/index.php?title=User:Lamraoui_walid&amp;action=edit&amp;redlink=1</a></figcaption>
+</figure>
+</td>
+<td style="width: 64.927%; vertical-align: top;">
+<p style="text-align: center;">PASO 3</p>
+<p>No obstante, para poder usar su entorno integrado de desarrollo siempre se recomienda tener instalado Python para que aparezca como en paso 1. Para ello, hay que acceder a (por ejemplo EducaAndOS):</p>
+<p>Aplicaciones →Herramientas del Sistema→Centro de Software de EducaAndOS (Usado para instalar aquellas aplicaciones que se necesiten o aquellas que más se utilicen y no vengan instaladas por defecto en la distribución), y seleciona la categoría donde estará la aplicación (Herramientas de Desarrollo), pulsa en la aplicación cuando la veas y después pulsa "Instalar".</p>
+<p style="text-align: left;"><img src="educand_3.png" alt="Centro instalación EducaAndOS" title="Centro instalación EducaAndOS" width="800" height="372"></p>
+</td>
+</tr>
+</tbody>
+</table>
+<h2>Ubuntu</h2>
+<p>Al contrario que en la mayoría de distribuciones de Linux, Ubuntu no trae Python preinstalado, pero se descarga e instala de manera muy sencilla desde su Web y se instala mediante el uso del terminal. Sigue estos pasos:</p>
+<table style="width: 100%;" class="exe-table" border="1">
+<tbody>
+<tr>
+<td style="width: 33.3333%; vertical-align: top;">
+<p style="text-align: center;">PASO 1</p>
+<h3>🟣 Paso 1: Abrir la terminal y comprobar si Python está instalado</h3>
+<p>Abre la terminal de Ubuntu pulsando <strong>Ctrl + Alt + T</strong>. Vamos a comprobar si tienes Python 3 instalado en tu sistema. Escribe el siguiente comando:</p>
+<div style="background-color: #f4f4f4; border-left: 4px solid #5f1196; padding: 10px; font-family: monospace;">python3 --version</div>
+<h3>🟣 Paso 1: Abrir la terminal y comprobar si Python está instalado</h3>
+<p>Abre la terminal de Ubuntu pulsando <strong>Ctrl + Alt + T</strong>. Vamos a comprobar si tienes Python 3 instalado en tu sistema. Escribe el siguiente comando:</p>
+<div style="background-color: #f4f4f4; border-left: 4px solid #5f1196; padding: 10px; font-family: monospace;">python3 --version</div>
+<p>🔎 Si te aparece una versión como <code>Python 3.10.x</code>, significa que Python ya está correctamente instalado.</p>
+<p><img src="terminal_1.jpg" alt="Terminal 1 Ubuntu de Python" title="Terminal 1 Ubuntu de Python" width="535" height="99" style="display: block; margin-left: auto; margin-right: auto;"></p>
+<p>✅ En ese caso, puedes pasar directamente al Paso 3: Abrir IDLE.</p>
+</td>
+<td style="width: 33.3333%; vertical-align: top;">
+<p style="text-align: center;">PASO 2</p>
+<h3>🟣 Paso 2: Instalar y abrir IDLE en Ubuntu</h3>
+<p>Si aún no tienes instalado <strong>IDLE</strong> (el entorno gráfico para programar en Python), puedes hacerlo fácilmente desde la terminal. IDLE es muy útil para empezar a trabajar con Python de forma sencilla.</p>
+<p>🔧 Ejecuta los siguientes comandos para instalarlo:</p>
+<div style="background-color: #f4f4f4; border-left: 4px solid #5f1196; padding: 10px; font-family: monospace;">sudo apt update<br>sudo apt install idle3</div>
+<p><img src="terminal_2.jpg" alt="Terminal 2 Ubuntu de Python" title="Terminal 2 Ubuntu de Python" style="display: block; margin-left: auto; margin-right: auto;" width="808" height="268"></p>
+</td>
+<td style="width: 33.3333%; vertical-align: top;">
+<p style="text-align: center;">PASO 3</p>
+<h3>🟣 Paso 3: Abrir IDLE</h3>
+<p>Una vez instalado, puedes abrir el entorno de programación <strong>IDLE</strong> fácilmente desde el menú de Ubuntu.</p>
+<p>🔎 Haz clic en el icono de aplicaciones (parte superior izquierda) y escribe <strong>IDLE</strong> en el buscador.</p>
+<p>Selecciona <strong>IDLE (Python 3.x)</strong> y se abrirá una ventana como esta:</p>
+<p>🖥️ Ahí podrás escribir y ejecutar tus primeros programas en Python, incluyendo los relacionados con bases de datos mediante <code>sqlite3</code>.</p>
+<p><img src="Paso_1.jpg" alt="Abrir el IDLE" title="Abrir el IDLE" width="619" height="241"></p>
+</td>
+</tr>
+</tbody>
+</table>
+<h2>Windows</h2>
+<p>Al contrario que en la mayoría de distribuciones de Linux, Windows no trae Python preinstalado, pero se descarga e instala de manera muy sencilla desde su Web. Sigue estos pasos:</p>
+<table style="width: 100%;" class="exe-table" border="1">
+<tbody>
+<tr>
+<td style="width: 33.3333%; vertical-align: top;">
+<p style="text-align: center;">PASO 1</p>
+<p>Accede a la web del proyecto y a la sección de descargas (Download). Seleciona tu SO, dscarga el fichero ejecutable e instálalo e ntu ordenador:</p>
+<p style="text-align: center;"><a href="https://www.python.org/">https://www.python.org/</a></p>
+<p><img src="windows_1.png" alt="Web de Python" title="Web de Python" width="1306" height="518"></p>
+</td>
+<td style="width: 33.3333%; vertical-align: top;">
+<p style="text-align: center;">PASO 2</p>
+<p>Tras instalarlo, tanto el entorno básico como el entorno de desarrollo integrado están disponibles en el menú de Inicio, dentro de la carpeta Python:</p>
+<p><img src="windows_2.jpg" alt="Python en Windows" title="Python en Windows" style="display: block; margin-left: auto; margin-right: auto;" width="229" height="117"></p>
+</td>
+<td style="width: 33.3333%; vertical-align: top;">
+<p style="text-align: center;">PASO 3</p>
+<p>El manejo de ambos entornos es idéntico en los dos SSOO:</p>
+<p><img src="windows_3.png" alt="python command line" title="python command line" width="677" height="343"></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div></div></div></section><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p style="text-align: justify;"><img src="IMG_PRO2BAC_REA04_SQL-PYTHON.jpg" alt="Mujer programando en SQL en un ordenador." title="Programación SQL" style="margin-right: 10px; margin-left: 10px; float: right;" width="150" height="150">Seguramente, después de conocer el lenguaje SQL para crear bases de datos y manipularlas, te habrás preguntado: ¿Y cómo utilizo en mi reto este nuevo lenguaje? Realizaremos nuestro programa en Python, pero...¿cómo usar entonces otro lenguaje - SQL - para gestionar la base de datos a crear?</p>
+<p style="text-align: justify;">¡Menos mal que nuestro equipo de trabajo dispone de miembros expertos tecnológicos que, a través de este ejercicio guiado que vas a realizar aquí, te van a enseñar cómo SQL se puede <strong>integrar y usar</strong> desde tu programación con Pyhton. ¡Realiza todos los pasos siguientes en tu entorno de desarrollo y crea tu primera base de datos!</p>
+<div style="border-left: 4px solid #5f1196; background-color: #f1edfa; padding: 1em; margin: 1em 0;"><strong>📌 Importante:</strong><br>No debes escribir los siguientes códigos directamente en el Shell de Python (ventana inicial de comandos). En su lugar, sigue estos pasos:
+<ol>
+<li>Abre <strong>Archivo → Nuevo archivo</strong> desde IDLE (el entorno de Python).</li>
+<li>Copia y pega allí los códigos.</li>
+</ol>
+</div>
+<div class="exe-fx exe-carousel">
+<h2>Paso 1: Crea y conecta la base de datos</h2>
+<p style="text-align: justify;">En principio no se requiere más que tener Python instalado para poder trabajar con SQL gracias al <strong>módulo sqlite3</strong>, que forma parte de la librería estándar de Python. La primera vez que ejecutemos este programa como no existe la base de datos <em>bdventas.db</em> se crea, consiste en un único archivo que se localiza en la misma carpeta de nuestra aplicación.</p>
+<p>Por tanto, antes de empezar a programar, vamos a crear un archivo Python donde escribiremos el código necesario para conectarnos a una base de datos utilizando <code>sqlite3</code>.</p>
+<div class="exe-layout-2-cols exe-layout-2-50-50 exe-clear">
+<div class="exe-col exe-col-1">
+<pre style="border: 1px solid #5f1196;"><span style="font-size: 10pt;"><span style="color: #000000;"><strong><span style="color: #ff6600;">import</span> </strong>sqlite3<br>conexion=sqlite3.connect(<span style="color: #008000;">"bdventas.db"</span>)</span></span></pre>
+</div>
+<div class="exe-col exe-col-2">
+<p style="text-align: justify;">¿Qué has conseguido con estos comandos?</p>
+<ol>
+<li style="list-style-type: none;">
+<ol>
+<li style="text-align: justify;"><strong>Importar</strong> el módulo 'sqlite3' para poder trabajar con bases de datos SQL.</li>
+<li style="text-align: justify;"><strong>Crear o abrir</strong> una conexión con una base de datos existente gracias a la función 'connect' del módulo 'sqlite3'.</li>
+</ol>
+</li>
+</ol>
+<details>
+<summary><strong>🧪 ¿Cómo puedes comprobar que ha funcionado?</strong></summary>
+<br>
+<p>Cuando ejecutas este código:</p>
+<div style="background-color: #f4f4f4; border-left: 4px solid #5f1196; padding: 10px; font-family: monospace;">conexion = sqlite3.connect("bdventas.db")</div>
+<p>Python <strong>no mostrará ningún mensaje</strong> por pantalla. Pero eso no significa que no haya funcionado. Puedes verificarlo de dos formas:</p>
+<h4>✅ Opción 1: Mostrar la conexión por pantalla</h4>
+<p>Escribe lo siguiente para comprobar que el objeto conexión existe:</p>
+<div style="background-color: #f4f4f4; border-left: 4px solid #5f1196; padding: 10px; font-family: monospace;">print(conexion)</div>
+<p>Si todo va bien, verás un mensaje parecido a:</p>
+<p><code><sqlite3.connection object="" at="" 0x000001c4=""></sqlite3.connection></code></p>
+<h4>✅ Opción 2: Verifica el archivo creado</h4>
+<p>Revisa la carpeta donde estás trabajando. Deberías ver un archivo llamado:</p>
+<p><strong>bdventas.db</strong></p>
+<p>Este archivo es tu base de datos creada, aunque de momento aún está vacía.</p>
+</details></div>
+</div>
+<h2>Paso 2: Crea una tabla</h2>
+<p>Una vez que se tiene una conexión se puede llamar a su método <strong>execute()</strong> para ejecutar comandos SQL.</p>
+<div class="exe-layout-2-cols exe-layout-2-50-50 exe-clear">
+<div class="exe-col exe-col-1">
+<pre style="border: 1px solid #5f1196;"><span style="font-size: 10pt;"><span style="color: #000000;"><span style="color: #ff6600;">try</span>:<br>   conexion.execute(<span style="color: #008000;">"""create table productos (</span><br><span style="color: #008000;">         codigo integer primary key autoincrement,</span><br><span style="color: #008000;">         nombre text,</span><br><span style="color: #008000;">         precio real</span><br><span style="color: #008000;">      )"""</span>)<br>   <span style="color: #800080;">print</span>(<span style="color: #008000;">"se creo la tabla productos"</span>) <br><span style="color: #ff6600;">except</span> sqlite3.OperationalError:<br>   <span style="color: #800080;">print</span>(<span style="color: #008000;">"La tabla productos ya existe"</span>)</span></span></pre>
+</div>
+<div class="exe-col exe-col-2">
+<p>Este bloque de código:</p>
+<ul>
+<li style="text-align: justify;">Utiliza un <strong>try/except</strong> en el momento de crear la tabla porque si ejecutamos por segunda vez este programa se tratará de crear nuevamente la tabla 'articulos' y, al ya existir, se genera una excepción de tipo <em>OperationalError.</em></li>
+</ul>
+<details>
+<summary><strong>¿Qué hace este código? ¡Vamos a entenderlo paso a paso!</strong></summary>
+<p>Este ejemplo crea una tabla llamada <code>productos</code> dentro de la base de datos <strong>bdventas.db</strong>, que se creó en el paso anterior. A continuación te explicamos qué hace cada parte del código:</p>
+<ul>
+<li><code>import sqlite3</code>: importa el módulo necesario para trabajar con bases de datos en Python.</li>
+<li><code>sqlite3.connect("bdventas.db")</code>: crea (si no existe) o abre la base de datos <strong>bdventas.db</strong> en la misma carpeta del programa. Se guarda en la variable <code>conexion</code>.</li>
+<li><code>conexion.execute(...)</code>: ejecuta el código SQL que está dentro, en este caso para crear una tabla.</li>
+<li>La tabla <code>productos</code> tiene 3 atributos:
+<ul>
+<li><code>codigo</code>: clave primaria, es un número entero que se genera automáticamente (gracias a <code>autoincrement</code>).</li>
+<li><code>nombre</code>: texto que almacena el nombre del producto.</li>
+<li><code>precio</code>: número decimal que indica el precio del producto.</li>
+</ul>
+</li>
+<li><code>try / except</code>: sirve para controlar errores. Si el programa intenta crear la tabla y esta ya existe, se lanza una excepción y se muestra un mensaje.</li>
+</ul>
+<h3>🔁 ¿Se puede reutilizar este ejemplo?</h3>
+<p>¡Claro que sí! Este código sirve como <strong>plantilla</strong>. Solo tienes que cambiar:</p>
+<ul>
+<li>El nombre de la tabla (<code>productos</code>) por <code>clientes</code>, <code>servicios</code>, o cualquier otra.</li>
+<li>Los atributos (columnas) según lo que necesites almacenar.</li>
+<li>El tipo de datos de cada atributo: <code>text</code>, <code>integer</code>, <code>real</code>, <code>date</code>, etc.</li>
+</ul>
+<p>¡Recuerda definir correctamente la <strong>clave primaria</strong> y, más adelante, también las <strong>claves ajenas</strong> si hay relaciones!</p>
+</details></div>
+</div>
+<h2>Paso 3: Inserta filas en la tabla</h2>
+<p>Vamos a insertar tres filas en la tabla anterior creada:</p>
+<pre style="border: 1px solid #5f1196;"><span style="font-size: 10pt; color: #000000;">conexion.execute(<span style="color: #008000;">"insert into productos(nombre,precio) values (?,?)"</span>, (<span style="color: #008000;">"ventilador"</span>, 41.50))<br>conexion.execute(<span style="color: #008000;">"insert into productos(nombre,precio) values (?,?)"</span>, (<span style="color: #008000;">"taburete"</span>, 34))<br>conexion.execute(<span style="color: #008000;">"insert into productos(nombre,precio) values (?,?)"</span>, (<span style="color: #008000;">"tostador"</span>, 15))<br>conexion.commit()</span></pre>
+<p>En este código:</p>
+<ul>
+<li style="list-style-type: none;">
+<ul>
+<li>Se llama a <strong>execute</strong> pasándole como primer parámetro un comando SQL '<strong>insert</strong>' con el carácter '<strong>?</strong>' indicando las posiciones donde se van a sustituir los valores que vienen a continuación.</li>
+<li>Tras efectuar todos los insert debemos llamar a '<strong>commit</strong>' para que se actualicen los datos realmente en la tabla de la base de datos.</li>
+</ul>
+</li>
+</ul>
+<details>
+<summary><strong>¿Qué significa exactamente este código?</strong></summary>
+<p>Este código sirve para <strong>insertar datos</strong> en la tabla <code>productos</code> que ya has creado anteriormente. Vamos línea por línea:</p>
+<ul>
+<li><code>execute("insert into productos(nombre, precio) values (?, ?)", (...))</code>: Es una instrucción para insertar datos. Los <code>?</code> son marcadores de posición que se sustituyen por los valores reales (nombre y precio).</li>
+<li>Se repite tres veces, insertando <code>ventilador</code>, <code>taburete</code> y <code>tostador</code>.</li>
+<li><code>conexion.commit()</code>: Guarda todos los cambios realizados. Si no se ejecuta, los datos no se guardarán realmente en el archivo de la base de datos.</li>
+</ul>
+<p>💡 Este es un buen momento para pensar en tu propio proyecto: ¿Qué productos, clientes o servicios vas a insertar tú? Pronto lo pondrás en práctica.</p>
+</details>
+<h2>Paso 4: Recupera todas las filas de una tabla</h2>
+<p>Vamos a programar una estructura <strong>SELECT</strong> para obtener todas las filas de nuestra tabla.</p>
+<p>El siguiente fragmento de código permite <strong>consultar todos los datos almacenados</strong> en la tabla <code>productos</code> de la base de datos.</p>
+<div class="exe-layout-2-cols exe-layout-2-50-50 exe-clear">
+<div class="exe-col exe-col-1">
+<pre style="border: 1px solid #5f1196;"><span style="font-size: 10pt;"><span style="color: #000000;">cursor= (conexion.execute(<span style="color: #008000;">"select codigo,<br>         nombre,precio from productos"</span>))<br><span style="color: #ff6600;">for</span> fila <span style="color: #ff6600;">in</span> cursor:<br>   <span style="color: #800080;">print</span>(fila)</span></span></pre>
+</div>
+<div class="exe-col exe-col-2">
+<p>En este código:</p>
+<ul>
+<li>El método execute retorna un objeto de la clase <strong>Cursor</strong> que se guarda en la variable del mismo nombre.</li>
+<li>Recorremos la variable sacando por pantalla cada fila.</li>
+</ul>
+</div>
+<details>
+<summary><strong>¿Qué está haciendo este código?</strong></summary>
+<p>Vamos paso a paso a entender qué se está realizando:</p>
+<ul>
+<li><code>conexion.execute("select codigo, nombre, precio from productos")</code>: esta instrucción <strong>SELECT</strong> busca todos los registros de la tabla <code>productos</code> y selecciona específicamente las columnas <code>codigo</code>, <code>nombre</code> y <code>precio</code>.</li>
+<li>El resultado de la consulta se guarda en la variable <code>cursor</code>. Esta variable es un <strong>objeto de tipo cursor</strong>, que sirve para recorrer fila por fila los datos obtenidos de la base de datos.</li>
+<li><code>for fila in cursor:</code> permite recorrer cada fila obtenida. Cada <code>fila</code> es una tupla con los datos de un producto (código, nombre, precio).</li>
+<li><code>print(fila)</code> muestra por pantalla cada fila (es decir, cada producto con sus datos).</li>
+</ul>
+<p>✅ Esta estructura es muy útil para mostrar información al usuario o para comprobar si los datos están correctamente guardados en la tabla.</p>
+</details></div>
+<h2>Paso 5: Recupera una fila de la tabla</h2>
+<p>Vamos a crear un programa que pida al usuario el código de un producto y, si lo encuentra en la base de datos, mostrará su nombre y su precio por pantalla. Te aconsejo que lo utilices y practiques.</p>
+<div class="exe-layout-2-cols exe-layout-2-50-50 exe-clear">
+<div class="exe-col exe-col-1">
+<div class="highlighted-code language-python">
+<div>
+<pre><code>codigo=int(input("Ingrese el código de un artículo:"))
+cursor=(conexion.execute("select nombre,precio from productos 
+      where codigo=?", (codigo, )))
+fila=cursor.fetchone()
+if fila!=None:
+   print(fila)
+else:
+   print("No existe un artículo con dicho código.")</code></pre>
+</div>
+</div>
+</div>
+<div class="exe-col exe-col-2">
+<p><strong>En este programa:</strong></p>
+<ul>
+<li>El método <code>fetchone</code> de la clase <em>Cursor</em> retorna una tupla con la fila de la tabla que coincide con el código ingresado o retorna <code>'None'</code>.</li>
+</ul>
+<details>
+<summary><strong>¿Qué hace exactamente este programa? Explicación paso a paso</strong></summary>
+<ul>
+<li style="list-style-type: none;">
+<ul style="list-style-type: disc;">
+<li><strong>1. Solicita al usuario</strong> que introduzca el <code>código</code> de un producto. Este dato se guarda en la variable <code>codigo</code>.</li>
+<li><strong>2. Ejecuta una consulta SQL con SELECT:</strong> busca en la tabla <code>productos</code> las columnas <code>nombre</code> y <code>precio</code> del producto cuyo código coincide con el que ha introducido el usuario.<br>La línea de código usada es:<br><code>cursor = conexion.execute("SELECT nombre, precio FROM productos WHERE codigo=?", (codigo,))</code></li>
+</ul>
+</li>
+</ul>
+<div style="background-color: #fff3cd; border: 1px solid #ffeeba; padding: 10px; margin-top: 10px; text-align: left;">
+<p><strong>¿Qué deberías cambiar si usas otra base de datos?</strong><br>Esta consulta se adapta fácilmente. Observa cómo puedes modificarla:</p>
+<ul>
+<li><code>SELECT campo1, campo2</code> → Cambia los nombres de los campos que quieres obtener.</li>
+<li><code>FROM nombre_tabla</code> → Sustituye <code>productos</code> por la tabla de tu proyecto.</li>
+<li><code>WHERE nombre_campo=?</code> → Cambia <code>codigo</code> por el campo que usarás como filtro.</li>
+</ul>
+<p><strong>Ejemplo genérico:</strong><br><code>cursor = conexion.execute("SELECT campo1, campo2 FROM tabla WHERE campo_clave=?", (valor_buscado,))</code><br>Esto te permitirá obtener datos filtrados de cualquier tabla, siempre que sustituyas los elementos entre comillas por los de tu propio proyecto.</p>
+</div>
+<ul style="list-style-type: disc;">
+<li><strong>3. Recupera los datos con <code>fetchone()</code>:</strong> Si existe una fila que cumpla con la condición, se guarda en la variable <code>fila</code>.</li>
+<li><strong>4. Comprueba si hay resultado:</strong> si se ha encontrado una fila, muestra el nombre y precio; si no, indica que no hay resultados.</li>
+</ul>
+</details></div>
+</div>
+<h2>Paso 6: Recupera varias filas de la tabla</h2>
+<p>Para ver cómo recuperar varias filas, vamos a realizar un programa que pida un precio por pantalla y nos muestre todos los productos de precio menor al introducido:</p>
+<div class="exe-layout-2-cols exe-layout-2-50-50 exe-clear">
+<div class="exe-col exe-col-1">
+<pre style="border: 1px solid #5f1196;"><span style="font-size: 10pt;"><span style="color: #000000;">precio=float(input("Ingrese un precio:"))<br>cursor= (conexion.execute(<span style="color: #008000;">"select nombre from articulos <br>      where precio&lt;?"</span>, (precio, )))<br>filas=cursor.fetchall()<br><span style="color: #ff6600;">if</span> <span style="color: #800080;">len</span>(filas)&gt;0:<br>   <span style="color: #ff6600;">for</span> fila <span style="color: #ff6600;">in</span> filas:<br>      <span style="color: #800080;">print</span>(fila)<br>   <span style="color: #ff6600;">else</span>:<br>      <span style="color: #800080;">print</span>(<span style="color: #008000;">"No existen artículos con un precio menor <br>         al ingresado."</span>)<br>conexion.close()</span></span></pre>
+</div>
+<div class="exe-col exe-col-2">
+<p><strong>¿Qué has realizado en este programa?</strong></p>
+<ul>
+<li>Ahora, el resultado del comando 'select' pueden ser muchas filas.</li>
+<li>El método <strong>'fetchall'</strong> de la clase Cursor nos retorna una lista con todas las filas de la tabla que cumplen la condición dada.</li>
+<li>¡No olvides cerrar siempre la conexión al terminar con el método <code>close()</code>!</li>
+</ul>
+<details>
+<summary><strong>¿Qué hace exactamente este programa? Explicación paso a paso</strong></summary>
+<ul>
+<li><strong>1. Solicita al usuario</strong> un valor de <code>precio</code> que será usado como filtro para mostrar artículos con un precio menor.</li>
+<li><strong>2. Ejecuta una consulta SQL con SELECT:</strong> busca en la tabla <code>articulos</code> todos los nombres cuyo precio sea inferior al que ha introducido el usuario.</li>
+<li><strong>3. Recupera múltiples filas</strong> con <code>fetchall()</code>: se almacena una lista con todas las filas que cumplen la condición.</li>
+<li><strong>4. Recorre los resultados:</strong> si hay resultados, se imprime cada uno. Si no hay coincidencias, muestra un mensaje informativo.</li>
+<li><strong>5. Cierra la conexión:</strong> se finaliza la conexión con <code>conexion.close()</code>.</li>
+</ul>
+<div style="background-color: #fff3cd; border: 1px solid #ffeeba; padding: 10px; margin-top: 10px; text-align: left;">
+<p><strong>¿Qué deberías cambiar si usas otra base de datos?</strong><br>Este programa es reutilizable. Solo necesitas ajustar algunos elementos:</p>
+<ul>
+<li><code>SELECT campo1</code> → Cambia el nombre del campo que quieres recuperar.</li>
+<li><code>FROM nombre_tabla</code> → Sustituye <code>articulos</code> por la tabla de tu proyecto.</li>
+<li><code>WHERE campo &lt; ?</code> → Cambia <code>precio</code> por el campo numérico que deseas comparar.</li>
+</ul>
+<p><strong>Ejemplo genérico:</strong></p>
+<code>cursor = conexion.execute("SELECT campo1 FROM tabla WHERE campo_num &lt; ?", (valor,))</code>
+<p>Esto mostrará todos los valores de <code>campo1</code> cuya condición con respecto a <code>campo_num</code> sea menor al <code>valor</code> indicado.</p>
+</div>
+</details></div>
+</div>
+<h2>¡Ahora te toca a ti!</h2>
+<p>¡Ha llegado el momento de aplicar todo lo aprendido en esta sección! A lo largo de los apartados anteriores.</p>
+<p>En esta actividad final del bloque, deberás crear una nueva base de datos que contenga las siguientes tres tablas. Observa atentamente su estructura y datos:</p>
+<p style="text-align: center;"><strong>Películas</strong></p>
+<img src="Tpeliculas.png" alt="Tabla Películas" width="1378" height="270" style="display: block; margin-left: auto; margin-right: auto;">
+<p style="text-align: center;"><strong>Clientes</strong></p>
+<img src="Tclientes.png" alt="Tabla Clientes" width="2090" height="228" style="display: block; margin-left: auto; margin-right: auto;">
+<p style="text-align: center;"><strong>Alquiler</strong></p>
+<img src="Talquiler.png" alt="Tabla Alquiler" width="494" height="235" style="display: block; margin-left: auto; margin-right: auto;">
+<div style="border: 2px solid #0073aa; background-color: #e7f3fe; padding: 15px; margin-top: 20px;">
+<h3>🔹 Actividad: Crea la base de datos y responde a las consultas</h3>
+<p>Con los conocimientos adquiridos, deberás:</p>
+<ol>
+<li>Crear una base de datos que contenga las tres tablas anteriores con sus datos.</li>
+<li>Diseñar las tablas con las relaciones necesarias (PK y FK donde proceda).</li>
+<li>Insertar los datos tal y como aparecen en las imágenes.</li>
+<li>Crear consultas que respondan a las siguientes preguntas:</li>
+</ol>
+<ul>
+<li>Mostrar personas que se hicieron socias a partir de 2017</li>
+<li>¿Cuál es el precio medio de una película en el videoclub?</li>
+<li>Muestra en pantalla los préstamos que aún no han sido devueltos, visualizando el <strong>nombre del socio</strong> y el <strong>título de la película</strong>.</li>
+</ul>
+</div>
+<h3>🔄 Hoja de ruta recomendada</h3>
+<ol>
+<li>Revisa el <strong>Paso 1</strong> y <strong>Paso 2</strong> para crear la base de datos y sus tablas con <code>CREATE</code>.</li>
+<li>Inserta los datos usando el <strong>Paso 3</strong> con <code>INSERT INTO</code>.</li>
+<li>Consulta datos aplicando <code>SELECT</code> con <code>WHERE</code>, como hicimos en los <strong>Pasos 4, 5 y 6</strong>.</li>
+<li>Recuerda cerrar la conexión con <code>conexion.close()</code>.</li>
+</ol>
+<h3>📄 Entrega</h3>
+<p>Sube a Moodle un documento PDF que contenga:</p>
+<ul>
+<li>Código fuente usado para crear e insertar los datos.</li>
+<li>Código de cada consulta con su resultado.</li>
+<li>Capturas de pantalla de la ejecución en tu entorno (opcional pero recomendado).</li>
+</ul>
+<p>¡Demuestra todo lo que sabes y conviértete en un verdadero maestro/a de SQL!</p>
+</div></div></div></section><section class="exe-udlContent-block js-hidden"><header class="exe-udlContent-header exe-udlContent-character-4"><h2><span class="sr-av">Lumen dice </span>¿Sabes cómo afrontar los últimos puntos del ejercicio?</h2></header><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><div style="background-color: #f0f0f0; padding: 10px; border-left: 4px solid #6a1b9a;">
+<p>Para calcular la <strong>media</strong> o <em>promedio</em> de una columna numérica en SQL, utilizamos la función <code>AVG()</code>. Esta función forma parte del conjunto de funciones de agregación que hemos aprendido.</p>
+<ol>
+<li>Usa <code>SELECT AVG(nombre_columna)</code> para calcular la media de esa columna.</li>
+<li>Indica la tabla de la que quieres obtener el dato usando <code>FROM nombre_tabla</code>.</li>
+<li>¡Y listo! No necesitas WHERE si quieres calcular la media de toda la columna.</li>
+</ol>
+<p><strong>Ejemplo</strong>: ¿Cuál es el precio medio de las películas disponibles?</p>
+<div style="background-color: #ffffff; border: 1px solid purple; padding: 8px; font-family: monospace;">SELECT AVG(Precio) FROM Películas</div>
+</div>
+<div style="background-color: #f0f0f0; padding: 10px; border-left: 4px solid #6a1b9a;">
+<p>Para realizar consultas que necesiten información de varias tablas a la vez, debes combinarlas adecuadamente. Aquí te explicamos cómo hacerlo paso a paso:</p>
+<ol>
+<li>En <strong>FROM</strong> deberás escribir todas las tablas que vayas a utilizar, separadas por comas.</li>
+<li>En <strong>WHERE</strong> deberás relacionar esas tablas usando los campos comunes (por ejemplo: <code>Clientes.Socio = Alquiler.Socio</code>).</li>
+<li>Cuando uses campos de varias tablas, debes especificar siempre el nombre de la tabla delante del campo, seguido de un punto: <code>Tabla.Campo</code>.</li>
+</ol>
+<p><strong>Ejemplo:</strong> ¿Qué socio ha alquilado la película <em>"Desperado"</em>? Queremos obtener su nombre:</p>
+<div style="background-color: #ffffff; border: 1px solid purple; padding: 8px; font-family: monospace;">SELECT Clientes.nombre<br>FROM Clientes, Alquiler<br>WHERE Clientes.Socio = Alquiler.Socio<br>AND Alquiler.Pelicula = 'Desperado'</div>
+</div>
+<div style="background-color: #f9f9f9; border-left: 4px solid #5f1196; padding: 10px; margin-top: 15px;">
+<p><strong>¿Y si un campo está vacío?</strong> En SQL, cuando un campo no tiene valor, se escribe como <code>IS NULL</code>. Si quieres comprobar que sí tiene valor, se usa <code>IS NOT NULL</code>.</p>
+<p><strong>Ejemplo:</strong> Ver los préstamos que aún no han sido devueltos:</p>
+<pre style="border: 1px solid #5f1196; background-color: #ffffff; padding: 10px;"><code>SELECT * FROM Alquiler  
+WHERE Fecha_devolucion IS NULL;</code></pre>
+</div></div></div></section></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="32_de_los_esquemas_al_sistema_crea_las_tablas_y_normaliza_tu_base_de_datos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><span class="page-counter">Página <strong>8</strong> de <strong>12</strong></span> <span class="sep">| </span><a href="41_cuando_los_datos_crecen_big_data_y_nuevas_formas_de_almacenarlos.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_intef_js.js"></script></body></html>

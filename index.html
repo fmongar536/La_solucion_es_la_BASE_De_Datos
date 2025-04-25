@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>La solución: una base de datos </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Belén Lara Aznar" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<meta name="description" content="Este REA nos adentra en el Ciclo de Vida del Software para desarrollar aplicaciones, hay que tener en cuenta todas las fases que hemos conocido en este recurso: el inicio del proyecto que nos encarga un cliente es la fase de Planificación en la que obtendremos como resultado el Diagrama de Casos de Uso que nos muestra las especificaciones funcionales y técnicas. Con este documento pasamos a la fase de Análisis, en la que los analistas del Equipo de Desarrollo se encargan de especificar los detalles. Tras ello entramos de lleno en la etapa de Diseño. Para almacenar los datos de las aplicaciones, estas trabajan con Bases de Datos, y dentro de ellas las más comúnmente utilizadas son las relacionales. Existen otros tipos de bases de datos que utilizan otras estructuras, como las NoSQL que muestran su potencial en el trabajo con Big Data. En las bases de datos relacionales que hemos conocido exiten tres niveles de diseño: El Diseño Conceptual, que da lugar al modelo E-R en el que especificamos entidades, atributos y relaciones, el Diseño Lógico, en el que especificamos las tablas,  y el Diseño Físico, donde implementamos la base de datos, aunque este último corresponde a la fase de Implementación del software. La aplicación ya codificada entra en la fase de Pruebas, donde realizamos pruebas de caja negra o caja blanca, para finalmente encargarnos del Mantenimiento en los equipos de trabajo del cliente." />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<link rel="stylesheet" type="text/css" href="udl-content.css" />
+<script type="text/javascript" src="udl-content.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-0"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">La solución: una base de datos</div></header>
+<nav id="siteNav">
+<ul>
+   <li id="active"><a href="index.html" class="active daddy main-node">Del dato a la solución</a></li>
+   <li><a href="1_del_dato_al_conocimiento_el_poder_de_la_informacin.html" class="no-ch">1. Del dato al conocimiento: el poder de la información</a></li>
+   <li><a href="2_del_problema_a_la_solucin.html" class="daddy">2. Del problema a la solución</a>
+   <ul class="other-section">
+      <li><a href="21_fundamentos_de_las_bases_de_datos_lo_esencial_para_empezar.html" class="no-ch">2.1 Fundamentos de las bases de datos: lo esencial para empezar</a></li>
+   </ul>
+   </li>
+   <li><a href="3_de_las_ideas_al_diseo_construimos_el_modelo_de_datos.html" class="daddy">3. De las ideas al diseño: construimos el modelo de datos</a>
+   <ul class="other-section">
+      <li><a href="31_dibuja_tu_base_de_datos_el_modelo_conceptual.html" class="no-ch">3.1 Dibuja tu base de datos: el modelo conceptual</a></li>
+      <li><a href="32_de_los_esquemas_al_sistema_crea_las_tablas_y_normaliza_tu_base_de_datos.html" class="no-ch">3.2 De los esquemas al sistema: crea las tablas y normaliza tu base de datos</a></li>
+   </ul>
+   </li>
+   <li><a href="4_del_diagrama_al_cdigo_bienvenido_a_sql.html" class="daddy">4. Del diagrama al código: bienvenido a SQL</a>
+   <ul class="other-section">
+      <li><a href="41_cuando_los_datos_crecen_big_data_y_nuevas_formas_de_almacenarlos.html" class="no-ch">4.1 Cuando los datos crecen: Big Data y nuevas formas de almacenarlos</a></li>
+   </ul>
+   </li>
+   <li><a href="5_finalicemos_el_proyecto.html" class="no-ch">5. Finalicemos el proyecto</a></li>
+   <li><a href="9_conclusin.html" class="no-ch">9. Conclusión</a></li>
+   <li><a href="crditos.html" class="no-ch">Créditos</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<span class="page-counter">Página <strong>1</strong> de <strong>12</strong></span> <span class="sep">| </span><a href="1_del_dato_al_conocimiento_el_poder_de_la_informacin.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">Del dato a la solución</h1></header>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id69">
+<div class="iDevice emphasis0" >
+<div id="ta69_793_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Este REA está diseñado para guiarte en el desarrollo completo de una aplicación con base de datos, trabajando todas las fases del ciclo de vida del software: desde la planificación hasta el mantenimiento. A través de actividades prácticas y progresivas, aprenderás los fundamentos de las bases de datos relacionales, su diseño, la programación en SQL, y la implementación de un programa funcional que utilice una base de datos.</p>
+<p><strong>Del dato a la solución</strong></p>
+<ul>
+<li>1. Del dato al conocimiento: el poder de la información</li>
+<li>2. Del problema a la solución
+<ul>
+<li>2.1 Fundamentos de las bases de datos: lo esencial para empezar</li>
+</ul>
+</li>
+<li>3. De las ideas al diseño: construimos el modelo de datos
+<ul>
+<li>3.1 Dibuja tu base de datos: el modelo conceptual</li>
+<li>3.2 De los esquemas al sistema: crea las tablas y normaliza tu base de datos</li>
+</ul>
+</li>
+<li>4. Del diagrama al código: bienvenido a SQL
+<ul>
+<li>4.1 Cuando los datos crecen: Big Data y nuevas formas de almacenarlos</li>
+</ul>
+</li>
+<li>5. Finalicemos el proyecto</li>
+<li>9. Conclusión</li>
+</ul></div></div></section></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<span class="page-counter">Página <strong>1</strong> de <strong>12</strong></span> <span class="sep">| </span><a href="1_del_dato_al_conocimiento_el_poder_de_la_informacin.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_intef_js.js"></script></body></html>

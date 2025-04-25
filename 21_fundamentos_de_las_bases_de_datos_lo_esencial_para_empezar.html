@@ -1,0 +1,482 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_effects.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>2.1 Fundamentos de las bases de datos: lo esencial para empezar | La solución: una base de datos </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Belén Lara Aznar" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_effects.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<link rel="stylesheet" type="text/css" href="udl-content.css" />
+<script type="text/javascript" src="udl-content.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-4"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">La solución: una base de datos</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Del dato a la solución</a></li>
+   <li><a href="1_del_dato_al_conocimiento_el_poder_de_la_informacin.html" class="no-ch">1. Del dato al conocimiento: el poder de la información</a></li>
+   <li class="current-page-parent"><a href="2_del_problema_a_la_solucin.html" class="current-page-parent daddy">2. Del problema a la solución</a>
+   <ul>
+      <li id="active"><a href="21_fundamentos_de_las_bases_de_datos_lo_esencial_para_empezar.html" class="active no-ch">2.1 Fundamentos de las bases de datos: lo esencial para empezar</a></li>
+   </ul>
+   </li>
+   <li><a href="3_de_las_ideas_al_diseo_construimos_el_modelo_de_datos.html" class="daddy">3. De las ideas al diseño: construimos el modelo de datos</a>
+   <ul class="other-section">
+      <li><a href="31_dibuja_tu_base_de_datos_el_modelo_conceptual.html" class="no-ch">3.1 Dibuja tu base de datos: el modelo conceptual</a></li>
+      <li><a href="32_de_los_esquemas_al_sistema_crea_las_tablas_y_normaliza_tu_base_de_datos.html" class="no-ch">3.2 De los esquemas al sistema: crea las tablas y normaliza tu base de datos</a></li>
+   </ul>
+   </li>
+   <li><a href="4_del_diagrama_al_cdigo_bienvenido_a_sql.html" class="daddy">4. Del diagrama al código: bienvenido a SQL</a>
+   <ul class="other-section">
+      <li><a href="41_cuando_los_datos_crecen_big_data_y_nuevas_formas_de_almacenarlos.html" class="no-ch">4.1 Cuando los datos crecen: Big Data y nuevas formas de almacenarlos</a></li>
+   </ul>
+   </li>
+   <li><a href="5_finalicemos_el_proyecto.html" class="no-ch">5. Finalicemos el proyecto</a></li>
+   <li><a href="9_conclusin.html" class="no-ch">9. Conclusión</a></li>
+   <li><a href="crditos.html" class="no-ch">Créditos</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="2_del_problema_a_la_solucin.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><span class="page-counter">Página <strong>4</strong> de <strong>12</strong></span> <span class="sep">| </span><a href="3_de_las_ideas_al_diseo_construimos_el_modelo_de_datos.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">2.1 Fundamentos de las bases de datos: lo esencial para empezar</h1></header>
+<article class="iDevice_wrapper UDLcontentIdevice em_iDevice em_iDevice_udl_exp_tareagrupal" id="id9">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">1. ¿Por qué no basta con archivos?</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta9_734_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-expression"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Durante años, muchas aplicaciones han almacenado datos usando <strong>archivos de texto</strong> o <strong>ficheros</strong> simples (como .txt, .csv, etc.). Aunque en algunos casos pueden funcionar, cuando el volumen de datos crece o hay varios usuarios trabajando al mismo tiempo, estos métodos empiezan a fallar.</p>
+<p>Aquí tienes algunos <strong>problemas típicos</strong> que aparecen al trabajar solo con archivos:</p>
+<ul>
+<li>❌ <strong>Duplicidad de datos:</strong> se repite la misma información en varios archivos.</li>
+<li>❌ <strong>Inconsistencias:</strong> los datos no coinciden entre archivos porque alguien los ha modificado solo en uno.</li>
+<li>❌ <strong>Dificultad para acceder a los datos:</strong> no hay una forma rápida de consultar o filtrar información concreta.</li>
+<li>❌ <strong>Falta de control de acceso:</strong> cualquier persona puede modificar los archivos, incluso por error.</li>
+<li>❌ <strong>Escasa automatización:</strong> no se pueden hacer consultas complejas ni relaciones entre datos fácilmente.</li>
+</ul>
+<p>Por eso, cuando queremos diseñar un sistema sólido, compartido y escalable, la solución ideal es usar un <strong>Sistema de Gestión de Bases de Datos (SGBD)</strong>.</p>
+<div style="background-color: #f0f9ff; border: 1px solid #0077b6; padding: 15px; border-radius: 8px;">
+<h3 style="color: #0077b6;"><i class="fas fa-lightbulb"></i> Actividad: Detectando problemas</h3>
+<p>Lee este caso práctico y responde a la pregunta al final:</p>
+<blockquote>Una pequeña empresa almacena los datos de sus clientes en un archivo Excel. Cada trabajador tiene su copia del archivo, y a veces los modifican para añadir teléfonos o direcciones nuevas. Un día, un cliente llama para cambiar su correo electrónico, pero cuando otro trabajador lo consulta desde su archivo, el dato está desactualizado.</blockquote>
+<p><strong>Pregunta:</strong> ¿Qué problemas observas en esta situación? ¿Qué ventajas tendría usar una base de datos compartida?</p>
+</div></div></div></section><section class="exe-udlContent-block js-hidden"><header class="exe-udlContent-header exe-udlContent-character-4"><h2>Habrás deducido algunos problemas...</h2></header><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Respondiendo a las preguntas anteriores habréis deducido algunos de los problemas que encontramos enlos sistemas de ficheros:</p>
+<ul>
+<li>Separación y aislamiento de datos.</li>
+<li>Duplicación de datos.</li>
+<li>Dependencia de datos.</li>
+<li>Formatos de ficheros incompatibles.</li>
+<li>Consultas fijas / proliferación de programas de aplicación.</li>
+</ul></div></div></section></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper UDLcontentIdevice em_iDevice em_iDevice_udl_rep_reflexion" id="id14">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">2. Todo bajo control: cómo funciona una base de datos</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta14_734_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-representation"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Como has visto en el apartado anterior, los sistemas basados en archivos presentan muchos problemas cuando gestionamos grandes cantidades de información o cuando varios usuarios acceden a los datos a la vez.</p>
+<p>Por eso surgieron las <strong>bases de datos</strong>: estructuras organizadas donde se pueden almacenar, modificar y consultar datos de forma eficiente, minimizando la redundancia y los errores.</p>
+<p>Una <strong>base de datos</strong> es un conjunto de datos organizados que pueden ser compartidos por múltiples programas y usuarios, según los permisos de acceso establecidos. De ahí el término <strong>"base"</strong>: porque actúa como un punto común para la información.</p>
+<h3><i class="fas fa-server"></i> ¿Y quién gestiona todo eso?</h3>
+<p>Las bases de datos funcionan gracias a un software especializado: el <strong>Sistema Gestor de Bases de Datos (SGBD)</strong>.</p>
+<p>Un SGBD es el conjunto de programas que permite:</p>
+<ul>
+<li>📂 Crear, modificar y borrar bases de datos.</li>
+<li>🔐 Controlar quién accede a los datos y qué puede hacer con ellos.</li>
+<li>🔄 Evitar errores, duplicidades y accesos simultáneos conflictivos.</li>
+<li>📊 Consultar datos mediante <strong>lenguajes de consulta</strong> como SQL.</li>
+</ul>
+<p>Algunos ejemplos de SGBD muy conocidos son: <strong>MySQL, PostgreSQL, SQLite, Oracle o Microsoft SQL Server</strong>.</p>
+<div style="background-color: #f0f9ff; border: 1px solid #0077b6; padding: 15px; border-radius: 8px;">
+<h3 style="color: #0077b6;"><i class="fas fa-lightbulb"></i> Actividad: ¿Qué sistema es mejor?</h3>
+<p>Lee cada afirmación y, antes de desplegar la respuesta, piensa si se adapta mejor a un sistema basado en archivos o a uno basado en bases de datos.</p>
+<details>
+<summary><strong>1. Permite que varios usuarios accedan a los datos a la vez sin errores</strong></summary>
+✅ <strong>Base de datos</strong>. Los SGBD gestionan el acceso concurrente de forma controlada.</details><details>
+<summary><strong>2. No tiene control de seguridad ni permisos de usuario</strong></summary>
+❌ <strong>Archivos</strong>. Cualquiera puede abrir y modificar el contenido.</details><details>
+<summary><strong>3. Permite hacer búsquedas por diferentes criterios fácilmente</strong></summary>
+✅ <strong>Base de datos</strong>. Gracias al lenguaje SQL puedes consultar cualquier dato rápidamente.</details><details>
+<summary><strong>4. Tiene riesgo de duplicar datos en distintos archivos</strong></summary>
+❌ <strong>Archivos</strong>. No hay control automático de integridad.</details><details>
+<summary><strong>5. Relaciona información entre distintas tablas fácilmente</strong></summary>
+✅ <strong>Base de datos</strong>. Es una de las grandes ventajas del modelo relacional.</details></div></div></div></section><section class="exe-udlContent-block js-hidden"><header class="exe-udlContent-header exe-udlContent-character-4"><h2>¿Un resumen?</h2></header><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>¿Quieres tener una visión clara y rápida de lo más importante sobre las bases de datos y los sistemas que las gestionan? Aquí tienes un esquema que resume los conceptos clave trabajados hasta ahora. ¡Perfecto para repasar y asegurarte de que no se te escapa nada!</p>
+<div class="exe-fx exe-tabs">
+<h2>Esquema de una Base de Datos (BD)</h2>
+<div class="exe-layout-3-cols exe-clear">
+<div class="exe-col exe-col-1">
+<div style="background: #5f1196; color: #ffffff;">
+<p style="text-align: center;"><strong>¿Qué se almacena?<br></strong></p>
+</div>
+Hay que mirar desde dos puntos de vista:<br>
+<pre style="border: 1px solid #5f1196; background: #D7D7D7;"><span style="font-size: 11pt;"><span style="color: #000000;"><span style="text-decoration: underline;">Desde un <strong>punto de vista lógico</strong><br>(el de los usuarios)</span>:<span style="text-decoration: underline;"></span><br></span></span></pre>
+<ul>
+<li>Se almacenan todos los datos en un solo lugar.</li>
+<li>Se almacenan las definiciones de las relaciones entre los datos.</li>
+</ul>
+<pre style="border: 1px solid #5f1196; background: #D7D7D7;"><span style="font-size: 11pt;"><span style="color: #000000;">
+<span style="text-decoration: underline;">Desde un <strong>punto de vista físico</strong></span>:</span></span></pre>
+<ul>
+<li>Los datos se almacenan en uno o varios discos y en uno o varios archivos.</li>
+</ul>
+Así, la parte lógica y la parte física son <strong>independientes</strong>.</div>
+<div class="exe-col exe-col-2"></div>
+<div class="exe-col exe-col-3">
+<div style="background: #5f1196; color: #ffffff;">
+<p style="text-align: center;"><strong>¿Cómo se accede?<br></strong></p>
+</div>
+<p>A los datos se accede mediante el sistema de gestión de la base de datos (SGBD) que permite <strong>3 formas de ver los datos</strong>:</p>
+<ul>
+<li><strong>Esquema de la base de datos</strong>: Visión lógica global para el <strong>administrador</strong> y el <strong>diseñador</strong>.</li>
+<li><strong>Subesquema</strong> o <strong>Vista</strong>: Visión parcial de los datos relacionados con una <strong>aplicación</strong> o con la función que tenga asignada el <strong>usuario</strong>.</li>
+<li><strong>Visión física</strong>: El modo físico en que están almacenados los datos para los <strong>programadores</strong> creadores de la BD.</li>
+</ul>
+</div>
+</div>
+<p><br><br></p>
+<h2>Sistema Gestor de Bases de Datos (SGBD)</h2>
+<p>También conocido por sus siglas en inglés <strong>DBMS</strong> (DataBase Management System).</p>
+<div style="background: #5f1196; color: #ffffff;">
+<p style="text-align: center;"><strong>¿Para qué sirve un DBMS?<br></strong></p>
+</div>
+<p>Es una aplicación que:</p>
+<ul style="list-style-type: square;">
+<li>Permite definir y crear la base de datos gracias a un <strong><a href="#t9ad99b5f-fc09-9d7d-c410-1733f92b0fa8" id="link9ad99b5f-fc09-9d7d-c410-1733f92b0fa8" class="exe-tooltip definition-tt titled-tt" title="Lenguaje de definición de datos | Lenguaje de definición de datos">lenguaje de definición de datos</a> (DDL)</strong>.</li>
+<li>Permite trabajar con los datos mediante un <strong><a href="#t8586fcbf-396f-bbd5-52f0-ccaa03512050" id="link8586fcbf-396f-bbd5-52f0-ccaa03512050" class="exe-tooltip definition-tt titled-tt" title="Lenguaje de manejo de datos | Lenguaje de manejo de datos">lenguaje de manejo de datos</a> (DML)</strong>.</li>
+<li>Ofrece un acceso controlado a los datos gracias a que tiene:
+<ul style="list-style-type: disc;">
+<li>Un sistema de seguridad.</li>
+<li>Un sistema de integridad.</li>
+<li>Un sistema <a href="#t1b36841f-3aaa-8d23-df2a-ed59c233a206" id="link1b36841f-3aaa-8d23-df2a-ed59c233a206" class="exe-tooltip definition-tt titled-tt" title="Control de concurrencia | Control de concurrencia">control de concurrencia</a>.</li>
+<li>Un sistema de control de recuperación.</li>
+<li>Un diccionario de datos, donde almacena la descripción de los datos y gracias a esto es independiente del almacenamiento físico de los mismos.</li>
+</ul>
+</li>
+</ul>
+<div style="background: #5f1196; color: #ffffff;">
+<p style="text-align: center;"><strong>¿Qué estructura tiene?<br></strong></p>
+</div>
+<p>En un SGBD existen 3 niveles de trabajo. Observa dónde se encuentra cada uno y para qué sirve:</p>
+<p style="text-align: center;"><iframe width="759" height="400" src="https://blogsaverroes.juntadeandalucia.es/ejerciciosrea/wp-admin/admin-ajax.php?action=h5p_embed&amp;id=1988"></iframe><br><br><br><br><br><br></p>
+</div>
+<div id="t153377f9-b623-d2d2-1d78-385debbebc2a" class="exe-tooltip-text">
+<p>De manera que esos datos son un conjunto de piezas bien organizadas como partes de un todo.</p>
+</div>
+<div id="t04715d8a-7964-9c83-3abc-7e0f1f501a0d" class="exe-tooltip-text">
+<p>La redundancia es la repetición innecesaria que puede dar lugar a informaciones diferentes sobre el mismo dato.</p>
+</div>
+<div id="t1b36841f-3aaa-8d23-df2a-ed59c233a206" class="exe-tooltip-text">
+<p>Es un control de accesos simultáneos.</p>
+</div>
+<div id="t9ad99b5f-fc09-9d7d-c410-1733f92b0fa8" class="exe-tooltip-text">
+<p>Lenguaje informático de programación utilizado para crear modificar la estructura de la base de datos.</p>
+</div>
+<div id="t8586fcbf-396f-bbd5-52f0-ccaa03512050" class="exe-tooltip-text">
+<p>Es un lenguaje que permite a los usuarios llevar a cabo las tareas de consulta o modificación de los datos contenidos en la Base de Datos.</p>
+</div></div></div></section></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper ListaIdevice em_iDevice em_iDevice_question" id="id15">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">3.  Cada dato en su sitio... y todos conectados</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section id="ta15_116" class="block instructions iDevice_content">
+<p>Ahora que ya sabes qué es una base de datos y qué papel juega el SGBD, ha llegado el momento de conocer cómo se organizan internamente los datos.</p>
+<p>En esta unidad vamos a trabajar con <strong>bases de datos relacionales</strong>, que son las más utilizadas en el mundo real. Este modelo organiza los datos en forma de <strong>tablas</strong>, que se relacionan entre sí mediante claves.</p>
+<p>Cada tabla representa un conjunto de elementos del mundo real (por ejemplo, clientes, productos o reservas), y cada fila representa una <strong>tupla</strong> o registro. Las relaciones entre esas tablas se establecen gracias a <strong>claves primarias</strong> y <strong>claves ajenas</strong>.</p>
+<hr />
+<h3><i class="fas fa-table"></i> Elementos clave de una base de datos relacional</h3>
+<ul>
+<li>📄 <strong>Tabla:</strong> conjunto de datos relacionados. Cada tabla tiene un nombre único.</li>
+<li>📌 <strong>Atributos:</strong> columnas que definen las características de los datos (nombre, fecha, email, etc.).</li>
+<li>📎 <strong>Tupla:</strong> cada fila representa un registro único (una instancia real del dato).</li>
+<li>🔑 <strong>Clave primaria (PK):</strong> atributo(s) que identifica de forma única a cada tupla. No puede repetirse.</li>
+<li>🔗 <strong>Clave ajena (FK):</strong> atributo que enlaza una tabla con otra. Debe coincidir con la PK de la tabla referenciada.</li>
+</ul>
+<hr />
+</section>
+
+<section class="activity" id="activity-15_117">
+<form name="cloze-form-15_117" action="#" class="activity-form cloze-form">
+<div id="cloze15_117">
+<input type="hidden" name="clozeVar15_117.feedbackId" id="clozeVar15_117.feedbackId" value="ta15_118"/>
+
+<div style="background-color: #f0f9ff; border: 1px solid #0077b6; padding: 15px; border-radius: 8px;">
+<h3 style="color: #0077b6;"><i class="fas fa-database"></i> Actividad: Identifica los elementos clave de una base de datos relacional</h3>
+<p>Observa las dos tablas que aparecen a continuación. Representan la información de una base de datos bancaria compuesta por entidades (bancos) y sus respectivas oficinas.</p>
+<p>Tu objetivo es identificar correctamente los <strong>componentes fundamentales del modelo relacional</strong>: tablas, atributos, tuplas, clave principal (PK) y clave ajena (FK).</p>
+</div>
+<table class="exe-table" style="width: 75.4328%; height: 135px;"><caption>
+<label for="clozeBlank15_117.0" class="sr-av">Rellenar huecos (1):</label>
+<select id="clozeBlank15_117.0">
+<option selected="selected"> </option><option value="tabla">tabla</option><option value="tuplas">tuplas</option><option value="atributos">atributos</option><option value="clave principal">clave principal</option><option value="clave ajena">clave ajena</option>
+</select>
+<span style="display:none" id="clozeAnswer15_117.0">JXUwMDJjJXUwMDE1JXUwMDAzJXUwMDBlJXUwMDBk</span>
+</caption>
+<thead>
+<tr style="height: 23px;">
+<td style="width: 26.628%; text-align: center; height: 23px;" colspan="2">
+<label for="clozeBlank15_117.1" class="sr-av">Rellenar huecos (2):</label>
+<select id="clozeBlank15_117.1">
+<option selected="selected"> </option><option value="tabla">tabla</option><option value="tuplas">tuplas</option><option value="atributos">atributos</option><option value="clave principal">clave principal</option><option value="clave ajena">clave ajena</option>
+</select>
+<span style="display:none" id="clozeAnswer15_117.1">JXUwMDNiJXUwMDBmJXUwMDBkJXUwMDE3JXUwMDEzJXUwMDQ1JXUwMDUwJXUwMDAyJXUwMDFiJXUwMDA3JXUwMDBkJXUwMDBhJXUwMDE5JXUwMDExJXUwMDBk</span>
+</td>
+<td style="width: 30.2479%; background-color: #ffffff; height: 23px;" colspan="2"></td>
+<td style="width: 30.1385%; height: 46px; background-color: #ffffff; border-style: solid; vertical-align: bottom;" rowspan="2" scope="rowgroup"><span style="color: #000000;">→</span> 
+<label for="clozeBlank15_117.2" class="sr-av">Rellenar huecos (3):</label>
+<select id="clozeBlank15_117.2">
+<option selected="selected"> </option><option value="tabla">tabla</option><option value="tuplas">tuplas</option><option value="atributos">atributos</option><option value="clave principal">clave principal</option><option value="clave ajena">clave ajena</option>
+</select>
+<span style="display:none" id="clozeAnswer15_117.2">JXUwMDM5JXUwMDE1JXUwMDA2JXUwMDFiJXUwMDBiJXUwMDE3JXUwMDAxJXUwMDFiJXUwMDFj</span>
+</td>
+</tr>
+<tr style="height: 23px;">
+<th style="width: 8.60108%; height: 23px;">ENTIDAD</th>
+<th style="width: 18.0269%; height: 23px;">CODIGO_OFICINA</th>
+<th style="width: 12.2847%; height: 23px;">POBLACION</th>
+<th style="width: 17.9632%; height: 23px;">DIRECCION</th>
+</tr>
+</thead>
+<tbody>
+<tr style="height: 23px;">
+<td style="width: 8.60108%; height: 23px;">0893</td>
+<td style="width: 18.0269%; height: 23px;">001</td>
+<td style="width: 12.2847%; height: 23px;">Madrid</td>
+<td style="width: 17.9632%; height: 23px;">Castellana, 73</td>
+<td style="width: 30.1385%; height: 89px;" rowspan="4">→ 
+<label for="clozeBlank15_117.3" class="sr-av">Rellenar huecos (4):</label>
+<select id="clozeBlank15_117.3">
+<option selected="selected"> </option><option value="tabla">tabla</option><option value="tuplas">tuplas</option><option value="atributos">atributos</option><option value="clave principal">clave principal</option><option value="clave ajena">clave ajena</option>
+</select>
+<span style="display:none" id="clozeAnswer15_117.3">JXUwMDJjJXUwMDAxJXUwMDA1JXUwMDFjJXUwMDBkJXUwMDEy</span>
+</td>
+</tr>
+<tr style="height: 23px;">
+<td style="width: 8.60108%; height: 20px;">3428</td>
+<td style="width: 18.0269%; height: 20px;">022</td>
+<td style="width: 12.2847%; height: 20px;">Las Palmas</td>
+<td style="width: 17.9632%; height: 20px;">Triana, 21</td>
+</tr>
+<tr style="height: 23px;">
+<td style="width: 8.60108%; height: 23px;">0893</td>
+<td style="width: 18.0269%; height: 23px;">022</td>
+<td style="width: 12.2847%; height: 23px;">Gáldar</td>
+<td style="width: 17.9632%; height: 23px;">R. Moreno, 3</td>
+</tr>
+<tr style="height: 23px;">
+<td style="width: 8.60108%; height: 23px;">5632</td>
+<td style="width: 18.0269%; height: 23px;">213</td>
+<td style="width: 12.2847%; height: 23px;">Oviedo</td>
+<td style="width: 17.9632%; height: 23px;">Uría, 43</td>
+</tr>
+</tbody>
+</table>
+<table class="exe-table" style="height: 103px; width: 174px;">
+<thead>
+<tr style="border-style: none; border-color: #ffffff; background-color: #ffffff;">
+<td style="width: 87.2667px; background-color: #ffffff; border-style: solid;">
+<label for="clozeBlank15_117.4" class="sr-av">Rellenar huecos (5):</label>
+<select id="clozeBlank15_117.4">
+<option selected="selected"> </option><option value="tabla">tabla</option><option value="tuplas">tuplas</option><option value="atributos">atributos</option><option value="clave principal">clave principal</option><option value="clave ajena">clave ajena</option>
+</select>
+<span style="display:none" id="clozeAnswer15_117.4">JXUwMDNiJXUwMDBmJXUwMDBkJXUwMDE3JXUwMDEzJXUwMDQ1JXUwMDQxJXUwMDBiJXUwMDBmJXUwMDBiJXUwMDBm</span>
+</td>
+<td style="width: 87.1667px; background-color: #ffffff; border-style: solid;"></td>
+</tr>
+<tr style="height: 23px;">
+<th style="height: 23px; width: 87.2667px;">ENTIDAD</th>
+<th style="height: 23px; width: 87.1667px;">NOMBRE</th>
+</tr>
+</thead>
+<tbody>
+<tr style="height: 10px;">
+<td style="height: 10px; width: 87.2667px;">0893</td>
+<td style="height: 10px; width: 87.1667px;">Santander</td>
+</tr>
+<tr style="height: 24px;">
+<td style="height: 24px; width: 87.2667px;">059</td>
+<td style="height: 24px; width: 87.1667px;">Popular</td>
+</tr>
+<tr style="height: 23px;">
+<td style="height: 23px; width: 87.2667px;">3428</td>
+<td style="height: 23px; width: 87.1667px;">BBVA</td>
+</tr>
+<tr style="height: 23px;">
+<td style="height: 23px; width: 87.2667px;">5632</td>
+<td style="height: 23px; width: 87.1667px;">Banesto</td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: right;"><span style="font-size: 10pt;">Ejemplos tomados de <a href="https://ocw.unican.es/course/view.php?id=152#section-3" target="_blank" title="Acceso al documento en PDF sobre Bases de datos." rel="noopener">Bases de Datos (2011)</a>, Marta Elena <em>Zorrilla</em> Pantaleón y Rafael Duque Medina, con <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/es/" target="_blank" rel="noopener">licencia CC</a><br/></span></p>
+<div style="background-color: #f0f9ff; border: 1px solid #0077b6; padding: 15px; border-radius: 8px;">
+<h3 style="color: #0077b6;"><i class="fas fa-question-circle"></i>Comprensión del modelo relacional</h3>
+<details>
+<summary><strong>1. ¿Qué columna identifica de forma única cada oficina en esta base de datos?</strong></summary>
+✅ <strong>La combinación de ENTIDAD + CODIGO_OFICINA.</strong> Es una clave compuesta que garantiza unicidad incluso cuando diferentes entidades usan el mismo código de oficina.</details><details>
+<summary><strong>2. ¿Qué papel cumple la columna ENTIDAD en la tabla OFICINA?</strong></summary>
+✅ <strong>Es una clave ajena (FK).</strong> Sirve para relacionar cada oficina con su banco correspondiente a través de la clave primaria ENTIDAD de la otra tabla.</details><details>
+<summary><strong>3. ¿Qué problema podría surgir si se usara solo CODIGO_OFICINA como clave primaria?</strong></summary>
+❌ Podría haber conflictos si varias entidades usan el mismo código. ✅ La clave dejaría de ser única, lo que rompería la integridad del modelo.</details><details>
+<summary><strong>4. ¿Qué ventaja tendría crear un campo ID_OFICINA como clave primaria?</strong></summary>
+✅ Facilita relaciones, mejora el rendimiento y permite cambios en los códigos sin afectar otras tablas. Se convierte en una clave artificial (sustitutiva) más eficiente y mantenible.</details><details>
+<summary><strong>5. ¿Qué tipo de relación hay entre ENTIDAD y OFICINA?</strong></summary>
+✅ <strong>Relación 1:N (uno a muchos).</strong> Un banco puede tener varias oficinas, pero cada oficina pertenece a una sola entidad.</details></div>
+<div class="block iDevice_buttons">
+<p>
+<input class="button" type="submit" name="getScore15_117" value="Comprobar"  id="getScore15_117" />
+
+<input type="button" name="feedback15_117" value="Mostrar retroalimentación" class="feedbackbutton cloze-feedback-toggler" />
+
+<input type="hidden" name="clozeOtras15_117" id="clozeOtras15_117" value=""/>
+
+<input type="hidden" name="clozeFlag15_117.strictMarking" id="clozeFlag15_117.strictMarking" value="false" />
+<input type="hidden" name="clozeFlag15_117.checkCaps" id="clozeFlag15_117.checkCaps" value="false" />
+<input type="hidden" name="clozeFlag15_117.instantMarking" id="clozeFlag15_117.instantMarking" value="false" />
+<span class="js-hidden js-warning">Habilitar JavaScript</span>
+</p>
+</div>
+<div class="score js-feedback" id="clozeScore15_117"></div>
+</div>
+</form>
+</section>
+<section id="ta15_118" class="feedback js-feedback iDevice_content" style="display:none">
+<p><strong>Para saber más...</strong></p>
+<p>Observa en esta imagen los distintos modelos de bases de datos que existen, además de la relacional que vamos a trabajar:</p>
+<p style="text-align: center;"><img src="IMG_PRO2BAC_REA04-Database_models.jpg" alt="Distintos tipo de modelos de bases de datos: relacional, jerárquico, orientado a objetos, de red y de ficheros." title="Modelos de Bases de Datos" width="700" height="504" /></p>
+</section>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper ClozeIdevice em_iDevice em_iDevice_question" id="id16">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">4. Conectando conceptos: repasamos lo aprendido</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section id="ta16_105" class="block instructions iDevice_content">
+<p>Antes de continuar, vamos a detenernos un momento para consolidar los conceptos esenciales que ya has visto sobre bases de datos relacionales.</p>
+<p>En este ejercicio, pondrás a prueba tu memoria y comprensión: deberás relacionar cada <strong>término clave</strong> del modelo relacional con su <strong>definición correspondiente</strong>.</p>
+<p>Lee con atención cada término y su posible definición. Escribe el número correcto en cada casilla. ¡Seguro que lo dominas!</p>
+</section>
+
+    <section class="activity" id="activity-16_106"><form name="cloze-form-16_106" action="#" class="activity-form cloze-activity-form"><div id="cloze16_106"><input type="hidden" name="clozeFlag16_106.strictMarking" id="clozeFlag16_106.strictMarking" value="false"/>
+<input type="hidden" name="clozeFlag16_106.checkCaps" id="clozeFlag16_106.checkCaps" value="false"/>
+<input type="hidden" name="clozeFlag16_106.instantMarking" id="clozeFlag16_106.instantMarking" value="false"/>
+<table style="height: 179px; width: 100%; border-style: none; border-color: #ffffff;" height="230" border="0">
+<tbody>
+<tr style="height: 16px;">
+<td style="width: 18.1291%; height: 16px;">1. Campo</td>
+<td style="width: 188.638%; height: 16px;">  <label for="clozeBlank16_106.0" class="sr-av">Rellenar huecos (1):</label><input class="autocomplete-off" type="text" value="" id="clozeBlank16_106.0" style="width:1ch" /><span style="display:none" id="clozeAnswer16_106.0">JXUwMDYw
+</span>   Es la intersección de una fila con una columna.</td>
+</tr>
+<tr style="height: 19px;">
+<td style="width: 18.1291%; height: 19px;">2. Atributo</td>
+<td style="width: 188.638%; height: 19px;">  <label for="clozeBlank16_106.1" class="sr-av">Rellenar huecos (2):</label><input class="autocomplete-off" type="text" value="" id="clozeBlank16_106.1" style="width:1ch" /><span style="display:none" id="clozeAnswer16_106.1">JXUwMDYx
+</span>   Es un campo o conjunto de campos que no admite valores duplicados en los registros. Debe ser única, no nula y obligatoria.</td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 18.1291%; height: 18px;">3. Registro</td>
+<td style="width: 188.638%; height: 18px;">  <label for="clozeBlank16_106.2" class="sr-av">Rellenar huecos (3):</label><input class="autocomplete-off" type="text" value="" id="clozeBlank16_106.2" style="width:1ch" /><span style="display:none" id="clozeAnswer16_106.2">JXUwMDZm
+</span>   Conjunto de reglas que sirven para garantizar que las relaciones entre los registros de tablas relacionadas son válidas y que no se eliminan ni modifican accidentalmente datos relacionados.</td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 18.1291%; height: 18px;">4. Tabla</td>
+<td style="width: 188.638%; height: 18px;">  <label for="clozeBlank16_106.3" class="sr-av">Rellenar huecos (4):</label><input class="autocomplete-off" type="text" value="" id="clozeBlank16_106.3" style="width:1ch" /><span style="display:none" id="clozeAnswer16_106.3">JXUwMDZk
+</span>   Se representa por los campos en una tabla y pueden almacenar información de diferente tipo: numérico, char, etc.</td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 18.1291%; height: 18px;">5. Dato</td>
+<td style="width: 188.638%; height: 18px;">  <label for="clozeBlank16_106.4" class="sr-av">Rellenar huecos (5):</label><input class="autocomplete-off" type="text" value="" id="clozeBlank16_106.4" style="width:1ch" /><span style="display:none" id="clozeAnswer16_106.4">JXUwMDZi
+</span>   Equivalen a las filas de una tabla y constituyen la información que va contenida en los campos de una tabla, referida a un mismo objeto o persona.</td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 18.1291%; height: 18px;">6. Base de Datos</td>
+<td style="width: 188.638%; height: 18px;">  <label for="clozeBlank16_106.5" class="sr-av">Rellenar huecos (6):</label><input class="autocomplete-off" type="text" value="" id="clozeBlank16_106.5" style="width:1ch" /><span style="display:none" id="clozeAnswer16_106.5">JXUwMDY5
+</span>   Representación simbólica (numérica, alfabética, algorítmica, etc.), atributo o característica de una entidad.</td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 18.1291%; height: 18px;">7. Integridad referencial</td>
+<td style="width: 188.638%; height: 18px;">  <label for="clozeBlank16_106.6" class="sr-av">Rellenar huecos (7):</label><input class="autocomplete-off" type="text" value="" id="clozeBlank16_106.6" style="width:1ch" /><span style="display:none" id="clozeAnswer16_106.6">JXUwMDZh
+</span>   Es una propiedad de una entidad, se representa por las columnas de una tabla.</td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 18.1291%; height: 18px;">8. Celda</td>
+<td style="width: 188.638%; height: 18px;">  <label for="clozeBlank16_106.7" class="sr-av">Rellenar huecos (8):</label><input class="autocomplete-off" type="text" value="" id="clozeBlank16_106.7" style="width:1ch" /><span style="display:none" id="clozeAnswer16_106.7">JXUwMDZl
+</span>   Conjunto de información relacionada y agrupada que está compuesta por varias tablas.</td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 18.1291%; height: 18px;">9. Clave principal</td>
+<td style="width: 188.638%; height: 18px;">  <label for="clozeBlank16_106.8" class="sr-av">Rellenar huecos (9):</label><input class="autocomplete-off" type="text" value="" id="clozeBlank16_106.8" style="width:2ch" /><span style="display:none" id="clozeAnswer16_106.8">JXUwMDY5JXUwMDAx
+</span>   Está formada por una o varias columnas que están asociadas a una clave primaria de otra o de la misma tabla. Se pueden definir tantas como se precise, y pueden estar o no en la misma tabla que la clave primaria.</td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 18.1291%; height: 18px;">10. Clave ajena</td>
+<td style="width: 188.638%; height: 18px;">  <label for="clozeBlank16_106.9" class="sr-av">Rellenar huecos (10):</label><input class="autocomplete-off" type="text" value="" id="clozeBlank16_106.9" style="width:1ch" /><span style="display:none" id="clozeAnswer16_106.9">JXUwMDZj
+</span>   Representan información de una base de datos y se representan en forma de filas y columnas.</td>
+</tr>
+</tbody>
+</table><div class="block iDevice_buttons"><p><input class="button" type="submit" name="submit16_106" value="Enviar"  id="submit16_106" />
+<input type="button" name="restart16_106" value="Reiniciar" style="display:none" id="restart16_106" onclick="$exe.cloze.restart('16_106')" />
+ <input type="button" name="16_106showAnswersButton" value="Mostrar las respuestas" style="display:none" id="showAnswersButton16_106" onclick="$exe.cloze.fillInputs('16_106')" />
+<span class="js-hidden js-warning">Habilitar JavaScript</span></p></div><div id="clozeScore16_106"></div></div></form></section></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper UDLcontentIdevice" id="id17">
+<div class="iDevice emphasis0" >
+<div id="ta17_735_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-engagement"><section class="exe-udlContent-block js-hidden"><header class="exe-udlContent-header exe-udlContent-character-2"><h2>Para saber más...</h2></header><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Finalmente, puedes encontrar aquí una enumeración a modo de resumen de las principales <strong>ventajas</strong> que hemos obtenido con la aparición de las bases de datos:</p>
+<p><img src="IMG_PRO2BAC_REA04_database_application.jpg" alt="Imagen con una Flecha que indica el camino hacia las aplicaciones de bases de datos" title="Database application" style="float: left; margin-right: 50px; margin-left: 50px;" width="300" height="200"></p>
+<ul>
+<li><strong>Independencia</strong> lógica y física de los datos.</li>
+<li><strong>Redundancia mínima</strong>.</li>
+<li><strong>Acceso</strong> concurrente por parte de múltiples usuarios.</li>
+<li><strong>Integridad</strong> de los datos.</li>
+<li><strong>Consultas</strong> complejas optimizadas.</li>
+<li><strong>Seguridad</strong> de acceso y auditoria.</li>
+<li><strong>Respaldo</strong> y <strong>recuperación</strong>.</li>
+<li>Acceso a través de lenguajes de programación <strong>estándar</strong>.</li>
+</ul></div></div></section></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="2_del_problema_a_la_solucin.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><span class="page-counter">Página <strong>4</strong> de <strong>12</strong></span> <span class="sep">| </span><a href="3_de_las_ideas_al_diseo_construimos_el_modelo_de_datos.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_intef_js.js"></script></body></html>

@@ -1,0 +1,877 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_effects.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>3.2 De los esquemas al sistema: crea las tablas y normaliza tu base de datos | La solución: una base de datos </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Belén Lara Aznar" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_effects.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<link rel="stylesheet" type="text/css" href="udl-content.css" />
+<script type="text/javascript" src="udl-content.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-8"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">La solución: una base de datos</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Del dato a la solución</a></li>
+   <li><a href="1_del_dato_al_conocimiento_el_poder_de_la_informacin.html" class="no-ch">1. Del dato al conocimiento: el poder de la información</a></li>
+   <li><a href="2_del_problema_a_la_solucin.html" class="daddy">2. Del problema a la solución</a>
+   <ul class="other-section">
+      <li><a href="21_fundamentos_de_las_bases_de_datos_lo_esencial_para_empezar.html" class="no-ch">2.1 Fundamentos de las bases de datos: lo esencial para empezar</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="3_de_las_ideas_al_diseo_construimos_el_modelo_de_datos.html" class="current-page-parent daddy">3. De las ideas al diseño: construimos el modelo de datos</a>
+   <ul>
+      <li><a href="31_dibuja_tu_base_de_datos_el_modelo_conceptual.html" class="no-ch">3.1 Dibuja tu base de datos: el modelo conceptual</a></li>
+      <li id="active"><a href="32_de_los_esquemas_al_sistema_crea_las_tablas_y_normaliza_tu_base_de_datos.html" class="active no-ch">3.2 De los esquemas al sistema: crea las tablas y normaliza tu base de datos</a></li>
+   </ul>
+   </li>
+   <li><a href="4_del_diagrama_al_cdigo_bienvenido_a_sql.html" class="daddy">4. Del diagrama al código: bienvenido a SQL</a>
+   <ul class="other-section">
+      <li><a href="41_cuando_los_datos_crecen_big_data_y_nuevas_formas_de_almacenarlos.html" class="no-ch">4.1 Cuando los datos crecen: Big Data y nuevas formas de almacenarlos</a></li>
+   </ul>
+   </li>
+   <li><a href="5_finalicemos_el_proyecto.html" class="no-ch">5. Finalicemos el proyecto</a></li>
+   <li><a href="9_conclusin.html" class="no-ch">9. Conclusión</a></li>
+   <li><a href="crditos.html" class="no-ch">Créditos</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="31_dibuja_tu_base_de_datos_el_modelo_conceptual.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><span class="page-counter">Página <strong>7</strong> de <strong>12</strong></span> <span class="sep">| </span><a href="4_del_diagrama_al_cdigo_bienvenido_a_sql.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">3.2 De los esquemas al sistema: crea las tablas y normaliza tu base de datos</h1></header>
+<article class="iDevice_wrapper UDLcontentIdevice em_iDevice em_iDevice_udl_exp_tareagrupal" id="id40">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">1. El plan para la transformación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta40_734_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-expression"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p>Ahora que ya tienes el <strong>modelo entidad-relación (E/R)</strong> diseñado, pasamos al siguiente paso: <strong>convertirlo en tablas</strong>. Es el momento de crear el <strong>diseño lógico</strong> de tu base de datos.</p>
+<p>Esto significa transformar el esquema conceptual en una estructura concreta que pueda implementarse en un <strong>sistema gestor de bases de datos relacional (SGBDR)</strong>. En esta fase, deberás definir <strong>tablas, claves primarias y claves ajenas</strong>.</p>
+<p>Para lograr esta transformación es necesario seguir una serie de <strong>reglas claras</strong> que permiten convertir entidades y relaciones en tablas. Vas a ver un vídeo explicativo y extraer de él estas normas básicas.</p></div></div></section><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><div style="background-color: #f0f9ff; border: 1px solid #0077b6; padding: 15px; border-radius: 8px;">
+<h3 style="color: #0077b6;">🎯 Actividad: Extrae las reglas de transformación</h3>
+<div class="exe-layout-2-cols exe-layout-2-50-50 exe-clear">
+<div class="exe-col exe-col-1">
+<p>Visualiza el siguiente vídeo (puedes activar los subtítulos si lo necesitas). A partir de su contenido, redacta un <strong>listado de reglas</strong> que expliquen cómo se transforma un modelo E/R en un modelo relacional:</p>
+<ul>
+<li>¿Cómo se transforma una entidad?</li>
+<li>¿Cómo se representa una relación 1:1?</li>
+<li>¿Y una 1:N?</li>
+<li>¿Qué pasa con una relación N:M?</li>
+</ul>
+<p>Elabora tu lista de reglas y compártela con tu grupo o en el blog de clase. Puedes compararla después con el resumen final del apartado.</p>
+</div>
+<div class="exe-col exe-col-2" style="text-align: center;"><iframe width="80%" height="315" src="https://www.youtube.com/embed/_bI5CUOtWEg?end=804" allowfullscreen="allowfullscreen"></iframe></div>
+</div>
+</div></div></div></section><section class="exe-udlContent-block js-hidden"><header class="exe-udlContent-header exe-udlContent-character-4"><h2><span class="sr-av">Lumen dice </span>Finalmente...</h2></header><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p><strong style="color: #333333; font-size: 1.05em;">✅ Comprueba si tus reglas son correctas</strong></p>
+<ul>
+<li>Cada entidad se transforma en una <strong>tabla</strong>. Sus atributos se convierten en columnas. La clave principal de la entidad se convierte en la <strong>clave primaria</strong> de la tabla.</li>
+<li>Las relaciones <strong>1:1</strong> se implementan añadiendo la clave primaria de una tabla como clave ajena en la otra (puede depender del contexto).</li>
+<li>Las relaciones <strong>1:N</strong> se representan añadiendo la clave primaria de la entidad del lado “1” como <strong>clave ajena</strong> en la entidad del lado “N”.</li>
+<li>Las relaciones <strong>N:M</strong> se transforman en una nueva tabla intermedia, con las claves primarias de las dos entidades como claves ajenas (y compuestas).</li>
+</ul></div></div></section></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper UDLcontentIdevice em_iDevice em_iDevice_udl_rep_caso" id="id41">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">2. ¿Qué es la normalización?</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta41_735_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-representation"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p style="text-align: justify;"><img src="IMG_PRO2BAC_REA04_NORMALIZACION.png" alt="Imagen de las 5 formas normales que existen para las bases ded atos" title="Formas normales" style="float: left; margin-right: 35px; margin-left: 35px;" width="342" height="256"></p>
+<p>A veces, el diseño lógico inicial genera <strong>problemas de redundancia, lentitud o inconsistencias</strong> en los datos. Para evitarlo, usamos una técnica llamada <strong>normalización</strong>.</p>
+<p>La normalización es el proceso que permite <strong>reorganizar las tablas y relaciones</strong> para que los datos:</p>
+<ul>
+<li>No se repitan innecesariamente.</li>
+<li>Estén organizados de forma eficiente.</li>
+<li>Permitan actualizaciones y consultas más rápidas.</li>
+</ul>
+<p style="text-align: justify;">Existen <strong>5 formas normales</strong> sucesivas, de las que aquí vamos a ver hasta la tercera de ellas. La mejor forma de conocerlas es aplicarlas a una tabla concreta. La que vamos a utilizar en este caso de uso es la tabla inicial de gestión de una biblioteca informática:</p>
+<table class="exe-table" style="width: 100%;">
+<thead>
+<tr>
+<th style="width: 3.1891%;"><span style="font-size: 11pt;">Codigo</span></th>
+<th style="width: 40.7381%;"><span style="font-size: 11pt;">Titulo</span></th>
+<th style="width: 1.03413%;"><span style="font-size: 11pt;">Autor</span></th>
+<th style="width: 11.5385%;"><span style="font-size: 11pt;">Editorial</span></th>
+<th style="width: 8.40081%;"><span style="font-size: 11pt;">ISBN</span></th>
+<th style="width: 17.8138%;"><span style="font-size: 11pt;">Nombre_lector</span></th>
+<th style="width: 16.289%;"><span style="font-size: 11pt;">Cod_lector</span></th>
+<th style="width: 7.59331%;"><span style="font-size: 11pt;">F_dev</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="width: 3.1891%;"><span style="font-size: 11pt;">1002</span></td>
+<td style="width: 40.7381%;"><span style="font-size: 11pt;">Estadística</span></td>
+<td style="width: 1.03413%;"><span style="font-size: 11pt;">Murray Spiegel</span></td>
+<td style="width: 11.5385%;"><span style="font-size: 11pt;">McGraw Hill</span></td>
+<td style="width: 8.40081%;"><span style="font-size: 11pt;">1585-4544-5655</span></td>
+<td style="width: 17.8138%;"><span style="font-size: 11pt;">Campos Lara, Juan</span></td>
+<td style="width: 16.289%;"><span style="font-size: 11pt;">JCL27</span></td>
+<td style="width: 7.59331%;"><span style="font-size: 11pt;">25/07/22</span></td>
+</tr>
+<tr>
+<td style="width: 3.1891%;"><span style="font-size: 11pt;">1002</span></td>
+<td style="width: 40.7381%;"><span style="font-size: 11pt;">Estadística</span></td>
+<td style="width: 1.03413%;"><span style="font-size: 11pt;">Murray Spiegel</span></td>
+<td style="width: 11.5385%;"><span style="font-size: 11pt;">McGraw Hill</span></td>
+<td style="width: 8.40081%;"><span style="font-size: 11pt;">1585-4544-5655</span></td>
+<td style="width: 17.8138%;"><span style="font-size: 11pt;">Moreno Caro, Mercedes</span></td>
+<td style="width: 16.289%;"><span style="font-size: 11pt;">MMC04</span></td>
+<td style="width: 7.59331%;"><span style="font-size: 11pt;">15/06/22</span></td>
+</tr>
+<tr>
+<td style="width: 3.1891%;"><span style="font-size: 11pt;">1004</span></td>
+<td style="width: 40.7381%;"><span style="font-size: 11pt;">Bases de Datos</span></td>
+<td style="width: 1.03413%;"><span style="font-size: 11pt;">Ramalho</span></td>
+<td style="width: 11.5385%;"><span style="font-size: 11pt;">Alfaguara</span></td>
+<td style="width: 8.40081%;"><span style="font-size: 11pt;">5967-4978-5311</span></td>
+<td style="width: 17.8138%;"><span style="font-size: 11pt;">Moreno Caro, Mercedes</span></td>
+<td style="width: 16.289%;"><span style="font-size: 11pt;">MMC04</span></td>
+<td style="width: 7.59331%;"><span style="font-size: 11pt;">19/03/22</span></td>
+</tr>
+<tr>
+<td style="width: 3.1891%;"><span style="font-size: 11pt;">1004</span></td>
+<td style="width: 40.7381%;"><span style="font-size: 11pt;">Bases de Datos</span></td>
+<td style="width: 1.03413%;"><span style="font-size: 11pt;">Ramalho</span></td>
+<td style="width: 11.5385%;"><span style="font-size: 11pt;">Alfaguara</span></td>
+<td style="width: 8.40081%;"><span style="font-size: 11pt;">5967-4978-5311</span></td>
+<td style="width: 17.8138%;"><span style="font-size: 11pt;">Campos Lara, Juan</span></td>
+<td style="width: 16.289%;"><span style="font-size: 11pt;">JCL27</span></td>
+<td style="width: 7.59331%;"><span style="font-size: 11pt;">10/01/22</span></td>
+</tr>
+<tr>
+<td style="width: 3.1891%;"><span style="font-size: 11pt;">1005</span></td>
+<td style="width: 40.7381%;"><span style="font-size: 11pt;">Algoritmos</span></td>
+<td style="width: 1.03413%;"><span style="font-size: 11pt;">Kenneth Brown</span></td>
+<td style="width: 11.5385%;"><span style="font-size: 11pt;">RA-MA</span></td>
+<td style="width: 8.40081%;"><span style="font-size: 11pt;">4894-0560-5542</span></td>
+<td style="width: 17.8138%;"><span style="font-size: 11pt;">López Ayala, Pedro</span></td>
+<td style="width: 16.289%;"><span style="font-size: 11pt;">PLA14</span></td>
+<td style="width: 7.59331%;"><span style="font-size: 11pt;">04/02/22</span></td>
+</tr>
+<tr>
+<td style="width: 3.1891%;"><span style="font-size: 11pt;">1007</span></td>
+<td style="width: 40.7381%;"><span style="font-size: 11pt;">Oracle</span></td>
+<td style="width: 1.03413%;"><span style="font-size: 11pt;">Sarah Connor</span></td>
+<td style="width: 11.5385%;"><span style="font-size: 11pt;">McGraw Hill</span></td>
+<td style="width: 8.40081%;"><span style="font-size: 11pt;">1700-8462-9869</span></td>
+<td style="width: 17.8138%;"><span style="font-size: 11pt;">López Ayala, Pedro</span></td>
+<td style="width: 16.289%;"><span style="font-size: 11pt;">PLA14</span></td>
+<td style="width: 7.59331%;"><span style="font-size: 11pt;">30/08/22</span></td>
+</tr>
+<tr>
+<td style="width: 3.1891%;"><span style="font-size: 11pt;">1008</span></td>
+<td style="width: 40.7381%;"><span style="font-size: 11pt;">SQL</span></td>
+<td style="width: 1.03413%;"><span style="font-size: 11pt;">Meredith Goldberg</span></td>
+<td style="width: 11.5385%;"><span style="font-size: 11pt;">RA-MA</span></td>
+<td style="width: 8.40081%;"><span style="font-size: 11pt;">4477-4754-4455</span></td>
+<td style="width: 17.8138%;"><span style="font-size: 11pt;">Campos Lara, Juan</span></td>
+<td style="width: 16.289%;"><span style="font-size: 11pt;">JCL27</span></td>
+<td style="width: 7.59331%;"><span style="font-size: 11pt;">14/09/22</span></td>
+</tr>
+</tbody>
+</table>
+<div class="exe-fx exe-tabs">
+<h2>Primera forma normal - 1FN</h2>
+<p>Para que una tabla esté en primera forma normal (<strong>1FN</strong>) debe cumplir:</p>
+<ol>
+<li>Que sus campos tengan <strong>valores atómicos</strong>: que en lo posible estén formados por valores no compuestos. Por ejemplo: si en un campo tenemos nombre y apellidos, conviene dividir en nombre, primer apellido y segundo apellido.</li>
+<li>Que para un valor de clave dado no haya conjuntos de <strong>valores repetidos</strong>.</li>
+</ol>
+<p>Para transformar una tabla en primera forma normal, vamos a ver los pasos aplicados a nuestra tabla de trabajo.</p>
+<div style="background: #5f1196; color: #ffffff;">
+<p style="text-align: center;"><strong>PASO 1<br></strong></p>
+</div>
+<p>Separamos los campos no atómicos. Así, la columna anterior llamada <strong>Nombre_lector</strong> se convertirá en 3 columnas. Podéis ver aquí el extracto de la tabla principal:</p>
+<table class="exe-table" style="width: 14.0086%; height: 93px;">
+<thead>
+<tr style="height: 23px;">
+<th style="width: 29.4069%; height: 23px;"><span style="font-size: 11pt;">Nom_lector</span></th>
+<th style="width: 2.5%; height: 23px;"><span style="font-size: 11pt;">Ape1_lector<br></span></th>
+<th style="width: 32.4535%; height: 23px;"><span style="font-size: 11pt;">Ape2_lector<br></span></th>
+</tr>
+</thead>
+<tbody>
+<tr style="height: 47px;">
+<td style="width: 29.4069%; height: 10px;"><span style="font-size: 11pt;">Juan</span></td>
+<td style="width: 2.5%; height: 10px;"><span style="font-size: 11pt;">Campos<br></span></td>
+<td style="width: 32.4535%; height: 10px;"><span style="font-size: 11pt;">Lara<br></span></td>
+</tr>
+<tr style="height: 47px;">
+<td style="width: 29.4069%; height: 10px;"><span style="font-size: 11pt;">Mercedes</span></td>
+<td style="width: 2.5%; height: 10px;"><span style="font-size: 11pt;">Moreno</span></td>
+<td style="width: 32.4535%; height: 10px;"><span style="font-size: 11pt;"> Caro</span></td>
+</tr>
+<tr style="height: 47px;">
+<td style="width: 29.4069%; height: 10px;"><span style="font-size: 11pt;">Mercedes</span></td>
+<td style="width: 2.5%; height: 10px;"><span style="font-size: 11pt;">Moreno</span></td>
+<td style="width: 32.4535%; height: 10px;"><span style="font-size: 11pt;">Caro</span></td>
+</tr>
+<tr style="height: 47px;">
+<td style="width: 29.4069%; height: 10px;"><span style="font-size: 11pt;">Juan</span></td>
+<td style="width: 2.5%; height: 10px;"><span style="font-size: 11pt;">Campos</span></td>
+<td style="width: 32.4535%; height: 10px;"><span style="font-size: 11pt;">Lara</span></td>
+</tr>
+<tr style="height: 47px;">
+<td style="width: 29.4069%; height: 10px;"><span style="font-size: 11pt;">Pedro</span></td>
+<td style="width: 2.5%; height: 10px;"><span style="font-size: 11pt;">López</span></td>
+<td style="width: 32.4535%; height: 10px;"><span style="font-size: 11pt;">Ayala</span></td>
+</tr>
+<tr style="height: 47px;">
+<td style="width: 29.4069%; height: 10px;"><span style="font-size: 11pt;">Pedro</span></td>
+<td style="width: 2.5%; height: 10px;"><span style="font-size: 11pt;">López</span></td>
+<td style="width: 32.4535%; height: 10px;"><span style="font-size: 11pt;"> Ayala </span></td>
+</tr>
+<tr style="height: 47px;">
+<td style="width: 29.4069%; height: 10px;"><span style="font-size: 11pt;">Juan</span></td>
+<td style="width: 2.5%; height: 10px;"><span style="font-size: 11pt;">Campos</span></td>
+<td style="width: 32.4535%; height: 10px;"><span style="font-size: 11pt;">Lara</span></td>
+</tr>
+</tbody>
+</table>
+<div style="background: #5f1196; color: #ffffff;">
+<p style="text-align: center;"><strong>PASO 2<br></strong></p>
+</div>
+<p>Separamos en tablas aparte los campos con valores repetidos para un mismo valor de clave:</p>
+<p>Tabla <strong>BIBLIOTECA</strong></p>
+<table class="exe-table" style="width: 100%; height: 112px;">
+<thead>
+<tr style="height: 23px;">
+<th style="width: 69.1667px; height: 23px;"><span style="font-size: 11pt;">Codigo</span></th>
+<th style="width: 108.217px; height: 23px;"><span style="font-size: 11pt;">Título</span></th>
+<th style="width: 123.25px; height: 23px;"><span style="font-size: 11pt;">Autor</span></th>
+<th style="width: 62.15px; height: 23px;"><span style="font-size: 11pt;">Editorial</span></th>
+<th style="width: 110.217px; height: 23px;"><span style="font-size: 11pt;">ISBN</span></th>
+</tr>
+</thead>
+<tbody>
+<tr style="height: 23px;">
+<td style="width: 69.1667px; height: 10px;"><span style="font-size: 11pt;">1002</span></td>
+<td style="width: 108.217px; height: 10px;"><span style="font-size: 11pt;">Estadística</span></td>
+<td style="width: 123.25px; height: 10px;"><span style="font-size: 11pt;">Murray Spiegel </span></td>
+<td style="width: 62.15px; height: 10px;"><span style="font-size: 11pt;">McGraw Hill </span></td>
+<td style="width: 110.217px; height: 10px;"><span style="font-size: 11pt;">1585-4544-5655</span></td>
+</tr>
+<tr style="height: 23px;">
+<td style="width: 69.1667px; height: 23px;"><span style="font-size: 11pt;">1004</span></td>
+<td style="width: 108.217px; height: 23px;"><span style="font-size: 11pt;">Bases de Datos</span></td>
+<td style="width: 123.25px; height: 23px;"><span style="font-size: 11pt;">Ramalho </span></td>
+<td style="width: 62.15px; height: 23px;"><span style="font-size: 11pt;">Alfaguara</span></td>
+<td style="width: 110.217px; height: 23px;"><span style="font-size: 11pt;">5967-4978-5311</span></td>
+</tr>
+<tr style="height: 23px;">
+<td style="width: 69.1667px; height: 23px;"><span style="font-size: 11pt;">1005</span></td>
+<td style="width: 108.217px; height: 23px;"><span style="font-size: 11pt;">Algoritmos</span></td>
+<td style="width: 123.25px; height: 23px;"><span style="font-size: 11pt;">Kenneth Brown</span></td>
+<td style="width: 62.15px; height: 23px;"><span style="font-size: 11pt;">RA-MA</span></td>
+<td style="width: 110.217px; height: 23px;"><span style="font-size: 11pt;">4894-0560-5542</span></td>
+</tr>
+<tr style="height: 23px;">
+<td style="width: 69.1667px; height: 23px;"><span style="font-size: 11pt;">1007</span></td>
+<td style="width: 108.217px; height: 23px;"><span style="font-size: 11pt;">Oracle</span></td>
+<td style="width: 123.25px; height: 23px;"><span style="font-size: 11pt;">Sarah Connor</span></td>
+<td style="width: 62.15px; height: 23px;"><span style="font-size: 11pt;">McGraw Hill </span></td>
+<td style="width: 110.217px; height: 23px;"><span style="font-size: 11pt;">1700-8462-9869</span></td>
+</tr>
+<tr style="height: 10px;">
+<td style="width: 69.1667px; height: 10px;"><span style="font-size: 11pt;">1008</span></td>
+<td style="width: 108.217px; height: 10px;"><span style="font-size: 11pt;">SQL</span></td>
+<td style="width: 123.25px; height: 10px;"><span style="font-size: 11pt;">Meredith Goldberg</span></td>
+<td style="width: 62.15px; height: 10px;"><span style="font-size: 11pt;">RA-MA</span></td>
+<td style="width: 110.217px; height: 10px;"><span style="font-size: 11pt;">4477-4754-4455</span></td>
+</tr>
+</tbody>
+</table>
+<p>Tabla <strong>PRESTAMOS</strong></p>
+<table class="exe-table" style="width: 74.2249%; height: 93px;">
+<thead>
+<tr style="height: 23px;">
+<th style="width: 14.7034%;"><span style="font-size: 11pt;">Codigo<br></span></th>
+<th style="width: 14.7034%; height: 23px;"><span style="font-size: 11pt;">Nom_lector</span></th>
+<th style="width: 2.5%; height: 23px;"><span style="font-size: 11pt;">Ape1_lector<br></span></th>
+<th style="width: 16.2268%; height: 23px;"><span style="font-size: 11pt;">Ape2_lector<br></span></th>
+<th style="width: 8.1134%;"><span style="font-size: 11pt;">Cod_lector<br></span></th>
+<th style="width: 8.1134%;"><span style="font-size: 11pt;">Devolucion<br></span></th>
+</tr>
+</thead>
+<tbody>
+<tr style="height: 47px;">
+<td style="width: 14.7034%;"><span style="font-size: 11pt;">1002<br></span></td>
+<td style="width: 14.7034%; height: 10px;"><span style="font-size: 11pt;">Juan</span></td>
+<td style="width: 2.5%; height: 10px;"><span style="font-size: 11pt;">Campos<br></span></td>
+<td style="width: 16.2268%; height: 10px;"><span style="font-size: 11pt;">Lara<br></span></td>
+<td style="width: 8.1134%;"><span style="font-size: 11pt;">JCL27</span></td>
+<td style="width: 8.1134%;"><span style="font-size: 11pt;">25/07/22</span></td>
+</tr>
+<tr style="height: 47px;">
+<td style="width: 14.7034%;"><span style="font-size: 11pt;">1002<br></span></td>
+<td style="width: 14.7034%; height: 10px;"><span style="font-size: 11pt;">Mercedes</span></td>
+<td style="width: 2.5%; height: 10px;"><span style="font-size: 11pt;">Moreno</span></td>
+<td style="width: 16.2268%; height: 10px;"><span style="font-size: 11pt;"> Caro</span></td>
+<td style="width: 8.1134%;"><span style="font-size: 11pt;">MMC04</span></td>
+<td style="width: 8.1134%;"><span style="font-size: 11pt;">15/06/22</span></td>
+</tr>
+<tr style="height: 47px;">
+<td style="width: 14.7034%;"><span style="font-size: 11pt;">1004<br></span></td>
+<td style="width: 14.7034%; height: 10px;"><span style="font-size: 11pt;">Mercedes</span></td>
+<td style="width: 2.5%; height: 10px;"><span style="font-size: 11pt;">Moreno</span></td>
+<td style="width: 16.2268%; height: 10px;"><span style="font-size: 11pt;">Caro</span></td>
+<td style="width: 8.1134%;"><span style="font-size: 11pt;">MMC04</span></td>
+<td style="width: 8.1134%;"><span style="font-size: 11pt;">19/03/22</span></td>
+</tr>
+<tr style="height: 47px;">
+<td style="width: 14.7034%;"><span style="font-size: 11pt;">1004<br></span></td>
+<td style="width: 14.7034%; height: 10px;"><span style="font-size: 11pt;">Juan</span></td>
+<td style="width: 2.5%; height: 10px;"><span style="font-size: 11pt;">Campos</span></td>
+<td style="width: 16.2268%; height: 10px;"><span style="font-size: 11pt;">Lara</span></td>
+<td style="width: 8.1134%;"><span style="font-size: 11pt;">JCL27</span></td>
+<td style="width: 8.1134%;"><span style="font-size: 11pt;">10/01/22</span></td>
+</tr>
+<tr style="height: 47px;">
+<td style="width: 14.7034%;"><span style="font-size: 11pt;">1005<br></span></td>
+<td style="width: 14.7034%; height: 10px;"><span style="font-size: 11pt;">Pedro</span></td>
+<td style="width: 2.5%; height: 10px;"><span style="font-size: 11pt;">López</span></td>
+<td style="width: 16.2268%; height: 10px;"><span style="font-size: 11pt;">Ayala</span></td>
+<td style="width: 8.1134%;"><span style="font-size: 11pt;">PLA14</span></td>
+<td style="width: 8.1134%;"><span style="font-size: 11pt;">04/02/22</span></td>
+</tr>
+<tr style="height: 47px;">
+<td style="width: 14.7034%;"><span style="font-size: 11pt;">1007<br></span></td>
+<td style="width: 14.7034%; height: 10px;"><span style="font-size: 11pt;">Pedro</span></td>
+<td style="width: 2.5%; height: 10px;"><span style="font-size: 11pt;">López</span></td>
+<td style="width: 16.2268%; height: 10px;"><span style="font-size: 11pt;"> Ayala </span></td>
+<td style="width: 8.1134%;"><span style="font-size: 11pt;">PLA14</span></td>
+<td style="width: 8.1134%;"><span style="font-size: 11pt;">30/08/22</span></td>
+</tr>
+<tr style="height: 47px;">
+<td style="width: 14.7034%;"><span style="font-size: 11pt;">1008<br></span></td>
+<td style="width: 14.7034%; height: 10px;"><span style="font-size: 11pt;">Juan</span></td>
+<td style="width: 2.5%; height: 10px;"><span style="font-size: 11pt;">Campos</span></td>
+<td style="width: 16.2268%; height: 10px;"><span style="font-size: 11pt;">Lara</span></td>
+<td style="width: 8.1134%;"><span style="font-size: 11pt;">JCL27</span></td>
+<td style="width: 8.1134%;"><span style="font-size: 11pt;">14/09/22</span></td>
+</tr>
+</tbody>
+</table>
+<p><strong></strong></p>
+<h2>Segunda forma normal - 2FN</h2>
+<p>Para que una tabla esté en segunda forma normal (<strong>2FN</strong>) debe cumplir:</p>
+<ol>
+<li>Estar en <strong>primera forma normal</strong>.</li>
+<li>Que todos los atributos que no forman parte de la clave <strong>dependan de forma completa</strong> de ella.</li>
+</ol>
+<p style="text-align: justify;">Seguimos transformando nuestro ejemplo, ahora a segunda forma normal. <strong>En nuestras tablas del ejemplo en 1FN podemos comprobar que si el segundo apellido de Mercedes era incorrecto, y el cambio no es aplicado en las dos filas, sino en una sola entramos en un conflicto de datos</strong>. Para ello se utiliza la <strong>2FN</strong>.</p>
+<div style="background: #5f1196; color: #ffffff;">
+<p style="text-align: center;"><strong>PASO 1<br></strong></p>
+</div>
+<p style="text-align: justify;">Determinamos qué columnas <strong>no clave</strong> no dependen de la clave primaria al completo: Entonces vemos que debemos trabajar sobre la tabla <strong>PRESTAMOS</strong>, cuya clave principal está formada por los campos <strong>Codigo</strong> y <strong>Cod_lector</strong>. Podemos comprobar las columnas de nombre y apellidos del lector dependen solamente de Cod_lector, y no dependen de Codigo. Luego estos campos no dependen de la clave completa:</p>
+<table class="exe-table" style="width: 74.2249%; height: 93px;">
+<thead>
+<tr style="height: 23px;">
+<th style="width: 14.7034%;"><span style="font-size: 11pt;">Codigo<br></span></th>
+<th style="width: 14.7034%; height: 23px;"><span style="font-size: 11pt;">Nom_lector</span></th>
+<th style="width: 2.5%; height: 23px;"><span style="font-size: 11pt;">Ape1_lector<br></span></th>
+<th style="width: 16.2268%; height: 23px;"><span style="font-size: 11pt;">Ape2_lector<br></span></th>
+<th style="width: 8.1134%;"><span style="font-size: 11pt;">Cod_lector<br></span></th>
+<th style="width: 8.1134%;"><span style="font-size: 11pt;">Devolucion<br></span></th>
+</tr>
+</thead>
+<tbody>
+<tr style="height: 47px;">
+<td style="width: 14.7034%;"><span style="font-size: 11pt;">1002<br></span></td>
+<td style="width: 14.7034%; height: 10px;"><span style="font-size: 11pt;">Juan</span></td>
+<td style="width: 2.5%; height: 10px;"><span style="font-size: 11pt;">Campos<br></span></td>
+<td style="width: 16.2268%; height: 10px;"><span style="font-size: 11pt;">Lara<br></span></td>
+<td style="width: 8.1134%;"><span style="font-size: 11pt;">JCL27</span></td>
+<td style="width: 8.1134%;"><span style="font-size: 11pt;">25/07/22</span></td>
+</tr>
+<tr style="height: 47px;">
+<td style="width: 14.7034%;"><span style="font-size: 11pt;">1002<br></span></td>
+<td style="width: 14.7034%; height: 10px;"><span style="font-size: 11pt;">Mercedes</span></td>
+<td style="width: 2.5%; height: 10px;"><span style="font-size: 11pt;">Moreno</span></td>
+<td style="width: 16.2268%; height: 10px;"><span style="font-size: 11pt;"> Caro</span></td>
+<td style="width: 8.1134%;"><span style="font-size: 11pt;">MMC04</span></td>
+<td style="width: 8.1134%;"><span style="font-size: 11pt;">15/06/22</span></td>
+</tr>
+<tr style="height: 47px;">
+<td style="width: 14.7034%;"><span style="font-size: 11pt;">1004<br></span></td>
+<td style="width: 14.7034%; height: 10px;"><span style="font-size: 11pt;">Mercedes</span></td>
+<td style="width: 2.5%; height: 10px;"><span style="font-size: 11pt;">Moreno</span></td>
+<td style="width: 16.2268%; height: 10px;"><span style="font-size: 11pt;">Caro</span></td>
+<td style="width: 8.1134%;"><span style="font-size: 11pt;">MMC04</span></td>
+<td style="width: 8.1134%;"><span style="font-size: 11pt;">19/03/22</span></td>
+</tr>
+<tr style="height: 47px;">
+<td style="width: 14.7034%;"><span style="font-size: 11pt;">1004<br></span></td>
+<td style="width: 14.7034%; height: 10px;"><span style="font-size: 11pt;">Juan</span></td>
+<td style="width: 2.5%; height: 10px;"><span style="font-size: 11pt;">Campos</span></td>
+<td style="width: 16.2268%; height: 10px;"><span style="font-size: 11pt;">Lara</span></td>
+<td style="width: 8.1134%;"><span style="font-size: 11pt;">JCL27</span></td>
+<td style="width: 8.1134%;"><span style="font-size: 11pt;">10/01/22</span></td>
+</tr>
+<tr style="height: 47px;">
+<td style="width: 14.7034%;"><span style="font-size: 11pt;">1005<br></span></td>
+<td style="width: 14.7034%; height: 10px;"><span style="font-size: 11pt;">Pedro</span></td>
+<td style="width: 2.5%; height: 10px;"><span style="font-size: 11pt;">López</span></td>
+<td style="width: 16.2268%; height: 10px;"><span style="font-size: 11pt;">Ayala</span></td>
+<td style="width: 8.1134%;"><span style="font-size: 11pt;">PLA14</span></td>
+<td style="width: 8.1134%;"><span style="font-size: 11pt;">04/02/22</span></td>
+</tr>
+<tr style="height: 47px;">
+<td style="width: 14.7034%;"><span style="font-size: 11pt;">1007<br></span></td>
+<td style="width: 14.7034%; height: 10px;"><span style="font-size: 11pt;">Pedro</span></td>
+<td style="width: 2.5%; height: 10px;"><span style="font-size: 11pt;">López</span></td>
+<td style="width: 16.2268%; height: 10px;"><span style="font-size: 11pt;"> Ayala </span></td>
+<td style="width: 8.1134%;"><span style="font-size: 11pt;">PLA14</span></td>
+<td style="width: 8.1134%;"><span style="font-size: 11pt;">30/08/22</span></td>
+</tr>
+<tr style="height: 47px;">
+<td style="width: 14.7034%;"><span style="font-size: 11pt;">1008<br></span></td>
+<td style="width: 14.7034%; height: 10px;"><span style="font-size: 11pt;">Juan</span></td>
+<td style="width: 2.5%; height: 10px;"><span style="font-size: 11pt;">Campos</span></td>
+<td style="width: 16.2268%; height: 10px;"><span style="font-size: 11pt;">Lara</span></td>
+<td style="width: 8.1134%;"><span style="font-size: 11pt;">JCL27</span></td>
+<td style="width: 8.1134%;"><span style="font-size: 11pt;">14/09/22</span></td>
+</tr>
+</tbody>
+</table>
+<div style="background: #5f1196; color: #ffffff;">
+<p style="text-align: center;"><strong>PASO 2<br></strong></p>
+</div>
+<p style="text-align: justify;">Lo que haremos a continuación es eliminar estas columnas de la tabla PRESTAMOS y crear una tabla LECTORES con dichas columnas y la llave primaria de la que dependen. Quedan entonces las tablas siguientes:</p>
+<p style="text-align: justify;">Tabla <strong>LECTORES</strong></p>
+<table class="exe-table" style="width: 48.4484%; height: 93px;">
+<thead>
+<tr style="height: 23px;">
+<th style="width: 1.86916%;">Cod_lector<span style="font-size: 11pt;"><br></span></th>
+<th style="width: 1.86916%; height: 23px;"><span style="font-size: 11pt;">Nom_lector</span></th>
+<th style="width: 1.86916%; height: 23px;"><span style="font-size: 11pt;">Ape1_lector<br></span></th>
+<th style="width: 1.86916%; height: 23px;"><span style="font-size: 11pt;">Ape2_lector<br></span></th>
+</tr>
+</thead>
+<tbody>
+<tr style="height: 47px;">
+<td style="width: 1.86916%;"><span style="font-size: 11pt;">JCL27</span></td>
+<td style="width: 1.86916%; height: 10px;"><span style="font-size: 11pt;">Juan</span></td>
+<td style="width: 1.86916%; height: 10px;"><span style="font-size: 11pt;">Campos<br></span></td>
+<td style="width: 1.86916%; height: 10px;"><span style="font-size: 11pt;">Lara<br></span></td>
+</tr>
+<tr style="height: 47px;">
+<td style="width: 1.86916%;"><span style="font-size: 11pt;">MMC04</span></td>
+<td style="width: 1.86916%; height: 10px;"><span style="font-size: 11pt;">Mercedes</span></td>
+<td style="width: 1.86916%; height: 10px;"><span style="font-size: 11pt;">Moreno</span></td>
+<td style="width: 1.86916%; height: 10px;"><span style="font-size: 11pt;">Caro</span></td>
+</tr>
+<tr style="height: 47px;">
+<td style="width: 1.86916%;"><span style="font-size: 11pt;">PLA14</span></td>
+<td style="width: 1.86916%; height: 10px;"><span style="font-size: 11pt;">Pedro</span></td>
+<td style="width: 1.86916%; height: 10px;"><span style="font-size: 11pt;">López</span></td>
+<td style="width: 1.86916%; height: 10px;"><span style="font-size: 11pt;">Ayala</span></td>
+</tr>
+</tbody>
+</table>
+Tabla <strong>PRESTAMOS</strong>
+<table class="exe-table" style="width: 18.2098%;">
+<thead>
+<tr>
+<th style="width: 3.1891%;"><span style="font-size: 11pt;">Codigo</span></th>
+<th style="width: 16.289%;"><span style="font-size: 11pt;">Cod_lector</span></th>
+<th style="width: 7.59331%;"><span style="font-size: 11pt;">F_dev</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="width: 3.1891%;"><span style="font-size: 11pt;">1002</span></td>
+<td style="width: 16.289%;"><span style="font-size: 11pt;">JCL27</span></td>
+<td style="width: 7.59331%;"><span style="font-size: 11pt;">25/07/22</span></td>
+</tr>
+<tr>
+<td style="width: 3.1891%;"><span style="font-size: 11pt;">1002</span></td>
+<td style="width: 16.289%;"><span style="font-size: 11pt;">MMC04</span></td>
+<td style="width: 7.59331%;"><span style="font-size: 11pt;">15/06/22</span></td>
+</tr>
+<tr>
+<td style="width: 3.1891%;"><span style="font-size: 11pt;">1004</span></td>
+<td style="width: 16.289%;"><span style="font-size: 11pt;">MMC04</span></td>
+<td style="width: 7.59331%;"><span style="font-size: 11pt;">19/03/22</span></td>
+</tr>
+<tr>
+<td style="width: 3.1891%;"><span style="font-size: 11pt;">1004</span></td>
+<td style="width: 16.289%;"><span style="font-size: 11pt;">JCL27</span></td>
+<td style="width: 7.59331%;"><span style="font-size: 11pt;">10/01/22</span></td>
+</tr>
+<tr>
+<td style="width: 3.1891%;"><span style="font-size: 11pt;">1005</span></td>
+<td style="width: 16.289%;"><span style="font-size: 11pt;">PLA14</span></td>
+<td style="width: 7.59331%;"><span style="font-size: 11pt;">04/02/22</span></td>
+</tr>
+<tr>
+<td style="width: 3.1891%;"><span style="font-size: 11pt;">1007</span></td>
+<td style="width: 16.289%;"><span style="font-size: 11pt;">PLA14</span></td>
+<td style="width: 7.59331%;"><span style="font-size: 11pt;">30/08/22</span></td>
+</tr>
+<tr>
+<td style="width: 3.1891%;"><span style="font-size: 11pt;">1008</span></td>
+<td style="width: 16.289%;"><span style="font-size: 11pt;">JCL27</span></td>
+<td style="width: 7.59331%;"><span style="font-size: 11pt;">14/09/22</span></td>
+</tr>
+</tbody>
+</table>
+<h2>Tercera forma normal - 3FN</h2>
+<p>Para que una tabla esté en tercera forma normal (<strong>3FN</strong>) debe cumplir:</p>
+<ol>
+<li>Estar en <strong>segunda forma normal.</strong></li>
+<li>No debe haber atributos no clave que dependan <strong>de otros atributos no primos</strong> (que no pertenecen a la clave).</li>
+</ol>
+<p>Seguimos transformando nuestro ejemplo, ahora a tercera forma normal:</p>
+<div style="background: #5f1196; color: #ffffff;">
+<p style="text-align: center;"><strong>PASO 1<br></strong></p>
+</div>
+<p><strong>Determinamos las columnas que son dependientes de otra columna no clave</strong>: Al observar las tablas que hemos creado en el ejemplo, nos damos cuenta que tanto la tabla LECTORES, como la tabla PRESTAMOS se encuentran en 3FN. Sin embargo, la tabla <strong>BIBLIOTECA</strong> no lo está, ya que TITULO, EDITORIAL Y AUTOR son dependientes de <strong>ISBN</strong>, y esta columna no es la llave primaria:</p>
+<table class="exe-table" style="width: 100%; height: 112px;">
+<thead>
+<tr style="height: 23px;">
+<th style="width: 69.1667px; height: 23px;"><span style="font-size: 11pt;">Codigo</span></th>
+<th style="width: 108.217px; height: 23px;"><span style="font-size: 11pt;">Título</span></th>
+<th style="width: 123.25px; height: 23px;"><span style="font-size: 11pt;">Autor</span></th>
+<th style="width: 62.15px; height: 23px;"><span style="font-size: 11pt;">Editorial</span></th>
+<th style="width: 110.217px; height: 23px;"><span style="font-size: 11pt;">ISBN</span></th>
+</tr>
+</thead>
+<tbody>
+<tr style="height: 23px;">
+<td style="width: 69.1667px; height: 10px;"><span style="font-size: 11pt;">1002</span></td>
+<td style="width: 108.217px; height: 10px;"><span style="font-size: 11pt;">Estadística</span></td>
+<td style="width: 123.25px; height: 10px;"><span style="font-size: 11pt;">Murray Spiegel </span></td>
+<td style="width: 62.15px; height: 10px;"><span style="font-size: 11pt;">McGraw Hill </span></td>
+<td style="width: 110.217px; height: 10px;"><span style="font-size: 11pt;">1585-4544-5655</span></td>
+</tr>
+<tr style="height: 23px;">
+<td style="width: 69.1667px; height: 23px;"><span style="font-size: 11pt;">1004</span></td>
+<td style="width: 108.217px; height: 23px;"><span style="font-size: 11pt;">Bases de Datos</span></td>
+<td style="width: 123.25px; height: 23px;"><span style="font-size: 11pt;">Ramalho </span></td>
+<td style="width: 62.15px; height: 23px;"><span style="font-size: 11pt;">Alfaguara</span></td>
+<td style="width: 110.217px; height: 23px;"><span style="font-size: 11pt;">5967-4978-5311</span></td>
+</tr>
+<tr style="height: 23px;">
+<td style="width: 69.1667px; height: 23px;"><span style="font-size: 11pt;">1005</span></td>
+<td style="width: 108.217px; height: 23px;"><span style="font-size: 11pt;">Algoritmos</span></td>
+<td style="width: 123.25px; height: 23px;"><span style="font-size: 11pt;">Kenneth Brown</span></td>
+<td style="width: 62.15px; height: 23px;"><span style="font-size: 11pt;">RA-MA</span></td>
+<td style="width: 110.217px; height: 23px;"><span style="font-size: 11pt;">4894-0560-5542</span></td>
+</tr>
+<tr style="height: 23px;">
+<td style="width: 69.1667px; height: 23px;"><span style="font-size: 11pt;">1007</span></td>
+<td style="width: 108.217px; height: 23px;"><span style="font-size: 11pt;">Oracle</span></td>
+<td style="width: 123.25px; height: 23px;"><span style="font-size: 11pt;">Sarah Connor</span></td>
+<td style="width: 62.15px; height: 23px;"><span style="font-size: 11pt;">McGraw Hill </span></td>
+<td style="width: 110.217px; height: 23px;"><span style="font-size: 11pt;">1700-8462-9869</span></td>
+</tr>
+<tr style="height: 10px;">
+<td style="width: 69.1667px; height: 10px;"><span style="font-size: 11pt;">1008</span></td>
+<td style="width: 108.217px; height: 10px;"><span style="font-size: 11pt;">SQL</span></td>
+<td style="width: 123.25px; height: 10px;"><span style="font-size: 11pt;">Meredith Goldberg</span></td>
+<td style="width: 62.15px; height: 10px;"><span style="font-size: 11pt;">RA-MA</span></td>
+<td style="width: 110.217px; height: 10px;"><span style="font-size: 11pt;">4477-4754-4455</span></td>
+</tr>
+</tbody>
+</table>
+<div style="background: #5f1196; color: #ffffff;">
+<p style="text-align: center;"><strong>PASO 2<br></strong></p>
+</div>
+<p style="text-align: justify;">Para normalizar esta tabla, moveremos las columnas no clave y la columna clave de la cual dependen dentro de una nueva tabla <strong>EJEMPLARES</strong>. Las nuevas tablas BIBLIOTECA y EJEMPLARES se muestran a continuación:<br><br>Tabla <strong>BIBLIOTECA</strong></p>
+<table class="exe-table" style="width: 30.7695%; height: 112px;">
+<thead>
+<tr style="height: 23px;">
+<th style="width: 19.4774%; height: 23px;"><span style="font-size: 11pt;">Codigo</span></th>
+<th style="width: 4.27763%; height: 23px;"><span style="font-size: 11pt;">ISBN</span></th>
+</tr>
+</thead>
+<tbody>
+<tr style="height: 23px;">
+<td style="width: 19.4774%; height: 10px;"><span style="font-size: 11pt;">1002</span></td>
+<td style="width: 4.27763%; height: 10px;"><span style="font-size: 11pt;">1585-4544-5655</span></td>
+</tr>
+<tr style="height: 23px;">
+<td style="width: 19.4774%; height: 23px;"><span style="font-size: 11pt;">1004</span></td>
+<td style="width: 4.27763%; height: 23px;"><span style="font-size: 11pt;">5967-4978-5311</span></td>
+</tr>
+<tr style="height: 23px;">
+<td style="width: 19.4774%; height: 23px;"><span style="font-size: 11pt;">1005</span></td>
+<td style="width: 4.27763%; height: 23px;"><span style="font-size: 11pt;">4894-0560-5542</span></td>
+</tr>
+<tr style="height: 23px;">
+<td style="width: 19.4774%; height: 23px;"><span style="font-size: 11pt;">1007</span></td>
+<td style="width: 4.27763%; height: 23px;"><span style="font-size: 11pt;">1700-8462-9869</span></td>
+</tr>
+<tr style="height: 10px;">
+<td style="width: 19.4774%; height: 10px;"><span style="font-size: 11pt;">1008</span></td>
+<td style="width: 4.27763%; height: 10px;"><span style="font-size: 11pt;">4477-4754-4455</span></td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: justify;">Tabla <strong>EJEMPLARES</strong></p>
+<table class="exe-table" style="width: 68.0218%; height: 112px;">
+<thead>
+<tr style="height: 23px;">
+<th style="width: 8.4616%; height: 23px;">ISBN</th>
+<th style="width: 22.7307%; height: 23px;"><span style="font-size: 11pt;">Título</span></th>
+<th style="width: 22.1466%; height: 23px;"><span style="font-size: 11pt;">Autor</span></th>
+<th style="width: 16.0731%; height: 23px;"><span style="font-size: 11pt;">Editorial</span></th>
+</tr>
+</thead>
+<tbody>
+<tr style="height: 23px;">
+<td style="width: 8.4616%; height: 10px;">1585-4544-5655</td>
+<td style="width: 22.7307%; height: 10px;"><span style="font-size: 11pt;">Estadística</span></td>
+<td style="width: 22.1466%; height: 10px;"><span style="font-size: 11pt;">Murray Spiegel </span></td>
+<td style="width: 16.0731%; height: 10px;"><span style="font-size: 11pt;">McGraw Hill </span></td>
+</tr>
+<tr style="height: 23px;">
+<td style="width: 8.4616%; height: 23px;">5967-4978-5311</td>
+<td style="width: 22.7307%; height: 23px;"><span style="font-size: 11pt;">Bases de Datos</span></td>
+<td style="width: 22.1466%; height: 23px;"><span style="font-size: 11pt;">Ramalho </span></td>
+<td style="width: 16.0731%; height: 23px;"><span style="font-size: 11pt;">Alfaguara</span></td>
+</tr>
+<tr style="height: 23px;">
+<td style="width: 8.4616%; height: 23px;">4894-0560-5542</td>
+<td style="width: 22.7307%; height: 23px;"><span style="font-size: 11pt;">Algoritmos</span></td>
+<td style="width: 22.1466%; height: 23px;"><span style="font-size: 11pt;">Kenneth Brown</span></td>
+<td style="width: 16.0731%; height: 23px;"><span style="font-size: 11pt;">RA-MA</span></td>
+</tr>
+<tr style="height: 23px;">
+<td style="width: 8.4616%; height: 23px;">1700-8462-9869</td>
+<td style="width: 22.7307%; height: 23px;"><span style="font-size: 11pt;">Oracle</span></td>
+<td style="width: 22.1466%; height: 23px;"><span style="font-size: 11pt;">Sarah Connor</span></td>
+<td style="width: 16.0731%; height: 23px;"><span style="font-size: 11pt;">McGraw Hill </span></td>
+</tr>
+<tr style="height: 10px;">
+<td style="width: 8.4616%; height: 10px;">4477-4754-4455</td>
+<td style="width: 22.7307%; height: 10px;"><span style="font-size: 11pt;">SQL</span></td>
+<td style="width: 22.1466%; height: 10px;"><span style="font-size: 11pt;">Meredith Goldberg</span></td>
+<td style="width: 16.0731%; height: 10px;"><span style="font-size: 11pt;">RA-MA</span></td>
+</tr>
+</tbody>
+</table>
+</div></div></div></section></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper UDLcontentIdevice em_iDevice em_iDevice_udl_exp_actividad" id="id42">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">3. El poder de la normalización para la mejor versión</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta42_734_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-expression"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><h2>🔁 Continuamos nuestro proyecto: preparando la base de datos real</h2>
+<p>En la última fase del proyecto diseñamos el modelo conceptual a través de un <strong>diagrama entidad-relación (E/R)</strong>, identificando claramente las entidades: <strong>Cliente, Servicio y Factura</strong>, así como sus atributos y relaciones.</p>
+<p>Ahora te proponemos dar un paso más: trabajar directamente con datos reales simulados. A continuación, te mostramos una <strong>tabla unificada no normalizada</strong> que agrupa toda la información de clientes, servicios y facturas. Esta será tu base para aplicar el proceso completo de normalización.</p>
+<p><em>¡Recuerda! Este tipo de estructuras mal diseñadas son muy comunes al inicio de un desarrollo. Tu trabajo consistirá en detectar los problemas y transformarla correctamente.</em></p>
+<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%;">
+<thead style="background-color: #f0f0f0;">
+<tr>
+<th>nombre_completo</th>
+<th>DNI</th>
+<th>fecha_nacimiento</th>
+<th>teléfono</th>
+<th>correo_electrónico</th>
+<th>dirección_postal</th>
+<th>código_actividad</th>
+<th>descripción_servicio</th>
+<th>ID_Factura</th>
+<th>fecha_factura</th>
+<th>precio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ana Gómez</td>
+<td>12345670A</td>
+<td>1990-03-15</td>
+<td>600112233</td>
+<td>ana@gmail.com</td>
+<td>Calle Luna 12</td>
+<td>SERV001</td>
+<td>Consultoría informática</td>
+<td>FAC001</td>
+<td>2024-01-10</td>
+<td>250.00</td>
+</tr>
+<tr>
+<td>Luis Pérez</td>
+<td>12345671A</td>
+<td>1985-07-23</td>
+<td>600223344</td>
+<td>luis@gmail.com</td>
+<td>Av. del Sol 45</td>
+<td>SERV002</td>
+<td>Desarrollo web</td>
+<td>FAC002</td>
+<td>2024-01-12</td>
+<td>450.50</td>
+</tr>
+<tr>
+<td>Marta Martínez</td>
+<td>12345672A</td>
+<td>1992-11-05</td>
+<td>600334455</td>
+<td>marta@gmail.com</td>
+<td>Paseo Marítimo 3</td>
+<td>SERV003</td>
+<td>Instalación de redes</td>
+<td>FAC003</td>
+<td>2024-01-15</td>
+<td>320.75</td>
+</tr>
+<tr>
+<td>Carlos López</td>
+<td>12345673A</td>
+<td>1988-01-30</td>
+<td>600445566</td>
+<td>carlos@gmail.com</td>
+<td>Calle Fuego 78</td>
+<td>SERV004</td>
+<td>Mantenimiento técnico</td>
+<td>FAC004</td>
+<td>2024-01-20</td>
+<td>600.00</td>
+</tr>
+<tr>
+<td>Lucía Sánchez</td>
+<td>12345674A</td>
+<td>1995-06-12</td>
+<td>600556677</td>
+<td>lucia@gmail.com</td>
+<td>Av. las Flores 90</td>
+<td>SERV005</td>
+<td>Auditoría de sistemas</td>
+<td>FAC005</td>
+<td>2024-02-02</td>
+<td>150.00</td>
+</tr>
+<tr>
+<td>Pedro Ramírez</td>
+<td>12345675A</td>
+<td>1983-09-09</td>
+<td>600667788</td>
+<td>pedro@gmail.com</td>
+<td>Calle Río 23</td>
+<td>SERV006</td>
+<td>Formación TIC</td>
+<td>FAC006</td>
+<td>2024-02-10</td>
+<td>500.00</td>
+</tr>
+<tr>
+<td>Sofía Ortega</td>
+<td>12345676A</td>
+<td>2000-04-22</td>
+<td>600778899</td>
+<td>sofia@gmail.com</td>
+<td>Camino Verde 17</td>
+<td>SERV007</td>
+<td>Soporte remoto</td>
+<td>FAC007</td>
+<td>2024-02-20</td>
+<td>275.25</td>
+</tr>
+<tr>
+<td>David Castro</td>
+<td>12345677A</td>
+<td>1991-10-10</td>
+<td>600889900</td>
+<td>david@gmail.com</td>
+<td>Calle Azul 55</td>
+<td>SERV008</td>
+<td>Digitalización documental</td>
+<td>FAC008</td>
+<td>2024-03-01</td>
+<td>399.99</td>
+</tr>
+</tbody>
+</table></div></div></section><section class="exe-udlContent-block js-hidden"><header class="exe-udlContent-header exe-udlContent-character-1"><h2>¿Recuerdas lo último que hicimos en nuestro proyecto?</h2></header><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p><strong>📁 ¿No recuerdas qué hicimos en la última actividad del proyecto?</strong></p>
+<p>En la actividad anterior diseñaste el <strong>modelo entidad-relación</strong> (E/R) de la aplicación <em>AgendaClientesApp</em>, en el que definiste las tres entidades principales:</p>
+<ul>
+<li><strong>Cliente</strong>: con su DNI, nombre, apellidos, datos de contacto, etc.</li>
+<li><strong>Servicio</strong>: con código y descripción.</li>
+<li><strong>Factura</strong>: con su fecha, precio, y referencias al cliente y al servicio.</li>
+</ul>
+<p>A partir de los <strong>requisitos funcionales</strong> del cliente, organizaste toda la información en un <strong>modelo visual</strong> claro y estructurado como este:</p>
+<p><img src="ModeloER_AgendaClientesApp.png" width="757" height="761" style="display: block; margin-left: auto; margin-right: auto;"></p>
+<p><em>Utiliza ahora ese diseño como guía para construir y normalizar las tablas de tu base de datos.</em></p></div></div></section><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><div style="background-color: #f0f9ff; border: 1px solid #0077b6; padding: 15px; border-radius: 8px;">
+<h3 style="color: #0077b6;">📊 Actividad: Normaliza la base de datos de nuestro proyecto.</h3>
+<p>A partir de la tabla que se te ha proporcionado, donde se mezclan datos de clientes, servicios y facturas en una sola estructura, vas a realizar el proceso completo de <strong>normalización hasta la Tercera Forma Normal (3FN)</strong>.</p>
+<p><strong>Importante:</strong> el campo <strong>DNI</strong> es el identificador único de cada cliente. Por tanto, será el que se usará como <strong>código_cliente</strong> en la tabla de facturas.<br>De igual manera, el campo <strong>código_actividad</strong> representa el identificador único de cada servicio y será utilizado como <strong>código_servicio</strong> en la tabla de facturas.</p>
+<h4>🔧 ¿Qué debes hacer?</h4>
+<ol>
+<li><strong>Analiza la tabla inicial</strong> e identifica los atributos correspondientes a cada entidad (Cliente, Servicio y Factura).</li>
+<li><strong>Detecta errores de diseño:</strong> valores compuestos, datos repetidos o columnas mal agrupadas.</li>
+<li><strong>Aplica las 3 formas normales:</strong>
+<ul>
+<li><strong>1FN:</strong> Asegúrate de que todos los valores son atómicos. Por ejemplo, separa el campo <code>nombre_completo</code> en <code>nombre</code> y <code>apellidos</code>.</li>
+<li><strong>2FN:</strong> Revisa que los atributos dependan completamente de la clave primaria (y no de parte de ella si es compuesta).</li>
+<li><strong>3FN:</strong> Elimina dependencias entre atributos no clave. Asegúrate de que cada campo depende únicamente de la clave.</li>
+</ul>
+</li>
+<li><strong>Rediseña las tablas resultantes</strong> y define claramente:
+<ul>
+<li>Sus claves primarias (<code>PK</code>).</li>
+<li>Sus claves ajenas (<code>FK</code>) cuando haya relaciones.</li>
+</ul>
+</li>
+</ol>
+<h4>📤 ¿Cómo debes entregarlo?</h4>
+<ul>
+<li>Crea un documento que incluya:
+<ul>
+<li>✅ La tabla original (copiada o capturada).</li>
+<li>✅ Breve explicación de cada paso aplicado (1FN, 2FN, 3FN).</li>
+<li>✅ Las tablas finales normalizadas con sus campos, PK y FK bien identificadas.</li>
+</ul>
+</li>
+<li>Entrega el documento en formato <strong>PDF con imagenes o tablas</strong> a través de Moodle.</li>
+<li>Se recomienda usar una hoja de cálculo (Google Sheets, Excel o LibreOffice Calc) o herramientas visuales como <strong>DbDesigner</strong> para organizar mejor las tablas.</li>
+</ul>
+<p><em>Tu misión es reorganizar esta base de datos para que sea eficiente, comprensible y lista para su implementación real. ¡Manos a la obra!</em></p>
+</div></div></div></section></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="31_dibuja_tu_base_de_datos_el_modelo_conceptual.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><span class="page-counter">Página <strong>7</strong> de <strong>12</strong></span> <span class="sep">| </span><a href="4_del_diagrama_al_cdigo_bienvenido_a_sql.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_intef_js.js"></script></body></html>

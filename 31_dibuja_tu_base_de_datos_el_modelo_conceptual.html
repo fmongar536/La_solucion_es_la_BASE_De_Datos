@@ -1,0 +1,518 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="exe_effects.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>3.1 Dibuja tu base de datos: el modelo conceptual | La solución: una base de datos </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Belén Lara Aznar" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.9 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="exe_effects.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<link rel="stylesheet" type="text/css" href="udl-content.css" />
+<script type="text/javascript" src="udl-content.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-7"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">La solución: una base de datos</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Del dato a la solución</a></li>
+   <li><a href="1_del_dato_al_conocimiento_el_poder_de_la_informacin.html" class="no-ch">1. Del dato al conocimiento: el poder de la información</a></li>
+   <li><a href="2_del_problema_a_la_solucin.html" class="daddy">2. Del problema a la solución</a>
+   <ul class="other-section">
+      <li><a href="21_fundamentos_de_las_bases_de_datos_lo_esencial_para_empezar.html" class="no-ch">2.1 Fundamentos de las bases de datos: lo esencial para empezar</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="3_de_las_ideas_al_diseo_construimos_el_modelo_de_datos.html" class="current-page-parent daddy">3. De las ideas al diseño: construimos el modelo de datos</a>
+   <ul>
+      <li id="active"><a href="31_dibuja_tu_base_de_datos_el_modelo_conceptual.html" class="active no-ch">3.1 Dibuja tu base de datos: el modelo conceptual</a></li>
+      <li><a href="32_de_los_esquemas_al_sistema_crea_las_tablas_y_normaliza_tu_base_de_datos.html" class="no-ch">3.2 De los esquemas al sistema: crea las tablas y normaliza tu base de datos</a></li>
+   </ul>
+   </li>
+   <li><a href="4_del_diagrama_al_cdigo_bienvenido_a_sql.html" class="daddy">4. Del diagrama al código: bienvenido a SQL</a>
+   <ul class="other-section">
+      <li><a href="41_cuando_los_datos_crecen_big_data_y_nuevas_formas_de_almacenarlos.html" class="no-ch">4.1 Cuando los datos crecen: Big Data y nuevas formas de almacenarlos</a></li>
+   </ul>
+   </li>
+   <li><a href="5_finalicemos_el_proyecto.html" class="no-ch">5. Finalicemos el proyecto</a></li>
+   <li><a href="9_conclusin.html" class="no-ch">9. Conclusión</a></li>
+   <li><a href="crditos.html" class="no-ch">Créditos</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="3_de_las_ideas_al_diseo_construimos_el_modelo_de_datos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><span class="page-counter">Página <strong>6</strong> de <strong>12</strong></span> <span class="sep">| </span><a href="32_de_los_esquemas_al_sistema_crea_las_tablas_y_normaliza_tu_base_de_datos.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">3.1 Dibuja tu base de datos: el modelo conceptual</h1></header>
+<article class="iDevice_wrapper UDLcontentIdevice em_iDevice em_iDevice_udl_rep_reflexion" id="id34">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">1. Modelo E-R (Entidad-Relación)</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta34_735_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-representation"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p style="text-align: justify;"><img src="IMG_PRO2BAC_REA04-DIAGRAMAjpg.jpg" alt="Mano dibujando un diagrama en una pizarra." title="Dibujando un diagrama" style="float: left; margin: 25px 50px 25px 50px;" width="286" height="191"></p>
+<p>Antes de poder programar una base de datos, necesitamos diseñarla. Es decir, <strong>planificar qué información vamos a guardar</strong>, cómo se relaciona esa información y cómo se estructura.</p>
+<p>Para eso usamos el <strong>modelo entidad-relación (E/R)</strong>, una herramienta visual que nos permite representar gráficamente los elementos de una base de datos y las relaciones que hay entre ellos.</p>
+<p>Este modelo es la base del diseño conceptual y nos ayuda a <strong>organizar las ideas antes de construir las tablas</strong>. Vamos a ver qué lo compone:</p>
+<p>Para poder aprender cómo crear nuestro&nbsp;diagrama E/R, primero debemos conocer sus elementos y lo haremos utilizando el ejemplo del modelado de las tarjetas que ha ofrecido un banco a sus clientes:</p>
+<p><em>De los clientes se conoce el código de cliente, el dni, el nombre, la fecha de nacimiento y la ciudad en la que vive. A su vez, también sabemos que cada cliente puede utilizar varias tarjetas de crédito, que son identificadas por el nombre de la tarjeta, el número, el código de seguridad y la fecha de vencimiento.</em></p>
+<div class="exe-fx exe-tabs">
+<h2>PASO 1: Entidades</h2>
+<div class="exe-layout-2-cols exe-layout-2-30-70 exe-clear">
+<div class="exe-col exe-col-1">
+<div style="background: #5f1196 none repeat scroll 0% 0%; color: #ffffff; text-align: center;">
+<p style="text-align: center;"><strong>MODELO<br></strong></p>
+</div>
+<img src="IMG_PRO2BAC_REA04_entidades.jpg" alt="Reconocimiento de entidades del ejemplo: cliente y tarjeta" title="Entidades" width="300" height="150"></div>
+<div class="exe-col exe-col-2">
+<div style="background: #5f1196; color: #ffffff;">
+<p style="text-align: center;"><strong>¿Qué es?¿Cómo se representa?<br></strong></p>
+</div>
+<p style="text-align: justify;">Una <strong>Entidad</strong> es un objeto que existe y es distinguible de otros objetos por su sola existencia y sobre él recogeremos información. <strong>Ejemplos</strong> de entidades son: cosa, persona, concepto abstracto o suceso (coches, casas, empleados, clientes, empresas, oficios, diseños de productos, conciertos, excursiones, etc.).</p>
+<p style="text-align: justify;">Tiene como <strong>características</strong> que:</p>
+<ul>
+<li style="text-align: justify;">Un nombre de entidad sólo puede <strong>aparecer una vez</strong> en el esquema.</li>
+<li style="text-align: justify;">Puede ser <strong>concreta</strong>, como una persona o un libro, o puede ser <strong>abstracta</strong>, como un día festivo o un concepto.</li>
+<li style="text-align: justify;">Toda entidad tiene un <strong>identificador o clave</strong>: conjunto de uno o más atributos que permiten identificar de forma única una ocurrencia de una entidad dentro de un conjunto de ellas. Una entidad puede tener identificadores alternativos.</li>
+</ul>
+<p style="text-align: justify;">Las entidades se representan gráficamente mediante rectángulos y su nombre aparece en el interior de él: <img src="IMG_PRO2BAC_REA04_ENTIDAD_REP.png" alt="Representación de la entidad: Un rectángulo con el nombre dentro." title="Representación de la entidad" style="display: block; margin-left: auto; margin-right: auto; vertical-align: middle;" width="148" height="57"></p>
+</div>
+</div>
+<h2>PASO 2: Atributos</h2>
+<div class="exe-layout-2-cols exe-layout-2-30-70 exe-clear">
+<div class="exe-col exe-col-1">
+<div style="background: #5f1196; color: #ffffff;">
+<p style="text-align: center;"><strong>MODELO<br></strong></p>
+</div>
+<figure class="exe-figure exe-image position-center" style="width: 399px; text-align: center;"><a href="IMG_PRO2BAC_REA04_ATRIBUTOS.png" target="_blank" rel="noopener"><img src="IMG_PRO2BAC_REA04_ATRIBUTOS.png" alt="Reconocimiento de atributos del ejemplo para cliente y tarjeta." title="Atributos del ejemplo" width="399" height="143"></a>
+<figcaption class="figcaption"><span class="title" style="font-size: 10pt;"><em>(Clic para ampliar)</em></span></figcaption>
+</figure>
+</div>
+<div class="exe-col exe-col-2">
+<div style="background: #5f1196; color: #ffffff;">
+<p style="text-align: center;"><strong>¿Qué es?¿Cómo se representa?</strong></p>
+</div>
+<p style="text-align: justify;">Una entidad está representada por un conjunto de <strong>atributos</strong>. Los atributos son datos que describen las propiedades de una entidad dada: cada una de las <strong>propiedades o características</strong>. El conjunto de valores permitidos un atributo se denomina <a href="#tbf26aae3-e3fa-714e-7946-1874e2078fdb" id="linkbf26aae3-e3fa-714e-7946-1874e2078fdb" class="exe-tooltip definition-tt titled-tt" title="Dominio | Dominio"><strong>dominio</strong></a>.</p>
+<p style="text-align: justify;">Ten cuidado con:</p>
+<ul>
+<li style="text-align: justify;"><strong>No confundir otras entidades con un atributo.</strong> Por ejemplo: de la Entidad Vehículo se pueden establecer atributos como marca, modelo, color, chasis, placa, etc. Son características propias del vehículo y lo diferencian de otros. Pero el dueño del vehículo no puede ser un atributo del vehículo ya que no define al vehículo y este además tiene atributos propios que lo definen, como nombre, DNI, dirección, teléfono, edad, sexo, etc. Sería otra entidad.</li>
+<li style="text-align: justify;"><strong>No confundir atributos iguales de entidades distintas</strong>. Por ejemplo: podemos tener una entidad Estudiante y otra entidad Profesor, que aparentemente tienen los mismos atributos como DNI, nombre, edad, teléfono, etc. Podemos malinterpretar esta situación y crear una entidad llamada persona para englobar a ambas entidades, pero esto no es conveniente; por lo que se debe ser muy específico al nombrar los atributos de las entidades para que hagan referencia a la entidad a la que pertenecen.</li>
+</ul>
+<p style="text-align: justify;">Los atributos se representan mediante una elipse o un círculo con su nombre:<img src="IMG_PRO2BAC_REA04_ATRIBUTOS_REP.png" alt="Representación de los atributus: elipse con el nombe dentro" title="Representación de atributos" style="vertical-align: middle;" width="168" height="56"></p>
+</div>
+</div>
+<h2>PASO 3: Relaciones</h2>
+<div class="exe-layout-2-cols exe-layout-2-30-70 exe-clear">
+<div class="exe-col exe-col-1">
+<div style="background: #5f1196; color: #ffffff;">
+<p style="text-align: center;"><strong>MODELO<br></strong></p>
+</div>
+<figure class="exe-figure exe-image position-center" style="width: 400px; text-align: center;"><a href="IMG_PRO2BAC_REA04_RELACIONES.png" target="_blank" rel="noopener"><img src="IMG_PRO2BAC_REA04_RELACIONES.png" alt="Relación entre las entidades Cliente y tarjeta: rombo con el nombre " utiliza="" title="Relación del ejemplo" width="400" height="117"></a>
+<figcaption class="figcaption"><span class="title" style="font-size: 10pt;"><em>(Clic para ampliar)</em></span></figcaption>
+</figure>
+</div>
+<div class="exe-col exe-col-2">
+<div style="background: #5f1196; color: #ffffff;">
+<p style="text-align: center;"><strong>¿Qué es?¿Cómo se representa?</strong></p>
+</div>
+<p style="text-align: justify;">Una <strong>relación</strong> es una <strong>asociación o correspondencia</strong> existente entre entidades, básicamente para compartir información.</p>
+<p style="text-align: justify;">Por ejemplo, podemos definir una relación que asocia al cliente Juan López con la tarjeta 12345.</p>
+<p style="text-align: justify;"><strong>Característica importante</strong> de las relaciones es la <strong>cardinalidad de las entidades en cada extremo</strong> de la relación: La <strong>cardinalidad</strong> expresa cuántas del conjunto de entidades de un extremo de la relación están relacionadas con cuántas entidades del conjunto del otro extremo. Pueden ser “uno a uno”', “uno a varios”' o “varios a varios”'.</p>
+<ul>
+<li style="text-align: justify;">Por ejemplo: un artículo puede ser escrito por un solo autor o por varios, pero nunca por ninguno y un autor puede escribir muchos artículos, o ninguno.</li>
+<li style="text-align: justify;">En nuestro ejemplo: un cliente puede utilizar una, varias o ninguna tarjeta, pero una tarjeta siempre será utilizada por un solo cliente.</li>
+</ul>
+<p>Una relación se representa mediante un rombo y la conexión mediante una línea: <img src="IMG_PRO2BAC_REA04_RELACIONES_REP.png" alt="Representación de la relación con un rombo con el nombre dentro." title="Representación de la relación" style="vertical-align: middle; display: block; margin-left: auto; margin-right: auto;" width="159" height="115"></p>
+</div>
+</div>
+</div>
+<div id="tbf26aae3-e3fa-714e-7946-1874e2078fdb" class="exe-tooltip-text">
+<p>Conjunto de valores que puede tomar un atributo.</p>
+</div></div></div></section></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper UDLcontentIdevice em_iDevice em_iDevice_udl_rep_ejemplo" id="id38">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">2. El equipo resuelve el desafío, paso a paso</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta38_736_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-representation"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p style="text-align: justify;">Habéis conocido los elementos que necesitamos para crear un modelo que resuelve el problema. Un modelo conceptual de cómo debe ser el comportamiento de nuestra base de datos. Pero hay que saber <strong>aplicar correctamente cada paso</strong>, qué acción debemos resolver antes y cuál después. Para ello vamos a observar ahora un ejemplo de lo aprendido, vamos a trabajar en una <strong>aplicación</strong> concreta que resolverá un problema planteado en el siguiente enunciado:</p>
+<p style="text-align: justify;"><em>Vamos a modelar la gestión de una empresa de taxis. Los taxis vendrán especificados por su marca del vehículo, el modelo que es dentro de la marca y su placa de matrícula. Sabemos que cada taxi tiene un propietario, a quién identificaremos por su DNI, su nombre y su teléfono. A su vez, la empresa tiene en plantilla a una serie de conductores, que pueden ser los propietarios del taxi o no. Los conductores trabajan a turnos, asignándoseles un taxi concreto en cada turno. De los conductores necesitamos saber su DNI, su nombre y su teléfono.</em></p>
+<div class="exe-fx exe-paginated">
+<h2>Paso 1: Identificamos las Entidades</h2>
+<p>En el caso que nos ocupa, tras leer detenidamente la descripción, observamos que tendremos <strong>3 entidades</strong>: taxi, propietario y conductor:</p>
+<figure class="exe-figure exe-image position-center" style="width: 400px; text-align: center;"><a href="IMG_PRO2BAC_REA04_Ej1.JPG" target="_blank" rel="noopener"><img src="IMG_PRO2BAC_REA04_Ej1.JPG" alt="Las 3 entidades detectadas en el problema: taxi, propietario y conductor." title="E-R paso 1" width="400" height="284"></a>
+<figcaption class="figcaption"><span class="title" style="font-size: 10pt;"><em>(Clic para ampliar)</em></span></figcaption>
+</figure>
+<h2>Paso 2: Identificamos los atributos</h2>
+<p>En cada entidad asociamos los <strong>atributos</strong> que se almacenarán de ella:</p>
+<figure class="exe-figure exe-image position-center" style="width: 400px; text-align: center;"><a href="IMG_PRO2BAC_REA04_Ej2.JPG" target="_blank" rel="noopener"><img src="IMG_PRO2BAC_REA04_Ej2.JPG" alt="Asignamos los atributos a cada entidad en el dibujo realizado." title="E-R paso 2" width="400" height="284"></a>
+<figcaption class="figcaption"><span class="title" style="font-size: 10pt;"><em>(Clic para ampliar)</em></span></figcaption>
+</figure>
+<h2 style="text-align: left;">Paso 3: Seleccionamos los identificadores</h2>
+<p>Asignados los atributos correspondientes a cada entidad, debemos seleccionar el <strong>identificador</strong> de la entidad, el que será la clave:</p>
+<figure class="exe-figure exe-image position-center" style="width: 400px; text-align: center;"><a href="IMG_PRO2BAC_REA04_Ej3-B.JPG" target="_blank" rel="noopener"><img src="IMG_PRO2BAC_REA04_Ej3-B.JPG" alt="Marcamos en el esquema los atributos que son identificadores subrayándolos." title="E-R paso 3" width="400" height="284"></a>
+<figcaption class="figcaption"><span class="title" style="font-size: 10pt;"><em>(Clic para ampliar)</em></span></figcaption>
+</figure>
+<h2 style="text-align: left;">Paso 4: Identificamos las relaciones</h2>
+<p style="text-align: left;">Una vez que las entidades están reconocidas con sus atributos y su identificadores (claves) procedemos a establecer las <strong>relaciones</strong> entre entidades:</p>
+<figure class="exe-figure exe-image position-center" style="width: 400px; text-align: center;"><a href="IMG_PRO2BAC_REA04_Ej3.JPG" target="_blank" rel="noopener"><img src="IMG_PRO2BAC_REA04_Ej3.JPG" alt="Establecimiento de relaciones entre entidades mediante su símbolo del rombo." title="E-R paso 4" width="400" height="274"></a>
+<figcaption class="figcaption"><span class="title" style="font-size: 10pt;"><em>(Clic para ampliar)</em></span></figcaption>
+</figure>
+<h2 style="text-align: left;">Paso 5: Asignamos la cardinalidad</h2>
+<p style="text-align: left;">Finalmente, nuestro diagrama E-R termina cuando asignamos la <strong>cardinalidad</strong> a las entidades y consignamos en el diagrama el tipo de correspondencia:</p>
+<figure class="exe-figure exe-image position-center" style="width: 400px; text-align: center;"><a href="IMG_PRO2BAC_REA04_Ej4.JPG" target="_blank" rel="noopener"><img src="IMG_PRO2BAC_REA04_Ej4.JPG" alt="Asignamos la cardinalidad a las entidades y marcamos en el diagrama." title="E-R paso 5" width="400" height="269"></a>
+<figcaption class="figcaption"><span class="title" style="font-size: 10pt;"><em>(Clic para ampliar)</em></span></figcaption>
+</figure>
+</div>
+<div style="background-color: #f0f9ff; border: 1px solid #0077b6; padding: 15px; border-radius: 8px; clear: both;">
+<h3 style="color: #0077b6;"><i class="fas fa-pencil-alt"></i> Actividad: Diseña el modelo de datos de un festival</h3>
+<p>Vas a diseñar el modelo conceptual de una base de datos que sirva para organizar un <strong>festival de música</strong>. En este festival actuarán artistas en distintos escenarios y habrá un registro del público asistente a cada concierto.</p>
+<ul>
+<li>Identifica al menos <strong>tres entidades</strong> principales y sus atributos. Ejemplo: <em>Artista</em> (nombre, estilo musical), <em>Escenario</em> (nombre, capacidad), <em>Público</em> (edad, entrada adquirida), Concierto (fecha, hora, artista, escenario)...</li>
+<li>Establece <strong>una o varias relaciones</strong> entre ellas. ¿Qué relación hay entre artista y escenario? ¿Y entre concierto y público?</li>
+<li>Dibuja tu modelo conceptual utilizando los símbolos del modelo entidad-relación (rectángulos, óvalos y rombos).</li>
+</ul>
+<p>RECORDATORIO: Si “algo” puede tener su propia entidad con varios datos, es una entidad, no un atributo.&nbsp;Por tanto, se relaciona a través de un rombo, no se pone como óvalo.</p>
+<p>Puedes hacer el esquema usando una herramienta como <a href="https://app.diagrams.net/" target="_blank" rel="noopener"><strong>Diagrams.net</strong></a> para crear tu diagrama digitalmente. Cuando lo termines, guárdalo como imagen o PDF y compártelo en Moodle.</p>
+</div></div></div></section></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper ListaIdevice em_iDevice em_iDevice_question" id="id35">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">3. ¿Cuántos están implicados?</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section id="ta35_116" class="block instructions iDevice_content">
+<p>Como has conocido anteriormente, la relación entre entidades da lugar a una <a href="#t004b9a45-bceb-19d8-1f28-45d5552c2e11" id="link004b9a45-bceb-19d8-1f28-45d5552c2e11" class="exe-tooltip definition-tt titled-tt" title="Cardinalidad | Cardinalidad"><strong>cardinalidad</strong></a> que pudiste observar en los ejemplos dados.</p>
+<p>Ahora vas a ver que si de esta cardinalidad tomamos el número máximo de elementos de un tipo que se puede relacionar con cada entidad del otro tipo asociadas por la relación, obtenemos el <a href="#t0c26a925-5ee3-8daa-0965-e0e76ee500e1" id="link0c26a925-5ee3-8daa-0965-e0e76ee500e1" class="exe-tooltip definition-tt titled-tt" title="Tipo de correspondencia | Tipo de correspondencia"><strong>tipo de correspondencia</strong></a>.</p>
+<p><strong>Practica</strong> a continuación los tipos de correspondencia y la cardinalidad de las entidades que podemos encontrar en los siguientes ejemplos:</p>
+<div id="t004b9a45-bceb-19d8-1f28-45d5552c2e11" class="exe-tooltip-text">
+<p>Indica el núnero de entidades con las que se puede relacionar una entidad dada.</p>
+</div>
+<div id="t0c26a925-5ee3-8daa-0965-e0e76ee500e1" class="exe-tooltip-text">
+<p>Toma los números máximos de la cardinalidad de cada una de las entidades que relaciona.</p>
+</div>
+<div style="background-color: #fff8dc; border: 1px solid #e0b000; padding: 15px; border-radius: 8px;">
+<h3 style="color: #e0b000;"><i class="fas fa-info-circle"></i> Teoría de apoyo: tipos de correspondencia y cardinalidad</h3>
+<p><strong>1. ¿Qué es la correspondencia?</strong></p>
+<p>La <strong>correspondencia</strong> indica cuántos elementos de una entidad se relacionan con cuántos de otra. Puede ser de tres tipos:</p>
+<table style="border-collapse: collapse; width: 100%; margin-bottom: 1em;">
+<thead>
+<tr style="background-color: #f8e9a1;">
+<th style="border: 1px solid #e0b000; padding: 8px;">Tipo</th>
+<th style="border: 1px solid #e0b000; padding: 8px;">Nombre</th>
+<th style="border: 1px solid #e0b000; padding: 8px;">Significado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="border: 1px solid #e0b000; padding: 8px;">1:1</td>
+<td style="border: 1px solid #e0b000; padding: 8px;">Uno a uno</td>
+<td style="border: 1px solid #e0b000; padding: 8px;">Cada elemento de una entidad se relaciona con uno de la otra, y viceversa.</td>
+</tr>
+<tr>
+<td style="border: 1px solid #e0b000; padding: 8px;">1:N</td>
+<td style="border: 1px solid #e0b000; padding: 8px;">Uno a muchos</td>
+<td style="border: 1px solid #e0b000; padding: 8px;">Un elemento de la primera entidad puede relacionarse con muchos de la segunda, pero no al revés.</td>
+</tr>
+<tr>
+<td style="border: 1px solid #e0b000; padding: 8px;">N:M</td>
+<td style="border: 1px solid #e0b000; padding: 8px;">Muchos a muchos</td>
+<td style="border: 1px solid #e0b000; padding: 8px;">Varios elementos de una entidad se relacionan con varios de la otra.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>2. ¿Qué es la cardinalidad?</strong></p>
+<p>La <strong>cardinalidad</strong> define cuántas veces, como mínimo y máximo, un elemento puede participar en una relación. Se representa como <code>(mín, máx)</code>.</p>
+<ul>
+<li><strong>(1,1):</strong> Exactamente una vez</li>
+<li><strong>(0,1):</strong> Ninguna o una vez</li>
+<li><strong>(0,n):</strong> Ninguna o muchas veces</li>
+<li><strong>(1,n):</strong> Al menos una vez, hasta muchas</li>
+</ul>
+<p><strong>3. Relación entre correspondencia y cardinalidad</strong></p>
+<ul>
+<li><strong>1:1</strong> → Ambas entidades con máximo 1</li>
+<li><strong>1:N</strong> → Una entidad con máximo 1, la otra con máximo n</li>
+<li><strong>N:M</strong> → Ambas entidades con máximo n</li>
+</ul>
+</div>
+</section>
+
+<section class="activity" id="activity-35_117">
+<form name="cloze-form-35_117" action="#" class="activity-form cloze-form">
+<div id="cloze35_117">
+<input type="hidden" name="clozeVar35_117.feedbackId" id="clozeVar35_117.feedbackId" value="ta35_118"/>
+
+<p style="text-align: justify;"><em>Trabajamos con el caso de una Universidad en la que existen varios Departamentos a los que pertenecen los Profesores. Los Departamentos son dirigidos por un profesor y los Profesores se contratan por el Departamento al que pertenecen. Sin embargo, aunque un Profesor esté contratado por un Departamento, puede dar clases en asignaturas que pertenezcan a otro Departamento, en colaboración.</em></p>
+<div class="exe-layout-3-cols exe-clear">
+<div class="exe-col exe-col-1">
+<p style="text-align: center;"><strong>Imagen</strong></p>
+</div>
+<div class="exe-col exe-col-2">
+<p style="text-align: center;"><strong>Tipo de correspondencia</strong></p>
+</div>
+<div class="exe-col exe-col-3">
+<p style="text-align: center;"><strong>Cardinalidad de las entidades</strong><br/><br/></p>
+</div>
+</div>
+<div class="exe-layout-3-cols exe-clear">
+<div class="exe-col exe-col-1">
+<p style="text-align: center;"><img src="IMG_PRO2BAC_REA04_CARDINALIDAD1.png" alt="Relación: Profesor dirige Departamento" title="Profesor dirige Departamento" width="526" height="100"></img></p>
+</div>
+<div class="exe-col exe-col-2" style="text-align: center;">
+<p>        
+<label for="clozeBlank35_117.0" class="sr-av">Rellenar huecos (1):</label>
+<select id="clozeBlank35_117.0">
+<option selected="selected"> </option><option value="Profesor: (1,1) - Departamento: (1,n)">Profesor: (1,1) - Departamento: (1,n)</option><option value="Tipo de correspondencia 1:1">Tipo de correspondencia 1:1</option><option value="Tipo de correspondencia N:M">Tipo de correspondencia N:M</option><option value="Tipo de correspondencia 1:N">Tipo de correspondencia 1:N</option><option value="Profesor: (0,1) - Departamento: (1,1)">Profesor: (0,1) - Departamento: (1,1)</option><option value="Profesor: (1,n) - Departamento: (1,n)">Profesor: (1,n) - Departamento: (1,n)</option>
+</select>
+<span style="display:none" id="clozeAnswer35_117.0">JXUwMDBjJXUwMDNkJXUwMDE5JXUwMDFmJXUwMDRmJXUwMDQ0JXUwMDAxJXUwMDQ1JXUwMDQzJXUwMDBjJXUwMDFkJXUwMDAwJXUwMDE3JXUwMDE2JXUwMDAzJXUwMDFmJXUwMDAxJXUwMDBhJXUwMDAxJXUwMDBiJXUwMDBkJXUwMDBhJXUwMDA4JXUwMDQxJXUwMDExJXUwMDBiJXUwMDBi</span>
+        </p>
+</div>
+<div class="exe-col exe-col-3" style="text-align: center;">
+<p>        
+<label for="clozeBlank35_117.1" class="sr-av">Rellenar huecos (2):</label>
+<select id="clozeBlank35_117.1">
+<option selected="selected"> </option><option value="Profesor: (1,1) - Departamento: (1,n)">Profesor: (1,1) - Departamento: (1,n)</option><option value="Tipo de correspondencia 1:1">Tipo de correspondencia 1:1</option><option value="Tipo de correspondencia N:M">Tipo de correspondencia N:M</option><option value="Tipo de correspondencia 1:N">Tipo de correspondencia 1:N</option><option value="Profesor: (0,1) - Departamento: (1,1)">Profesor: (0,1) - Departamento: (1,1)</option><option value="Profesor: (1,n) - Departamento: (1,n)">Profesor: (1,n) - Departamento: (1,n)</option>
+</select>
+<span style="display:none" id="clozeAnswer35_117.1">JXUwMDA4JXUwMDIyJXUwMDFkJXUwMDA5JXUwMDAzJXUwMDE2JXUwMDFjJXUwMDFkJXUwMDQ4JXUwMDFhJXUwMDA4JXUwMDE4JXUwMDFjJXUwMDFkJXUwMDE4JXUwMDA5JXUwMDBkJXUwMDBkJXUwMDY0JXUwMDIxJXUwMDE1JXUwMDExJXUwMDEzJXUwMDA2JXUwMDE1JXUwMDBjJXUwMDA4JXUwMDBiJXUwMDFhJXUwMDFiJXUwMDU1JXUwMDFhJXUwMDA4JXUwMDE5JXUwMDFkJXUwMDFkJXUwMDE4</span>
+        </p>
+</div>
+</div>
+<div class="exe-layout-3-cols exe-clear" style="text-align: center;">
+<div class="exe-col exe-col-1">
+<p><img src="IMG_PRO2BAC_REA04_CARDINALIDAD2.png" alt="Relación: Profesor pertenece a Departamento." title="Profesor pertenece a Departamento." width="526" height="100"></img></p>
+</div>
+<div class="exe-col exe-col-2">
+<p>        
+<label for="clozeBlank35_117.2" class="sr-av">Rellenar huecos (3):</label>
+<select id="clozeBlank35_117.2">
+<option selected="selected"> </option><option value="Profesor: (1,1) - Departamento: (1,n)">Profesor: (1,1) - Departamento: (1,n)</option><option value="Tipo de correspondencia 1:1">Tipo de correspondencia 1:1</option><option value="Tipo de correspondencia N:M">Tipo de correspondencia N:M</option><option value="Tipo de correspondencia 1:N">Tipo de correspondencia 1:N</option><option value="Profesor: (0,1) - Departamento: (1,1)">Profesor: (0,1) - Departamento: (1,1)</option><option value="Profesor: (1,n) - Departamento: (1,n)">Profesor: (1,n) - Departamento: (1,n)</option>
+</select>
+<span style="display:none" id="clozeAnswer35_117.2">JXUwMDBjJXUwMDNkJXUwMDE5JXUwMDFmJXUwMDRmJXUwMDQ0JXUwMDAxJXUwMDQ1JXUwMDQzJXUwMDBjJXUwMDFkJXUwMDAwJXUwMDE3JXUwMDE2JXUwMDAzJXUwMDFmJXUwMDAxJXUwMDBhJXUwMDAxJXUwMDBiJXUwMDBkJXUwMDBhJXUwMDA4JXUwMDQxJXUwMDExJXUwMDBiJXUwMDc0</span>
+        </p>
+</div>
+<div class="exe-col exe-col-3">
+<p>        
+<label for="clozeBlank35_117.3" class="sr-av">Rellenar huecos (4):</label>
+<select id="clozeBlank35_117.3">
+<option selected="selected"> </option><option value="Profesor: (1,1) - Departamento: (1,n)">Profesor: (1,1) - Departamento: (1,n)</option><option value="Tipo de correspondencia 1:1">Tipo de correspondencia 1:1</option><option value="Tipo de correspondencia N:M">Tipo de correspondencia N:M</option><option value="Tipo de correspondencia 1:N">Tipo de correspondencia 1:N</option><option value="Profesor: (0,1) - Departamento: (1,1)">Profesor: (0,1) - Departamento: (1,1)</option><option value="Profesor: (1,n) - Departamento: (1,n)">Profesor: (1,n) - Departamento: (1,n)</option>
+</select>
+<span style="display:none" id="clozeAnswer35_117.3">JXUwMDA4JXUwMDIyJXUwMDFkJXUwMDA5JXUwMDAzJXUwMDE2JXUwMDFjJXUwMDFkJXUwMDQ4JXUwMDFhJXUwMDA4JXUwMDE5JXUwMDFkJXUwMDFkJXUwMDE4JXUwMDA5JXUwMDBkJXUwMDBkJXUwMDY0JXUwMDIxJXUwMDE1JXUwMDExJXUwMDEzJXUwMDA2JXUwMDE1JXUwMDBjJXUwMDA4JXUwMDBiJXUwMDFhJXUwMDFiJXUwMDU1JXUwMDFhJXUwMDA4JXUwMDE5JXUwMDFkJXUwMDQyJXUwMDQ3</span>
+        </p>
+</div>
+</div>
+<div class="exe-layout-3-cols exe-clear">
+<div class="exe-col exe-col-1" style="text-align: center;">
+<p><img src="IMG_PRO2BAC_REA04_CARDINALIDAD3.png" alt="Relación: Profesor enseña en Departamento." title="Profesor enseña en Departamento" width="526" height="96"></img></p>
+</div>
+<div class="exe-col exe-col-2" style="text-align: center;">
+<p>        
+<label for="clozeBlank35_117.4" class="sr-av">Rellenar huecos (5):</label>
+<select id="clozeBlank35_117.4">
+<option selected="selected"> </option><option value="Profesor: (1,1) - Departamento: (1,n)">Profesor: (1,1) - Departamento: (1,n)</option><option value="Tipo de correspondencia 1:1">Tipo de correspondencia 1:1</option><option value="Tipo de correspondencia N:M">Tipo de correspondencia N:M</option><option value="Tipo de correspondencia 1:N">Tipo de correspondencia 1:N</option><option value="Profesor: (0,1) - Departamento: (1,1)">Profesor: (0,1) - Departamento: (1,1)</option><option value="Profesor: (1,n) - Departamento: (1,n)">Profesor: (1,n) - Departamento: (1,n)</option>
+</select>
+<span style="display:none" id="clozeAnswer35_117.4">JXUwMDBjJXUwMDNkJXUwMDE5JXUwMDFmJXUwMDRmJXUwMDQ0JXUwMDAxJXUwMDQ1JXUwMDQzJXUwMDBjJXUwMDFkJXUwMDAwJXUwMDE3JXUwMDE2JXUwMDAzJXUwMDFmJXUwMDAxJXUwMDBhJXUwMDAxJXUwMDBiJXUwMDBkJXUwMDBhJXUwMDA4JXUwMDQxJXUwMDZlJXUwMDc0JXUwMDc3</span>
+        </p>
+</div>
+<div class="exe-col exe-col-3">
+<p style="text-align: center;">        
+<label for="clozeBlank35_117.5" class="sr-av">Rellenar huecos (6):</label>
+<select id="clozeBlank35_117.5">
+<option selected="selected"> </option><option value="Profesor: (1,1) - Departamento: (1,n)">Profesor: (1,1) - Departamento: (1,n)</option><option value="Tipo de correspondencia 1:1">Tipo de correspondencia 1:1</option><option value="Tipo de correspondencia N:M">Tipo de correspondencia N:M</option><option value="Tipo de correspondencia 1:N">Tipo de correspondencia 1:N</option><option value="Profesor: (0,1) - Departamento: (1,1)">Profesor: (0,1) - Departamento: (1,1)</option><option value="Profesor: (1,n) - Departamento: (1,n)">Profesor: (1,n) - Departamento: (1,n)</option>
+</select>
+<span style="display:none" id="clozeAnswer35_117.5">JXUwMDA4JXUwMDIyJXUwMDFkJXUwMDA5JXUwMDAzJXUwMDE2JXUwMDFjJXUwMDFkJXUwMDQ4JXUwMDFhJXUwMDA4JXUwMDE5JXUwMDFkJXUwMDQyJXUwMDQ3JXUwMDA5JXUwMDBkJXUwMDBkJXUwMDY0JXUwMDIxJXUwMDE1JXUwMDExJXUwMDEzJXUwMDA2JXUwMDE1JXUwMDBjJXUwMDA4JXUwMDBiJXUwMDFhJXUwMDFiJXUwMDU1JXUwMDFhJXUwMDA4JXUwMDE5JXUwMDFkJXUwMDQyJXUwMDQ3</span>
+        </p>
+</div>
+</div>
+<p><br/><br/><br/><br/></p>
+<p></p>
+<div class="block iDevice_buttons">
+<p>
+<input class="button" type="submit" name="getScore35_117" value="Comprobar"  id="getScore35_117" />
+
+<input type="button" name="feedback35_117" value="Mostrar retroalimentación" class="feedbackbutton cloze-feedback-toggler" />
+
+<input type="hidden" name="clozeOtras35_117" id="clozeOtras35_117" value=""/>
+
+<input type="hidden" name="clozeFlag35_117.strictMarking" id="clozeFlag35_117.strictMarking" value="false" />
+<input type="hidden" name="clozeFlag35_117.checkCaps" id="clozeFlag35_117.checkCaps" value="false" />
+<input type="hidden" name="clozeFlag35_117.instantMarking" id="clozeFlag35_117.instantMarking" value="false" />
+<span class="js-hidden js-warning">Habilitar JavaScript</span>
+</p>
+</div>
+<div class="score js-feedback" id="clozeScore35_117"></div>
+</div>
+</form>
+</section>
+<section id="ta35_118" class="feedback js-feedback iDevice_content" style="display:none">
+<p>A continuación te mostramos la solución razonada para cada una de las relaciones representadas en el ejercicio anterior:</p>
+<ul>
+<li><strong>Relación “Dirige”:</strong><br /><code>Profesor (0,1) – Departamento (1,1)</code><br />Un profesor puede no dirigir ningún departamento o dirigir uno, pero <strong>cada departamento debe tener un único director</strong>. Por eso el profesor tiene (0,1) y el departamento (1,1). Esta relación es de tipo <strong>1:1</strong>.</li>
+<li><strong>Relación “Pertenece”:</strong><br /><code>Profesor (1,1) – Departamento (1,n)</code><br />Todo profesor pertenece exactamente a un departamento, pero <strong>un departamento puede tener muchos profesores contratados</strong>. Esta relación es de tipo <strong>1:N</strong>.</li>
+<li><strong>Relación “Enseña”:</strong><br /><code>Profesor (1,n) – Departamento (1,n)</code><br />Un profesor puede enseñar en uno o varios departamentos (colaboración entre áreas), y <strong>cada departamento puede tener clases impartidas por varios profesores</strong>. Esta es una relación de tipo <strong>N:M</strong>.</li>
+</ul>
+<p><em>Con estos ejemplos verás más claramente cómo se aplica la teoría a un caso práctico realista.</em></p>
+</section>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper ClozeIdevice em_iDevice em_iDevice_question" id="id37">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">4. Diseñar bien es poner límites: aprende las reglas básicas</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section id="ta37_105" class="block instructions iDevice_content">
+<p>Ya has aprendido cómo crear un modelo entidad-relación y los pasos necesarios para transformarlo en una base de datos funcional. Sin embargo, no basta con dibujar entidades, atributos y relaciones: hay que seguir <strong>unas normas básicas</strong> para que el diseño sea correcto, claro y coherente.</p>
+<p>Estas normas, también llamadas <strong>restricciones del diseño conceptual</strong>, garantizan que nuestro modelo no tenga errores de estructura, conexión o significado.</p>
+<p>A continuación encontrarás un conjunto de reglas clave que todo buen diseño debe cumplir. Una vez que las comprendas, pondrás a prueba tu capacidad para detectar errores en diagramas incorrectos.</p>
+<h3><i class="fas fa-check-circle"></i> Reglas que debe cumplir un buen diseño E/R</h3>
+<ol>
+<li>Una entidad puede estar relacionada con varias entidades, pero <strong>debe hacerlo a través de rombos separados</strong> (una relación por cada conexión).</li>
+<li><strong>No puede haber dos entidades con el mismo nombre</strong>.</li>
+<li>El <strong>orden de los atributos</strong> y de las entidades <strong>no afecta al diseño</strong>.</li>
+<li>Cada atributo solo puede tener <strong>valores válidos de su dominio</strong>.</li>
+<li><strong>Dos entidades no se conectan directamente</strong>; deben unirse a través de una relación (rombo).</li>
+<li>Las <strong>cardinalidades deben escribirse sobre las líneas</strong> que unen las entidades con las relaciones.</li>
+<li>Debes <strong>evitar relaciones circulares</strong> que no tengan sentido lógico o funcional.</li>
+<li>No debe haber entidades o relaciones <strong>aisladas o sin conexión</strong>.</li>
+<li><strong>Un rombo solo puede unir dos entidades</strong>. Si necesitas conectar más, usa relaciones independientes.</li>
+</ol>
+<hr />
+<div style="background-color: #f0f9ff; border: 1px solid #0077b6; padding: 15px; border-radius: 8px; clear: both;">
+<h3 style="color: #0077b6;"><i class="fas fa-search"></i> Actividad: ¿Qué norma se está rompiendo?</h3>
+<p>A continuación verás una serie de <strong>modelos E/R incorrectos</strong>. Tu tarea es observar cada imagen con atención e indicar <strong>qué norma (del 1 al 9)</strong> no se está cumpliendo en cada caso.</p>
+</div>
+</section>
+
+    <section class="activity" id="activity-37_106"><form name="cloze-form-37_106" action="#" class="activity-form cloze-activity-form"><div id="cloze37_106"><input type="hidden" name="clozeFlag37_106.strictMarking" id="clozeFlag37_106.strictMarking" value="false"/>
+<input type="hidden" name="clozeFlag37_106.checkCaps" id="clozeFlag37_106.checkCaps" value="false"/>
+<input type="hidden" name="clozeFlag37_106.instantMarking" id="clozeFlag37_106.instantMarking" value="false"/>
+<input type="hidden" name="clozeVar37_106.feedbackId" id="clozeVar37_106.feedbackId" value="ta37_107"/>
+<div class="exe-layout-3-cols exe-clear">
+<div class="exe-col exe-col-1">
+<p style="text-align: center;"><img src="IMG_PRO2BAC_REA04_RESTRICCIONES1.png" alt="Imagen de tres entidades con tres relaciones formando un círculo.." title="Restricciones 1" style="margin-right: 10px; margin-left: 10px; vertical-align: text-bottom;" width="200" height="106"></img></p>
+<p style="text-align: center;">No cumple la restricción nº    <label for="clozeBlank37_106.0" class="sr-av">Rellenar huecos (1):</label><input class="autocomplete-off" type="text" value="" id="clozeBlank37_106.0" style="width:1ch" /><span style="display:none" id="clozeAnswer37_106.0">JXUwMDZm
+</span>   </p>
+</div>
+<div class="exe-col exe-col-2">
+<p style="text-align: center;"><img src="IMG_PRO2BAC_REA04_RESTRICCIONES2.png" alt="Imagen de tres entidades con solamente dos unidas por relación." title="Restricción 2" width="201" height="107"></img></p>
+<p style="text-align: center;">No cumple la restricción nº    <label for="clozeBlank37_106.1" class="sr-av">Rellenar huecos (2):</label><input class="autocomplete-off" type="text" value="" id="clozeBlank37_106.1" style="width:1ch" /><span style="display:none" id="clozeAnswer37_106.1">JXUwMDYw
+</span>   </p>
+</div>
+<div class="exe-col exe-col-3" style="text-align: center;">
+<p style="text-align: center;"><img src="IMG_PRO2BAC_REA04_RESTRICCIONES3.png" alt="Imagen de tres entidades unidas por la misma relación." title="Restricción 3" width="200" height="91"></img></p>
+No cumple la restricción nº    <label for="clozeBlank37_106.2" class="sr-av">Rellenar huecos (3):</label><input class="autocomplete-off" type="text" value="" id="clozeBlank37_106.2" style="width:1ch" /><span style="display:none" id="clozeAnswer37_106.2">JXUwMDY5
+</span>   </div>
+</div>
+<div class="exe-layout-3-cols exe-clear">
+<div class="exe-col exe-col-1">
+<p style="text-align: center;"><img src="IMG_PRO2BAC_REA04_RESTRICCIONES4.png" alt="Imagen de cuatro entidades con una repetida." title="Restricción 4" width="200" height="90"></img></p>
+<p style="text-align: center;">No cumple la restricción nº    <label for="clozeBlank37_106.3" class="sr-av">Rellenar huecos (4):</label><input class="autocomplete-off" type="text" value="" id="clozeBlank37_106.3" style="width:1ch" /><span style="display:none" id="clozeAnswer37_106.3">JXUwMDZh
+</span>   </p>
+</div>
+<div class="exe-col exe-col-2">
+<p style="text-align: center;"><img src="IMG_PRO2BAC_REA04_RESTRICCIONES5.png" alt="Imágen con la cardinalidad escrita en las propias entidades." title="Restricción 5" width="200" height="45"></img></p>
+<p style="text-align: center;">No cumple la restricción nº    <label for="clozeBlank37_106.4" class="sr-av">Rellenar huecos (5):</label><input class="autocomplete-off" type="text" value="" id="clozeBlank37_106.4" style="width:1ch" /><span style="display:none" id="clozeAnswer37_106.4">JXUwMDZl
+</span>   </p>
+</div>
+<div class="exe-col exe-col-3">
+<p style="text-align: center;"><img src="IMG_PRO2BAC_REA04_RESTRICCIONES6.png" alt="Imagen de dos entidades unidas sin relación." title="Restricción 6" width="202" height="43"></img></p>
+<p style="text-align: center;">No cumple la restricción nº    <label for="clozeBlank37_106.5" class="sr-av">Rellenar huecos (6):</label><input class="autocomplete-off" type="text" value="" id="clozeBlank37_106.5" style="width:1ch" /><span style="display:none" id="clozeAnswer37_106.5">JXUwMDZk
+</span>   </p>
+</div>
+</div><div class="block iDevice_buttons"><p><input class="button" type="submit" name="submit37_106" value="Enviar"  id="submit37_106" />
+<input type="button" name="restart37_106" value="Reiniciar" style="display:none" id="restart37_106" onclick="$exe.cloze.restart('37_106')" />
+ <input type="button" name="37_106showAnswersButton" value="Mostrar las respuestas" style="display:none" id="showAnswersButton37_106" onclick="$exe.cloze.fillInputs('37_106')" />
+<span class="js-hidden js-warning">Habilitar JavaScript</span></p></div><div id="clozeScore37_106"></div></div></form></section>
+    <section id="ta37_107" class="feedback js-feedback iDevice_content" style="display:none">
+<p>A continuación te mostramos la explicación de cada uno de los errores representados en los modelos E/R del ejercicio:</p>
+<p><strong>Imagen 1 – No cumple la restricción nº <span style="color: #0077b6;">7</span>:</strong><br />El modelo muestra una <strong>relación circular</strong>, donde varias entidades están conectadas entre sí de forma confusa a través de varias relaciones que se retroalimentan. <em>Las relaciones deben ser claras y directas, sin ciclos innecesarios.</em></p>
+<p><strong>Imagen 2 – No cumple la restricción nº <span style="color: #0077b6;">8</span>:</strong><br />Hay una <strong>entidad aislada</strong> (la entidad C) que no participa en ninguna relación. <em>Todo elemento del modelo debe estar conectado y cumplir una función dentro del sistema.</em></p>
+<p><strong>Imagen 3 – No cumple la restricción nº <span style="color: #0077b6;">1</span>:</strong><br />Una sola relación está conectando a tres entidades distintas. <em>Cada rombo solo puede unir dos entidades</em>; si hay más relaciones, deben representarse por separado.</p>
+<p><strong>Imagen 4 – No cumple la restricción nº <span style="color: #0077b6;">2</span>:</strong><br />Se repite el nombre de la entidad A en dos contextos distintos. <em>No puede haber entidades duplicadas con el mismo identificador.</em></p>
+<p><strong>Imagen 5 – No cumple la restricción nº <span style="color: #0077b6;">6</span>:</strong><br />Las <strong>cardinalidades no están colocadas sobre las líneas</strong> que conectan entidad y relación. En su lugar, aparecen dentro de los rectángulos, lo cual es incorrecto.</p>
+<p><strong>Imagen 6 – No cumple la restricción nº <span style="color: #0077b6;">5</span>:</strong><br />Se ha conectado directamente una entidad con otra usando una línea. <em>En un modelo E/R siempre debe haber un rombo (relación) entre dos entidades.</em></p>
+</section>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper UDLcontentIdevice em_iDevice em_iDevice_udl_exp_actividad" id="id39">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">5. ¡Manos a la obra! Tu modelo conceptual del proyecto</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta39_737_2" class="block iDevice_content">
+<div class="exe-udlContent exe-udlContent-expression"><section class="exe-udlContent-block"><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p style="text-align: justify;"><img src="IMG_PRO2BAC_REA04_CLIENTE-SERVICIO.JPG" alt="Mujeres en un comercio adquiriendo un producto." title="Cliente-servicio" style="float: left; margin: 35px 50px 35px 50px;" width="300" height="197"></p>
+<p>El equipo de <strong>REAldata Inc.</strong> entra en la siguiente fase del desarrollo del sistema. Tras las reuniones con el cliente y la fase de análisis, ya disponemos de toda la información necesaria para construir el modelo conceptual de la base de datos que dará soporte a nuestra aplicación.</p>
+<p>La solución planteada consiste en desarrollar una aplicación llamada <strong>AgendaClientesApp</strong>, que permitirá registrar, consultar y gestionar información de clientes y servicios. Además, aunque en esta primera versión no se trabajará directamente con facturas, se incluirán sus datos en la base de datos para futuras ampliaciones.</p>
+<p>Los requisitos recopilados del cliente son claros. La base de datos deberá almacenar la siguiente información:</p>
+<ul>
+<li><strong>Cliente:</strong> nombre, apellidos, DNI, fecha de nacimiento, teléfono, correo electrónico y dirección postal.</li>
+<li><strong>Servicio:</strong> código de la actividad y descripción.</li>
+<li><strong>Factura:</strong> código del cliente, código del servicio, fecha de realización y precio.</li>
+</ul>
+<p>Además, ya se han especificado los <strong>casos de uso de la aplicación</strong> y las funcionalidades que tendrá tanto para usuarios como para administradores. Puedes consultarlos en el diagrama generado anteriormente.</p>
+<div style="background-color: #f0f9ff; border: 1px solid #0077b6; padding: 15px; border-radius: 8px; clear: both;">
+<h3 style="color: #0077b6;">🛠️ Actividad: Diseña el modelo entidad-relación de tu proyecto</h3>
+<p>Es el momento de poner en práctica todo lo que has aprendido. Vas a crear el <strong>modelo E/R completo</strong> de la base de datos de la AgendaClientesApp.</p>
+<p>Tu diagrama deberá incluir, como mínimo:</p>
+<ul>
+<li>Las entidades necesarias: Cliente, Servicio y Factura.</li>
+<li>Los atributos de cada entidad, basados en los requisitos acordados.</li>
+<li>Las relaciones adecuadas entre las entidades (por ejemplo: un cliente puede contratar varios servicios).</li>
+<li>Las cardinalidades correctas en cada relación.</li>
+<li>Un diseño claro, ordenado y sin errores formales (recuerda las restricciones que ya conoces).</li>
+</ul>
+<p>Puedes realizar el diagrama en <a href="https://app.diagrams.net" target="_blank" rel="noopener"><strong>Diagrams.net</strong></a>. Cuando termines, guarda el archivo como imagen o PDF y entrégalo en la plataforma Moodle.</p>
+<p><em>Recuerda: este diseño conceptual es la base de la futura implementación del sistema. ¡Hazlo con cuidado y criterio profesional!</em></p>
+</div></div></div></section><section class="exe-udlContent-block js-hidden"><header class="exe-udlContent-header exe-udlContent-character-4"><h2>¿Recuerdas lo último que hicimos con respecto a nuestro proyecto?</h2></header><div class="exe-udlContent-content"><div class="exe-udlContent-content-main"><p><img src="Diagrama_casos_de_uso.png" width="700" height="800" style="float: left; margin-right: 50px; margin-left: 50px;">Antes de llegar a este punto, ya realizaste una <strong>fase de análisis funcional</strong> en la que diste respuesta a preguntas clave sobre el comportamiento del programa, como:</p>
+<ul>
+<li>¿Cómo se realizará la búsqueda de clientes?</li>
+<li>¿Qué campos son obligatorios?</li>
+<li>¿Se podrá modificar o eliminar información?</li>
+<li>¿Cómo se introducirán nuevos servicios?</li>
+<li>¿Cómo se mostrará la información en pantalla?</li>
+</ul>
+<p>Este análisis, junto con el diagrama de casos de uso que elaboraste (donde definiste las funciones de usuario y administrador), es la base que debes tener en cuenta ahora para construir el modelo de datos.</p>
+<p>En el desarrollo real de un proyecto, es habitual volver varias veces a revisar esta fase para evitar errores de interpretación. Por eso, es clave que lo consultes antes de seguir.</p></div></div></section></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="3_de_las_ideas_al_diseo_construimos_el_modelo_de_datos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><span class="page-counter">Página <strong>6</strong> de <strong>12</strong></span> <span class="sep">| </span><a href="32_de_los_esquemas_al_sistema_crea_las_tablas_y_normaliza_tu_base_de_datos.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_intef_js.js"></script></body></html>
